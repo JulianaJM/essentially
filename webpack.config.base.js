@@ -11,23 +11,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                exclude: /node_modules/,
-                options: {
-                    presets: [['@babel/preset-env', {
-                        targets: [ // polyfills add to the bundle depend on the targets
-                            'last 2 versions',
-                            'not dead',
-                            'not < 2%',
-                            // "not ie11"
-                        ],
-                        useBuiltIns: 'entry'
-                    }], '@babel/preset-react'],
-                    plugins: [
-                        'react-hot-loader/babel',
-                        '@babel/plugin-proposal-class-properties',
-                        '@babel/plugin-syntax-dynamic-import'
-                    ]
-                }
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
