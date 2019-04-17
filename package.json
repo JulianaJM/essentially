@@ -7,7 +7,7 @@
     "build": "webpack --config webpack.config.prod.js",
     "dev": "webpack --watch --config webpack.config.dev.js",
     "serve": "webpack-dev-server --open --config webpack.config.dev.js",
-    "serve:hot": "npm run serve -- --hot",
+    "serve:hot": "yarn serve -- --hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
