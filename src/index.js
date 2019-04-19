@@ -4,4 +4,9 @@ import '@babel/polyfill'; // polyfill features not available in older browsers (
 import App from './App';
 import './style.css';
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('app')
+);
