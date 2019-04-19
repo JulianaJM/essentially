@@ -4,7 +4,10 @@ import '@babel/polyfill'; // polyfill features not available in older browsers (
 import App from './App';
 import DefaultErrorBoundary from './DefaultErrorBoundary';
 import './style.css';
-
+if (process.env.NODE_ENV === 'development') {
+  const axe = require('react-axe');
+  axe(React, ReactDOM, 1000);
+}
 ReactDOM.render(
   <React.StrictMode>
     <DefaultErrorBoundary>
