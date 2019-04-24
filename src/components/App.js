@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
+import { css } from 'emotion';
 
 const Warning = React.lazy(() => import('./Warning'));
 class App extends Component {
@@ -8,8 +9,16 @@ class App extends Component {
   };
   render() {
     const { count } = this.state;
+    const color = 'darkgreen';
     return (
-      <div>
+      <div
+        className={css`
+          background-color: hotpink;
+          &:hover {
+            color: ${color};
+          }
+        `}
+      >
         <h1>Hello world</h1>
         <h2 className={count > 10 ? 'warning' : ''}> Count: {count}</h2>
         <button
