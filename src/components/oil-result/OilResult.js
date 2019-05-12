@@ -5,8 +5,8 @@ const OilResult = ({ oil }) => {
   return (
     <div>
       <img src={oil.picture} alt={oil.name} />
-      <p>nom : {oil.name}</p>
-      <p>description : {oil.description}</p>
+      <h3>{oil.name}</h3>
+      <p>{oil.description}</p>
       {/* <a href="#">recettes</a> */}
     </div>
   );

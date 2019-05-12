@@ -152,7 +152,11 @@ export default {
         'spasmes nerveux',
         'toux spasmodique'
       ],
-      effects: ['Brûlure', 'Répulsif antipoux ', 'Coup de soleil'],
+      effects: [
+        'Soulage les brûlures',
+        'Répulsif antipoux ',
+        'Apaisant coup de soleil'
+      ],
       recipes: [
         {
           symptoms: ['Asthme', 'spasmophilie', 'oppression'],

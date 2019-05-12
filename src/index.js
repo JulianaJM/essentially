@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import '@babel/polyfill'; // polyfill features not available in older browsers (eg promise)
 import App from './App';
 import DefaultErrorBoundary from './components/DefaultErrorBoundary';
@@ -11,7 +12,9 @@ if (process.env.NODE_ENV === 'development') {
 ReactDOM.render(
   <React.StrictMode>
     <DefaultErrorBoundary>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </DefaultErrorBoundary>
   </React.StrictMode>,
   document.getElementById('app')

@@ -1,9 +1,13 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import { NavLink, Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import './header.scss';
-class Header extends Component {
+class Header extends PureComponent {
   constructor(props) {
     super(props);
     this.headerRef = React.createRef();
+    this.state = { value: '' };
   }
 
   componentDidMount() {
@@ -13,6 +17,14 @@ class Header extends Component {
       );
     }
   }
+  handleChange = e => {
+    this.setState({ value: e.target.value });
+    if (e.keyCode === 13) {
+      const { history } = this.props;
+      const { value } = this.state;
+      history.push(`/${value}`);
+    }
+  };
 
   handleScroll(ref) {
     if (
@@ -26,20 +38,31 @@ class Header extends Component {
       ref.firstChild.classList.remove('fontSizeDown');
     }
   }
+
   render() {
+    const { value } = this.state;
     return (
       <div className="header" ref={this.headerRef}>
         <h1 id="logo">Essentially</h1>
         <div className="navbar-right">
-          <a className="active" href="#home">
-            Home
-          </a>
-          <a href="#contact">Contact</a>
-          <a href="#about">About</a>
+          <NavLink to="/">Recherche</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <input
+            type="text"
+            placeholder="Je recherche une huile.."
+            onKeyUp={this.handleChange}
+          />
+          <Link to={`/${value}`}>
+            <i className="fa fa-search" />
+          </Link>
         </div>
       </div>
     );
   }
 }
+Header.propTypes = {
+  history: PropTypes.object.isRequired
+};
 
-export default Header;
+export default withRouter(Header);
