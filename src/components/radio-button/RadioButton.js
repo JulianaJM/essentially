@@ -8,7 +8,7 @@ const RadioButton = ({ id, label, onChange }) => {
     <label htmlFor={id}>
       <input
         type="radio"
-        name="searchButton"
+        name="radioBtn"
         value={label}
         id={id}
         className="form-radio"

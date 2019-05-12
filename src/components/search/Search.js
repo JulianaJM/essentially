@@ -1,59 +1,67 @@
-import React, { Component, Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
+import PropTypes from 'prop-types';
 import CategoryList from '../radio-button/RadioButtonList';
 const SymptomList = React.lazy(() => import('../symptom/SymptomList'));
 
-import db from '../../resources/db';
+const Search = ({ options, onSearch }) => {
+  const [symptomsByCategory, setSymptomsByCategory] = useState([]);
+  const [selectedSymptoms, setSeletedSymptoms] = useState([]);
 
-export default class Search extends Component {
-  state = {
-    db: [],
-    symptomsByCategory: []
-  };
-
-  componentDidMount() {
-    const data = this.loadData();
-    this.setState({ db: data });
-  }
-
-  loadData = () => {
-    return db;
-  };
-
-  getCategories = () => {
-    const { db } = this.state;
+  const getCategories = () => {
     const categories = [];
-    db.symptoms &&
-      db.symptoms.forEach(symptom => {
-        if (!categories.includes(symptom.category)) {
-          categories.push(symptom.category);
+    options &&
+      options.forEach(option => {
+        if (!categories.includes(option.category)) {
+          categories.push(option.category);
         }
       });
     return categories;
   };
 
-  handleCategoryChange = event => {
-    const { db } = this.state;
+  const handleCategoryChange = event => {
+    setSeletedSymptoms([]);
     const category = event.target.value;
-    const symptomsByCategory = db.symptoms.filter(
-      symptom => symptom.category === category
+    const symptomsByCategory = options.filter(
+      option => option.category === category
     );
-    this.setState({ symptomsByCategory });
+    setSymptomsByCategory(symptomsByCategory);
   };
 
-  render() {
-    const { symptomsByCategory } = this.state;
-    return (
-      <div>
-        <CategoryList
-          items={this.getCategories()}
-          onChange={this.handleCategoryChange}
+  const handleSymptomsChange = event => {
+    const value = event.target.value;
+    const newSelectedSymptoms = [...selectedSymptoms];
+    if (!newSelectedSymptoms.includes(value)) {
+      newSelectedSymptoms.push(value);
+    }
+    setSeletedSymptoms(newSelectedSymptoms);
+  };
+
+  const handleSearch = () => {
+    onSearch(selectedSymptoms);
+  };
+  return (
+    <div className="search">
+      <h2>Rechercher</h2>
+      <CategoryList items={getCategories()} onChange={handleCategoryChange} />
+      <Suspense fallback={null}>
+        <SymptomList
+          symptoms={symptomsByCategory}
+          onChange={handleSymptomsChange}
         />
-        {symptomsByCategory.length > 0 ? (
-          <Suspense fallback={null}>
-            <SymptomList symptoms={symptomsByCategory} />
-          </Suspense>
-        ) : null}
+      </Suspense>
+
+      <div className="search-btn">
+        <button type="button" onClick={handleSearch}>
+          Je lance ma recherche
+        </button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+Search.propTypes = {
+  options: PropTypes.array.isRequired,
+  onSearch: PropTypes.func.isRequired
+};
+
+export default Search;

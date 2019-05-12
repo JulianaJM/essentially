@@ -1,17 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const SymptomList = ({ symptoms }) => {
+const SymptomList = ({ symptoms, onChange }) => {
   return symptoms.map(symptom => (
     <div key={symptom.id}>
       <input
-        // onChange={this.handleChange}
+        onChange={onChange}
         id={symptom.id}
         type="checkbox"
-        // checked={this.state.isChecked}
+        value={symptom.name}
       />
       <label htmlFor={symptom.id}>{symptom.name}</label>
     </div>
   ));
+};
+
+SymptomList.propTypes = {
+  symptoms: PropTypes.array.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default SymptomList;

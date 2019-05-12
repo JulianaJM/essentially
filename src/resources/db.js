@@ -3,7 +3,7 @@ export default {
     {
       id: '1',
       name: 'Huile essentielle d’aneth',
-      photo:
+      picture:
         'http://www.conseils-aromatherapie.com/wp-content/uploads/2014/04/huile-essentielle-aneth.jpg',
       description:
         "L'huile essentielle d'aneth est appréciée pour stimuler l'appareil digestif ou dégager les voies respiratoires.",
@@ -47,7 +47,7 @@ export default {
     {
       id: '2',
       name: 'Huile essentielle de carotte',
-      photo:
+      picture:
         'https://static.passeportsante.net/200x200/i49650-huile-essentielle-de-carotte.jpg',
       description:
         'Si l\'adage dit que la carotte "rend aimable" ou permet d’améliorer sa vue, sous forme d’huile essentielle elle possède bien d’autres vertus, puisqu’elle agirait, entre autres, sur divers problèmes de peau et serait active pour la régénération de l’organisme.',
@@ -110,7 +110,7 @@ export default {
     {
       id: '3',
       name: 'Huile essentielle de lavande vraie',
-      photo:
+      picture:
         'https://resize.prod.docfr.doc-media.fr/img/var/doctissimo/storage/images/media/images/fr/www/lavande-vraie/818493-1-fre-FR/lavande-vraie.jpg',
       description:
         "L'huile essentielle de lavande vraie, ou lavande fine, a des vertus cicatrisantes et régénérantes cutanées. Elle permet de traiter de nombreuses infections cutanées, tout en ayant des vertus relaxantes et apaisantes.",
