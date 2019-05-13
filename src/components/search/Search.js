@@ -10,7 +10,7 @@ const Search = ({ options, match }) => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    if (match) {
+    if (match.params.name) {
       const { params } = match;
       searchOil(params.name);
     }

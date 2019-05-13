@@ -33,9 +33,8 @@ class App extends Component {
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route exact path="/" render={() => <Search options={db} />} />
             <Route
-              path="/:name"
+              path="/:name?"
               render={props => <Search {...props} options={db} />}
             />
           </Switch>
