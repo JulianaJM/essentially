@@ -13,6 +13,8 @@ const Search = ({ options, match }) => {
     if (match.params.name) {
       const { params } = match;
       searchOil(params.name);
+    } else {
+      setSearchResults([]);
     }
   }, [options, match]);
 

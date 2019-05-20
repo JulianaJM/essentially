@@ -109,8 +109,23 @@ const getSymptoms = ($, index) => {
     .split(',');
 };
 
+function getUnique(arr, comp) {
+  const unique = arr
+    .map(e => e[comp])
+
+    // store the keys of the unique objects
+    .map((e, i, final) => final.indexOf(e) === i && i)
+
+    // eliminate the dead keys & store unique objects
+    .filter(e => arr[e])
+    .map(e => arr[e]);
+
+  return unique;
+}
+
 const saveData = data => {
-  fs.writeFileSync('../src/resources/oils.json', JSON.stringify(data));
+  const newData = getUnique(data, 'name');
+  fs.writeFileSync('../src/resources/oils.json', JSON.stringify(newData));
 };
 const categories = ['Beauty', 'Health', 'Mood'];
 

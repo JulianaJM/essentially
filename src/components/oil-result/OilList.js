@@ -5,7 +5,7 @@ import OilResult from './OilResult';
 const OilList = ({ oils }) => (
   <div>
     {oils.map(oil => (
-      <OilResult key={oil.id} oil={oil} />
+      <OilResult key={oil.name} oil={oil} />
     ))}
   </div>
 );
