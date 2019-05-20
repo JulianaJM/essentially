@@ -70,7 +70,7 @@ const promiseSymptomsRequest = url => {
     healthSymptoms.push(...getSymptoms($, 15));
     moodSymptoms.push(...getSymptoms($, 16));
     beautySymptoms.push(...getSymptoms($, 17));
-    return (
+    return [
       {
         category: 'Health',
         list: [...healthSymptoms]
@@ -83,7 +83,7 @@ const promiseSymptomsRequest = url => {
         category: 'Beauty',
         list: [...beautySymptoms]
       }
-    );
+    ];
   });
 };
 
@@ -110,10 +110,26 @@ const getSymptoms = ($, index) => {
 };
 
 const saveData = data => {
-  fs.writeFileSync('../src/resources/data.json', JSON.stringify(data));
+  fs.writeFileSync('../src/resources/oils.json', JSON.stringify(data));
 };
+const categories = ['Beauty', 'Health', 'Mood'];
+
 const saveDataSymptoms = data => {
-  fs.writeFileSync('../src/resources/data1.json', JSON.stringify(data));
+  const list = [];
+
+  const newData = data[0]
+    .map(d => {
+      list.push(...d.list);
+      return {
+        category: d.category,
+        list: [...new Set(list)]
+      };
+    })
+    .filter(d => {
+      return categories.includes(d.category);
+    });
+
+  fs.writeFileSync('../src/resources/symptoms.json', JSON.stringify(newData));
 };
 getLinks(
   'http://www.doctissimo.fr/sante/aromatherapie/guide-huiles-essentielles',

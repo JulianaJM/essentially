@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Health",
+    "list": [
+      "Antalgique ++",
+      "Antibactérienne +",
+      "Antifongique +",
+      "Anti-inflammatoire ++",
+      "Anti-nauséeuse ++",
+      "Antiseptique +",
+      "Antispasmodique ++++",
+      "Antivirale ++",
+      "Carminative +++",
+      "Décontractante",
+      " sédative et calmante +++",
+      "Tonique digestif et hépatique +++"
+    ]
+  },
+  {
+    "category": "Mood",
+    "list": [
+      "Antalgique ++",
+      "Antibactérienne +",
+      "Antifongique +",
+      "Anti-inflammatoire ++",
+      "Anti-nauséeuse ++",
+      "Antiseptique +",
+      "Antispasmodique ++++",
+      "Antivirale ++",
+      "Carminative +++",
+      "Décontractante",
+      " sédative et calmante +++",
+      "Tonique digestif et hépatique +++",
+      "Équilibrante +++",
+      "Régulatrice du système nerveux ++++",
+      "Reposante +++"
+    ]
+  },
+  {
+    "category": "Beauty",
+    "list": [
+      "Antalgique ++",
+      "Antibactérienne +",
+      "Antifongique +",
+      "Anti-inflammatoire ++",
+      "Anti-nauséeuse ++",
+      "Antiseptique +",
+      "Antispasmodique ++++",
+      "Antivirale ++",
+      "Carminative +++",
+      "Décontractante",
+      " sédative et calmante +++",
+      "Tonique digestif et hépatique +++",
+      "Équilibrante +++",
+      "Régulatrice du système nerveux ++++",
+      "Reposante +++",
+      "Antioxydante +",
+      "Purifiante +",
+      "Tonique cutanée +"
+    ]
+  }
+]
