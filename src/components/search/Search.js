@@ -42,10 +42,13 @@ const Search = ({ options, match }) => {
     const { symptoms } = options;
     setSeletedSymptoms([]);
     const category = event.target.value;
-    const symptomsByCategory = symptoms.filter(
+    const symptomsByCategory = symptoms.find(
       option => option.category === category
     );
-    setSymptomsByCategory(symptomsByCategory);
+    const { list } = symptomsByCategory;
+    if (list && list.length > 0) {
+      setSymptomsByCategory(list);
+    }
   };
 
   const handleSymptomsChange = event => {

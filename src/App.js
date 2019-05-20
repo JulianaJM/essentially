@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { Switch, Route } from 'react-router-dom';
-import db from './resources/db';
+import oils from './resources/oils.json';
+import symptoms from './resources/symptoms.json';
 import Header from './components/header/Header';
 import Search from './components/search/Search';
 import About from './components/about/About';
@@ -20,9 +21,7 @@ class App extends Component {
     this.setState({ db: data });
   }
 
-  loadData = () => {
-    return db;
-  };
+  loadData = () => ({ oils, symptoms });
 
   render() {
     const { db } = this.state;

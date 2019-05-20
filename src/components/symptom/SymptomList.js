@@ -3,14 +3,9 @@ import PropTypes from 'prop-types';
 
 const SymptomList = ({ symptoms, onChange }) => {
   return symptoms.map(symptom => (
-    <div key={symptom.id}>
-      <input
-        onChange={onChange}
-        id={symptom.id}
-        type="checkbox"
-        value={symptom.name}
-      />
-      <label htmlFor={symptom.id}>{symptom.name}</label>
+    <div key={symptom}>
+      <input onChange={onChange} id={symptom} type="checkbox" value={symptom} />
+      <label htmlFor={symptom}>{symptom}</label>
     </div>
   ));
 };
