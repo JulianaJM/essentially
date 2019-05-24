@@ -1,21 +1,26 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import Symptom from './Symptom';
 
-const SymptomList = ({ symptoms, onChange }) => (
-  <div>
-    {symptoms.map(symptom => (
-      <Fragment key={symptom}>
-        <input
-          onChange={onChange}
-          id={symptom}
-          type="checkbox"
-          value={symptom}
-        />
-        <label htmlFor={symptom}>{symptom}</label>
-      </Fragment>
-    ))}
-  </div>
-);
+const SymptomList = ({ symptoms, onChange }) => {
+  let list = [];
+  let flag = false;
+  return (
+    <div>
+      {symptoms.map((symptom, i) => {
+        if (flag) {
+          list = [];
+          flag = false;
+        }
+        list.push(symptom);
+        if (list.length === 50) {
+          flag = true;
+          return <Symptom key={i} symptoms={list} onChange={onChange} />;
+        }
+      })}
+    </div>
+  );
+};
 
 SymptomList.propTypes = {
   symptoms: PropTypes.array.isRequired,
