@@ -44,12 +44,40 @@ const promiseRequest = url => {
     const beautyDetails = getDetails($, 'beaute');
     const kitchen = getDetailsKitchen($);
 
+    const precautions = $('.left.value')
+      .children('p')
+      .map(function(i, element) {
+        return $(element)
+          .text()
+          .replace(/-/g, '')
+          .trim();
+      })
+      .get();
+
+    const recipesTitle = $('.formule-title')
+      .map(function(i, element) {
+        return $(element)
+          .text()
+          .trim();
+      })
+      .get();
+
+    const recipesContent = $('.formule-desc')
+      .map(function(i, element) {
+        return $(element)
+          .text()
+          .trim();
+      })
+      .get();
+
     const result = {
       oil: name,
-      Health: { ...healthDetails },
-      Mood: { ...moodDetails },
-      Beauty: { ...beautyDetails },
-      Kitchen: { ...kitchen }
+      health: { ...healthDetails },
+      mood: { ...moodDetails },
+      beauty: { ...beautyDetails },
+      kitchen: { ...kitchen },
+      precautions,
+      recipes: { recipesTitle, recipesContent }
     };
     return result;
   });
