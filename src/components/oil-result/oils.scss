@@ -1,0 +1,18 @@
+.oils {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(15rem, auto);
+  &_card {
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    margin-bottom: 0.5rem;
+  }
+  .truncate {
+    width: 25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

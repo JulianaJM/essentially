@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import OilResult from './OilResult';
 
+import './oils.scss';
+
 const OilList = ({ oils }) => (
-  <div>
+  <div className="oils">
     {oils.map(oil => (
       <OilResult key={oil.name} oil={oil} />
     ))}

@@ -19,6 +19,13 @@ const getLinks = (urls, paterns) => {
 
           links.push(value);
         });
+        $(`a[href*="${paterns[1]}"]`).each((index, el) => {
+          let value = `https://www.aroma-zone.com${$(el)
+            .attr('href')
+            .trim()}`;
+          links.push(value);
+        });
+
         return links;
       });
     })
@@ -199,7 +206,10 @@ const links = [
   'https://www.aroma-zone.com/info/guide-des-huiles-essentielles/tous'
 ];
 
-const filters = ['/info/fiche-technique/huile-essentielle'];
+const filters = [
+  '/info/fiche-technique/huile-essentielle',
+  '/info/fiche-technique/baume'
+];
 getLinks(links, filters, err => {
   if (err) {
     throw new Error('une erreur est survenue');

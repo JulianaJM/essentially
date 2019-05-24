@@ -1,0 +1,13 @@
+.symptom {
+  display: flex;
+  &-chunk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &_line {
+      width: 30rem;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

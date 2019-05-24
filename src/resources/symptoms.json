@@ -1,6 +1,6 @@
 [
   {
-    "category": "Health",
+    "category": "Santé",
     "list": [
       "Antalgique",
       "Antibactérienne",
@@ -276,7 +276,7 @@
     ]
   },
   {
-    "category": "Mood",
+    "category": "Bien-être",
     "list": [
       "Équilibrante",
       "Régulatrice du système nerveux",
@@ -377,7 +377,7 @@
     ]
   },
   {
-    "category": "Beauty",
+    "category": "Beauté",
     "list": [
       "Antibactérienne",
       "Antioxydante",

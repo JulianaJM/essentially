@@ -1,8 +1,10 @@
-import React, { Suspense, useState, useEffect } from 'react';
+import React, { Suspense, lazy, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import CategoryList from '../radio-button/RadioButtonList';
-const SymptomList = React.lazy(() => import('../symptom/SymptomList'));
-const OilList = React.lazy(() => import('../oil-result/OilList'));
+const SymptomList = lazy(() => import('../symptom/SymptomList'));
+const OilList = lazy(() => import('../oil-result/OilList'));
+
+import './search.scss';
 
 const Search = ({ options, match }) => {
   const [symptomsByCategory, setSymptomsByCategory] = useState([]);
@@ -10,15 +12,17 @@ const Search = ({ options, match }) => {
   const [searchResults, setSearchResults] = useState([]);
 
   useEffect(() => {
-    if (match.params.name) {
+    /*if (match.params.name) {
       const { params } = match;
       searchOil(params.name);
-    } else {
-      setSearchResults([]);
-    }
+    } else {*/
+    setSearchResults([]);
+    setSeletedSymptoms([]);
+    setSymptomsByCategory([]);
+    //}
   }, [options, match]);
 
-  const searchOil = name => {
+  /* const searchOil = name => {
     const { oils } = options;
     const result = oils.filter(item => {
       const currentName = item.name;
@@ -26,7 +30,7 @@ const Search = ({ options, match }) => {
     });
 
     setSearchResults(result);
-  };
+  }; */
 
   const getCategories = () => {
     const categories = [];
@@ -49,7 +53,7 @@ const Search = ({ options, match }) => {
     );
     const { list } = symptomsByCategory;
     if (list && list.length > 0) {
-      setSymptomsByCategory(list);
+      setSymptomsByCategory(list.sort());
     }
   };
 
@@ -58,6 +62,9 @@ const Search = ({ options, match }) => {
     const newSelectedSymptoms = [...selectedSymptoms];
     if (!newSelectedSymptoms.includes(value)) {
       newSelectedSymptoms.push(value);
+    } else {
+      const index = newSelectedSymptoms.indexOf(value);
+      if (index !== -1) newSelectedSymptoms.splice(index, 1);
     }
     setSeletedSymptoms(newSelectedSymptoms);
   };
@@ -74,7 +81,8 @@ const Search = ({ options, match }) => {
           return oil;
         }
       })
-      .filter(item => item !== undefined);
+      .filter(item => item !== undefined)
+      .sort();
 
     setSearchResults(result);
   };
@@ -82,22 +90,25 @@ const Search = ({ options, match }) => {
     <div className="search">
       {searchResults.length === 0 ? (
         <div className="search-form">
-          <h2>Rechercher</h2>
+          <h2>Je recherche une huile essentielle </h2>
           <CategoryList
             items={getCategories()}
             onChange={handleCategoryChange}
           />
-          <Suspense fallback={null}>
+          <div>
+            <button type="button" className="search-btn" onClick={handleSearch}>
+              Je lance ma recherche
+            </button>
+          </div>
+          <Suspense fallback={<div>chargement...</div>}>
+            {symptomsByCategory.length > 0 && (
+              <h3>Pour quelles problématiques: </h3>
+            )}
             <SymptomList
               symptoms={symptomsByCategory}
               onChange={handleSymptomsChange}
             />
           </Suspense>
-          <div className="search-btn">
-            <button type="button" onClick={handleSearch}>
-              Je lance ma recherche
-            </button>
-          </div>
         </div>
       ) : (
         <div className="search-result">

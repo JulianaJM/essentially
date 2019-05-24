@@ -1,21 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Symptom from './Symptom';
+import SymptomChunk from './SymptomChunk';
 
 const SymptomList = ({ symptoms, onChange }) => {
-  let list = [];
-  let flag = false;
+  let chunkList = [];
+  let isMaxChunk = false;
   return (
-    <div>
+    <div className="symptom">
       {symptoms.map((symptom, i) => {
-        if (flag) {
-          list = [];
-          flag = false;
+        if (isMaxChunk) {
+          chunkList = [];
+          isMaxChunk = false;
         }
-        list.push(symptom);
-        if (list.length === 50) {
-          flag = true;
-          return <Symptom key={i} symptoms={list} onChange={onChange} />;
+        chunkList.push(symptom);
+        if (chunkList.length === 15) {
+          isMaxChunk = true;
+          return (
+            <SymptomChunk key={i} symptoms={chunkList} onChange={onChange} />
+          );
         }
       })}
     </div>

@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './symptom.scss';
+
 const Symptom = ({ symptoms, onChange }) => (
-  <div>
+  <div className="symptom-chunk">
     {symptoms.map(symptom => {
       return (
-        <div key={symptom}>
+        <div key={symptom} className="symptom-chunk_line">
           <input
             onChange={onChange}
             id={symptom}

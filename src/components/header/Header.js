@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { NavLink, Link, withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import './header.scss';
@@ -7,7 +7,6 @@ class Header extends PureComponent {
   constructor(props) {
     super(props);
     this.headerRef = React.createRef();
-    this.state = { value: '' };
   }
 
   componentDidMount() {
@@ -18,11 +17,9 @@ class Header extends PureComponent {
     }
   }
   handleChange = e => {
-    this.setState({ value: e.target.value });
+    // const value = e.target.value;
     if (e.keyCode === 13) {
-      const { history } = this.props;
-      const { value } = this.state;
-      history.push(`/${value}`);
+      // TODO
     }
   };
 
@@ -40,7 +37,6 @@ class Header extends PureComponent {
   }
 
   render() {
-    const { value } = this.state;
     return (
       <div className="header" ref={this.headerRef}>
         <h1 id="logo">Essentially</h1>
@@ -53,9 +49,7 @@ class Header extends PureComponent {
             placeholder="Je recherche une huile.."
             onKeyUp={this.handleChange}
           />
-          <Link to={`/${value}`}>
-            <i className="fa fa-search" />
-          </Link>
+          <i className="fa fa-search" />
         </div>
       </div>
     );
