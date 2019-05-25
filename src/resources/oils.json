@@ -173,7 +173,7 @@
       "Mange-graisses",
       "Nausées de la grossesse",
       "Stimulante immunitaire",
-      "Régulatrice métabolique : foie et pancréas. Apéritive et carminative",
+      "Régulatrice métabolique",
       "Dynamisante et stimulante",
       "Régulateur du système nerveux",
       "Eclat du teint",
@@ -388,7 +388,7 @@
   },
   {
     "name": "Huile essentielle de niaouli",
-    "description": "Incontournable, l'huile essentielle de niaouli est l'une des plus connues dans le monde de l'aromathérapie. Et pour cause : elle possède d'innombrables vertus (sur le plan circulatoire, sur le système nerveux, etc.), elle dégage de plus un parfum particulièrement agréable.",
+    "description": "Incontournable, l'huile essentielle de niaouli est l'une des plus connues dans le monde de l'aromathérapie. Et pour cause : elle possède d'innombrables vertus (sur le plan circulatoire, sur le système nerveux, etc.), elle dégage de plus un parfum particulièrement agréable. Elle est déconseillée en cas de cancer hormono-dépendants",
     "picture": "https://resize.prod.docfr.doc-media.fr/r/200,200/img/var/doctissimo/storage/images/media/images/huile-essentielle-de-niaouli1_medium/821553-1-fre-FR/huile-essentielle-de-niaouli1_medium.jpg",
     "goodFor": [
       "Antibactérienne (active sur certaines bactéries)",
@@ -398,7 +398,7 @@
       "Favorise une bonne circulation sanguine",
       "Rafraichissante, oxygénante",
       "Tonifiante et régénératrice des structures cutanées (ongles, cheveux et peau)",
-      "Radioprotectrice cutanée (déconseillée en cas de cancer hormono-dépendants)"
+      "Radioprotectrice cutanée"
     ]
   },
   {
@@ -560,12 +560,7 @@
     "name": "Huile essentielle de thym à thujanol",
     "description": "L'huile essentielle de thym à thujanol fait partie des incontournables. C'est un anti-infectieux puissant mais doux à utiliser. Elle parfaitement indiquée en cas de maux de gorge.",
     "picture": "https://resize.prod.docfr.doc-media.fr/r/200,200/img/var/doctissimo/storage/images/media/images/huile-essentielle-de-thym-a-thujanol1_medium/831465-1-fre-FR/huile-essentielle-de-thym-a-thujanol1_medium.jpg",
-    "goodFor": [
-      "Tonique et équilibrante du système nerveux",
-      "Application cutanée (bain, compresse froide, massage) : bronchite, circulation sanguine, fatigue, faiblesse hépatique, hépatites virales (en soutien), grippe, infection bactérienne et virale, infection génitale, infection ORL (angine, sinusite, otite, rhino-pharyngite), infection urinaire, infection virale",
-      "Voie respiratoire (diffusion, inhalation, olfaction) : bronchite, faiblesse hépatique, hépatites virales (en soutien), infection ORL (angine, rhino-pharyngite, sinusite, otite), fatigue, grippe, infection bactérienne et virale",
-      "Voie interne : pour les infections bactériennes et virales notamment de la sphère ORL sur conseil d’un professionnel"
-    ]
+    "goodFor": ["Tonique et équilibrante du système nerveux"]
   },
   {
     "name": "Huile essentielle d'ylang-ylang",
@@ -620,11 +615,7 @@
     "name": "Huile essentielle d'ajowan",
     "description": "L'huile essentielle d'ajowan (ou thym indien) est un antiseptique puissant. Elle est également tonifiante et permet de prévenir et traiter de nombreuses infections.",
     "picture": "https://resize.prod.docfr.doc-media.fr/r/200,200/img/var/doctissimo/storage/images/media/images/huile-essentielle-d-ajowan_medium/832109-1-fre-FR/huile-essentielle-d-ajowan_medium.jpg",
-    "goodFor": [
-      "Aphrodisiaque",
-      "Application cutanée (bain, compresse froide, massage) : Baisse de libido, infection bactérienne, infection cutanée, infection ORL, infection urinaire, infection virale, rhumatisme",
-      "Voie respiratoire (diffusion, inhalation, olfaction) : Baisse de libido, infection bactérienne, infection ORL, infection virales"
-    ]
+    "goodFor": ["Aphrodisiaque"]
   },
   {
     "name": "Huile essentielle d'aneth",

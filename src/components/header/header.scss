@@ -12,6 +12,9 @@ h1 {
   position: fixed;
   top: 0;
   width: 100%;
+  border-radius: 0 0 250px 0;
+  z-index: 1;
+
   &:hover {
     color: green;
   }
@@ -27,7 +30,7 @@ h1 {
       line-height: 25px;
       border-radius: 4px;
       &.active {
-        background-color: dodgerblue;
+        background-color: #333;
         color: white;
       }
     }

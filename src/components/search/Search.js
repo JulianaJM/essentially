@@ -90,24 +90,27 @@ const Search = ({ options, match }) => {
     <div className="search">
       {searchResults.length === 0 ? (
         <div className="search-form">
-          <h2>Je recherche une huile essentielle </h2>
-          <CategoryList
-            items={getCategories()}
-            onChange={handleCategoryChange}
-          />
-          <div>
+          <div className="categories">
+            <h2>Je recherche une huile essentielle </h2>
+            <CategoryList
+              items={getCategories()}
+              onChange={handleCategoryChange}
+            />
+
             <button type="button" className="search-btn" onClick={handleSearch}>
               Je lance ma recherche
             </button>
           </div>
           <Suspense fallback={<div>chargement...</div>}>
-            {symptomsByCategory.length > 0 && (
-              <h3>Pour quelles problématiques: </h3>
-            )}
-            <SymptomList
-              symptoms={symptomsByCategory}
-              onChange={handleSymptomsChange}
-            />
+            <div className="filters">
+              {symptomsByCategory.length > 0 && (
+                <h3>Pour quelles problématiques: </h3>
+              )}
+              <SymptomList
+                symptoms={symptomsByCategory}
+                onChange={handleSymptomsChange}
+              />
+            </div>
           </Suspense>
         </div>
       ) : (

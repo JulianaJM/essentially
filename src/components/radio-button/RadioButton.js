@@ -3,27 +3,29 @@ import PropTypes from 'prop-types';
 
 import './radio-button.scss';
 
-const RadioButton = ({ id, label, onChange }) => {
+const RadioButton = ({ id, label, image, onChange }) => {
   return (
-    <label htmlFor={id}>
+    <div className="form-radio">
       <input
         type="radio"
         name="radioBtn"
         value={label}
         id={id}
-        className="form-radio"
-        // checked={isChecked}
         onChange={onChange}
       />
-      {label}
-    </label>
+      <label htmlFor={id}>
+        <img src={image} alt={label} />
+      </label>
+      <p>{label}</p>
+    </div>
   );
 };
 
 RadioButton.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
+  image: PropTypes.object.isRequired
 };
 
 export default RadioButton;

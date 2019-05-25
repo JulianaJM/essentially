@@ -1,19 +1,17 @@
+.radio-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
 .form-radio {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: inline-block;
-  position: relative;
-  background-color: #f1f1f1;
-  color: #666;
-  top: 10px;
-  height: 30px;
-  width: 30px;
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  margin-right: 7px;
-  outline: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    position: absolute;
+    left: -9999px;
+  }
 }
 .form-radio:checked::before {
   position: absolute;
@@ -35,4 +33,26 @@ label {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   cursor: pointer;
+}
+.input-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+input[type='radio']:checked + label > img {
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px 3px #090;
+}
+
+/* Stuff after this is only to make things more pretty */
+input[type='radio'] + label > img {
+  border: 1px dashed #444;
+  border-radius: 300px;
+  width: 150px;
+  height: 150px;
+  transition: 500ms all;
+}
+
+input[type='radio']:checked + label > img {
+  transform: rotateZ(-10deg) rotateX(10deg);
 }

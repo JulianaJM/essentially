@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SymptomChunk from './SymptomChunk';
+
+import './symptom.scss';
 
 const SymptomList = ({ symptoms, onChange }) => {
-  let chunkList = [];
-  let isMaxChunk = false;
   return (
     <div className="symptom">
-      {symptoms.map((symptom, i) => {
-        if (isMaxChunk) {
-          chunkList = [];
-          isMaxChunk = false;
-        }
-        chunkList.push(symptom);
-        if (chunkList.length === 15) {
-          isMaxChunk = true;
-          return (
-            <SymptomChunk key={i} symptoms={chunkList} onChange={onChange} />
-          );
-        }
+      {symptoms.map(symptom => {
+        return (
+          <div key={symptom} className="symptom_line">
+            <input
+              onChange={onChange}
+              id={symptom}
+              type="checkbox"
+              value={symptom}
+            />
+            <label htmlFor={symptom} title={symptom}>
+              {symptom}
+            </label>
+          </div>
+        );
       })}
     </div>
   );
