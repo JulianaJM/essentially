@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import OilElement from './oilElement';
 
 const OilDetails = ({ details, match }) => {
   const {
@@ -16,19 +17,27 @@ const OilDetails = ({ details, match }) => {
     const currentName = item.oil.toLowerCase();
     return currentName.match(name.toLowerCase());
   });
+  const { health = {}, mood = {}, beauty = {} } = oilDetails;
   return (
     <div className="oil-details">
       <img src={oil.picture} alt={oil.name} />
       <h3>{oil.name}</h3>
       <p>{oil.description}</p>
-      <h3>Santé</h3>
-      <p>{oilDetails.health.propertiesDesc}</p>
+
+      {health.propertiesDesc && <h3>En Santé</h3>}
+      <OilElement category={health} />
+
+      {mood.propertiesDesc && <h3>En bien-être</h3>}
+      <OilElement category={mood} />
+
+      {beauty.propertiesDesc && <h3>En beauté</h3>}
+      <OilElement category={beauty} />
     </div>
   );
 };
 
 OilDetails.propTypes = {
-  details: PropTypes.array.isRequired,
+  details: PropTypes.object.isRequired,
   match: PropTypes.object
 };
 

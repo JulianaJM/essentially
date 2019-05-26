@@ -1,58 +1,92 @@
-h1 {
-  font-variant: small-caps;
-  font-style: italic;
-  font-size: 3rem;
-  font-family: cursive;
-}
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
   padding: 5rem 0.6rem;
   transition: 0.4s;
   position: fixed;
   top: 0;
   width: 100%;
-  border-radius: 0 0 250px 0;
   z-index: 1;
 
-  &:hover {
-    color: green;
+  .navbar-title {
+    font-size: 1.5rem;
+    h1 {
+      font-family: cursive;
+      color: #971048;
+      font-variant: small-caps;
+      font-style: italic;
+    }
+    width: 55%;
+    background: #fff;
+    border-radius: 0 0 11.875rem 0;
+    padding-top: 6.25rem;
+    padding-left: 3.125rem;
+    margin-left: -3.125rem;
+    margin-top: -6.25rem;
+    z-index: 2;
+  }
+  .navbar-search {
+    margin-bottom: 1.2rem;
+    z-index: 2;
+
+    input {
+      width: 60%;
+    }
+  }
+
+  .navbar-links {
+    margin-bottom: 1.875rem;
+    width: 100%;
   }
 
   .navbar-right {
+    display: flex;
+    flex-direction: column;
     & a {
-      display: block;
-      color: black;
-      text-align: left;
-      padding: 12px;
+      color: #fff;
+      padding: 0.75rem;
       text-decoration: none;
-      font-size: 18px;
-      line-height: 25px;
-      border-radius: 4px;
+      font-size: 1.125rem;
+      line-height: 1.5625rem;
+      border-radius: 0.25rem;
       &.active {
         background-color: #333;
-        color: white;
+        color: #fff;
       }
     }
   }
 
   .fontSizeDown {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 .paddingScrollDown {
   padding: 1.9rem 0.6rem;
 }
 
-@media screen and (min-width: 580px) {
+@media screen and (min-width: 768px) {
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     .navbar-right {
-      & a {
-        float: left;
-        text-align: center;
+      flex-direction: row;
+      width: 70%;
+      position: absolute;
+      right: 0;
+      background-color: #971048;
+      padding-top: 6.25rem;
+      padding-left: 3.125rem;
+      margin-left: -3.125rem;
+      margin-top: -3.5rem;
+      align-items: center;
+    }
+    .navbar-search {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      input {
+        width: 60%;
       }
     }
   }

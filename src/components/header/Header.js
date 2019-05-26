@@ -39,17 +39,23 @@ class Header extends PureComponent {
   render() {
     return (
       <div className="header" ref={this.headerRef}>
-        <h1 id="logo">Essentially</h1>
+        <div className="navbar-title">
+          <h1 id="logo">Essentially</h1>
+        </div>
         <div className="navbar-right">
-          <NavLink to="/">Recherche</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <input
-            type="text"
-            placeholder="Je recherche une huile.."
-            onKeyUp={this.handleChange}
-          />
-          <i className="fa fa-search" />
+          <div className="navbar-search">
+            <input
+              type="text"
+              placeholder="Je recherche une huile.."
+              onKeyUp={this.handleChange}
+            />
+            <i className="fa fa-search" />
+          </div>
+          <div className="navbar-links">
+            <NavLink to="/">Accueil</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <NavLink to="/about">A propos</NavLink>
+          </div>
         </div>
       </div>
     );

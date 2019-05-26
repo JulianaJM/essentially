@@ -1,6 +1,7 @@
 .search-form {
   h2 {
     text-align: center;
+    color: #333;
   }
   .categories {
     display: flex;
@@ -16,9 +17,9 @@
     }
   }
   .search-btn {
-    background-color: #ddd;
+    background-color: #971048;
     border: none;
-    color: black;
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
