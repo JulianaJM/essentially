@@ -17,7 +17,7 @@ const OilDetails = ({ details, match }) => {
     const currentName = item.oil.toLowerCase();
     return currentName.match(name.toLowerCase());
   });
-  const { health = {}, mood = {}, beauty = {} } = oilDetails;
+  const { health = {}, mood = {}, beauty = {}, precautions } = oilDetails;
   return (
     <div className="oil-details">
       <img src={oil.picture} alt={oil.name} />
@@ -32,6 +32,13 @@ const OilDetails = ({ details, match }) => {
 
       {beauty.propertiesDesc && <h3>En beauté</h3>}
       <OilElement category={beauty} />
+
+      {precautions.length > 0 && <strong>Précautions</strong>}
+      <ul>
+        {precautions.map((precaution, i) => (
+          <li key={i}>{precaution}</li>
+        ))}
+      </ul>
     </div>
   );
 };
