@@ -51,6 +51,16 @@ const promiseRequest = url => {
     const beautyDetails = getDetails($, 'beaute');
     const kitchen = getDetailsKitchen($);
 
+    const ideal = $('.he-ideale')
+      .children('ul')
+      .children('li')
+      .map(function(i, element) {
+        return $(element)
+          .text()
+          .trim();
+      })
+      .get();
+
     const precautions = $('.left.value')
       .children('p')
       .map(function(i, element) {
@@ -84,7 +94,8 @@ const promiseRequest = url => {
       beauty: { ...beautyDetails },
       kitchen: { ...kitchen },
       precautions,
-      recipes: { recipesTitle, recipesContent }
+      recipes: { recipesTitle, recipesContent },
+      ideal: { ...ideal }
     };
     return result;
   });
