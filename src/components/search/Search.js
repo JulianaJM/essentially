@@ -91,7 +91,7 @@ const Search = ({ options, match }) => {
       {searchResults.length === 0 ? (
         <div className="search-form">
           <div className="categories">
-            <h2>Je recherche une huile essentielle </h2>
+            <h2>Je recherche une huile essentielle :</h2>
             <CategoryList
               items={getCategories()}
               onChange={handleCategoryChange}
