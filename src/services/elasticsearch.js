@@ -1,23 +1,40 @@
-const client = require('../datasource/connection');
+import client from '../datasource/connection';
+import log from 'log';
 
 // const healthCheck = () => client.cluster.health();
 
-const search = () => {
-  searchRequest()
+export const search = term => {
+  searchRequest(term)
     .then(res => {
-      // console.log('heheheeh');
-      // console.log(res.hits.hits);
+      return res.hits.hits;
     })
     .catch(err => {
-      // console.log('hihihihih', err);
+      log.error('error during search', err);
     });
 };
 
-const searchRequest = () => {
+const searchRequest = term => {
   const payload = {
     query: {
-      match: {
-        oil: 'copahu'
+      multi_match: {
+        fields: [
+          'name',
+          'ideal',
+          'health.synergies',
+          'mood.synergies',
+          'beauty.synergies',
+          'health.properties',
+          'mood.properties',
+          'beauty.properties',
+          'health.indicationsDesc',
+          'mood.indicationsDesc',
+          'beauty.indicationsDesc',
+          'health.indications',
+          'mood.indications',
+          'beauty.indications'
+        ],
+        query: term,
+        fuzziness: 'AUTO'
       }
     }
   };
@@ -26,5 +43,3 @@ const searchRequest = () => {
     body: payload
   });
 };
-
-search();

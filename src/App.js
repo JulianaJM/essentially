@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { Switch, Route } from 'react-router-dom';
-import oils from './resources/oils.json';
-import oilsDetails from './resources/oils-details.json';
-import symptoms from './resources/symptoms.json';
 import Header from './components/header/Header';
 import Search from './components/search/Search';
 import About from './components/about/About';
@@ -19,14 +16,14 @@ class App extends Component {
   };
 
   componentDidMount() {
-    const data = this.loadData();
-    this.setState({ db: data });
+    // const data = this.loadData();
+    // this.setState({ db: data });
   }
 
-  loadData = () => ({ oils, oilsDetails, symptoms });
+  // loadData = () => ({ oils, oilsDetails, symptoms });
 
   render() {
-    const { db } = this.state;
+    // const { db } = this.state;
     return (
       <div className="app">
         <Header />
@@ -34,15 +31,8 @@ class App extends Component {
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route
-              exact
-              path="/"
-              render={props => <Search {...props} options={db} />}
-            />
-            <Route
-              path="/:name"
-              render={props => <OilDetails {...props} details={db} />}
-            />
+            <Route exact path="/" render={props => <Search {...props} />} />
+            <Route path="/:name" render={props => <OilDetails {...props} />} />
           </Switch>
         </div>
       </div>
