@@ -282,6 +282,15 @@
           }
         }
       },
+      "description": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
       "precautions": {
         "type": "text",
         "fields": {
