@@ -6,9 +6,10 @@ import './oils.scss';
 
 const OilList = ({ oils }) => (
   <div className="oils">
-    {oils.map(oil => (
-      <OilResult key={oil.name} oil={oil} />
-    ))}
+    {oils.map(({ _source }) => {
+      const oil = { ..._source };
+      return <OilResult key={oil.name} oil={oil} />;
+    })}
   </div>
 );
 

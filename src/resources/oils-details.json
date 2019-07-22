@@ -16,9 +16,7 @@
         "Relaxante"
       ],
       "indicationsDesc": "Elle est traditionnellement utilisée pour améliorer les situations suivantes :",
-      "indications": [
-        "Peau abîmée, peau sèche, vergetures : diluer dans une huile végétale et appliquer sur la zone à traiter."
-      ],
+      "indications": ["Peau abîmée", "peau sèche", "vergetures"],
       "synergies": [
         "Avec les huiles essentielle de lavande, de mandarine, de petitgrain pour apaiser."
       ]
@@ -7801,14 +7799,33 @@
       "propertiesDesc": "En santé, l'huile essentielle de manuka est reconnue pour ces propriétés :",
       "properties": [
         "Puissante antiseptique atmosphérique",
-        "Antibactérienne, antivirale, antifongique très puissante (20 fois plus que l'huile de Tea tree sur certaines bactéries et germes)",
+        "Antibactérienne",
+        "antivirale",
+        "antifongique très puissante (20 fois plus que l'huile de Tea tree sur certaines bactéries et germes)",
         "Riche en actifs anti-inflammatoires et cicatrisants",
         "Anti-histaminique",
         "Expectorante"
       ],
       "indicationsDesc": "Elle est traditionnellement utilisée pour améliorer les situations suivantes :",
       "indications": [
-        "Infection cutanée, abcès, teigne, ulcère, ampoule, verrue, herpès, mycoses, plaie superficielle, coup de soleil, échauffement de la peau, brûlure légère, impétigo, piqûres d'insectes, eczéma, ulcère variqueux, escarres, zona",
+        "Infection cutanée",
+        "abcès",
+        "teigne",
+        "ulcère",
+        "ampoule",
+        "verrue",
+        "herpès",
+        "mycoses",
+        "plaie superficielle",
+        "coup de soleil",
+        "échauffement de la peau",
+        "brûlure légère",
+        "impétigo",
+        "piqûres d'insectes",
+        "eczéma",
+        "ulcère variqueux",
+        "escarres",
+        "zona",
         "Soins de la bouche : gingivite, amygdalite, ulcère buccal, mauvaise haleine",
         "Piqûres d'insectes, allergies",
         "Sphère respiratoire : bronchites, catarrhes, rhumes, grippes, sinusites, toux",

@@ -1,47 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import OilElement from './OilElement';
+import { searchByName } from '../../services/elasticsearch';
 
 import './oil-details.scss';
 
-const OilDetails = ({ details, match }) => {
-  const {
-    params: { name }
-  } = match;
-  const { oils, oilsDetails } = details;
-  const oil = oils.find(item => {
-    const currentName = item.name;
-    return currentName.match(name);
-  });
+const OilDetails = ({ match }) => {
+  const [oil, setOil] = useState(null);
 
-  const oilDetails = oilsDetails.find(item => {
-    const currentName = item.oil.toLowerCase();
-    return currentName.match(name.toLowerCase());
-  });
-  const { health = {}, mood = {}, beauty = {}, precautions } = oilDetails;
+  useEffect(() => {
+    const { params } = match;
+    searchByName(params.name)
+      .then(res => {
+        setOil(res.hits.hits[0]._source);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, [oil]);
+
   return (
-    <div className="oil-details">
-      <img src={oil.picture} alt={oil.name} />
-      <h3>{oil.name}</h3>
-      <p>{oil.description}</p>
-
-      {health.propertiesDesc && <h3>En Santé</h3>}
-      <OilElement category={health} />
-
-      {mood.propertiesDesc && <h3>En bien-être</h3>}
-      <OilElement category={mood} />
-
-      {beauty.propertiesDesc && <h3>En beauté</h3>}
-      <OilElement category={beauty} />
-
-      {precautions.length > 0 && <strong>Précautions</strong>}
-      <ul>
-        {precautions.map((precaution, i) => (
-          <li key={i}>{precaution}</li>
-        ))}
-      </ul>
-    </div>
+    oil && (
+      <div className="oil-details">
+        {/*       <img src={picture} alt={name} />
+         */}{' '}
+        <h3>{oil.name}</h3>
+        <p>{oil.description}</p>
+        {oil.health.propertiesDesc && <h3>En Santé</h3>}
+        <OilElement category={oil.health} />
+        {oil.mood.propertiesDesc && <h3>En bien-être</h3>}
+        <OilElement category={oil.mood} />
+        {oil.beauty.propertiesDesc && <h3>En beauté</h3>}
+        <OilElement category={oil.beauty} />
+        {oil.precautions.length > 0 && <strong>Précautions</strong>}
+        <ul>
+          {oil.precautions.map((precaution, i) => (
+            <li key={i}>{precaution}</li>
+          ))}
+        </ul>
+      </div>
+    )
   );
 };
 

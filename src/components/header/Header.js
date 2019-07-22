@@ -17,10 +17,12 @@ class Header extends PureComponent {
     }
   }
   handleChange = e => {
-    // const value = e.target.value;
-    if (e.keyCode === 13) {
-      // TODO
-    }
+    e.persist();
+    setTimeout(() => {
+      const { history } = this.props;
+      const { value } = e.target;
+      history.push(`?value=${value}`);
+    }, 500);
   };
 
   handleScroll(ref) {

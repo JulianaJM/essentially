@@ -1,16 +1,9 @@
 import client from '../datasource/connection';
-import log from 'log';
 
 // const healthCheck = () => client.cluster.health();
 
 export const search = term => {
-  searchRequest(term)
-    .then(res => {
-      return res.hits.hits;
-    })
-    .catch(err => {
-      log.error('error during search', err);
-    });
+  return searchRequest(term);
 };
 
 const searchRequest = term => {
@@ -41,5 +34,18 @@ const searchRequest = term => {
   return client.search({
     index: 'oils',
     body: payload
+  });
+};
+
+export const searchByName = name => {
+  return client.search({
+    index: 'oils',
+    body: {
+      query: {
+        match_phrase: {
+          name
+        }
+      }
+    }
   });
 };
