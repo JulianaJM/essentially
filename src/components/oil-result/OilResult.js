@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const OilResult = ({ oil }) => {
+  const { name, image, description } = oil;
   return (
     <div className="oils_card">
-      <Link to={`/${oil.name}`}>
-        <img src={oil.picture} alt={oil.name} />
-        <h3>{oil.name}</h3>
-        <p className="truncate">{oil.description}</p>
+      <Link to={`/${name}`}>
+        <img src={image} alt={name} />
+        <h3>{name}</h3>
+        <p className="truncate">{description}</p>
       </Link>
     </div>
   );

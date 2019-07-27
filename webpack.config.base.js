@@ -1,5 +1,6 @@
 const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -29,12 +30,23 @@ module.exports = {
             loader: 'url-loader'
           }
         ]
+      },
+      {
+        test: /\.(png|svg|jp(e*)g|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name]-[hash:8].[ext]',
+            outputPath: 'assets/images'
+          }
+        }
       }
     ]
   },
   plugins: [
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
+    }),
+    new CopyWebpackPlugin([{ from: 'src/assets/images', to: 'assets/images' }])
   ]
 };

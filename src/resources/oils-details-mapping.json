@@ -188,6 +188,15 @@
           }
         }
       },
+      "image": {
+        "type": "text",
+        "fields": {
+          "raw": {
+            "type": "text",
+            "index": false
+          }
+        }
+      },
       "description": {
         "type": "text",
         "fields": {

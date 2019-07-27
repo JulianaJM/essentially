@@ -2,12 +2,14 @@ import client from '../datasource/connection';
 
 // const healthCheck = () => client.cluster.health();
 
+const SIZE = 200;
 export const search = term => {
   return searchRequest(term);
 };
 
 const searchRequest = term => {
   const payload = {
+    size: SIZE,
     query: {
       multi_match: {
         fields: [
@@ -41,6 +43,7 @@ export const searchByName = name => {
   return client.search({
     index: 'oils',
     body: {
+      size: SIZE,
       query: {
         match_phrase: {
           name
