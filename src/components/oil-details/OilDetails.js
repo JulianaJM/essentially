@@ -18,13 +18,12 @@ const OilDetails = ({ match }) => {
       .catch(err => {
         console.log(err);
       });
-  }, [oil]);
+  }, [match.params.name]);
 
   return (
     oil && (
       <div className="oil-details">
-        {/*       <img src={picture} alt={name} />
-         */}{' '}
+        <img src={oil.image} alt={oil.name} />
         <h3>{oil.name}</h3>
         <p>{oil.description}</p>
         {oil.health.propertiesDesc && <h3>En Santé</h3>}
