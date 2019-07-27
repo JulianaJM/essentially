@@ -3,15 +3,29 @@ import client from '../datasource/connection';
 // const healthCheck = () => client.cluster.health();
 
 const SIZE = 200;
+const INDEX = 'oils';
+
 export const search = term => {
   return searchRequest(term);
 };
 
-const searchRequest = term => {
+const searchRequest = terms => {
+  let queryString = '';
+  terms.forEach((t, i) => {
+    if (t) {
+      if (i === terms.length - 1) {
+        queryString += `(${t}~)`;
+      } else {
+        queryString += `(${t}~) OR `;
+      }
+    }
+  });
+
   const payload = {
     size: SIZE,
     query: {
-      multi_match: {
+      query_string: {
+        query: queryString,
         fields: [
           'name',
           'ideal',
@@ -27,21 +41,19 @@ const searchRequest = term => {
           'health.indications',
           'mood.indications',
           'beauty.indications'
-        ],
-        query: term,
-        fuzziness: 'AUTO'
+        ]
       }
     }
   };
   return client.search({
-    index: 'oils',
+    index: INDEX,
     body: payload
   });
 };
 
 export const searchByName = name => {
   return client.search({
-    index: 'oils',
+    index: INDEX,
     body: {
       size: SIZE,
       query: {

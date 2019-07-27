@@ -21,6 +21,11 @@ cd src/resources (or archives)
 - Import json file (remove \ of \_bulk)
   curl -XPOST "localhost:9200/\_bulk?pretty" -H 'Content-Type: application/x-ndjson' --data-binary @oils-details_elastic.json
 
+  - Handle cors
+    go to dir elasticsearch-7.1.1/config/elasticsearch.yml
+    http.cors.allow-origin: "\*" (remove \ of \*)
+    http.cors.enabled: true
+
 #### delete data
 
 curl -X DELETE "localhost:9200/index_name"
@@ -54,6 +59,12 @@ https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzzy-match-query.ht
 https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html
 
 https://medium.com/a-beginners-guide-for-webpack-2/copy-all-images-files-to-a-folder-using-copy-webpack-plugin-7c8cf2de7676
+
+https://stackoverflow.com/questions/33225204/fuzzy-searching-with-query-string-elasticsearch
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_fuzziness
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html
 
 init eslintrc :
 npx eslint --init

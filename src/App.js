@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/Header';
-import Search from './components/search/Search';
+import SearchResults from './components/search/SearchResults';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import OilDetails from './components/oil-details/OilDetails';
@@ -31,7 +31,11 @@ class App extends Component {
           <Switch>
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
-            <Route exact path="/" render={props => <Search {...props} />} />
+            <Route
+              exact
+              path="/"
+              render={props => <SearchResults {...props} />}
+            />
             <Route path="/:name" render={props => <OilDetails {...props} />} />
           </Switch>
         </div>

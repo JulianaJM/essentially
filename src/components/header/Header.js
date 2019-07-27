@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Tags from '../search/tags/Tags';
 
 import './header.scss';
 class Header extends PureComponent {
@@ -10,19 +11,18 @@ class Header extends PureComponent {
   }
 
   componentDidMount() {
+    const { history } = this.props;
+
     if (this.headerRef) {
       window.addEventListener('scroll', () =>
         this.handleScroll(this.headerRef.current)
       );
     }
+    history.push('');
   }
-  handleChange = e => {
-    e.persist();
-    setTimeout(() => {
-      const { history } = this.props;
-      const { value } = e.target;
-      history.push(`?value=${value}`);
-    }, 500);
+  handleChange = queryParams => {
+    const { history } = this.props;
+    history.push(`?value=${queryParams}`);
   };
 
   handleScroll(ref) {
@@ -46,12 +46,7 @@ class Header extends PureComponent {
         </div>
         <div className="navbar-right">
           <div className="navbar-search">
-            <input
-              type="text"
-              placeholder="Je recherche une huile.."
-              onKeyUp={this.handleChange}
-            />
-            <i className="fa fa-search" />
+            <Tags onUpdate={this.handleChange} />
           </div>
           <div className="navbar-links">
             <NavLink to="/">Accueil</NavLink>
