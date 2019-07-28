@@ -30,17 +30,17 @@ cd src/resources (or archives)
 
 curl -X DELETE "localhost:9200/index_name"
 
-http://localhost:9200/oilsdetails/_search?size=200
+http://localhost:9200/oils/_search?size=200
 
-http://localhost:9200/oilsdetails/_search?q=Copahu&pretty
+http://localhost:9200/oils/_search?q=Copahu&pretty
 
-http://localhost:9200/oilsdetails/_search?q=oil=copahu&pretty
+http://localhost:9200/oils/_search?q=oil=copahu&pretty
 
-http://localhost:9200/oilsdetails/_search?q=properties:peau sèche&pretty
+http://localhost:9200/oils/_search?q=properties:peau sèche&pretty
 
-http://localhost:9200/oilsdetails/_search?q=health.properties:Antiseptique%20AND%20health.synergies:lavande&pretty
+http://localhost:9200/oils/_search?q=health.properties:Antiseptique%20AND%20health.synergies:lavande&pretty
 
-http://localhost:9200/oilsdetails/_search?q=health.properties:Antiseptique%20AND%20-health.synergies:lavande&pretty
+http://localhost:9200/oils/_search?q=health.properties:Antiseptique%20AND%20-health.synergies:lavande&pretty
 
 ### utils
 
@@ -65,6 +65,8 @@ https://stackoverflow.com/questions/33225204/fuzzy-searching-with-query-string-e
 https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#_fuzziness
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html
+
+https://codepen.io/zebapy/pen/mJVrwg
 
 init eslintrc :
 npx eslint --init
