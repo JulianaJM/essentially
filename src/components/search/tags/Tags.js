@@ -7,9 +7,6 @@ import PropTypes from 'prop-types';
 
 import './tags.scss';
 
-/* const ENTER_KEY = 13;
-const COMMA_KEY = 188;
-const BACKSPACE_KEY = 8; */
 const animatedComponents = makeAnimated();
 
 class Tags extends Component {
@@ -43,10 +40,9 @@ class Tags extends Component {
         components={animatedComponents}
         name="symptoms"
         options={options}
-        className="basic-multi-select"
+        className="select-container"
         classNamePrefix="select"
         onChange={this.handleChange}
-        // onInputChange={this.handleKeyDown}
         cacheOptions={true}
       />
     );

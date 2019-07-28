@@ -16,21 +16,34 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            // hack pour les images en background
+            options: {
+              modules: true,
+              importLoaders: 1,
+              localIdentName: '[name]_[local]_[hash:base64]',
+              sourceMap: true
+            }
+          }
+        ]
       },
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
-      {
+      /*  { // FIXME ne fonctionne pas avec les images en background
         test: /\.(jp(e*)g|png)$/,
         use: [
           {
             loader: 'url-loader'
           }
         ]
-      },
+      }, */
       {
         test: /\.(png|svg|jp(e*)g|gif)$/,
         use: {

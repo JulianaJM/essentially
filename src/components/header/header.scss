@@ -1,93 +1,40 @@
 .header {
-  overflow: hidden;
-  padding: 5rem 0.6rem;
-  transition: 0.4s;
-  position: fixed;
   top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
   width: 100%;
-  z-index: 1;
+  height: 28.125rem; //450px
+  background: url('../../assets/images/essential-oils.jpg') 0 0 no-repeat;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  transition: 0.4s;
 
-  .navbar-title {
-    font-size: 1.5rem;
+  &__title {
+    top: 0;
+    left: 0;
+    position: absolute;
+
     h1 {
-      font-family: cursive;
-      color: #971048;
-      font-variant: small-caps;
-      font-style: italic;
-    }
-    width: 55%;
-    background: #fff;
-    border-radius: 0 0 11.875rem 0;
-    padding-top: 6.25rem;
-    padding-left: 3.125rem;
-    margin-left: -3.125rem;
-    margin-top: -6.25rem;
-    z-index: 2;
-  }
-  .navbar-search {
-    margin-bottom: 1.2rem;
-    z-index: 2;
-
-    input {
-      width: 60%;
+      display: none;
     }
   }
 
-  .navbar-links {
-    margin-bottom: 1.875rem;
-    width: 100%;
-  }
-
-  .navbar-right {
-    display: flex;
-    flex-direction: column;
-    & a {
-      color: #fff;
-      padding: 0.75rem;
-      text-decoration: none;
-      font-size: 1.125rem;
-      line-height: 1.5625rem;
-      border-radius: 0.25rem;
-      &.active {
-        background-color: #333;
-        color: #fff;
-      }
-    }
-  }
-
-  .fontSizeDown {
-    font-size: 1rem;
+  .search-bar {
+    position: absolute;
+    width: 60%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
-.paddingScrollDown {
-  padding: 1.9rem 0.6rem;
+.heightScrollDown {
+  height: 6.25rem; //100px;
 }
 
-@media screen and (min-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .navbar-right {
-      flex-direction: row;
-      width: 70%;
-      position: absolute;
-      right: 0;
-      background-color: #971048;
-      padding-top: 6.25rem;
-      padding-left: 3.125rem;
-      margin-left: -3.125rem;
-      margin-top: -3.5rem;
-      align-items: center;
-    }
-    .navbar-search {
-      width: 100%;
-      //display: flex;
-      justify-content: center;
-
-      input {
-        width: 60%;
-      }
-    }
-  }
+.logoSizeDown {
+  width: 15%;
+  position: initial;
 }

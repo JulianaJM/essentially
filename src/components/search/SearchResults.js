@@ -38,7 +38,9 @@ const SearchResults = ({ location }) => {
 
   return (
     <div className="search">
-      <div className="search-result">
+      <div className="search__intro"> </div>
+
+      <div className="search__result">
         <Suspense fallback={[]}>
           <OilList oils={searchResults} />
         </Suspense>

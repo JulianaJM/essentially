@@ -27,33 +27,32 @@ class Header extends PureComponent {
 
   handleScroll(ref) {
     if (
-      document.body.scrollTop > 80 ||
-      document.documentElement.scrollTop > 80
+      document.body.scrollTop > 450 ||
+      document.documentElement.scrollTop > 450
     ) {
-      ref.classList.add('paddingScrollDown');
-      ref.firstChild.classList.add('fontSizeDown');
+      ref.classList.add('heightScrollDown');
+      ref.firstChild.classList.add('logoSizeDown');
     } else {
-      ref.classList.remove('paddingScrollDown');
-      ref.firstChild.classList.remove('fontSizeDown');
+      ref.classList.remove('heightScrollDown');
+      ref.firstChild.classList.remove('logoSizeDown');
     }
   }
 
   render() {
     return (
       <div className="header" ref={this.headerRef}>
-        <div className="navbar-title">
+        <div className="header__title">
           <h1 id="logo">Essentially</h1>
+          <img src="/assets/images/logo.png" />
         </div>
-        <div className="navbar-right">
-          <div className="navbar-search">
-            <Tags onUpdate={this.handleChange} />
-          </div>
-          <div className="navbar-links">
-            <NavLink to="/">Accueil</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-            <NavLink to="/about">A propos</NavLink>
-          </div>
+        <div className="search-bar">
+          <Tags onUpdate={this.handleChange} />
         </div>
+        {/* <div className="navbar-links">
+          <NavLink to="/">Accueil</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/about">A propos</NavLink>
+        </div> */}
       </div>
     );
   }
