@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 const OilResult = ({ oil }) => {
   const { name, image, description } = oil;
   return (
-    <div className="oils_card">
-      <Link to={`/${name}`}>
-        <img src={image} alt={name} />
-        <h3>{name}</h3>
-        <p className="truncate">{description}</p>
-      </Link>
-    </div>
+    <Link to={`/${name}`}>
+      <div className="oils__result">
+        <div className="icon">
+          <img src={image} alt={name} />
+        </div>
+        <div>
+          <h2>{name}</h2>
+          <div>
+            <p>{description}</p>
+          </div>
+        </div>
+      </div>
+    </Link>
   );
 };
 

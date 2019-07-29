@@ -254,7 +254,7 @@ export default {
     { label: 'Insectifuge', value: 'Insectifuge' },
     { label: 'Stimulante apéritive', value: 'Stimulante apéritive' },
     { label: 'Équilibrante immunitaire', value: 'Équilibrante immunitaire' },
-    { label: 'Antifatigue', value: 'Antifatigue' },
+    { label: 'Fatigue', value: 'Fatigue' },
     { label: 'Purificatrice rénale', value: 'Purificatrice rénale' },
     { label: 'Régulatrice hydrique', value: 'Régulatrice hydrique' },
     { label: 'Hémostatique', value: 'Hémostatique' },
@@ -321,7 +321,7 @@ export default {
     { label: 'Déstressante', value: 'Déstressante' },
     { label: 'Sédative', value: 'Sédative' },
     { label: 'Myorelaxante', value: 'Myorelaxante' },
-    { label: 'Mucolipolytique', value: 'Mucolipolytique' },
+    { label: 'Mucolytique', value: 'Mucolytique' },
     {
       label: 'Anti-infectieuse urinaire et génitale',
       value: 'Anti-infectieuse urinaire et génitale'
@@ -353,7 +353,6 @@ export default {
     { label: 'Relaxante nerveuse', value: 'Relaxante nerveuse' },
     { label: 'Stimulante cognitive', value: 'Stimulante cognitive' },
     { label: 'Tonifiante', value: 'Tonifiante' },
-    { label: 'Dynamisante et stimulante', value: 'Dynamisante et stimulante' },
     {
       label: 'Régulateur du système nerveux',
       value: 'Régulateur du système nerveux'
@@ -386,20 +385,12 @@ export default {
     { label: 'Tonique et oxygénante', value: 'Tonique et oxygénante' },
     { label: 'Revitalisante', value: 'Revitalisante' },
     {
-      label: 'Apaisante en cas de stress, surmenage et nervosité',
-      value: 'Apaisante en cas de stress, surmenage et nervosité'
-    },
-    {
       label: 'Équilibrante sexuelle et hormonale',
       value: 'Équilibrante sexuelle et hormonale'
     },
     { label: 'Fortifiante', value: 'Fortifiante' },
     { label: 'Immuno - stimulante', value: 'Immuno - stimulante' },
     { label: 'Antidépressive', value: 'Antidépressive' },
-    {
-      label: 'Antifatigue psychique et physique',
-      value: 'Antifatigue psychique et physique'
-    },
     { label: 'Équilibrante nerveuse', value: 'Équilibrante nerveuse' },
     { label: 'Stimulante sexuelle', value: 'Stimulante sexuelle' },
     { label: 'Stimulante', value: 'Stimulante' },
@@ -409,7 +400,6 @@ export default {
     { label: 'Apaisante et relaxante', value: 'Apaisante et relaxante' },
     { label: 'Assainissante', value: 'Assainissante' },
     { label: 'Réconfortante', value: 'Réconfortante' },
-    { label: 'Augmente la vigilance', value: 'Augmente la vigilance' },
     {
       label: 'Recentre les énergies vitales',
       value: 'Recentre les énergies vitales'
@@ -419,7 +409,6 @@ export default {
     { label: 'Préparatrice du sommeil', value: 'Préparatrice du sommeil' },
     { label: 'Euphorisante', value: 'Euphorisante' },
     { label: 'Harmonisante nerveuse', value: 'Harmonisante nerveuse' },
-    { label: 'Antifatigue', value: 'Antifatigue' },
     { label: 'Tonifiante du psychisme', value: 'Tonifiante du psychisme' },
     { label: 'Antistress', value: 'Antistress' },
     { label: 'Calmante psychique', value: 'Calmante psychique' },

@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import Select from 'react-select/creatable';
-import makeAnimated from 'react-select/animated';
 import suggestions from '../../../resources/suggestions';
 import _isEqual from 'lodash/isequal';
 import PropTypes from 'prop-types';
 
 import './tags.scss';
 
-const animatedComponents = makeAnimated();
+const components = {
+  DropdownIndicator: null
+};
 
 class Tags extends Component {
   constructor(props) {
     super(props);
-    this.state = { tags: [] };
+    this.state = { tags: [], currentValue: '' };
+
+    this.options = suggestions.options.sort((a, b) => {
+      return a.label > b.label ? 1 : -1;
+    });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -23,26 +28,35 @@ class Tags extends Component {
 
   handleChange = options => {
     const values = options && options.map(option => option.value);
+    // const currentSearch = options && options.slice(-1).pop();
     this.setState({
-      tags: values || []
+      tags: values || [],
+      currentValue: ''
+    });
+  };
+
+  handleInputChange = value => {
+    this.setState({
+      currentValue: value
     });
   };
 
   render() {
-    const { options } = suggestions;
-    options.sort((a, b) => {
-      return a.label > b.label ? 1 : -1;
-    });
-
+    const { currentValue } = this.state;
     return (
       <Select
         isMulti
-        components={animatedComponents}
+        components={components}
+        placeholder="Type something and press enter..."
+        formatCreateLabel={userInput => `Search for ${userInput}`}
+        menuIsOpen={currentValue}
         name="symptoms"
-        options={options}
-        className="select-container"
+        options={this.options}
+        className="select-container paddingSearchBar"
         classNamePrefix="select"
         onChange={this.handleChange}
+        onInputChange={this.handleInputChange}
+        onKeyDown={this.handleKeyDown}
         cacheOptions={true}
       />
     );

@@ -1,11 +1,12 @@
 .select-container {
   .select {
     &__control {
-      border-radius: 50px;
+      border-radius: 1.25rem; //20px
+      padding: 0.3rem;
     }
     &__multi-value {
       border-radius: 50px;
-      background-color: brown;
+      background-color: grey;
     }
   }
 }

@@ -1,18 +1,40 @@
 .oils {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(15rem, auto);
-  &_card {
-    a {
-      text-decoration: none;
-      color: inherit;
+  &__result {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    border: 1px solid #ccc;
+    width: 70%;
+    margin: 0 auto;
+
+    h2 {
+      color: rgb(40, 140, 252);
     }
-    margin-bottom: 0.5rem;
+
+    .icon {
+      margin: 0 15px 0 0;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 150px;
+        height: 100px;
+      }
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    div > div p {
+      color: rgb(192, 199, 212);
+      margin-top: 10px;
+    }
   }
-  .truncate {
-    width: 25rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+  a {
+    text-decoration: none;
+    color: rgb(36, 138, 250);
   }
 }

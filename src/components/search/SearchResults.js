@@ -8,8 +8,6 @@ import log from 'log';
 import './search.scss';
 
 const SearchResults = ({ location }) => {
-  /* const [symptomsByCategory, setSymptomsByCategory] = useState([]);
-  const [selectedSymptoms, setSeletedSymptoms] = useState([]); */
   const [searchResults, setSearchResults] = useState([]);
 
   const getSearchValues = () => {
