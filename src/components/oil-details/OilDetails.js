@@ -24,20 +24,22 @@ const OilDetails = ({ match }) => {
     oil && (
       <div className="oil-details">
         <img src={oil.image} alt={oil.name} />
-        <h3>{oil.name}</h3>
-        <p>{oil.description}</p>
-        {oil.health.propertiesDesc && <h3>En Santé</h3>}
-        <OilElement category={oil.health} />
-        {oil.mood.propertiesDesc && <h3>En bien-être</h3>}
-        <OilElement category={oil.mood} />
-        {oil.beauty.propertiesDesc && <h3>En beauté</h3>}
-        <OilElement category={oil.beauty} />
-        {oil.precautions.length > 0 && <strong>Précautions</strong>}
-        <ul>
-          {oil.precautions.map((precaution, i) => (
-            <li key={i}>{precaution}</li>
-          ))}
-        </ul>
+        <div className="oil-details__content">
+          <h3>{oil.name}</h3>
+          <p>{oil.description}</p>
+          {oil.health.propertiesDesc && <h3>En Santé</h3>}
+          <OilElement category={oil.health} />
+          {oil.mood.propertiesDesc && <h3>En bien-être</h3>}
+          <OilElement category={oil.mood} />
+          {oil.beauty.propertiesDesc && <h3>En beauté</h3>}
+          <OilElement category={oil.beauty} />
+          {oil.precautions.length > 0 && <strong>Précautions</strong>}
+          <ul>
+            {oil.precautions.map((precaution, i) => (
+              <li key={i}>{precaution}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     )
   );

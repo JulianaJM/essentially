@@ -31,6 +31,7 @@ const getLinks = (urls, paterns) => {
     })
   ).then(response => {
     getDataFromLinks(response[0]).then(response => {
+      console.log('yo');
       saveData(response);
     });
   });
@@ -58,6 +59,23 @@ const promiseRequest = url => {
         return $(element)
           .text()
           .trim();
+      })
+      .get();
+
+    const utilisations = $('#product-pictos')
+      .children('tbody')
+      .children('tr')
+      .children('td')
+      .map(function(i, element) {
+        return (
+          $(element)
+            .children('img')
+            .attr('alt') +
+          ' ' +
+          $(element)
+            .children('.ponderation')
+            .text()
+        );
       })
       .get();
 
@@ -95,8 +113,12 @@ const promiseRequest = url => {
       kitchen: { ...kitchen },
       precautions,
       recipes: { recipesTitle, recipesContent },
-      ideal: { ...ideal }
+      ideal,
+      utilisations
     };
+
+    //console.log(result);
+
     return result;
   });
 };
@@ -209,8 +231,8 @@ const getDataFromLinks = links => {
 };
 
 const saveData = data => {
-  //console.log(data);
-  fs.writeFileSync('../src/resources/oils-details.json', JSON.stringify(data));
+  console.log('saving');
+  fs.writeFileSync('../src/resources/oils-details1.json', JSON.stringify(data));
 };
 
 const links = [

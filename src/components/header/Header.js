@@ -22,6 +22,7 @@ class Header extends PureComponent {
   }
   handleChange = queryParams => {
     const { history } = this.props;
+    history.push('');
     history.push(`?value=${queryParams}`);
   };
 

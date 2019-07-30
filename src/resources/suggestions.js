@@ -59,10 +59,6 @@ export default {
     { label: 'Hypertensive', value: 'Hypertensive' },
     { label: 'Hypocholestérolémiante', value: 'Hypocholestérolémiante' },
     { label: 'Stimulante circulatoire', value: 'Stimulante circulatoire' },
-    {
-      label: 'Anti-infectieuse (antibactérienne et antivirale)',
-      value: 'Anti-infectieuse (antibactérienne et antivirale)'
-    },
     { label: 'Antihémorragique', value: 'Antihémorragique' },
     { label: 'Neurotonique', value: 'Neurotonique' },
     { label: 'Stimulante veineuse', value: 'Stimulante veineuse' },
@@ -128,7 +124,6 @@ export default {
     { label: 'Lipolytique', value: 'Lipolytique' },
     { label: 'Calmante nerveuse', value: 'Calmante nerveuse' },
     { label: 'Tonique digestive', value: 'Tonique digestive' },
-    { label: 'Anti-infectieuse', value: 'Anti-infectieuse' },
     { label: 'Antinauséeuse', value: 'Antinauséeuse' },
     { label: 'Rafraîchissante', value: 'Rafraîchissante' },
     { label: 'Régulatrice hépatique', value: 'Régulatrice hépatique' },

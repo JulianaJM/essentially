@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState, useEffect } from 'react';
+import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 const OilList = lazy(() => import('../oil-result/OilList'));
@@ -9,6 +9,7 @@ import './search.scss';
 
 const SearchResults = ({ location }) => {
   const [searchResults, setSearchResults] = useState([]);
+  const resultsEl = useRef(null);
 
   const getSearchValues = () => {
     const queryParamString = location.search
@@ -27,6 +28,9 @@ const SearchResults = ({ location }) => {
       search(terms)
         .then(res => {
           setSearchResults(res.hits.hits);
+          if (resultsEl.current) {
+            resultsEl.current.focus();
+          }
         })
         .catch(err => {
           log.error('error during search', err);
@@ -38,7 +42,7 @@ const SearchResults = ({ location }) => {
     <div className="search">
       <div className="search__intro"> </div>
 
-      <div className="search__result">
+      <div className="search__result" ref={resultsEl} tabIndex={-1}>
         <Suspense fallback={[]}>
           <OilList oils={searchResults} />
         </Suspense>
