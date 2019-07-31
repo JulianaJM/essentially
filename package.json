@@ -1,0 +1,23 @@
+{
+  "name": "essentially",
+  "version": "1.0.0",
+  "description": "essentials",
+  "scripts": {
+    "start": " cd api && node ./server/www",
+    "postinstall": "yarn build-api && yarn build-front",
+    "build-api": "cd api && yarn install",
+    "build-front": "cd frontend && yarn install && yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JulianaJM/essentially.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JulianaJM/essentially/issues"
+  },
+  "homepage": "https://github.com/JulianaJM/essentially#readme",
+  "dependencies": {}
+}

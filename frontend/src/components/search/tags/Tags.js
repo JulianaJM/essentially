@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Select from 'react-select/creatable';
 import suggestions from '../../../resources/suggestions';
-import _isEqual from 'lodash/isequal';
+import { isEqual } from 'lodash';
 import PropTypes from 'prop-types';
 
 import './tags.scss';
@@ -21,7 +21,7 @@ class Tags extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (!_isEqual(prevState.tags, this.state.tags)) {
+    if (!isEqual(prevState.tags, this.state.tags)) {
       this.props.onUpdate(this.state.tags);
     }
   }
