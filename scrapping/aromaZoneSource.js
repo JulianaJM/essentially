@@ -1,6 +1,6 @@
-var request = require('request-promise');
-var cheerio = require('cheerio');
-var fs = require('fs');
+var request = require("request-promise");
+var cheerio = require("cheerio");
+var fs = require("fs");
 
 const getLinks = (urls, paterns) => {
   const links = [];
@@ -14,14 +14,14 @@ const getLinks = (urls, paterns) => {
       }).then($ => {
         $(`a[href*="${paterns[i]}"]`).each((index, el) => {
           let value = `https://www.aroma-zone.com${$(el)
-            .attr('href')
+            .attr("href")
             .trim()}`;
 
           links.push(value);
         });
         $(`a[href*="${paterns[1]}"]`).each((index, el) => {
           let value = `https://www.aroma-zone.com${$(el)
-            .attr('href')
+            .attr("href")
             .trim()}`;
           links.push(value);
         });
@@ -31,7 +31,6 @@ const getLinks = (urls, paterns) => {
     })
   ).then(response => {
     getDataFromLinks(response[0]).then(response => {
-      console.log('yo');
       saveData(response);
     });
   });
@@ -46,15 +45,15 @@ const promiseRequest = url => {
   };
   return request(options).then($ => {
     // title
-    const name = $('h1').text();
-    const healthDetails = getDetails($, 'sante');
-    const moodDetails = getDetails($, 'bien-etre');
-    const beautyDetails = getDetails($, 'beaute');
+    const name = $("h1").text();
+    const healthDetails = getDetails($, "sante");
+    const moodDetails = getDetails($, "bien-etre");
+    const beautyDetails = getDetails($, "beaute");
     const kitchen = getDetailsKitchen($);
 
-    const ideal = $('.he-ideale')
-      .children('ul')
-      .children('li')
+    const ideal = $(".he-ideale")
+      .children("ul")
+      .children("li")
       .map(function(i, element) {
         return $(element)
           .text()
@@ -62,34 +61,34 @@ const promiseRequest = url => {
       })
       .get();
 
-    const utilisations = $('#product-pictos')
-      .children('tbody')
-      .children('tr')
-      .children('td')
+    const utilisations = $("#product-pictos")
+      .children("tbody")
+      .children("tr")
+      .children("td")
       .map(function(i, element) {
         return (
           $(element)
-            .children('img')
-            .attr('alt') +
-          ' ' +
+            .children("img")
+            .attr("alt") +
+          " " +
           $(element)
-            .children('.ponderation')
+            .children(".ponderation")
             .text()
         );
       })
       .get();
 
-    const precautions = $('.left.value')
-      .children('p')
+    const precautions = $(".left.value")
+      .children("p")
       .map(function(i, element) {
         return $(element)
           .text()
-          .replace(/-/g, '')
+          .replace(/-/g, "")
           .trim();
       })
       .get();
 
-    const recipesTitle = $('.formule-title')
+    const recipesTitle = $(".formule-title")
       .map(function(i, element) {
         return $(element)
           .text()
@@ -97,7 +96,7 @@ const promiseRequest = url => {
       })
       .get();
 
-    const recipesContent = $('.formule-desc')
+    const recipesContent = $(".formule-desc")
       .map(function(i, element) {
         return $(element)
           .text()
@@ -125,15 +124,15 @@ const promiseRequest = url => {
 
 const getDetails = ($, filter) => {
   const propertiesDesc = $(`tr.row-propriete.${filter}`)
-    .children('.col-propriete')
-    .children('.propriete-desc.proprietes')
-    .children('label')
+    .children(".col-propriete")
+    .children(".propriete-desc.proprietes")
+    .children("label")
     .text();
   const properties = $(`tr.row-propriete.${filter}`)
-    .children('.col-propriete')
-    .children('.propriete-desc.proprietes')
-    .children('ul')
-    .children('li')
+    .children(".col-propriete")
+    .children(".propriete-desc.proprietes")
+    .children("ul")
+    .children("li")
     .map(function(i, element) {
       return $(element)
         .text()
@@ -142,10 +141,10 @@ const getDetails = ($, filter) => {
     .get();
 
   const synergies = $(`tr.row-propriete.${filter}`)
-    .children('.col-propriete')
-    .children('.propriete-desc.synergies')
-    .children('ul')
-    .children('li')
+    .children(".col-propriete")
+    .children(".propriete-desc.synergies")
+    .children("ul")
+    .children("li")
     .map(function(i, element) {
       return $(element)
         .text()
@@ -154,24 +153,24 @@ const getDetails = ($, filter) => {
     .get();
 
   let indicationsDesc = $(`tr.row-propriete.${filter}`)
-    .children('.col-propriete')
-    .children('.propriete-desc.indications')
+    .children(".col-propriete")
+    .children(".propriete-desc.indications")
     .first()
     .text();
 
   if (!indicationsDesc) {
     indicationsDesc = $(`tr.row-propriete.${filter}`)
-      .children('.col-propriete')
-      .children('.propriete-desc.utilisations')
+      .children(".col-propriete")
+      .children(".propriete-desc.utilisations")
       .first()
       .text();
   }
 
   let indications = $(`tr.row-propriete.${filter}`)
-    .children('.col-propriete')
-    .children('.propriete-desc.indications')
-    .children('ul')
-    .children('li')
+    .children(".col-propriete")
+    .children(".propriete-desc.indications")
+    .children("ul")
+    .children("li")
     .map(function(i, element) {
       return $(element)
         .text()
@@ -181,10 +180,10 @@ const getDetails = ($, filter) => {
 
   if (indications.length === 0) {
     indications = $(`tr.row-propriete.${filter}`)
-      .children('.col-propriete')
-      .children('.propriete-desc.utilisations')
-      .children('ul')
-      .children('li')
+      .children(".col-propriete")
+      .children(".propriete-desc.utilisations")
+      .children("ul")
+      .children("li")
       .map(function(i, element) {
         return $(element)
           .text()
@@ -203,17 +202,17 @@ const getDetails = ($, filter) => {
 };
 
 const getDetailsKitchen = $ => {
-  const kitchenDesc = $('tr.row-propriete.cuisine')
-    .children('.col-propriete')
-    .children('.propriete-desc')
+  const kitchenDesc = $("tr.row-propriete.cuisine")
+    .children(".col-propriete")
+    .children(".propriete-desc")
     .first()
     .text();
 
-  const details = $('tr.row-propriete.cuisine')
-    .children('.col-propriete')
-    .children('.propriete-desc')
-    .children('ul')
-    .children('li')
+  const details = $("tr.row-propriete.cuisine")
+    .children(".col-propriete")
+    .children(".propriete-desc")
+    .children("ul")
+    .children("li")
     .map(function(i, element) {
       return $(element)
         .text()
@@ -231,20 +230,23 @@ const getDataFromLinks = links => {
 };
 
 const saveData = data => {
-  console.log('saving');
-  fs.writeFileSync('../src/resources/oils-details1.json', JSON.stringify(data));
+  console.log("saving");
+  fs.writeFileSync(
+    "../frontend/src/resources/oils-details1.json",
+    JSON.stringify(data)
+  );
 };
 
 const links = [
-  'https://www.aroma-zone.com/info/guide-des-huiles-essentielles/tous'
+  "https://www.aroma-zone.com/info/guide-des-huiles-essentielles/tous"
 ];
 
 const filters = [
-  '/info/fiche-technique/huile-essentielle',
-  '/info/fiche-technique/baume'
+  "/info/fiche-technique/huile-essentielle",
+  "/info/fiche-technique/baume"
 ];
 getLinks(links, filters, err => {
   if (err) {
-    throw new Error('une erreur est survenue');
+    throw new Error("une erreur est survenue");
   }
 });

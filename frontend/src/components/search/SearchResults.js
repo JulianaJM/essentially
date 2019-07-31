@@ -2,7 +2,7 @@ import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 const OilList = lazy(() => import('../oil-result/OilList'));
-import { search } from '../../services/elasticsearch';
+import ElasticSearchService from '../../services/Elasticsearch';
 import log from 'log';
 
 import './search.scss';
@@ -25,9 +25,9 @@ const SearchResults = ({ location }) => {
   useEffect(() => {
     const terms = getSearchValues();
     if (terms.length > 0) {
-      search(terms)
+      ElasticSearchService.search(terms)
         .then(res => {
-          setSearchResults(res.hits.hits);
+          setSearchResults(res.data);
           if (resultsEl.current) {
             resultsEl.current.focus();
           }
@@ -52,7 +52,6 @@ const SearchResults = ({ location }) => {
 };
 
 SearchResults.propTypes = {
-  options: PropTypes.array.isRequired,
   match: PropTypes.object,
   location: PropTypes.object
 };

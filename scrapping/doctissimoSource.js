@@ -1,19 +1,19 @@
-var request = require('request-promise');
-var cheerio = require('cheerio');
-var fs = require('fs');
+var request = require("request-promise");
+var cheerio = require("cheerio");
+var fs = require("fs");
 
 const specialConditions = [
-  'menthe poivrée',
-  'ravintsare',
-  'tea tree',
-  'laurier noble',
-  'thym',
-  'camomille romaine',
-  'eucalyptus radié',
-  'gaulthérie',
-  'hélichryse italienne',
-  'lavande vraie',
-  'lavande aspic'
+  "menthe poivrée",
+  "ravintsare",
+  "tea tree",
+  "laurier noble",
+  "thym",
+  "camomille romaine",
+  "eucalyptus radié",
+  "gaulthérie",
+  "hélichryse italienne",
+  "lavande vraie",
+  "lavande aspic"
 ];
 
 const getLinks = (url, patern, next) => {
@@ -22,7 +22,7 @@ const getLinks = (url, patern, next) => {
       const links = [];
       const $ = cheerio.load(html);
       $(`a[href*="${patern}"]`).each((index, value) => {
-        var link = $(value).attr('href');
+        var link = $(value).attr("href");
         links.push(link);
       });
       next(null, links);
@@ -43,65 +43,65 @@ const promiseRequest = url => {
   };
   return request(options).then($ => {
     // title
-    const name = $('h1').text();
+    const name = $("h1").text();
 
     // description
-    const description = $('.row .doc-content')
-      .children('div.col-md-18')
-      .children('p')
+    const description = $(".row .doc-content")
+      .children("div.col-md-18")
+      .children("p")
       .first()
       .text();
 
     // img
-    const picture = $('.doc-right').prop('src');
+    const picture = $(".doc-right").prop("src");
 
     // symptoms
     if (
-      $('h3')
+      $("h3")
         .eq(0)
         .text()
-        .trim() === 'En santé'
+        .trim() === "En santé"
     ) {
       healthSymptoms.push(...getSymptoms($, 15));
       if (
-        $('h3')
+        $("h3")
           .eq(1)
           .text()
-          .trim() === 'En bien-être'
+          .trim() === "En bien-être"
       ) {
         moodSymptoms.push(...getSymptoms($, 16));
       }
 
       if (
-        $('h3')
+        $("h3")
           .eq(2)
           .text()
-          .trim() === 'En beauté'
+          .trim() === "En beauté"
       ) {
         beautySymptoms.push(...getSymptoms($, 17));
       }
     }
     if (
-      $('h3')
+      $("h3")
         .eq(0)
         .text()
-        .trim() === 'En bien-être'
+        .trim() === "En bien-être"
     ) {
       moodSymptoms.push(...getSymptoms($, 15));
       if (
-        $('h3')
+        $("h3")
           .eq(1)
           .text()
-          .trim() === 'En beauté'
+          .trim() === "En beauté"
       ) {
         beautySymptoms.push(...getSymptoms($, 16));
       }
     }
     if (
-      $('h3')
+      $("h3")
         .eq(0)
         .text()
-        .trim() === 'En beauté'
+        .trim() === "En beauté"
     ) {
       beautySymptoms.push(...getSymptoms($, 15));
     }
@@ -129,65 +129,65 @@ const promiseSymptomsRequest = url => {
   return request(options).then($ => {
     // symptoms
     if (
-      $('h3')
+      $("h3")
         .eq(0)
         .text()
-        .trim() === 'En santé'
+        .trim() === "En santé"
     ) {
       healthSymptoms.push(...getSymptoms($, 15));
       if (
-        $('h3')
+        $("h3")
           .eq(1)
           .text()
-          .trim() === 'En bien-être'
+          .trim() === "En bien-être"
       ) {
         moodSymptoms.push(...getSymptoms($, 16));
       }
 
       if (
-        $('h3')
+        $("h3")
           .eq(2)
           .text()
-          .trim() === 'En beauté'
+          .trim() === "En beauté"
       ) {
         beautySymptoms.push(...getSymptoms($, 17));
       }
     }
     if (
-      $('h3')
+      $("h3")
         .eq(0)
         .text()
-        .trim() === 'En bien-être'
+        .trim() === "En bien-être"
     ) {
       moodSymptoms.push(...getSymptoms($, 15));
       if (
-        $('h3')
+        $("h3")
           .eq(1)
           .text()
-          .trim() === 'En beauté'
+          .trim() === "En beauté"
       ) {
         beautySymptoms.push(...getSymptoms($, 16));
       }
     }
     if (
-      $('h3')
+      $("h3")
         .eq(0)
         .text()
-        .trim() === 'En beauté'
+        .trim() === "En beauté"
     ) {
       beautySymptoms.push(...getSymptoms($, 15));
     }
     return [
       {
-        category: 'Health',
+        category: "Health",
         list: [...new Set(healthSymptoms)]
       },
       {
-        category: 'Mood',
+        category: "Mood",
         list: [...new Set(moodSymptoms)]
       },
       {
-        category: 'Beauty',
+        category: "Beauty",
         list: [...new Set(beautySymptoms)]
       }
     ];
@@ -203,23 +203,23 @@ const getDataSymptomsFromLinks = links => {
 };
 
 const getSymptoms = ($, index) => {
-  const name = $('h1').text();
+  const name = $("h1").text();
   const filter = specialConditions.filter(f => name.includes(f));
   if (filter.length === 1) {
     index++;
   }
-  return $('ul')
+  return $("ul")
     .eq(index)
-    .children('li')
+    .children("li")
     .map(function(i, element) {
       return $(element)
         .text()
-        .replace(/\+/g, '')
+        .replace(/\+/g, "")
         .trim();
     })
     .get()
-    .join('/')
-    .split('/');
+    .join("/")
+    .split("/");
 };
 
 function getUnique(arr, comp) {
@@ -237,8 +237,11 @@ function getUnique(arr, comp) {
 }
 
 const saveData = data => {
-  const newData = getUnique(data, 'name');
-  fs.writeFileSync('../src/resources/oils.json', JSON.stringify(newData));
+  const newData = getUnique(data, "name");
+  fs.writeFileSync(
+    "../frontend/src/resources/oils.json",
+    JSON.stringify(newData)
+  );
 };
 
 const saveDataSymptoms = data => {
@@ -249,34 +252,34 @@ const saveDataSymptoms = data => {
 
   data.forEach(symptoms => {
     symptoms.forEach(symptom => {
-      if (symptom.category === 'Health') {
+      if (symptom.category === "Health") {
         listHealth.push(...symptom.list);
       }
 
-      if (symptom.category === 'Mood') {
+      if (symptom.category === "Mood") {
         listMood.push(...symptom.list);
       }
 
-      if (symptom.category === 'Beauty') {
+      if (symptom.category === "Beauty") {
         listBeauty.push(...symptom.list);
       }
     });
   });
 
   symptoms.push(
-    { category: 'Health', list: [...new Set(listHealth)] },
-    { category: 'Mood', list: [...new Set(listMood)] },
-    { category: 'Beauty', list: [...new Set(listBeauty)] }
+    { category: "Health", list: [...new Set(listHealth)] },
+    { category: "Mood", list: [...new Set(listMood)] },
+    { category: "Beauty", list: [...new Set(listBeauty)] }
   );
 
-  fs.writeFileSync('../src/resources/symptoms.json', JSON.stringify(symptoms));
+  fs.writeFileSync("../src/resources/symptoms.json", JSON.stringify(symptoms));
 };
 getLinks(
-  'http://www.doctissimo.fr/sante/aromatherapie/guide-huiles-essentielles',
-  'http://www.doctissimo.fr/sante/aromatherapie/guide-huiles-essentielles/huile-essentielle-',
+  "http://www.doctissimo.fr/sante/aromatherapie/guide-huiles-essentielles",
+  "http://www.doctissimo.fr/sante/aromatherapie/guide-huiles-essentielles/huile-essentielle-",
   (err, response) => {
     if (err) {
-      throw new Error('une erreur est survenue');
+      throw new Error("une erreur est survenue");
     }
     getDataFromLinks(response)
       .then(response => {

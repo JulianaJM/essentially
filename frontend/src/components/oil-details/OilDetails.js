@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import OilElement from './OilElement';
-import { searchByName } from '../../services/elasticsearch';
+import ElasticSearchService from '../../services/Elasticsearch';
 
 import './oil-details.scss';
 
@@ -11,9 +11,9 @@ const OilDetails = ({ match }) => {
 
   useEffect(() => {
     const { params } = match;
-    searchByName(params.name)
+    ElasticSearchService.searchByName(params.name)
       .then(res => {
-        setOil(res.hits.hits[0]._source);
+        setOil(res.data[0]._source);
       })
       .catch(err => {
         console.log(err);
@@ -46,7 +46,6 @@ const OilDetails = ({ match }) => {
 };
 
 OilDetails.propTypes = {
-  details: PropTypes.object.isRequired,
   match: PropTypes.object
 };
 
