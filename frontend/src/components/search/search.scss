@@ -1,4 +1,7 @@
 .search {
-  &__intro {
+  &__result {
+    &:focus {
+      outline: none;
+    }
   }
 }
