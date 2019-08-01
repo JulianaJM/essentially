@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import { Switch, Route } from 'react-router-dom';
-import Header from './components/header/Header';
-import SearchResults from './components/search/SearchResults';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import OilDetails from './components/oil-details/OilDetails';
+import Header from './components/header/header';
+import SearchResults from './components/search/search-results';
+import About from './components/about/about';
+import Contact from './components/contact/contact';
+import OilDetails from './components/oil-details/oil-details';
 
 import './app.scss';
 

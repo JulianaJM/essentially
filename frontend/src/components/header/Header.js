@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import Tags from '../search/tags/Tags';
+import Tags from '../search/tags/tags';
 
 import './header.scss';
 class Header extends PureComponent {

@@ -1,8 +1,8 @@
 import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
 import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-const OilList = lazy(() => import('../oil-result/OilList'));
-import ElasticSearchService from '../../services/Elasticsearch';
+const OilList = lazy(() => import('../oil-result/oil-list'));
+import ElasticSearchService from '../../services/elasticsearch';
 import log from 'log';
 
 import './search.scss';
