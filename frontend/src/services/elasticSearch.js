@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default class ElasticSearchService {
   static search(terms) {
-    return axios.get('/search', {
+    return axios.get("/search", {
       params: {
         value: terms
       }
@@ -10,7 +10,7 @@ export default class ElasticSearchService {
   }
 
   static searchByName(name) {
-    return axios.get('/searchByName', {
+    return axios.get("/searchByName", {
       params: {
         value: name
       }

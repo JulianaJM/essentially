@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
-import OilElement from './oil-element';
-import ElasticSearchService from '../../services/elasticsearch';
+import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+import OilElement from "./oil-element";
+import ElasticSearchService from "../../services/elasticSearch";
 
-import './oil-details.scss';
+import "./oil-details.scss";
 
 const OilDetails = ({ match }) => {
   const [oil, setOil] = useState(null);

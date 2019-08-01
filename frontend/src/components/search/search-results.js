@@ -1,11 +1,11 @@
-import React, { Suspense, lazy, useState, useEffect, useRef } from 'react';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-const OilList = lazy(() => import('../oil-result/oil-list'));
-import ElasticSearchService from '../../services/elasticsearch';
-import log from 'log';
+import React, { Suspense, lazy, useState, useEffect, useRef } from "react";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+const OilList = lazy(() => import("../oil-result/oil-list"));
+import ElasticSearchService from "../../services/elasticSearch";
+import log from "log";
 
-import './search.scss';
+import "./search.scss";
 
 const SearchResults = ({ location }) => {
   const [searchResults, setSearchResults] = useState([]);
@@ -13,8 +13,8 @@ const SearchResults = ({ location }) => {
 
   const getSearchValues = () => {
     const queryParamString = location.search
-      ? location.search.split('=')[1]
-      : '';
+      ? location.search.split("=")[1]
+      : "";
     const queryParams = queryParamString.split(/[\s,]+/);
 
     return queryParams.map(param => {
@@ -33,7 +33,7 @@ const SearchResults = ({ location }) => {
           }
         })
         .catch(err => {
-          log.error('error during search', err);
+          log.error("error during search", err);
         });
     }
   }, [location.search]);

@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import Select from 'react-select/creatable';
-import suggestions from '../../../resources/suggestions';
-import { isEqual } from 'lodash';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import Select from "react-select/creatable";
+import suggestions from "../../../resources/suggestions";
+import { isEqual } from "lodash";
+import PropTypes from "prop-types";
 
-import './tags.scss';
+import "./tags.scss";
 
 const components = {
   DropdownIndicator: null
@@ -13,7 +13,7 @@ const components = {
 class Tags extends Component {
   constructor(props) {
     super(props);
-    this.state = { tags: [], currentValue: '' };
+    this.state = { tags: [], currentValue: "" };
 
     this.options = suggestions.options.sort((a, b) => {
       return a.label > b.label ? 1 : -1;
@@ -31,7 +31,7 @@ class Tags extends Component {
     // const currentSearch = options && options.slice(-1).pop();
     this.setState({
       tags: values || [],
-      currentValue: ''
+      currentValue: ""
     });
   };
 

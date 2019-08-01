@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import Tags from '../search/tags/tags';
+import React, { PureComponent } from "react";
+import { NavLink, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import Tags from "../search/tags/tags";
 
-import './header.scss';
+import "./header.scss";
 class Header extends PureComponent {
   constructor(props) {
     super(props);
@@ -14,15 +14,15 @@ class Header extends PureComponent {
     const { history } = this.props;
 
     if (this.headerRef) {
-      window.addEventListener('scroll', () =>
+      window.addEventListener("scroll", () =>
         this.handleScroll(this.headerRef.current)
       );
     }
-    history.push('');
+    history.push("");
   }
   handleChange = queryParams => {
     const { history } = this.props;
-    history.push('');
+    history.push("");
     history.push(`?value=${queryParams}`);
   };
 
@@ -31,11 +31,11 @@ class Header extends PureComponent {
       document.body.scrollTop > 100 ||
       document.documentElement.scrollTop > 100
     ) {
-      ref.classList.add('heightScrollDown');
-      ref.firstChild.classList.add('logoSizeDown');
+      ref.classList.add("heightScrollDown");
+      ref.firstChild.classList.add("logoSizeDown");
     } else {
-      ref.classList.remove('heightScrollDown');
-      ref.firstChild.classList.remove('logoSizeDown');
+      ref.classList.remove("heightScrollDown");
+      ref.firstChild.classList.remove("logoSizeDown");
     }
   }
 

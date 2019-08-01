@@ -8,6 +8,10 @@
     "build-api": "cd api && yarn install",
     "build-front": "cd frontend && yarn install && yarn build"
   },
+  "engines": {
+    "node": "10.15.0",
+    "yarn": "1.17.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JulianaJM/essentially.git"
@@ -19,5 +23,8 @@
     "url": "https://github.com/JulianaJM/essentially/issues"
   },
   "homepage": "https://github.com/JulianaJM/essentially#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.39.1"
+  }
 }

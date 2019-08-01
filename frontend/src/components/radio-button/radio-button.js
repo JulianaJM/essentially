@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import './radio-button.scss';
+import "./radio-button.scss";
 
 const RadioButton = ({ id, label, image, onChange }) => {
   return (

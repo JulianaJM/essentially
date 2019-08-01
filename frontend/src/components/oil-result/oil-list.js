@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import OilResult from './oil-result';
+import React from "react";
+import PropTypes from "prop-types";
+import OilResult from "./oil-result";
 
-import './oils.scss';
+import "./oils.scss";
 
 const OilList = ({ oils }) => (
   <div className="oils">
