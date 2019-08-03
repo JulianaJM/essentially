@@ -15,7 +15,9 @@ const SearchResults = ({ location }) => {
     const queryParamString = location.search
       ? location.search.split("=")[1]
       : "";
-    const queryParams = queryParamString.split(/[\s,]+/);
+    const queryParams = queryParamString
+      ? queryParamString.split(/[\s,]+/)
+      : [];
 
     return queryParams.map(param => {
       const decode = decodeURI(param);

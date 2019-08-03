@@ -6,6 +6,7 @@ const elasticsearch = require("./datasource/connection");
 const elasticsearchService = require("./services/elasticsearch");
 const logger = require("morgan");
 const path = require("path");
+const initCluster = require("./resources/init-data");
 
 const app = express();
 
@@ -20,6 +21,7 @@ elasticsearch.ping(
       console.error("elasticsearch cluster is down!");
     } else {
       console.log("elasticsearch cluster is ok");
+      initCluster();
     }
   }
 );
@@ -28,7 +30,16 @@ elasticsearch.ping(
 app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
+const DIST_DIR = path.join(__dirname, "../frontend/dist");
+const HTML_FILE = path.join(DIST_DIR, "index.html");
+app.use(express.static(DIST_DIR));
+
+app.get("/", function(req, res) {
+  app.use((req, res, next) => {
+    // If no routes match, send them the React HTML.
+    res.sendFile(HTML_FILE);
+  });
+});
 
 // define the /search route that should return elastic search results
 app.get("/search", function(req, res) {

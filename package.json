@@ -6,7 +6,7 @@
     "start": " cd api && node ./server/www",
     "postinstall": "yarn build-api && yarn build-front",
     "build-api": "cd api && yarn install",
-    "build-front": "cd frontend && yarn install && yarn build"
+    "build-front": "cd frontend && rm -rf dist && yarn install && yarn build"
   },
   "engines": {
     "node": "10.15.0",

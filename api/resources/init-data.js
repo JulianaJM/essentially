@@ -2,15 +2,16 @@ const client = require("../datasource/connection.js");
 const mapping = require("./oils-details-mapping.json");
 const oils = require("./oils-details.json");
 const log = require("log");
+const INDEX = "oils";
 
 const createIndexAndMapping = () => {
   return client.indices
     .create({
-      index: "oils"
+      index: INDEX
     })
     .then(() => {
       return client.indices.putMapping({
-        index: "oils",
+        index: INDEX,
         body: mapping
       });
     })
@@ -22,7 +23,7 @@ const createIndexAndMapping = () => {
 const bulk = [];
 const makeBulk = (oils, callback) => {
   oils.forEach(oil => {
-    bulk.push({ index: { _index: "oils" } }, { ...oil });
+    bulk.push({ index: { _index: INDEX } }, { ...oil });
   });
   callback(bulk);
 };
@@ -43,18 +44,24 @@ var indexall = (madebulk, callback) => {
 };
 
 const initCluster = () => {
-  createIndexAndMapping()
-    .then(() => {
-      makeBulk(oils, response => {
-        log.info("Bulk content prepared");
-        indexall(response, function(response) {
-          log.info(response);
+  client.indices.exists({ index: INDEX }).then(exists => {
+    if (!exists) {
+      createIndexAndMapping()
+        .then(() => {
+          makeBulk(oils, response => {
+            log.info("Bulk content prepared");
+            indexall(response, function(response) {
+              log.info(response);
+            });
+          });
+        })
+        .catch(err => {
+          log.error("bulk crask", err);
         });
-      });
-    })
-    .catch(err => {
-      log.error("bulk crask", err);
-    });
+    } else {
+      log.info("already init no operation started");
+    }
+  });
 };
 
-initCluster();
+module.exports = initCluster;
