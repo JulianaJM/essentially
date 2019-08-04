@@ -56,6 +56,8 @@ https://zaiste.net/nodejs_elasticsearch_github_setup/
 
 https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzzy-match-query.html
 
+https://web.dev/codelab-imagemin-webpack
+
 https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-fuzzy-query.html
 
 https://medium.com/a-beginners-guide-for-webpack-2/copy-all-images-files-to-a-folder-using-copy-webpack-plugin-7c8cf2de7676
