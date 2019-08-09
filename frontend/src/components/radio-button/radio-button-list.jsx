@@ -24,7 +24,7 @@ const RadioButtonList = ({ items, onChange }) => (
 
 RadioButtonList.propTypes = {
   items: PropTypes.array.isRequired,
-  onChange: PropTypes.func.isRequired
+  onChange: PropTypes.func.isRequired,
 };
 
 export default RadioButtonList;

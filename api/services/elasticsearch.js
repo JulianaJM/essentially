@@ -13,12 +13,12 @@ const searchRequest = terms => {
       }
     }
   });
-
   const payload = {
     size: SIZE,
     query: {
       query_string: {
         query: queryString,
+        minimum_should_match: 2,
         fields: [
           "name",
           "ideal",

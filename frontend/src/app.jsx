@@ -10,11 +10,6 @@ import OilDetails from "./components/oil-details/oil-details";
 import "./app.scss";
 
 class App extends Component {
-  state = {
-    db: [],
-    searchResults: []
-  };
-
   componentDidMount() {
     // const data = this.loadData();
     // this.setState({ db: data });
@@ -23,7 +18,6 @@ class App extends Component {
   // loadData = () => ({ oils, oilsDetails, symptoms });
 
   render() {
-    // const { db } = this.state;
     return (
       <div className="app">
         <Header />

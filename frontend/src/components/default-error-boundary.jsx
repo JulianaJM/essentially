@@ -3,15 +3,17 @@ import propTypes from "prop-types";
 
 export default class DefaultErrorBoundary extends React.Component {
   state = {
-    isError: false
+    isError: false,
   };
+
   static propTypes = {
-    children: propTypes.node.isRequired
+    children: propTypes.node.isRequired,
   };
 
   static getDerivedStateFromError() {
     return { isError: true };
   }
+
   render() {
     const { isError } = this.state;
     const { children } = this.props;

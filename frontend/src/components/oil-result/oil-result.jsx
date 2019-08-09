@@ -22,7 +22,7 @@ const OilResult = ({ oil }) => {
 };
 
 OilResult.propTypes = {
-  oil: PropTypes.object.isRequired
+  oil: PropTypes.object.isRequired,
 };
 
 export default OilResult;

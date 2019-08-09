@@ -70,5 +70,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-
 
 https://codepen.io/zebapy/pen/mJVrwg
 
+https://opendistro.github.io/for-elasticsearch-docs/docs/elasticsearch/full-text/#options
+
 init eslintrc :
 npx eslint --init

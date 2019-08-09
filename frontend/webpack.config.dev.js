@@ -7,8 +7,10 @@ module.exports = merge(baseConfig, {
     port: 8000,
     proxy: {
       "/search": "http://localhost:3000",
-      "/searchByName": "http://localhost:3000"
-    }
+      "/searchByName": "http://localhost:3000",
+    },
+    // contentBase: "./dist",
+    hot: true,
   },
-  devtool: "source-map"
+  devtool: "eval-source-map",
 });

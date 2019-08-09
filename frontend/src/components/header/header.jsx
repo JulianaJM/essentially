@@ -1,9 +1,10 @@
 import React, { PureComponent } from "react";
-import { NavLink, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import Tags from "../search/tags/tags";
 
 import "./header.scss";
+
 class Header extends PureComponent {
   constructor(props) {
     super(props);
@@ -20,13 +21,14 @@ class Header extends PureComponent {
     }
     history.push("");
   }
+
   handleChange = queryParams => {
     const { history } = this.props;
     history.push("");
     history.push(`?value=${queryParams}`);
   };
 
-  handleScroll(ref) {
+  handleScroll = ref => {
     if (
       document.body.scrollTop > 100 ||
       document.documentElement.scrollTop > 100
@@ -37,14 +39,14 @@ class Header extends PureComponent {
       ref.classList.remove("heightScrollDown");
       ref.firstChild.classList.remove("logoSizeDown");
     }
-  }
+  };
 
   render() {
     return (
       <div className="header" ref={this.headerRef}>
         <div className="header__title">
           <h1 id="logo">Essentially</h1>
-          <img src="/assets/images/logo.png" />
+          <img src="/assets/images/logo.png" alt="logo" />
         </div>
         <div className="search-bar">
           <Tags onUpdate={this.handleChange} />
@@ -54,7 +56,7 @@ class Header extends PureComponent {
   }
 }
 Header.propTypes = {
-  history: PropTypes.object.isRequired
+  history: PropTypes.object.isRequired,
 };
 
 export default withRouter(Header);

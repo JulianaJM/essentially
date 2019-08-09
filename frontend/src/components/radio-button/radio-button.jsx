@@ -25,7 +25,7 @@ RadioButton.propTypes = {
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
-  image: PropTypes.object.isRequired
+  image: PropTypes.object.isRequired,
 };
 
 export default RadioButton;

@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import Select from "react-select/creatable";
-import suggestions from "../../../resources/suggestions";
 import { isEqual } from "lodash";
 import PropTypes from "prop-types";
+import suggestions from "../../../resources/suggestions";
 
 import "./tags.scss";
 
 const components = {
-  DropdownIndicator: null
+  DropdownIndicator: null,
 };
 
 class Tags extends Component {
@@ -21,8 +21,11 @@ class Tags extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (!isEqual(prevState.tags, this.state.tags)) {
-      this.props.onUpdate(this.state.tags);
+    const { tags } = this.state;
+    const { onUpdate } = this.props;
+    /* eslint-disable-next-line react/destructuring-assignment */
+    if (!isEqual(prevState.tags, tags)) {
+      onUpdate(tags);
     }
   }
 
@@ -31,13 +34,13 @@ class Tags extends Component {
     // const currentSearch = options && options.slice(-1).pop();
     this.setState({
       tags: values || [],
-      currentValue: ""
+      currentValue: "",
     });
   };
 
   handleInputChange = value => {
     this.setState({
-      currentValue: value
+      currentValue: value,
     });
   };
 
@@ -57,14 +60,14 @@ class Tags extends Component {
         onChange={this.handleChange}
         onInputChange={this.handleInputChange}
         onKeyDown={this.handleKeyDown}
-        cacheOptions={true}
+        cacheOptions
       />
     );
   }
 }
 
 Tags.propTypes = {
-  onUpdate: PropTypes.func.isRequired
+  onUpdate: PropTypes.func.isRequired,
 };
 
 export default Tags;

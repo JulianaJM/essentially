@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import OilElement from "./oil-element";
 import ElasticSearchService from "../../services/elasticSearch";
+import getUniqueId from "../../services/uuid";
 
 import "./oil-details.scss";
 
@@ -15,8 +16,8 @@ const OilDetails = ({ match }) => {
       .then(res => {
         setOil(res.data[0]._source);
       })
-      .catch(err => {
-        console.log(err);
+      .catch((/* err */) => {
+        // console.log(err);
       });
   }, [match.params.name]);
 
@@ -35,8 +36,8 @@ const OilDetails = ({ match }) => {
           <OilElement category={oil.beauty} />
           {oil.precautions.length > 0 && <strong>Précautions</strong>}
           <ul>
-            {oil.precautions.map((precaution, i) => (
-              <li key={i}>{precaution}</li>
+            {oil.precautions.map(precaution => (
+              <li key={getUniqueId()}>{precaution}</li>
             ))}
           </ul>
         </div>
@@ -46,7 +47,7 @@ const OilDetails = ({ match }) => {
 };
 
 OilDetails.propTypes = {
-  match: PropTypes.object
+  match: PropTypes.object,
 };
 
 export default withRouter(OilDetails);

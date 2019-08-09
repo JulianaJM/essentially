@@ -1,11 +1,11 @@
 import React, { Suspense, lazy, useState, useEffect, useRef } from "react";
-import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
-const OilList = lazy(() => import("../oil-result/oil-list"));
+import { withRouter } from "react-router-dom";
 import ElasticSearchService from "../../services/elasticSearch";
-import log from "log";
 
 import "./search.scss";
+
+const OilList = lazy(() => import("../oil-result/oil-list"));
 
 const SearchResults = ({ location }) => {
   const [searchResults, setSearchResults] = useState([]);
@@ -15,15 +15,14 @@ const SearchResults = ({ location }) => {
     const queryParamString = location.search
       ? location.search.split("=")[1]
       : "";
-    const queryParams = queryParamString
-      ? queryParamString.split(/[\s,]+/)
-      : [];
+    const queryParams = queryParamString.split(",");
 
     return queryParams.map(param => {
       const decode = decodeURI(param);
       return decode.trim();
     });
   };
+
   useEffect(() => {
     const terms = getSearchValues();
     if (terms.length > 0) {
@@ -34,8 +33,8 @@ const SearchResults = ({ location }) => {
             resultsEl.current.focus();
           }
         })
-        .catch(err => {
-          log.error("error during search", err);
+        .catch((/* err */) => {
+          // console.log("error during search", err);
         });
     }
   }, [location.search]);
@@ -54,8 +53,7 @@ const SearchResults = ({ location }) => {
 };
 
 SearchResults.propTypes = {
-  match: PropTypes.object,
-  location: PropTypes.object
+  location: PropTypes.object.isRequired,
 };
 
 export default withRouter(SearchResults);

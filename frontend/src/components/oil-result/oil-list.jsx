@@ -14,7 +14,7 @@ const OilList = ({ oils }) => (
 );
 
 OilList.propTypes = {
-  oils: PropTypes.array.isRequired
+  oils: PropTypes.array.isRequired,
 };
 
 export default OilList;
