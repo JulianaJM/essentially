@@ -28,7 +28,7 @@ const makeBulk = (oils, callback) => {
   callback(bulk);
 };
 
-var indexall = (madebulk, callback) => {
+const indexall = (madebulk, callback) => {
   client.bulk(
     {
       body: madebulk
@@ -43,24 +43,28 @@ var indexall = (madebulk, callback) => {
   );
 };
 
+const deleteIndex = () => {
+  return client.indices.delete({ index: INDEX });
+};
+
 const initCluster = () => {
   client.indices.exists({ index: INDEX }).then(exists => {
-    if (!exists) {
-      createIndexAndMapping()
-        .then(() => {
-          makeBulk(oils, response => {
-            log.info("Bulk content prepared");
-            indexall(response, function(response) {
-              log.info(response);
-            });
-          });
-        })
-        .catch(err => {
-          log.error("bulk crask", err);
-        });
-    } else {
-      log.info("already init no operation started");
+    if (exists) {
+      log.info("delete index");
+      deleteIndex();
     }
+    createIndexAndMapping()
+      .then(() => {
+        makeBulk(oils, response => {
+          log.info("Bulk content prepared");
+          indexall(response, function(response) {
+            log.info(response);
+          });
+        });
+      })
+      .catch(err => {
+        log.error("bulk crask", err);
+      });
   });
 };
 

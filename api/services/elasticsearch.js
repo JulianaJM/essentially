@@ -2,7 +2,8 @@ const client = require("../datasource/connection");
 
 const SIZE = 200;
 const INDEX = "oils";
-const searchRequest = terms => {
+
+const buildFullTextSearchQuery = (terms, offset) => {
   let queryString = "";
   terms.forEach((t, i) => {
     if (t) {
@@ -13,8 +14,9 @@ const searchRequest = terms => {
       }
     }
   });
-  const payload = {
-    size: SIZE,
+
+  const body = {
+    from: offset,
     query: {
       query_string: {
         query: queryString,
@@ -36,18 +38,27 @@ const searchRequest = terms => {
           "beauty.indications"
         ]
       }
+    },
+    highlight: {
+      fields: {
+        "*": {}
+      }
     }
   };
+  return body;
+};
+
+const searchRequest = (terms, offset) => {
+  const body = buildFullTextSearchQuery(terms, offset);
   return client.search({
     index: INDEX,
-    body: payload
+    body
   });
 };
 
 module.exports = {
-  search: function(terms) {
-    console.log(terms);
-    return searchRequest(terms);
+  search: function(terms, offset) {
+    return searchRequest(terms, offset);
   },
 
   searchByName: function(name) {

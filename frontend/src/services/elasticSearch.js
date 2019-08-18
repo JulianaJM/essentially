@@ -1,10 +1,11 @@
 import axios from "axios";
 
 export default class ElasticSearchService {
-  static search(terms) {
+  static search(terms, offset) {
     return axios.get("/search", {
       params: {
         value: terms,
+        offset,
       },
     });
   }

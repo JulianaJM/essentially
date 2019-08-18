@@ -43,9 +43,10 @@ app.get("/", function(req, res) {
 
 // define the /search route that should return elastic search results
 app.get("/search", function(req, res) {
+  const { value, offset } = req.query;
   elasticsearchService
-    .search(req.query.value)
-    .then(results => res.json(results.hits.hits))
+    .search(value, offset)
+    .then(results => res.json(results.hits))
     .catch(err => {
       console.log(err);
       res.send(err);

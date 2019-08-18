@@ -44,7 +44,8 @@
       "recipesTitle": [],
       "recipesContent": []
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": []
   },
   {
     "name": "Huile essentielle d'Achillée millefeuille",
@@ -111,7 +112,14 @@
         "HE Achillée millefeuille 1 ml / HE Géranium rosat 1 ml / HE Carotte 1 ml / HV Noyaux d'abricot 15 ml / HV Amande douce 15 ml / HV Germes de blé 10 ml / HV Jojoba 10 ml / HV Bourrache 10 ml / Utilisation : Appliquer matin et soir sur la peau cette préparation."
       ]
     },
-    "ideal": ["Crevasse/gerçure", "Eczéma", "Ecorchures, bobos, coupures"]
+    "ideal": ["Crevasse/gerçure", "Eczéma", "Ecorchures, bobos, coupures"],
+    "utilisations": [
+      "Diffusion -",
+      "Qualité alimentaire +",
+      "Bain aromatique +",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Ahibero (citronnelle)",
@@ -154,6 +162,7 @@
       "indicationsDesc": "Est utilisée en cas de : ",
       "indications": [
         "Manque d'intuition",
+        "Peurs, manque de courage",
         "Indifférence émotionnelle",
         "Stagnation mentale"
       ],
@@ -201,7 +210,13 @@
         "3 ml d'HE de Cannelle de Chine   4 ml d'HE de Bois de Hô   3 ml d'HE d'AhiberoUtilisation  : Ajoutez 1% de la synergie dans votre \"canard\" ou détergent respectueux de l'environnement. Désinfectez ainsi la cuvette et la lunette de vos toilettes  Note Aroma-Zone  : L'huile essentielle de Cannelle de Chine possède les mêmes propriétés que l'huile essentielle de Canelle de Ceylan Ecorce et peut donc être remplacée par celle-ci."
       ]
     },
-    "ideal": ["Acné, boutons", "Bouton de fièvre, herpès", "Mycose"]
+    "ideal": ["Acné, boutons", "Bouton de fièvre, herpès", "Mycose"],
+    "utilisations": [
+      "Diffusion +",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Ail",
@@ -270,7 +285,14 @@
         "6 cl d’HV d’Olive vierge / 2 gouttes d’HE de Basilic / 1 goutte d’HE d’Ail / Mode opératoire et utilisation : Mélanger les ingrédients. Idéal pour une salade bien relevée."
       ]
     },
-    "ideal": ["Verrue"]
+    "ideal": ["Verrue"],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Application cutanée et massage +",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Ajowan",
@@ -338,6 +360,13 @@
       "Infections cutanées",
       "Gastro et infections intestinales",
       "Vers intestinaux"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion +",
+      "Actif cosmétique +",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -408,7 +437,14 @@
         "Pour 8 muffins / Ingrédients : 2 blancs d’oeuf / 50 g de sucre blond de canne / 50 g de purée d’amande / 35 g de farine de riz / 25 g fécule de pommes de terre / 1 pincée de bicarbonate de sodium / 70 g de lait d’amande / 1 à 2 gouttes d’huile essentielle d’amande amère (facultatif) / 120 g de cerises non dénoyautées / 1 c. à soupe d’amandes effilées / Préparation : Préchauffer le four à 180°C. Dans un saladier, mélanger le sucre avec la farine de riz, la fécule et la pincée de bicarbonate. Incorporer la purée d’amande et le lait d’amande. Ajouter l’huile essentielle d’amande amère. Remuer jusqu’à l’obtention d’une pâte homogène. Battre les blancs en neige puis les incorporer délicatement à la préparation. Verser la pâte dans 8 moules à muffins en silicone. Rincer et dénoyauter les cerises. Les répartir dans les moules. Parsemer le dessus des gâteaux d’amandes effilées. Enfourner 20 minutes. Laisser refroidir avant de démouler."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion -",
+      "Application cutanée et massage -",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Amyris",
@@ -461,7 +497,14 @@
         "HV Jojoba bio : 24,6 g ou 28,6 ml   HE Amyris : 0,1 g soit 4 gouttes   HE Sauge sclarée : 0,06 g soit 2 gouttes   HE Néroli : 0,2 g soit 6 gouttes   HE Romarin à cinéole bio : 0,03 g soit 1 goutte   HE Petit grain bigarade bio : 0,2 g soit 7 gouttes   HE Orange douce bio : 0,2 g soit 7 gouttes   HE Lavande vraie bio : 0,02 g soit 1 goutte   HE Citron bio (sans furocoumarines): 0,2 g soit 8 gouttes   HE Bergamote bio (sans fucocoumarines) : 0,6 g soit 27 gouttesMode opératoire  : Versez l'huile de jojoba dans un bol. Ajoutez les HE et l'absolue de jasmin, en mélangeant bien à chaque ajout. Transvasez le parfum dans votre roll-on à l'aide d'un entonnoir."
       ]
     },
-    "ideal": ["Jambes lourdes, varices"]
+    "ideal": ["Jambes lourdes, varices"],
+    "utilisations": [
+      "Bain aromatique -",
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Aneth",
@@ -518,6 +561,13 @@
       "Bronchite",
       "Digestion difficile",
       "Règles"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Diffusion -",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -594,6 +644,13 @@
       "Insomnie",
       "Maux de ventre",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -684,6 +741,13 @@
       "Digestion difficile",
       "Ménopause",
       "Règles"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Actif cosmétique +",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -743,7 +807,14 @@
       "En règle générale, faites toujours un test d'application de votre préparation, dans le pli du coude, au moins 48h avant de l'utiliser. Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. /  Pour une utilisation en tant qu'ingrédient cosmétique veuillez vous référer aux précautions spécifiques."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Cicatrice", "Rides, ridules", "Stress"]
+    "ideal": ["Cicatrice", "Rides, ridules", "Stress"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Baies roses",
@@ -815,6 +886,13 @@
       "Arthrite, Arthrose, Rhumatismes",
       "Digestion difficile",
       "Toux grasse"
+    ],
+    "utilisations": [
+      "Bain aromatique +",
+      "Diffusion ++",
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -919,6 +997,13 @@
       "Digestion difficile",
       "Migraine et mal de tête",
       "Stress"
+    ],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1002,6 +1087,13 @@
       "Immunité (Stimuler lʹ)",
       "Fatigue",
       "Vers intestinaux"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1087,6 +1179,13 @@
       "Gastro et infections intestinales",
       "Maux de ventre",
       "Règles"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Actif cosmétique +",
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1122,7 +1221,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Alopécie, perte de cheveux", "Arthrite, Arthrose, Rhumatismes"]
+    "ideal": ["Alopécie, perte de cheveux", "Arthrite, Arthrose, Rhumatismes"],
+    "utilisations": [
+      "Bain aromatique -",
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Diffusion ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Bergamote",
@@ -1218,6 +1324,13 @@
       "Digestion difficile",
       "Insomnie",
       "Stress"
+    ],
+    "utilisations": [
+      "Application cutanée et massage +",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++"
     ]
   },
   {
@@ -1312,7 +1425,14 @@
         "Vinaigre de cidre : 100 ml / Hydrolat d'Hamamélis : 100 ml / HE Bergamote : 20 gouttes / HE Lavande : 20 gouttes / HE Patchouli : 10 gouttes / HE Bois de Rose : 10 gouttes / Absolue de Benjoin : 10 gouttes / Glycérine : 1/2 cuillère à café / Mode opératoire : Mélanger les ingrédients dans un flacon pulvérisateur et agiter vigoureusement. Laisser reposer 4 jours afin que les différentes substances amplifient leurs effets par synergie. Remuer de temps en temps et conserver dans un endroit frais, sec et sombre.Utilisation : Appliquer ou pulvériser le déodorant après la douche, ou à tout moment de la journée si nécessaire."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Diffusion +",
+      "Qualité alimentaire ++",
+      "Actif cosmétique ++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Bois de Gaïac",
@@ -1349,7 +1469,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Jambes lourdes", "varices"]
+    "ideal": ["Jambes lourdes", "varices"],
+    "utilisations": [
+      "Bain aromatique +",
+      "Qualité alimentaire +",
+      "Diffusion +",
+      "Actif cosmétique ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Bois de Hô",
@@ -1427,6 +1554,13 @@
       "Immunité (Stimuler lʹ)",
       "Infection urinaire",
       "Mycose"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1540,6 +1674,13 @@
       "Infection urinaire",
       "Infections cutanées",
       "Mycose"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1587,7 +1728,13 @@
         "HE Zingiber officinale (Gingembre) : 1 ml / HE Cinnamomum verum (Cannelle écorce) : 0.3 ml / HE Mentha citrata (Menthe Bergamote) : 1 ml / HE Fokienia hodginsii (Bois de Siam) : 1 ml / HV Noisette : complément à 30 ml / Utilisation: 6 à 8 gouttes du mélange dans le bas de la colonne vertébrale matin et soir pendant 3 semaines."
       ]
     },
-    "ideal": ["Baisse de libido", "Impuissance masculine"]
+    "ideal": ["Baisse de libido", "Impuissance masculine"],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Bouleau jaune",
@@ -1648,6 +1795,13 @@
       "Migraine et mal de tête",
       "Sciatique",
       "Torticolis"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion -",
+      "Qualité alimentaire -",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1713,7 +1867,14 @@
         "Pour des flacons de 125 ml :Cheveux gras / 1/3 de flacon de 125 ml de base moussante / 10 gouttes d’HE de Citron / 10 gouttes d’HE de Cyprès / Mode opératoire : Compléter avec des hydrolats de Genévrier, de Romarin ou de Thym.Chute de cheveux / 1/3 de flacon de 125 ml de base moussante / 10 gouttes d’HE de Sauge / 8 gouttes d’HE de Genévrier / 3 gouttes d’HE de Bois de Cèdre / Mode opératoire : Compléter avec des hydrolats de Genévrier, de Buis ou de Lavande.Pellicules / 1/3 de flacon de 125 ml de base moussante / 8 gouttes d’HE de Cade / 6 gouttes d’HE de Sauge / 4 gouttes d’HE de Géranium rosat / Mode opératoire : Compléter avec des hydrolats de Genévrier ou de Lavande."
       ]
     },
-    "ideal": ["Pellicules", "Psoriasis", "Gale"]
+    "ideal": ["Pellicules", "Psoriasis", "Gale"],
+    "utilisations": [
+      "Bain aromatique +",
+      "Diffusion +",
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Cajeput",
@@ -1792,6 +1953,13 @@
       "Grippe",
       "Laryngite, pharyngite",
       "Rhume, nez bouché, nez qui coule"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
     ]
   },
   {
@@ -1870,6 +2038,13 @@
       "Eczéma",
       "Digestion difficile",
       "Règles"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Qualité alimentaire ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -1973,6 +2148,13 @@
       "Stress",
       "Torticolis",
       "Vers intestinaux"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -2016,7 +2198,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Bronchite", "Rhume, nez bouché, nez qui coule"]
+    "ideal": ["Bronchite", "Rhume, nez bouché, nez qui coule"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Cannelle de Ceylan",
@@ -2130,6 +2319,13 @@
       "Mycose",
       "Verrue",
       "Vers intestinaux"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Application cutanée et massage +",
+      "Diffusion +",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -2179,7 +2375,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Qualité alimentaire +",
+      "Diffusion +",
+      "Application cutanée et massage +"
+    ]
   },
   {
     "name": "Huile essentielle de Cannelle de Chine",
@@ -2293,6 +2496,13 @@
       "Mycose",
       "Verrue",
       "Vers intestinaux"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Application cutanée et massage +",
+      "Diffusion +",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -2343,7 +2553,14 @@
       "Pas d'usage interne. /  Eviter le contact avec les yeux. Certains composés naturels contenus dans cette huile essentielle peuvent présenter un risque d'allergie chez certaines personnes sensibles lorsque l'huile essentielle est incorporée dans une composition cosmétique (selon le 7ème Amendement de la Directive Européenne relative aux produits cosmétiques (2003/15/CE)) : linalol et, dans une moindre mesure, limonène, coumarine, cinnamaldéhyde, géraniol, eugénol. En règle générale, faites toujours un test d'application de votre préparation, dans le pli du coude, au moins 48h avant de l'utiliser.",
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir)."
     ],
-    "recipes": { "recipesTitle": [], "recipesContent": [] }
+    "recipes": { "recipesTitle": [], "recipesContent": [] },
+    "ideal": [],
+    "utilisations": [
+      "Bain aromatique +",
+      "Actif cosmétique ++",
+      "Application cutanée et massage ++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Cardamome",
@@ -2421,6 +2638,13 @@
       "Mauvaise haleine",
       "Maux de ventre",
       "Toux grasse"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique +",
+      "Diffusion +",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -2505,7 +2729,14 @@
         "2 cuillères à café d'HV d'Amande douce / 2 cuillères à café d'HV de noyaux d'Abricot / 1 cuillère à café d'HV de Noisette ou de Pépins de raisin / 1 cuillère à café d'HV de Bourrache / 1 cuillère à café d'HV d'Olive / 1 cuillère à café d'HV de Avocat / 1 cuillère à café d'HV de Jojoba / 1 cuillère à café d'HV de Germes de blé / 5 gouttes d'HV d'Onagre / 5 gouttes d'huile essentielle de Palmarosa / 5 gouttes d'huile essentielle de Carotte / 5 gouttes d'huile essentielle de Rose ou Bois de Rose / 5 gouttes d'huile essentielle de Géranium rosat / 2 gouttes d'huile essentielle de Ylang-Ylang ou Jasmin / Utilisation : Très riche et nourrissante, cette huile conviendra à tous les types d'épiderme, régulera les sécrétions de sébum, et aura un effet adoucissant et antirides. Avant d'appliquer quelques gouttes de cette huile, pensez à humecter le contour des yeux d'un peu d'eau (pour hydrater la peau)."
       ]
     },
-    "ideal": ["Taches brunes", "Confort du foie"]
+    "ideal": ["Taches brunes", "Confort du foie"],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Actif cosmétique +++",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Carvi",
@@ -2557,7 +2788,13 @@
       "Tenir hors de portée des enfants Contient des cétones à risque neurotoxique et abortif. A proscrire chez les femmmes enceintes ou allaitantes, les enfants et les sujets épileptiques. Usage interne à doses limitées et sur courtes durées, sur conseil d'un thérapeute. Certains composés naturels contenus dans cette huile essentielle peuvent présenter un risque d’allergie chez certaines personnes sensibles lorsque l'huile essentielle est incorporée dans une composition cosmétique (selon le 7ème Amendement de la Directive Européenne relative aux produits cosmétiques (2003/15/CE)) : limonène. En règle générale, faites toujours un test d’application de votre préparation, dans le pli du coude, au moins 48h avant de l’utiliser."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Aérophagie", "ballonnements et flatulences"]
+    "ideal": ["Aérophagie", "ballonnements et flatulences"],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Cèdre de l'Atlas",
@@ -2651,6 +2888,13 @@
       "Pellicules",
       "Jambes lourdes, varices",
       "Répulsif insectes"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -2731,6 +2975,13 @@
       "Cellulite",
       "Pellicules",
       "Jambes lourdes, varices"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -2793,7 +3044,15 @@
         "HE Citron : 0.3 ml / HE Cèdre de Virginie : 0.6 ml / HE Lentisque : 0.3 ml / HE Vétiver : 0.3 ml / HE Immortelle : 0.3 ml / HE Niaouli : 0.6 ml / HE Menthe des champs : 0.3 ml / HV Millepertuis : 20 ml / HV noyaux d'abricot : complément à 50 ml / Utilisation  : 1 application locale (8 à 10 gouttes) 2 fois par jour en partant des chevilles et en remontant vers les cuissesNote Aroma-Zone  : Le macérât huileux de Millepertuis présente un risque de photosensibilisation. Ne pas s'exposer au soleil après application de cette préparation.",
         "HE Laurier noble 5 gouttes / HE Cèdre de virginie 5 gouttes / HE Carotte 5 gouttes / HE Géranium rosat 5 gouttes / HE Palmarosa 5 gouttes / HV Noisette ou Macadamia 50 ml / Utilisation : Masser tous les jours l'ensemble du corps avec le mélange"
       ]
-    }
+    },
+    "ideal": ["Cellulite", "Jambes lourdes, varices"],
+    "utilisations": [
+      "Diffusion +",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Céleri",
@@ -2856,7 +3115,14 @@
         "HE Daucus carota (Carotte) : 0.5 ml / HE Apium graveolens (Céleri) : 1 ml / HE Levisticum officinale (Livèche officinale) : 0.5 ml / HE Ledum groenlandicum (Lédon du Groënland) : 0.5 ml / HE Mentha piperita (Menthe poivrée) : 2.5 ml / Utilisation : 2 gouttes 2 fois par jour dans une cuillère à café d'huile d'olive."
       ]
     },
-    "ideal": ["Taches brunes", "Digestion difficile", "Confort du foie"]
+    "ideal": ["Taches brunes", "Digestion difficile", "Confort du foie"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion +",
+      "Bain aromatique +",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Christe marine",
@@ -2915,7 +3181,13 @@
         "30 ml d'HV de Calophylle inophyle / une synergie de 8 huiles essentielles (dilution à 10 %) / 4 huiles essentielles agissant comme toniques veineux : 10 gouttes d'HE Lentisque pistachier / 10 gouttes d'HE de Myrte rouge / 10 gouttes d'HE Valériane / 10 gouttes d'HE Hélichryse italienne / 4 huiles essentielles facilitant l'élimination de la cellulite : 10 gouttes d'HE de Palmarosa / 10 gouttes d'HE de Lemon grass / 10 gouttes d'HE de Christe marine / 10 gouttes d'HE de Pamplemousse / Mode opératoire : Versez l'huile végétale dans le roll-on. Ajoutez les 80 gouttes d'huiles essentielles. Secouez énergiquement le flacon afin de bien mélanger toutes les huiles essentielles. / Précautions : ce produit contenant des huiles essentielles, ne pas appliquer pendant la grossesse."
       ]
     },
-    "ideal": ["Cellulite"]
+    "ideal": ["Cellulite"],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Application cutanée et massage ++",
+      "Actif cosmétique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Ciste",
@@ -3006,6 +3278,13 @@
       "Ecorchures, bobos, coupures",
       "Escarres",
       "Saignement de nez"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion -",
+      "Qualité alimentaire +",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -3098,6 +3377,13 @@
       "Confort du foie",
       "Perte de poids, minceur, silhouette",
       "Vomissement, nausée"
+    ],
+    "utilisations": [
+      "Bain aromatique +",
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -3200,7 +3486,14 @@
         "HE Orange : 39 gouttes / HE Marjolaine sylvestre : 18 gouttes / HE Citron : 8 gouttes / HE Muscade : 8 gouttes / HE Ylang-Ylang : 1 goutte / HE Menthe poivrée : 1 goutte / Base lavante neutre ou base moussante : la moitié du flacon de 125 ml soit environ 60 ml / Mode opératoire: Secouer le flacon pour mélanger. Vous pouvez aussi ajouter de l'Eau florale de Genévrier. Agitez jusqu'à ce que le mélange devienne homogène et laissez reposer 1 jour."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Bain aromatique -",
+      "Application cutanée et massage ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle de Citron vert",
@@ -3265,7 +3558,14 @@
         "Pour 4 personnes; Préparation : 30 minutes; Cuisson : 25 minutes / Dorade : 1,5 kg / Petites tomates : 8 / Petits oignons : 6 / Gousses d'ail : 8 / Curcuma en poudre : 1 cuillère à café / Petit piment vert : 1 / HV Olive : 4 cuillères à soupe / HE Gingembre : 1 goutte / HE Limette (Citron vert) : 4 gouttes / HE de Thym (à linalol de préférence) : 1 goutte / Sel / Mode opératoire: Ecaillez et nettoyez le poisson puis découpez-le en cubes de 3 à 4 cm de coté environ. Emincez finement les oignons et coupez les tomates en petits morceaux. Pilez le sel avec l'ail, et les piments (facultatif). Faites revenir les morceaux de poisson dans l'huile chaude pendant environ 15 minutes puis enlevez-les. Ajouter le reste de l'huile d'olive puis les oignons et faites-les revenir 3 minutes et ajoutez enfin le mélange pilé. Au bout d'une minute, ajoutez les tomates, le curcuma et faites cuire 2 minutes. Ajoutez les morceaux de poisson ainsi qu'un verre d'eau et laissez cuire 5 minutes environ à couvert. Ajouter les huiles essentielles à la fin de la cuisson et mélangez de nouveau. Vous pouvez accompagner ce plat de riz blanc."
       ]
     },
-    "ideal": ["Insomnie", "Stress"]
+    "ideal": ["Insomnie", "Stress"],
+    "utilisations": [
+      "Bain aromatique +",
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle de Citronnelle",
@@ -3338,6 +3638,13 @@
       "Arthrite, Arthrose, Rhumatismes",
       "Piqûre d’insectes et d’autres animaux",
       "Répulsif insectes"
+    ],
+    "utilisations": [
+      "Bain aromatique +",
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -3401,7 +3708,14 @@
         "Pour 6 personnesPour la pâte : 1 pot de yaourt brassé nature (125 g) / 110 g de sucre / 3 œufs / 180 g de farine / ½ sachet de levure chimique / 80 ml d’huile d’olive / 1 goutte d’huile essentielle de clémentine / Pour le dessus : 5 clémentines / 25g de sucre en poudre / Préparation :Etape 1 : Mélangez le yaourt et le sucre. Ajoutez les œufs un par un en battant bien entre chaque ajout. Incorporez la farine et la levure chimique. Pour finir ajoutez l’huile d’olive et l’huile essentielle de clémentine.Etape 2 : Versez la pâte dans un moule en verre diamètre 23cm à bords hauts.Etape 3 : Pelez les clémentines et coupez-les en rondelles. Déposez-les sur la pâte à gâteau en serrant bien. Saupoudrez de sucre en poudre.Etape 4: Enfournez environ 40 min à 180°C."
       ]
     },
-    "ideal": ["Digestion difficile", "Insomnie", "Stress"]
+    "ideal": ["Digestion difficile", "Insomnie", "Stress"],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Bain aromatique ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Actif cosmétique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Clous de Girofle",
@@ -3483,6 +3797,13 @@
       "Douleurs dentaires (Carie, Gingivite, Abcès)",
       "Gastro et infections intestinales",
       "Mycose"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion ++",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -3539,7 +3860,14 @@
         "HV Noisette ou alcool 90° : 30 ml / HE Combawa ou Mandarine : 2 gouttes / HE Vétiver : 5 gouttes"
       ]
     },
-    "ideal": ["Arthrite, Arthrose, Rhumatismes", "Insomnie", "Stress"]
+    "ideal": ["Arthrite, Arthrose, Rhumatismes", "Insomnie", "Stress"],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Coriandre",
@@ -3609,6 +3937,10 @@
       "Brûlure d’estomac",
       "Constipation",
       "Digestion difficile"
+    ],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -3655,7 +3987,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Provoque une irritation cutanée (risque lié au produit sous forme pure). Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Poux", "Répulsif insectes"]
+    "ideal": ["Poux", "Répulsif insectes"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique +",
+      "Application cutanée et massage ++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Cumin",
@@ -3728,6 +4066,13 @@
       "Aérophagie, ballonnements et flatulences",
       "Constipation",
       "Digestion difficile"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion -",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage ++"
     ]
   },
   {
@@ -3834,6 +4179,13 @@
       "Aérophagie, ballonnements et flatulences",
       "Rides, ridules",
       "Digestion difficile"
+    ],
+    "utilisations": [
+      "Diffusion +",
+      "Bain aromatique +",
+      "Qualité alimentaire ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -3925,6 +4277,13 @@
       "Hémorroïdes",
       "Jambes lourdes, varices",
       "Ménopause"
+    ],
+    "utilisations": [
+      "Diffusion +",
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -3978,7 +4337,13 @@
         "20g de beurre de karité / 10g de cire de mimosa / 20g de macérât de millepertuis bio / 1 cuillère à café de glycérine végétale / 10 gouttes d’HE de manuka / 10 gouttes d’HE de cyprès bleu / 10 gouttes d’huile essentielle de menthe poivrée / Mode opératoire: 1. Dans la casserole, faire fondre au bain-marie la cire de mimosa avec le beurre de karité et le macérât de millepertuis bio. / 2. Retirez ensuite le mélange du feu et attendre qu’il refroidisse un peu. / 3. Ajouter à présent la glycérine végétale ainsi que les huiles essentielles de Manuka, de cyprès bleu et de menthe poivrée puis mélanger soigneusement le tout au mini fouet. / 4. Verser enfin la préparation dans un pot de 50 ml avant qu’elle ne durcisse."
       ]
     },
-    "ideal": ["Allergie cutanée", "Piqûre d’insectes et d’autres animaux"]
+    "ideal": ["Allergie cutanée", "Piqûre d’insectes et d’autres animaux"],
+    "utilisations": [
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage ++",
+      "Actif cosmétique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Cyprès toujours vert",
@@ -4068,6 +4433,13 @@
       "Hémorroïdes",
       "Jambes lourdes, varices",
       "Ménopause"
+    ],
+    "utilisations": [
+      "Diffusion +",
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4123,7 +4495,14 @@
         "Utilisation: Se masser le cou avec quelques gouttes d'huile essentielle d'Elémi et respirer l'arôme à même le flacon."
       ]
     },
-    "ideal": ["Escarres", "Mal de dos"]
+    "ideal": ["Escarres", "Mal de dos"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Encens oliban",
@@ -4199,6 +4578,12 @@
       "Immunité (Stimuler lʹ)",
       "Dépression (nerveuse), déprime",
       "Escarres"
+    ],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4258,6 +4643,12 @@
       "Arthrite, Arthrose, Rhumatismes",
       "Immunité (Stimuler lʹ)",
       "Fatigue"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4334,6 +4725,12 @@
       "Immunité (Stimuler lʹ)",
       "Fatigue",
       "Grippe"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4427,6 +4824,13 @@
       "Gastro et infections intestinales",
       "Maux de ventre",
       "Règles"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique +",
+      "Diffusion ++",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4482,7 +4886,13 @@
         "HE Satureia montana (Sarriette des montagnes): 1 ml   HE Thymus satureoides (Thym satureoides) : 2 ml   HE Gaultheria procumbens (Gaulthérie couchée) : 2 ml   HE Thymus vulgaris CT thujanol (Thym vulgaire à thujanol) : 0.5 ml   HE Lavandula x burnatii CT Super (Lavandin Super) : 4 ml   HE Eucalyptus polybractea CT Cryptone (Eucalyptus à cryptone) : 0.5 ml   Huile végétale : complément à 100 mlUtilisation  : 3 à 4 applications locales par jour pendant 15 jours (continuer si nécessaire) ET HE Picea mariana (Epinette Noire) : 3 ml   HE Pinus sylvestris ( Pin sylvestre) : 7 ml   Transcutol : complément à 30 mlUtilisation  : 8 gouttes en onctions surrénaliennes (au niveau des reins) 2 fois par jour Commentaire Aroma-Zone  : Le transcutol est une préparation pharmaceutique peu répandue qui permet de faire pénétrer facilement les corps gras comme les huiles essentielles au niveau de la peau. Il peut être facilement remplacé par une huile végétale sèche comme l'huile végétale de Noisette, de Kukui, ou de Macadamia"
       ]
     },
-    "ideal": ["Infection urinaire", "Vers intestinaux"]
+    "ideal": ["Infection urinaire", "Vers intestinaux"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion +",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Eucalyptus citronné",
@@ -4560,6 +4970,13 @@
       "Répulsif insectes",
       "Sciatique",
       "Torticolis"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4635,6 +5052,13 @@
       "Rhume, nez bouché, nez qui coule",
       "Sinusite",
       "Toux grasse"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique +",
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Application cutanée et massage ++"
     ]
   },
   {
@@ -4709,6 +5133,13 @@
       "Rhume, nez bouché, nez qui coule",
       "Sinusite",
       "Toux grasse"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4804,6 +5235,13 @@
       "Rhume, nez bouché, nez qui coule",
       "Sinusite",
       "Toux grasse"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4870,6 +5308,13 @@
       "Rhume, nez bouché, nez qui coule",
       "Sinusite",
       "Toux grasse"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Bain aromatique +",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -4944,6 +5389,12 @@
       "Dépression (nerveuse), déprime",
       "Insomnie",
       "Stress"
+    ],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -5014,7 +5465,14 @@
         "HV Pépins de Raisin : 3 cuillers à soupe / HV Amande douce : 2 cuillers à soupe / HV Germes de Blé : 5 gouttes / HE Romarin à camphre : 20 gouttes / HE Fenouil : 20 gouttes / HE Genièvre : 15 gouttes / HE Pamplemousse : 15 gouttes / HE Géranium rosat : 5 gouttes / Utilisations : - Avec une brosse en poils naturels, frotter votre peau à sec, avant le bain ou la douche (frotter toujours dans le sens du cœur, en faisant de petits mouvements circulaires). Verser 2 cuillers à café de produit dans l'eau du bain, s'agenouiller et masser le corps avec les gouttelettes en suspension.- Pour un massage corporel après une douche, mettre un peu de produit dans le creux de la main et masser la peau encore humide. / Le produit pourra également être utilisé pour faire des massages en profondeur, en pétrissant bien les chairs."
       ]
     },
-    "ideal": ["Cellulite", "Digestion difficile", "Ménopause", "Règles"]
+    "ideal": ["Cellulite", "Digestion difficile", "Ménopause", "Règles"],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Actif cosmétique ++",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Feuilles de Girofle",
@@ -5085,7 +5543,14 @@
         "HE Laurus nobilis (Laurier noble) : 4 ml / HE Thymus CT thujanol (possibilité de remplacement par HE Marjolaine à thujanol) : 3 ml / HE Melaleuca alternifolia (Tea tree) : 2 ml / HE Eugenia caryophyllus (Clou de girofle) : 1 ml / Utilisation : 2 à 3 gouttes localement 5 fois par jour."
       ]
     },
-    "ideal": ["Aphte", "Fatigue", "Piqûre d’insectes et d’autres animaux"]
+    "ideal": ["Aphte", "Fatigue", "Piqûre d’insectes et d’autres animaux"],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Fragonia",
@@ -5161,7 +5626,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Nocif en cas d'ingestion. Peut provoquer une allergie cutanée. Provoque une irritation cutanée (risque lié au produit sous forme pure)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Acné, boutons"]
+    "ideal": ["Acné, boutons"],
+    "utilisations": [
+      "Bain aromatique +",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Galbanum",
@@ -5210,7 +5681,14 @@
         "HV Jojoba bio : 25,1 g ou 29,2 ml   HE Amyris : 0,12 g soit 4 gouttes   HE Sauge sclarée : 0,18 g soit 6 gouttes   HE Ylang-ylang : 0,03 g soit 1 goutte   Absolue de jasmin Sambac : 0,06 g soit 2 gouttes   HE Lemongrass : 0,06 g soit 2 gouttes   HE Galbanum : 0,03 g soit 1 goutte   HE Citron vert : 0,12 g soit 5 gouttes   HE Citron bio (sans furocoumarines) : 0,3 g soit 13 gouttesMode opératoire  : Versez l'huile de jojoba dans un bol. Ajoutez les HE et l'absolue de jasmin, en mélangeant bien à chaque ajout. Transvasez le parfum dans votre roll-on à l'aide d'un entonnoir"
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Bain aromatique -",
+      "Application cutanée et massage +",
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Actif cosmétique ++"
+    ]
   },
   {
     "name": "Huile essentielle de Gaulthérie couchée",
@@ -5300,6 +5778,12 @@
       "Migraine et mal de tête",
       "Sciatique",
       "Torticolis"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Actif cosmétique -",
+      "Bain aromatique +",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -5390,6 +5874,12 @@
       "Migraine et mal de tête",
       "Sciatique",
       "Torticolis"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Actif cosmétique -",
+      "Application cutanée et massage +++",
+      "Bain aromatique +++"
     ]
   },
   {
@@ -5497,7 +5987,14 @@
         "Hydrolat de Cyprès : 50 ml   Hydrolat de Hélichryse italienne : 50 ml   Hydrolat de Genévrier : 50 ml   Hydrolat de Romarin à verbénone : 50 mlUtilisation  : 1 cuillère à soupe dans 1 litre d'eau à boire durant la journée, durant 40 jours; répéter si besoin est Voie externe  : HE Cyprès : 20 gouttes   HE Vétiver : 6 gouttes   HE Citron zeste : 10 gouttes   HE Genévrier : 10 gouttes   HE Romarin à verbénone : 6 gouttes   HV Noisette : 30 mlUtilisation  : En massage local sur les zones à traiter 2 fois par jourNote Aroma-Zone  : l'huile essentielle de Citron est photosensibilisante. Ne pas s'exposer au soleil après application de cette préparation. Nous vous conseillons de la remplacer par l'huile essentielle de Citron sans furocoumarines qui est dénuée de photoxicité"
       ]
     },
-    "ideal": ["Cellulite", "Arthrite, Arthrose, Rhumatismes"]
+    "ideal": ["Cellulite", "Arthrite, Arthrose, Rhumatismes"],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Diffusion ++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Géranium Bourbon",
@@ -5607,6 +6104,13 @@
       "Mycose",
       "Répulsif insectes",
       "Saignement de nez"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -5713,6 +6217,13 @@
       "Mycose",
       "Répulsif insectes",
       "Saignement de nez"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -5805,6 +6316,13 @@
       "Impuissance masculine",
       "Mal des transports",
       "Vomissement, nausée"
+    ],
+    "utilisations": [
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -5855,7 +6373,13 @@
       "Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Très toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Stress"]
+    "ideal": ["Stress"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Hélichryse de Madagascar",
@@ -5898,7 +6422,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Hélichryse italienne",
@@ -6017,6 +6547,13 @@
       "Entorse, foulure",
       "Escarres",
       "Jambes lourdes, varices"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion +",
+      "Bain aromatique +",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -6076,7 +6613,14 @@
         "HE Ravintsara : 25%   HE Niaouli : 30%   HE Saro : 20%   HE Hysope couchée : 15%   HE Laurier noble : 10%Utilisation  : Appliquez quelques gouttes (de 2 à 5) très localement (sous forme de spot-on) sur l'échine ou entre les oreilles du chat, 2 fois par jour durant 5 jours, attendre 1 bonne semaine avant de réitérer ce soin de base."
       ]
     },
-    "ideal": ["Asthme"]
+    "ideal": ["Asthme"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Qualité alimentaire +",
+      "Bain aromatique +",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Iary",
@@ -6195,7 +6739,13 @@
         "HE Melaleuca quinquenervia cinéole (niaouli à cinéole) : 1 ml / HE Inula graveolens (Inule odorante) : 0,5 ml / HE Myrtus communis cinéole (Myrte à cinéole) : 3 ml / HE Cinnamomum camphora (Ravintsara) : 2 ml / HV Noisette : 3 ml / HV Jojoba : complément à 15 ml / Utilisation : Appliquez 5 à 6 gouttes du mélange sur le dos matin et midi et sur le thorax le soir pendant 3 à 4 jours."
       ]
     },
-    "ideal": ["Bronchite", "Laryngite, pharyngite", "Toux grasse"]
+    "ideal": ["Bronchite", "Laryngite, pharyngite", "Toux grasse"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique +",
+      "Diffusion +",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Katrafay (ou Katafray)",
@@ -6248,7 +6798,13 @@
         "HE Katafray : 20% / HE Tanaisie annuelle : 10% / HE Camomille noble : 30% / HE Eucalyptus citronné : 20% / HE Petit grain bigarade : 10% / HE Menthe des champs : 10% / Utilisation : Diluez 3 parts du mélange avec une part de shampoing neutre. Ensuite diluez la préparation 10 fois juste avant l'application topique locale."
       ]
     },
-    "ideal": ["Arthrite, Arthrose, Rhumatismes", "Mal de dos"]
+    "ideal": ["Arthrite, Arthrose, Rhumatismes", "Mal de dos"],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Khella",
@@ -6301,7 +6857,13 @@
         "HE Ammi visnaga (Khella) : 0,5 ml   HE Cananga odorata totum (Ylang-Ylang complet) : 0,5 ml   HE Citrus aurantium ssp aurantium (fe) (Petitgrain bigarade) : 2 ml   HE Origanum majorana (Marjolaine à coquilles) : 0,5 ml   HE Tanacetum annuum (Tanaisie annuelle) : 0,3 ml   HV Noisette : 3 ml   HV Jojoba : complément à 15 mlUtilisation  : Appliquez 3 à 4 gouttes du mélange sur la voûte plantaire et sur le plexus solaire 1 fois par jour le soir en prévention ou toutes les 1/2 heures en cas de crise (maximum 4 fois)"
       ]
     },
-    "ideal": ["Asthme"]
+    "ideal": ["Asthme"],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion -",
+      "Actif cosmétique -",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Kunzea",
@@ -6370,7 +6932,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Très toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Lantana",
@@ -6414,7 +6982,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion -",
+      "Actif cosmétique -",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Laurier noble",
@@ -6543,6 +7117,13 @@
       "Douleurs dentaires (Carie, Gingivite, Abcès)",
       "Infections cutanées",
       "Mycose"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -6650,6 +7231,13 @@
       "Escarres",
       "Migraine et mal de tête",
       "Piqûre d’insectes et d’autres animaux"
+    ],
+    "utilisations": [
+      "Qualité alimentaire -",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -6774,6 +7362,13 @@
       "Insomnie",
       "Migraine et mal de tête",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -6897,6 +7492,13 @@
       "Insomnie",
       "Migraine et mal de tête",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -7018,6 +7620,13 @@
       "Insomnie",
       "Migraine et mal de tête",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -7095,6 +7704,13 @@
       "Insomnie",
       "Migraine et mal de tête",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -7182,6 +7798,13 @@
       "Insomnie",
       "Migraine et mal de tête",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -7246,7 +7869,14 @@
         "HE Daucus carota (Carotte) : 0.5 ml / HE Apium graveolens (Céleri) : 1 ml / HE Levisticum officinale (Livèche officinale) : 0.5 ml / HE Ledum groenlandicum (Lédon du Groënland) : 0.5 ml / HE Mentha piperita (Menthe poivrée) : 2.5 ml / Utilisation : 2 gouttes 2 fois par jour dans une cuillère à café d'huile d'olive."
       ]
     },
-    "ideal": ["Insomnie", "Confort du foie"]
+    "ideal": ["Insomnie", "Confort du foie"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Qualité alimentaire ++",
+      "Diffusion ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Lemongrass",
@@ -7329,7 +7959,14 @@
         "75 ml d’hydrolat de fleur d’Oranger / 20 ml de vodka / 3 ml d’HE de Verveine des Indes / 3 ml d’HE de Citron / 1.5 ml d’HE de Gingembre / Mode opératoire : Mélanger tous les ingrédients dans un flacon vaporisateur."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Lentisque Pistachier",
@@ -7404,6 +8041,13 @@
       "Escarres",
       "Hémorroïdes",
       "Jambes lourdes, varices"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Actif cosmétique ++",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -7499,6 +8143,13 @@
       "Arthrite, Arthrose, Rhumatismes",
       "Dépression (nerveuse), déprime",
       "Mycose"
+    ],
+    "utilisations": [
+      "Diffusion ++",
+      "Application cutanée et massage ++",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -7566,7 +8217,14 @@
         "HE Levisticum officinale (Livèche) : 1 ml   HE Rosmarinus officinalis CT verbénone (Romarin à verbénone) : 3 ml   HE Chamaemelum nobile (Camomille romaine) : 1 ml   HE Citrus aurantium ssp aurantium (Petitgrain) : 5 ml   HV Noisette ou transcutol : complément à 15 mlUtilisation : 6 gouttes du mélange 3 fois par jour sur la zone du foie ou 4 gouttes en résorption sublingual 2 à 3 fois par jour Commentaire Aroma-Zone :  Le transcutol est une préparation pharmaceutique peu répandue qui permet de faire pénétrer facilement les corps gras comme les huiles essentielles au niveau de la peau. Il peut être facilement remplacé par une huile végétale sèche comme l'huile végétale de Noisette, de Kukui, ou de Macadamia"
       ]
     },
-    "ideal": ["Psoriasis", "Confort du foie"]
+    "ideal": ["Psoriasis", "Confort du foie"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Diffusion -",
+      "Bain aromatique -",
+      "Application cutanée et massage +",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle de Magnolia",
@@ -7604,7 +8262,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Peut provoquer une allergie cutanée. Provoque une irritation cutanée (risque lié au produit sous forme pure). Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Stress"]
+    "ideal": ["Stress"],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Mandarine jaune",
@@ -7687,6 +8351,13 @@
       "Insomnie",
       "Piqûre d’insectes et d’autres animaux",
       "Stress"
+    ],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Bain aromatique +++",
+      "Diffusion +++"
     ]
   },
   {
@@ -7761,7 +8432,18 @@
         "HE Citrus aurantium var. aurantium (Orange amère) : 1,5 g / HE Citrus lemon (Citron) : 1,5 g / HE Citrus reticulata (Mandarine) : 1,75 g / HE Tanacetum annuum (Tanaisie annuelle) : 0,25 g / Huile végétale de 50 ml. / Utilisation : 1 application 2 à 3 fois, à 15 min d'intervalleNote Aroma-Zone  : Les huiles essentielles de Mandarine, d'Orange et de Citron sont photosensibilisantes, ne pas s'exposer au soleil après application de ce mélange."
       ]
     },
-    "ideal": ["Vergetures", "Insomnie", "Piqûre d’insectes et d’autres animaux"]
+    "ideal": [
+      "Vergetures",
+      "Insomnie",
+      "Piqûre d’insectes et d’autres animaux"
+    ],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Bain aromatique +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Mandarine verte",
@@ -7845,6 +8527,13 @@
       "Piqûre d’insectes et d’autres animaux",
       "Stress",
       "Verrue"
+    ],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Bain aromatique +++",
+      "Diffusion +++"
     ]
   },
   {
@@ -7892,7 +8581,13 @@
       "Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Très toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Stress"]
+    "ideal": ["Stress"],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Manuka",
@@ -7982,7 +8677,14 @@
         "HE Manuka : 20 gouttes / HE Bergamote : 10 gouttes / HE Tea-tree : 20 gouttes / HE Citronnelle : 10 gouttes / Vodka : 3 cuillères à soupe / Mode opératoire: Mélangez les ingrédients dans un flacon vaporisateur.Utilisation: Vaporiser le mélange dans les endroits à risque et sur vos mains après chaque contact considéré comme à risque."
       ]
     },
-    "ideal": ["Acné, boutons", "Infections cutanées", "Mycose"]
+    "ideal": ["Acné, boutons", "Infections cutanées", "Mycose"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Marjolaine à coquilles",
@@ -8069,6 +8771,13 @@
       "Laryngite, pharyngite",
       "Rhume, nez bouché, nez qui coule",
       "Stress"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique +",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
     ]
   },
   {
@@ -8172,6 +8881,13 @@
       "Laryngite, pharyngite",
       "Mycose",
       "Sinusite"
+    ],
+    "utilisations": [
+      "Diffusion +",
+      "Bain aromatique +",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -8222,7 +8938,13 @@
         "HE Orange : 39 gouttes / HE Marjolaine sylvestre : 18 gouttes / HE Citron : 8 gouttes / HE Muscade : 8 gouttes / HE Ylang-Ylang : 1 goutte / HE Menthe poivrée : 1 goutte / Base lavante neutre ou base moussante : la moitié du flacon de 125 ml soit environ 60 ml / Mode opératoire: Secouer le flacon pour mélanger. Vous pouvez aussi ajouter de l'Eau florale de Genévrier. Agitez jusqu'à ce que le mélange devienne homogène et laissez reposer 1 jour."
       ]
     },
-    "ideal": ["Bronchite"]
+    "ideal": ["Bronchite"],
+    "utilisations": [
+      "Bain aromatique +",
+      "Actif cosmétique +",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Mélisse",
@@ -8296,7 +9018,14 @@
         "HE Néroli : 40 gouttes / HE Bois de rose : 20 gouttes / HE Cyprès : 20 gouttes / HE Mélisse : 10 gouttes / Lait neutre pour le corps : 100 ml / Mode opératoire et utilisation : Ajoutez les huiles essentielles dans les 100 ml de lait neutre pour le corps. Agitez le mélange et massez en frictions circulaires les cuisses, les fesses, le ventre. A faire tous les jours si possible."
       ]
     },
-    "ideal": ["Insomnie", "Stress"]
+    "ideal": ["Insomnie", "Stress"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Menthe citronnée",
@@ -8358,6 +9087,12 @@
       "Dépression (nerveuse), déprime",
       "Digestion difficile",
       "Vomissement, nausée"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -8485,6 +9220,13 @@
       "Migraine et mal de tête",
       "Confort du foie",
       "Vomissement, nausée"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique +",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -8615,6 +9357,13 @@
       "Migraine et mal de tête",
       "Confort du foie",
       "Vomissement, nausée"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique +",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -8689,6 +9438,13 @@
       "Migraine et mal de tête",
       "Sinusite",
       "Vomissement, nausée"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique +",
+      "Diffusion ++",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -8766,6 +9522,13 @@
       "Digestion difficile",
       "Rhume, nez bouché, nez qui coule",
       "Sinusite"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique +",
+      "Application cutanée et massage ++",
+      "Diffusion ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -8841,6 +9604,13 @@
       "Bleus, coups, bosses, hématomes",
       "Psoriasis",
       "Infection urinaire"
+    ],
+    "utilisations": [
+      "Diffusion -",
+      "Bain aromatique +",
+      "Actif cosmétique +",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -8902,7 +9672,13 @@
         "HE Monarda fistulosa (Monarde fistuleuse) : 3 ml   HE Thym CT thujanol (possibilité de remplacement par HE Marjolaine à thujanol) : 1 ml   HE Eugenia caryophyllus (Clou de girofle) : 1 ml   HE Origanum heracleoticum (Origan vert) : 2 ml   Transcutol : complément à 15 mlUtilisation  : 1 application locale matin et soir pendant 3 semaines Commentaire Aroma-Zone  : Le transcutol est une préparation pharmaceutique peu répandue qui permet de faire pénétrer facilement les corps gras comme les huiles essentielles au niveau de la peau. Il peut être facilement remplacé par une huile végétale sèche comme l'huile végétale de Noisette, de Kukui, ou de Macadamia"
       ]
     },
-    "ideal": ["Mycose"]
+    "ideal": ["Mycose"],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de noix de Muscade",
@@ -8968,7 +9744,14 @@
         "HE Orange : 39 gouttes / HE Marjolaine sylvestre : 18 gouttes / HE Citron : 8 gouttes / HE Muscade : 8 gouttes / HE Ylang-Ylang : 1 goutte / HE Menthe poivrée : 1 goutte / Base lavante neutre ou base moussante : la moitié du flacon de 125 ml soit environ 60 ml / Mode opératoire: Secouer le flacon pour mélanger. Vous pouvez aussi ajouter de l'Eau florale de Genévrier. Agitez jusqu'à ce que le mélange devienne homogène et laissez reposer 1 jour."
       ]
     },
-    "ideal": ["Fatigue"]
+    "ideal": ["Fatigue"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Application cutanée et massage ++",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle de Myrrhe",
@@ -9065,6 +9848,13 @@
       "Ecorchures, bobos, coupures",
       "Escarres",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Bain aromatique +",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -9120,7 +9910,13 @@
         "HE Myrte : 1 volume / HE Citron : 1 volume / Préparation : Utilisez en diffusion atmosphérique et inhalez 5 minutes 2 fois par jour."
       ]
     },
-    "ideal": ["Mycose"]
+    "ideal": ["Mycose"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Myrte rouge",
@@ -9183,7 +9979,14 @@
         "30 ml d'HV de Calophylle inophyle / une synergie de 8 huiles essentielles (dilution à 10 %) / 4 huiles essentielles agissant comme toniques veineux : 10 gouttes d'HE Lentisque pistachier / 10 gouttes d'HE de Myrte rouge / 10 gouttes d'HE Valériane / 10 gouttes d'HE Hélichryse italienne / 4 huiles essentielles facilitant l'élimination de la cellulite : 10 gouttes d'HE de Palmarosa / 10 gouttes d'HE de Lemon grass / 10 gouttes d'HE de Christe marine / 10 gouttes d'HE de Pamplemousse / Mode opératoire : Versez l'huile végétale dans le roll-on. Ajoutez les 80 gouttes d'huiles essentielles. Secouez énergiquement le flacon afin de bien mélanger toutes les huiles essentielles. / Précautions : ce produit contenant des huiles essentielles, ne pas appliquer pendant la grossesse."
       ]
     },
-    "ideal": ["Jambes lourdes, varices"]
+    "ideal": ["Jambes lourdes, varices"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Myrte verte",
@@ -9256,7 +10059,14 @@
         "4 g de beurre de noix de Coco / 2 ml d’HV d’Argousier / 4 ml d’HV de pépins de Framboise / 6 ml d’HV d’Avocat / 3 ml de lécithine de soja / 2 g de gomme arabique / 35 ml d’hydrolat de Bleuet / 30 gouttes d’HE de Lavande / 20 gouttes d’HE de Myrte verte / 30 gouttes d’HE de Palmarosa / Mode opératoire : Faire fondre le beurre et la lécithine dans les HV au bain-marie. Incorporer la gomme à l’hydrolat puis réaliser une émulsion à chaud selon le protocole habituel. En fin de préparation ajouter les HE. Conditionner de préférence dans un flacon pompe."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Qualité alimentaire ++",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Nard jatamansi",
@@ -9323,7 +10133,14 @@
         "Mélange Crew CO2  100 gouttes / HE Camomille allemande : 30 gouttes / HE Hélichryse italienne :  25 gouttes / HE Nard : 10 gouttes / HE Patchouli : 10 gouttes / Mode opératoire et utilisation: Mélanger les ingrédients, diluer à 0,5 % le mélange obtenu dans une base neutre (crème, gel...) et appliquer en tant que soin adoucissant pour les peaux craquelées et inflammées."
       ]
     },
-    "ideal": ["Alopécie, perte de cheveux", "Eczéma"]
+    "ideal": ["Alopécie, perte de cheveux", "Eczéma"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Néroli",
@@ -9405,7 +10222,14 @@
         "4 cuillères à soupe d'HV de noyaux d'Abricot / 1 cuillère à soupe d'HV de Bourrache / 40 gouttes d'HV de Germes de blé / 60 gouttes d'HV d'Onagre / 5 gouttes d'huile essentielle de Camomille romaine / 5 gouttes d'huile essentielle de Rose ou Bois de Rose / 2 gouttes d'huile essentielle de Lavande vraie ou Néroli / Utilisation : Utiliser cette huile pour les soins du cou, du contour des yeux et des lèvres. Appliquer également une mince couche de cette huile en guise de crème de nuit."
       ]
     },
-    "ideal": ["Dépression (nerveuse), déprime", "Insomnie"]
+    "ideal": ["Dépression (nerveuse), déprime", "Insomnie"],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Niaouli",
@@ -9505,6 +10329,13 @@
       "Laryngite, pharyngite",
       "Otite",
       "Rhume, nez bouché, nez qui coule"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -9581,7 +10412,14 @@
         "HE Orange : 5 gouttes   HE Petitgrain bigarade : 2 gouttes   HE Lavande : 5 gouttesUtilisation  : Dans 2 cuillères à soupe de poudre de lait à ajouter au bain juste avant d'y rentrer"
       ]
     },
-    "ideal": ["Insomnie", "Stress"]
+    "ideal": ["Insomnie", "Stress"],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Bain aromatique +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Orange sanguine",
@@ -9655,7 +10493,14 @@
         "Contenant conseillé : pot en verre de 50 ml / Glycérine végétale : 40 g / Sucre de canne : 8 cuillères à moka / Miel de manuka (peut être remplacé par de la poudre de miel préalablement dissoute dans de l'eau) : 1 cuillère à soupe / HE Orange sanguine : 15 gouttes / Extrait de pépins de pamplemousse : 2 gouttes / Mode opératoire : Verser dans le bol la glycérine végétale et le miel, puis les mélanger au minifouet. Incorporer le sucre de canne puis ajouter l'huile essentielle d'orange sanguine et l'extrait de pépins de pamplemousse. Bien mélanger le tout puis transvaser dans le pot."
       ]
     },
-    "ideal": ["Stress"]
+    "ideal": ["Stress"],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Bain aromatique +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Origan compact",
@@ -9725,6 +10570,13 @@
       "Infections cutanées",
       "Gastro et infections intestinales",
       "Verrue"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Diffusion +",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -9797,6 +10649,13 @@
       "Gastro et infections intestinales",
       "Laryngite, pharyngite",
       "Mycose"
+    ],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion +",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -9875,6 +10734,13 @@
       "Gastro et infections intestinales",
       "Sinusite",
       "Verrue"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Diffusion +",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -9934,6 +10800,13 @@
       "Gastro et infections intestinales",
       "Sinusite",
       "Verrue"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Diffusion +",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -10021,7 +10894,14 @@
         "HE palmarosa : 1 goutte / Utilisation: Du bout du doigt, appliquez 1 goutte pure le matin, sur les aisselles épilées, propres et sèches, juste après la douche. Etalez bien. Vous êtes tranquille largement jusqu'à ce soir."
       ]
     },
-    "ideal": ["Acné, boutons", "Eczéma", "Escarres", "Mycose"]
+    "ideal": ["Acné, boutons", "Eczéma", "Escarres", "Mycose"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Pamplemousse",
@@ -10136,6 +11016,13 @@
       "Dépression (nerveuse), déprime",
       "Insomnie",
       "Perte de poids, minceur, silhouette"
+    ],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Bain aromatique +++"
     ]
   },
   {
@@ -10242,7 +11129,14 @@
         "50 g de poudre de Rhassoul   70 ml d'hydrolat de Fleur d'Oranger   1 cuillère à soupe d'HV de Jojoba   15 gouttes d'HE de Pamplemousse   5 gouttes d'HE de Bois de Rose   20 gouttes d'extrait de pépins de pamplemousse   7 gouttes de vitamine EMode opératoire  : Mélanger délicatement la poudre de Rhassoul et l'hydrolat au fouet. Laisser reposer 5 minutes afin que la préparation gonfle. Ajouter ensuite le reste des ingrédients en mélangeant uniformément et transvaser dans un pot.Utilisation  : Appliquer ce masque une à deux fois par mois sur cheveux mouillés, avant le shampooing"
       ]
     },
-    "ideal": ["Alopécie, perte de cheveux"]
+    "ideal": ["Alopécie, perte de cheveux"],
+    "utilisations": [
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Qualité alimentaire +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Patchouli",
@@ -10324,6 +11218,13 @@
       "Escarres",
       "Hémorroïdes",
       "Jambes lourdes, varices"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -10374,7 +11275,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Diffusion +",
+      "Bain aromatique +",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Petitgrain Bigarade",
@@ -10483,6 +11391,13 @@
       "Dépression (nerveuse), déprime",
       "Insomnie",
       "Stress"
+    ],
+    "utilisations": [
+      "Bain aromatique +++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -10518,7 +11433,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Angoisse, anxiété, panique", "Insomnie", "Stress"]
+    "ideal": ["Angoisse, anxiété, panique", "Insomnie", "Stress"],
+    "utilisations": [
+      "Bain aromatique -",
+      "Qualité alimentaire +",
+      "Diffusion +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Pin de Patagonie",
@@ -10579,7 +11501,13 @@
         "Forme liquide (non grasse) / HE Menthe poivrée : 0.5 ml / HE Eucalyptus citronné : 1 ml / HE Pin de Patagonie : 1ml / HE Petitgrain bigarade : 1 ml / HE Tanaisie annuelle : 0.5 ml / HV Arnica : 2 ml / HV Jojoba : complément à 15 ml / Utilisation : Appliquez localement sur la zone enflammée 4 à 6 gouttes du mélange 4 fois par jour pendant 7 à 10 jours."
       ]
     },
-    "ideal": ["Asthme"]
+    "ideal": ["Asthme"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Pin lariccio",
@@ -10638,7 +11566,14 @@
         "HE Camomille romaine : 1 goutte / HE Pin lariccio : 1 goutte / HE Marjolaine à coquilles : 1 goutte / HE Angélique : 1 goutte / Utilisation : Appliquez en massant ce mélange, sur la face interne des poignets et sur le plexus solaire 1/2 h avant le coucher, pendant 2 à 3 semaines / Note Aroma-Zone : L'huile essentielle d'Angélique est photosensibilisante. Ne pas s'exposer au soleil après application de cette préparation."
       ]
     },
-    "ideal": ["Bronchite"]
+    "ideal": ["Bronchite"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Pin sylvestre",
@@ -10706,7 +11641,14 @@
         "75 ml d’hydrolat de Lavande / 20 ml de Vodka / 75 gouttes (3.75 ml) d’HE de Romarin / 75 gouttes (3.75 ml) d’HE de Pin sylvestre / Mode opératoire : Mélanger tous les ingrédients dans un flacon avec vaporisateur.Utilisation : A vaporiser sur le linge avant le repassage."
       ]
     },
-    "ideal": ["Fatigue"]
+    "ideal": ["Fatigue"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Application cutanée et massage ++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Poivre noir",
@@ -10784,6 +11726,13 @@
       "Digestion difficile",
       "Douleurs dentaires (Carie, Gingivite, Abcès)",
       "Mal de dos"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -10879,6 +11828,13 @@
       "Dépression (nerveuse), déprime",
       "Insomnie",
       "Perte de poids, minceur, silhouette"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -10931,7 +11887,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Dépression (nerveuse), déprime"]
+    "ideal": ["Dépression (nerveuse), déprime"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Qualité alimentaire ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Ravintsara (Ravintsare)",
@@ -11033,6 +11996,13 @@
       "Rhume, nez bouché, nez qui coule",
       "Sinusite",
       "Stress"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -11085,7 +12055,13 @@
         "9 g de Beurre de Karité bio / 6 g d'HV de Camélia / 3 g de Cire de Mimosa / 1 c à moka de Glycérine végétale / 10 gouttes d'absolue de Jasmin / 10 gouttes d'HE de Géranium bourbon / 10 gouttes d'HE de Rhododendron / Mode opératoire : Faites fondre au bain-marie à feu doux le beurre de Karité et la cire de Mimosa avec l'huile végétale de Camélia. / Retirez la casserole du feu lorsque la cire est fondue et attendre que la préparation refroidisse. / Ajoutez la glycérine végétale, l'absolue et les deux huiles essentielles, puis mélangez le tout au mini-fouet. / Versez immédiatement la préparation dans un pot de 15 ml avant qu'elle durcisse."
       ]
     },
-    "ideal": ["Arthrite, Arthrose, Rhumatismes"]
+    "ideal": ["Arthrite, Arthrose, Rhumatismes"],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Bain aromatique +++",
+      "Diffusion +++",
+      "Actif cosmétique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Romarin camphré",
@@ -11167,6 +12143,13 @@
       "Crampes musculaires",
       "Impatiences, jambes sans repos",
       "Torticolis"
+    ],
+    "utilisations": [
+      "Qualité alimentaire -",
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Diffusion -",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -11251,7 +12234,14 @@
         "75 ml d’hydrolat de Lavande / 20 ml de Vodka / 75 gouttes (3.75 ml) d’HE de Romarin / 75 gouttes (3.75 ml) d’HE de Pin sylvestre / Mode opératoire : Mélanger tous les ingrédients dans un flacon avec vaporisateur.Utilisation : A vaporiser sur le linge avant le repassage."
       ]
     },
-    "ideal": ["Mycose"]
+    "ideal": ["Mycose"],
+    "utilisations": [
+      "Diffusion +",
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Romarin à verbénone",
@@ -11332,7 +12322,14 @@
         "Voie orale : HE Levisticum officinale (Livèche) : 20 mg   HE Apium graveolens (Céleri) : 20 mg   HE Ocimum basilicum ssp basilicum (Basilic tropical) : 20 mg   HE Ledum groenlandicum (Lédon du groënland) : 20 mg   HE Thymus vulgaris CT thujanol (Thym à thujanol) : 20 mg   Excipient poudre 300 mg pour faire une gélule n°0 dt 60   Faites préparer ces gélules par votre pharmacien.Utilisation : 2 x 1 gélule par jour après les repas ; à répéter selon les besoinsETVoie cutanée : HE Ledum groenlandicum (Lédon du groënland) : 3 ml   HE Rosmarinus officinalis CT verbénone (Romarin à verbénone) : 6 ml   HE Thymus vulgaris CT thujanol (Thym à thujanol) : 3 ml   HV Noisette ou transcutol : complément à 30 mlUtilisation : 10 gouttes 3 fois par jour localement sur le foie Commentaire Aroma-Zone : Le transcutol est une préparation pharmaceutique peu répandue qui permet de faire pénétrer facilement les corps gras comme les huiles essentielles au niveau de la peau. Il peut être facilement remplacé par une huile végétale sèche comme l'huile végétale de Noisette, de Kukui, ou de Macadamia"
       ]
     },
-    "ideal": ["Acné, boutons", "Cicatrice", "Vergetures", "Confort du foie"]
+    "ideal": ["Acné, boutons", "Cicatrice", "Vergetures", "Confort du foie"],
+    "utilisations": [
+      "Diffusion +",
+      "Bain aromatique +",
+      "Actif cosmétique ++",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Rosalina",
@@ -11384,7 +12381,13 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles. Dangereux. Respecter les précautions d'emploi. Liquide et vapeurs inflammables. Peut provoquer une allergie cutanée. Provoque une irritation cutanée (risque lié au produit sous forme pure). Peut être mortel en cas d'ingestion et de pénétration dans les voies respiratoires (si le produit est avalé accidentellement, ne pas faire vomir). Toxique pour les organismes aquatiques, entraîne des effets néfastes à long terme (en cas de déversement massif du produit dans un cours d'eau)."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Mycose"]
+    "ideal": ["Mycose"],
+    "utilisations": [
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Rose de Damas",
@@ -11447,7 +12450,14 @@
         "HE Ylang Ylang : 1 cuillère à café / HE Patchouli : 15 gouttes / HE Santal : 15 gouttes / Absolue Jasmin : 5 gouttes / HE Rose : 5 gouttes / Vodka ou eau-de-vie : 2 cuillères à soupe / Eau distillée : 2 cuillères à café / Glycérine : 1/4 cuillère à café / Mode opératoire : Mélanger les ingrédients dans un flacon d'une contenance de 60 ml. Agiter et laisser reposer 2 à 6 mois pour une bonne maturation. Attention, l'odeur initiale n'a rien à voir avec la fragrance finale."
       ]
     },
-    "ideal": ["Rides, ridules", "Dépression (nerveuse), déprime", "Ménopause"]
+    "ideal": ["Rides, ridules", "Dépression (nerveuse), déprime", "Ménopause"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Santal alba",
@@ -11529,6 +12539,13 @@
       "Hémorroïdes",
       "Infection urinaire",
       "Jambes lourdes, varices"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -11575,7 +12592,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Sapin baumier",
@@ -11631,7 +12655,14 @@
         "Contenant conseillé : pot en verre 125 ml / 100 g de sel d'Epsom / 3 à 5 cuillères à moka (petit cuillère à café) selon l’intensité souhaitée de Chlorophylle végétale / 0,5 ml d’huile végétale de Baobab (à prélever avec une seringue graduée) / 10 gouttes d’huile essentielle de Sapin baumier / 10 gouttes d’huile essentielle d'Eucalyptus citronné / 5 gouttes d’huile essentielle de Menthe poivrée / 5 gouttes d’huile essentielle de Cèdre de l’Atlas / 1 pointe de couteau de Mica blanc / Mode opératoire : Mettre le sel d’Epsom dans le bol ainsi que l’huile végétale de Baobab. Ajouter ensuite la poudre de Chlorophylle, le Mica blanc puis les gouttes d’huiles essentielles. Mélanger le tout en agitant vigoureusement afin d’obtenir une teinte homogène. Verser dans le potUtilisation : Ajouter 5 bouchons de ces sels de bain au moment de faire couler votre bain sous le jet d’eau afin de parfumer au maximum l’atmosphère de votre salle de bain.Conservation : Conserver à l'abri de la lumière et de l'air pendant 6 mois maximum."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Application cutanée et massage +",
+      "Actif cosmétique +",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Sapin pectiné",
@@ -11692,7 +12723,14 @@
       "Eviter le contact avec les yeux et les muqueuses. Tenir hors de portée des enfants. Certains composés naturels contenus dans cette huile essentielle peuvent présenter un risque d'allergie chez certaines personnes sensibles lorsque l'huile essentielle est incorporée dans une composition cosmétique (selon le 7ème Amendement de la Directive Européenne relative aux produits cosmétiques (2003/15/CE)) : limonène, linalol. En règle générale, faites toujours un test d'application de votre préparation, dans le pli du coude, au moins 48h avant de l'utiliser. Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Qualité alimentaire +",
+      "Bain aromatique ++",
+      "Application cutanée et massage ++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Saro",
@@ -11765,7 +12803,13 @@
         "HE Cinnamosma fragans (Saro) : 5 ml   HE Myrtus communis CT cinéole (Myrte) : 2 ml   HE Rosmarinus off. CT verbénone (Romarin à verbénone) : 1 ml   HE Eucalyptus radiata (Eucalyptus radié) : 2 ml   HV Corylus avellana (Noisette) : 5 mlUtilisations :  - enfant (de + de 6 ans et sur avis médical) : 6 gouttes sur le thorax et le dos 5 fois par jour pendant 3 à 5 jours.- adulte  : 15 gouttes sur le thorax et le dos 4 à 6 fois par jour pendant 3 à 5 jours"
       ]
     },
-    "ideal": ["Angine", "Bronchite", "Grippe", "Otite"]
+    "ideal": ["Angine", "Bronchite", "Grippe", "Otite"],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Sarriette des montagnes",
@@ -11846,6 +12890,13 @@
       "Infections cutanées",
       "Gastro et infections intestinales",
       "Laryngite, pharyngite"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Diffusion -",
+      "Actif cosmétique -",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -11928,6 +12979,13 @@
       "Transpiration",
       "Ménopause",
       "Règles"
+    ],
+    "utilisations": [
+      "Bain aromatique ++",
+      "Qualité alimentaire ++",
+      "Diffusion ++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -11996,7 +13054,14 @@
         "20 cl d’HV d’Olive / 5 cl d’HV de Jojoba / 20 gouttes d’HE de Tea tree / 20 gouttes d’HE de Lavande vraie / 20 gouttes d’HE de Serpolet / 5 gouttes d’HE de Santal blanc / Mode opératoire: Mélanger tous les ingrédients.Utilisation : Pratiquer un léger massage du cuir chevelu, puis enduire vos cheveux avec ce mélange. Recouvrir le tout d’une serviette chaude et laisser agir toute la nuit avant de faire un shampooing."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion +",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle de Tagète",
@@ -12044,7 +13109,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion -",
+      "Qualité alimentaire +",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Tanaisie annuelle",
@@ -12119,7 +13191,11 @@
         "HE Citrus aurantium var. aurantium (Orange amère) : 1,5 g / HE Citrus lemon (Citron) : 1,5 g / HE Citrus reticulata (Mandarine) : 1,75 g / HE Tanacetum annuum (Tanaisie annuelle) : 0,25 g / Huile végétale de 50 ml. / Utilisation : 1 application 2 à 3 fois, à 15 min d'intervalleNote Aroma-Zone  : Les huiles essentielles de Mandarine, d'Orange et de Citron sont photosensibilisantes, ne pas s'exposer au soleil après application de ce mélange."
       ]
     },
-    "ideal": ["Allergie cutanée", "Asthme"]
+    "ideal": ["Allergie cutanée", "Asthme"],
+    "utilisations": [
+      "Actif cosmétique ++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Tea tree",
@@ -12244,6 +13320,13 @@
       "Douleurs dentaires (Carie, Gingivite, Abcès)",
       "Infections cutanées",
       "Mycose"
+    ],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Bain aromatique ++",
+      "Actif cosmétique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -12292,7 +13375,14 @@
         "HE Basilic tropical ou Basilic à linalol : 10 gouttes / HE Géranium rosat : 10 gouttes / HE Romarin à cinéole : 5 gouttes / HE Tea tree (ou leptosperme) citronné : 5 gouttes / HV Macadamia ou Noyaux d'abricot : 30 ml / Utilisation : Masser régulièrement la zone du plexus solaire et faire de lents mouvements circulaires dans le sens des aiguilles d'une montre avec quelques gouttes de cette huile de massage."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Térébenthine",
@@ -12348,7 +13438,14 @@
         "HE Térébenthine : 10 gouttes / Mode opératoire: Dans de la poudre d'algue ou de l'argile / Utilisation: A ajouter au bain."
       ]
     },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Qualité alimentaire -",
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Application cutanée et massage ++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Thym à géraniol",
@@ -12423,7 +13520,14 @@
         "2 gouttes d'HE de Laurier noble / 2 gouttes d'HE de Palmarosa / 1 goutte d'HE de Lavande vraie / 2 gouttes d'HE de Mandravasarotra (Saro) / 2 gouttes d'HE de Cannelle de Chine / Utilisation  : 2 à 3 gouttes du mélange sur l'affection de l'ongle 3 fois par jour pendant 3 semaines ou jusqu'à nette améliorationNote Aroma-Zone  : L'huile essentielle de Cannelle de Chine possède les mêmes propriétés que l'huile essentielle de Cannelle de Ceylan Ecorce et peut donc être remplacée par celle-ci."
       ]
     },
-    "ideal": ["Mycose"]
+    "ideal": ["Mycose"],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Thym à linalol",
@@ -12484,7 +13588,14 @@
         "HV Pépins de raisin : 2 cuillères à soupe / Argile verte : 5 cuillère à soupe / Hydrolat de rose : quelques gouttes pour diluer la préparation / HE Thym : 2 gouttes / Mode opératoire : Bien mélanger la préparation afin d'obtenir une pâte onctueuse, ni trop liquide ni trop épaisse. Utilisation: Appliquer sur le cuir chevelu et les cheveux, laisser agir au moins 20 minutes puis rincer abondamment et procéder au shampooing."
       ]
     },
-    "ideal": ["Angine"]
+    "ideal": ["Angine"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Bain aromatique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Thym à linalol de Provence",
@@ -12545,7 +13656,14 @@
         "HV Pépins de raisin : 2 cuillères à soupe / Argile verte : 5 cuillère à soupe / Hydrolat de rose : quelques gouttes pour diluer la préparation / HE Thym : 2 gouttes / Mode opératoire : Bien mélanger la préparation afin d'obtenir une pâte onctueuse, ni trop liquide ni trop épaisse. Utilisation: Appliquer sur le cuir chevelu et les cheveux, laisser agir au moins 20 minutes puis rincer abondamment et procéder au shampooing."
       ]
     },
-    "ideal": ["Angine"]
+    "ideal": ["Angine"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Bain aromatique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Thym à thujanol",
@@ -12641,6 +13759,13 @@
       "Laryngite, pharyngite",
       "Rhume, nez bouché, nez qui coule",
       "Maladie de Raynaud"
+    ],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Diffusion +",
+      "Bain aromatique +",
+      "Qualité alimentaire +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -12697,7 +13822,12 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Mycose"]
+    "ideal": ["Mycose"],
+    "utilisations": [
+      "Application cutanée et massage ++",
+      "Diffusion ++",
+      "Qualité alimentaire +++"
+    ]
   },
   {
     "name": "Huile essentielle de Thym saturéoïdes",
@@ -12776,6 +13906,13 @@
       "Gastro et infections intestinales",
       "Laryngite, pharyngite",
       "Vers intestinaux"
+    ],
+    "utilisations": [
+      "Bain aromatique -",
+      "Actif cosmétique -",
+      "Diffusion +",
+      "Application cutanée et massage +++",
+      "Qualité alimentaire +++"
     ]
   },
   {
@@ -12822,7 +13959,14 @@
         "30 ml d'HV de Calophylle inophyle / une synergie de 8 huiles essentielles (dilution à 10 %) / 4 huiles essentielles agissant comme toniques veineux : 10 gouttes d'HE Lentisque pistachier / 10 gouttes d'HE de Myrte rouge / 10 gouttes d'HE Valériane / 10 gouttes d'HE Hélichryse italienne / 4 huiles essentielles facilitant l'élimination de la cellulite : 10 gouttes d'HE de Palmarosa / 10 gouttes d'HE de Lemon grass / 10 gouttes d'HE de Christe marine / 10 gouttes d'HE de Pamplemousse / Mode opératoire : Versez l'huile végétale dans le roll-on. Ajoutez les 80 gouttes d'huiles essentielles. Secouez énergiquement le flacon afin de bien mélanger toutes les huiles essentielles. / Précautions : ce produit contenant des huiles essentielles, ne pas appliquer pendant la grossesse."
       ]
     },
-    "ideal": ["Jambes lourdes, varices"]
+    "ideal": ["Jambes lourdes, varices"],
+    "utilisations": [
+      "Diffusion -",
+      "Actif cosmétique -",
+      "Qualité alimentaire +",
+      "Bain aromatique +",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Verge d'or",
@@ -12877,7 +14021,14 @@
         "HE Solidago cadanensis (Verge d'Or) : 25% / Huile végétale : 75% / Utilisation: En frictions localisées de quelques gouttes."
       ]
     },
-    "ideal": ["Arthrite, Arthrose, Rhumatismes", "Confort du foie"]
+    "ideal": ["Arthrite, Arthrose, Rhumatismes", "Confort du foie"],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Qualité alimentaire ++",
+      "Bain aromatique +++",
+      "Application cutanée et massage +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Verveine odorante",
@@ -12940,7 +14091,14 @@
         "HE Hélichryse verte (Helichrysum italicum)   HE Limette ou Citron vert (Citrus aurantifolium)   HE Verveine odorante (Lippia citriodora)Mode opératoire et utilisation : Mélanger 1 goutte de chaque huile essentielle dans un demi-verre d'eau chaude (37°) et gargarisez-vous pendant 1 à 2 minutes. Renouvelez ce traitement 2 à 3 fois dans la journée"
       ]
     },
-    "ideal": ["Asthme", "Dépression (nerveuse), déprime", "Stress"]
+    "ideal": ["Asthme", "Dépression (nerveuse), déprime", "Stress"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique ++",
+      "Application cutanée et massage ++",
+      "Qualité alimentaire +++",
+      "Diffusion +++"
+    ]
   },
   {
     "name": "Huile essentielle de Vétiver d'Haïti",
@@ -13003,7 +14161,14 @@
         "HV Noisette ou alcool 90° : 30 ml / HE Combawa ou Mandarine : 2 gouttes / HE Vétiver : 5 gouttes"
       ]
     },
-    "ideal": ["Hémorroïdes", "Jambes lourdes, varices"]
+    "ideal": ["Hémorroïdes", "Jambes lourdes, varices"],
+    "utilisations": [
+      "Bain aromatique -",
+      "Qualité alimentaire +",
+      "Diffusion ++",
+      "Application cutanée et massage +++",
+      "Actif cosmétique +++"
+    ]
   },
   {
     "name": "Huile essentielle de Xanthoxylum",
@@ -13045,7 +14210,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Douleurs dentaires (Carie, Gingivite, Abcès)"]
+    "ideal": ["Douleurs dentaires (Carie, Gingivite, Abcès)"],
+    "utilisations": [
+      "Actif cosmétique +",
+      "Bain aromatique +",
+      "Qualité alimentaire +",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle d'Ylang-Ylang complète",
@@ -13158,6 +14330,13 @@
       "Baisse de libido",
       "Insomnie",
       "Stress"
+    ],
+    "utilisations": [
+      "Qualité alimentaire +",
+      "Actif cosmétique +++",
+      "Bain aromatique +++",
+      "Diffusion +++",
+      "Application cutanée et massage +++"
     ]
   },
   {
@@ -13262,7 +14441,14 @@
         "Mode opératoire et utilisation: Mélangez 1 goutte d'huile essentielle d'Ylang-Ylang (Cananga odorata), 1 goutte d'huile essentielle de Géranium (Pelargonium graveolens) et 5 cl d'huile de colza. Pour donner une petite note bucolique à vos plats."
       ]
     },
-    "ideal": ["Alopécie, perte de cheveux", "Insomnie", "Stress"]
+    "ideal": ["Alopécie, perte de cheveux", "Insomnie", "Stress"],
+    "utilisations": [
+      "Qualité alimentaire ++",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Yuzu",
@@ -13324,7 +14510,14 @@
       "En règle générale, faites toujours un test d'application de votre préparation, dans le pli du coude, au moins 48h avant de l'utiliser."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": ["Stress"]
+    "ideal": ["Stress"],
+    "utilisations": [
+      "Qualité alimentaire +++",
+      "Diffusion +++",
+      "Bain aromatique +++",
+      "Actif cosmétique +++",
+      "Application cutanée et massage +++"
+    ]
   },
   {
     "name": "Huile essentielle de Zédoaire",
@@ -13371,7 +14564,14 @@
       "Téléchargez les précautions générales à lire avant toute utilisation d'huiles essentielles."
     ],
     "recipes": { "recipesTitle": [], "recipesContent": [] },
-    "ideal": []
+    "ideal": [],
+    "utilisations": [
+      "Actif cosmétique -",
+      "Bain aromatique -",
+      "Diffusion -",
+      "Qualité alimentaire ++",
+      "Application cutanée et massage ++"
+    ]
   },
   {
     "name": "Huile essentielle de Copahu",
@@ -13438,6 +14638,13 @@
       "Arthrite, Arthrose, Rhumatismes",
       "Ecorchures, bobos, coupures",
       "Entorse, foulure"
+    ],
+    "utilisations": [
+      "Qualité alimentaire -",
+      "Actif cosmétique ++",
+      "Bain aromatique ++",
+      "Diffusion ++",
+      "Application cutanée et massage +++"
     ]
   }
 ]
