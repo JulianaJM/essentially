@@ -1,6 +1,8 @@
 import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
 import { object, bool } from "prop-types";
+import { isMobile } from "react-device-detect";
+
 import Header from "./header";
 import Tags from "../search/tags/tags";
 
@@ -17,6 +19,14 @@ class HeaderContainer extends PureComponent {
   componentDidMount() {
     const { history } = this.props;
     history.push("");
+
+    if (isMobile) {
+      const { current } = this.headerRef;
+
+      current.classList.add("heightSizeDown--mobile");
+      current.firstChild.classList.add("logoSizeDown");
+      current.nextElementSibling.classList.add("container");
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -61,7 +71,10 @@ class HeaderContainer extends PureComponent {
     return (
       <Header ref={this.headerRef}>
         <div className="search-bar">
-          <Tags onUpdate={this.handleChange} />
+          <Tags
+            onUpdate={this.handleChange}
+            placeholder="je recherche une huile ou un symptome..."
+          />
         </div>
       </Header>
     );

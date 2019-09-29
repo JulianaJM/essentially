@@ -17,4 +17,8 @@ export default class ElasticSearchService {
       },
     });
   }
+
+  static getRandom() {
+    return axios.get("/random");
+  }
 }

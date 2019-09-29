@@ -46,14 +46,15 @@ class Tags extends Component {
 
   render() {
     const { currentValue } = this.state;
+    const { placeholder } = this.props;
     return (
       <Select
         isMulti
         components={components}
-        placeholder="Rechercher un symptome ou une huile..."
+        placeholder={placeholder}
         formatCreateLabel={userInput => `Search for ${userInput}`}
         menuIsOpen={currentValue}
-        name="symptoms"
+        name="tagsearch"
         options={this.options}
         className="select-container paddingSearchBar"
         classNamePrefix="select"
@@ -68,6 +69,7 @@ class Tags extends Component {
 
 Tags.propTypes = {
   onUpdate: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
 };
 
 export default Tags;

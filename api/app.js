@@ -41,6 +41,16 @@ app.get("/", function(req, res) {
   });
 });
 
+app.get("/random", function(req, res) {
+  elasticsearchService
+    .getRandomOils()
+    .then(results => res.json(results.hits))
+    .catch(err => {
+      console.log(err);
+      res.send(err);
+    });
+});
+
 // define the /search route that should return elastic search results
 app.get("/search", function(req, res) {
   const { value, offset } = req.query;

@@ -7,6 +7,8 @@ import Header from "./components/header/header-container";
 import SearchResults from "./components/search/search-results";
 import { /* isPageBottom */ isPageScrollable } from "./utils/scroll";
 import Loader from "./components/common/loader/loader";
+import Navbar from "./components/common/navbar/navbar";
+import AsyncComponent from "./components/common/async-component";
 
 import "./app.scss";
 
@@ -41,25 +43,24 @@ class App extends PureComponent {
     return (
       <div className="app">
         <Header isSticky={isScrollable} />
-        <div>
-          <Switch>
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route
-              exact
-              path="/"
-              render={props => <SearchResults {...props} />}
-            />
-            <Route
-              path="/:name"
-              render={props => (
-                <Suspense fallback={<Loader />}>
-                  <OilDetails {...props} />
-                </Suspense>
-              )}
-            />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/about" component={AsyncComponent(() => About)} />
+          <Route path="/contact" component={AsyncComponent(() => Contact)} />
+          <Route
+            exact
+            path="/"
+            render={props => <SearchResults {...props} />}
+          />
+          <Route
+            path="/:name"
+            render={props => (
+              <Suspense fallback={<Loader />}>
+                <OilDetails {...props} />
+              </Suspense>
+            )}
+          />
+        </Switch>
+        <Navbar />
       </div>
     );
   }

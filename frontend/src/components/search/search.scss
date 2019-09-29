@@ -1,24 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento&display=swap");
+
 .search {
-  width: 90%;
-  margin: 0 auto;
+  font-family: "Quattrocento", cursive;
+  width: 100%;
+
   &__results {
+    margin: 0 150px;
+    @media only screen and (max-width: 480px) {
+      margin: 0 2px;
+    }
+
     .button-wrapper {
       display: flex;
       justify-content: center;
-      // width: 80%;
     }
     .button-next {
-      background-color: #4caf50; /* Green */
+      outline: none;
       border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
+      background: none;
+      color: rgba(19, 128, 36, 0.54);
+      cursor: pointer;
+
+      svg {
+        margin-top: 50px;
+        font-size: 2.5rem;
+        transition: 0.3s;
+
+        @media only screen and (max-width: 480px) {
+          margin-top: 5px;
+          font-size: 1.5rem;
+        }
+      }
+
+      &:hover {
+        color: #4caf50;
+        transition: 0.3s;
+      }
     }
     &:focus {
       outline: none;
+    }
+    &__discover {
+      color: #484848;
+      margin-bottom: 20px;
+      @media only screen and (max-width: 480px) {
+        font-size: 1.1rem;
+      }
+    }
+    &__total {
+      color: #484848;
+      margin-bottom: 20px;
+      @media only screen and (max-width: 480px) {
+        font-size: 1.1rem;
+      }
     }
   }
 }

@@ -3,10 +3,20 @@
     &__control {
       border-radius: 1.25rem; //20px
       padding: 0.3rem;
+      &:focus {
+        border-color: #4caf50;
+      }
+    }
+    &__control--is-focused {
+      border-color: #4caf50 !important;
+      box-shadow: 0 0 0 1px rgba(19, 128, 36, 0.1);
     }
     &__multi-value {
       border-radius: 50px;
-      background-color: grey;
+      background-color: rgba(19, 128, 36, 0.54);
+      &__label {
+        color: black;
+      }
     }
   }
 }

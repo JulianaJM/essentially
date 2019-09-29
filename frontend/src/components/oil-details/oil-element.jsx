@@ -10,14 +10,14 @@ const OilElement = ({ category }) => (
         <li key={getUniqueId()}>{property}</li>
       ))}
     </ul>
-    {category.indicationsDesc && <strong>Indications</strong>}
+    {category.indicationsDesc && <p className="subtitle">Indications</p>}
     <p>{category.indicationsDesc}</p>
     <ul>
       {category.indications.map(property => (
         <li key={getUniqueId()}>{property}</li>
       ))}
     </ul>
-    {category.synergies.length > 0 && <strong>Synergies</strong>}
+    {category.synergies.length > 0 && <p className="subtitle">Synergies</p>}
     <ul>
       {category.synergies.map(property => (
         <li key={getUniqueId()}>{property}</li>

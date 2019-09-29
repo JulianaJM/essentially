@@ -26,7 +26,7 @@ const OilDetails = ({ match }) => {
       <div className="oil-details">
         <img src={oil.image} alt={oil.name} />
         <div className="oil-details__content">
-          <h3>{oil.name}</h3>
+          <h2>{oil.name}</h2>
           <p>{oil.description}</p>
           {oil.health.propertiesDesc && <h3>En Santé</h3>}
           <OilElement category={oil.health} />
@@ -34,7 +34,9 @@ const OilDetails = ({ match }) => {
           <OilElement category={oil.mood} />
           {oil.beauty.propertiesDesc && <h3>En beauté</h3>}
           <OilElement category={oil.beauty} />
-          {oil.precautions.length > 0 && <strong>Précautions</strong>}
+          {oil.precautions.length > 0 && (
+            <p className="subtitle">Précautions</p>
+          )}
           <ul>
             {oil.precautions.map(precaution => (
               <li key={getUniqueId()}>{precaution}</li>

@@ -6,9 +6,14 @@ import "./header.scss";
 const Header = React.forwardRef((props, ref) => (
   <div className="header" ref={ref} tabIndex={-1}>
     <div className="header__title">
-      <h1 id="logo">Essentially</h1>
-      <img src="/assets/images/logo.png" alt="logo" />
-      <h2>Bienvenue sur ton moteur de recherche {" d'huiles "}essentielles</h2>
+      <h1 className="sr-only">Essentially</h1>
+      <div className="header__title__content">
+        <img src="/assets/images/logo.png" alt="logo" />
+        <h2>
+          Bienvenue sur ton moteur de recherche{" "}
+          <span className="bold-green">{" d'huiles essentielles "} </span>
+        </h2>
+      </div>
     </div>
     {props.children}
   </div>

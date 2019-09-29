@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento|Indie+Flower&display=swap");
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-family: "Quattrocento", cursive;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.navbar span {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: "Indie Flower", cursive;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+  transition: 0.5s;
+}
+
+.navbar a.active {
+  background-color: #4caf50;
+  color: white;
+}
+@media only screen and (max-width: 480px) {
+  .navbar a,
+  .navbar span {
+    padding: 7px 10px;
+  }
+}

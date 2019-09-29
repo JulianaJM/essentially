@@ -7,8 +7,7 @@ module.exports = merge(baseConfig, {
     // if not defined default port is 8080
     port: 8000,
     proxy: {
-      "/search": "http://localhost:3000",
-      "/searchByName": "http://localhost:3000",
+      "/": "http://localhost:3000",
     },
     // contentBase: "./dist",
     hot: true,

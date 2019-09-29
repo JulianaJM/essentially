@@ -1,5 +1,8 @@
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
 import ElasticSearchService from "../../services/elasticSearch";
 import Loader from "../common/loader/loader";
 
@@ -11,7 +14,8 @@ const SearchResults = ({ location }) => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchOffset, setSearchOffset] = useState(0); // Search result pagination offset
   const [total, setTotal] = useState(0); // Total search results found
-  const [isButtonVisible, setIsButtonVisible] = useState(false);
+  const [hasNextResults, setHasNextResults] = useState(false);
+  const [isRandom, setIsRandom] = useState(false);
 
   const getSearchValues = () => {
     const queryParamString = location.search
@@ -27,7 +31,7 @@ const SearchResults = ({ location }) => {
   const resetSearchResults = () => {
     setSearchOffset(0);
     setSearchResults([]);
-    setIsButtonVisible(false);
+    setHasNextResults(false);
   };
 
   const onClick = () => {
@@ -35,31 +39,30 @@ const SearchResults = ({ location }) => {
     if (total > offsetDisplayed) {
       setSearchOffset(offsetDisplayed);
     } else {
-      setIsButtonVisible(false);
+      setHasNextResults(false);
     }
   };
 
-  // useEffect(() => {
-  //   if (isBottom) {
-  //     const offsetDisplayed = searchOffset + 10;
-  //     if (total > offsetDisplayed) {
-  //       setSearchOffset(offsetDisplayed);
-  //     }
-  //   }
-  // }, [isBottom]);
+  useEffect(() => {
+    ElasticSearchService.getRandom().then(res => {
+      setSearchResults(res.data.hits);
+      setIsRandom(true);
+    });
+  }, []);
 
   useEffect(() => {
     const searchParams = getSearchValues();
     if (searchParams.length > 0) {
+      setIsRandom(false);
       ElasticSearchService.search(searchParams, searchOffset)
         .then(res => {
           if (res.data.total.value === 0) {
             resetSearchResults();
-            return;
+          } else {
+            setTotal(res.data.total.value);
+            setSearchResults([...searchResults, ...res.data.hits]);
+            setHasNextResults(true);
           }
-          setTotal(res.data.total.value);
-          setSearchResults([...searchResults, ...res.data.hits]);
-          setIsButtonVisible(true);
         })
         .catch((/* err */) => {
           // console.log("error during search", err);
@@ -76,12 +79,22 @@ const SearchResults = ({ location }) => {
       <div className="search__results">
         {searchResults.length > 0 && (
           <Suspense fallback={<Loader />}>
-            <p>Total: {total}</p>
+            {!isRandom && hasNextResults && (
+              <p className="search__results__total">
+                {total} résultats trouvés
+              </p>
+            )}
+            {isRandom && (
+              <h2 className="search__results__discover">
+                Je découvre la sélection du jour
+              </h2>
+            )}
             <OilList oils={searchResults} />
-            {isButtonVisible && (
+            {hasNextResults && (
               <div className="button-wrapper">
                 <button className="button-next" type="button" onClick={onClick}>
-                  plus de résultas
+                  <FontAwesomeIcon icon={faArrowDown} />
+                  <p className="sr-only">Plus de résultats</p>
                 </button>
               </div>
             )}
@@ -94,7 +107,6 @@ const SearchResults = ({ location }) => {
 
 SearchResults.propTypes = {
   location: PropTypes.object.isRequired,
-  // isBottom: PropTypes.bool.isRequired,
 };
 
 export default SearchResults;
