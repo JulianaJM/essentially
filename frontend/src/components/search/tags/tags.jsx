@@ -50,7 +50,7 @@ class Tags extends Component {
       <Select
         isMulti
         components={components}
-        placeholder="Type something and press enter..."
+        placeholder="Rechercher un symptome ou une huile..."
         formatCreateLabel={userInput => `Search for ${userInput}`}
         menuIsOpen={currentValue}
         name="symptoms"

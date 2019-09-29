@@ -1,17 +1,21 @@
-import React, { PureComponent } from "react";
-import { hot } from "react-hot-loader";
+import { hot } from "react-hot-loader/root";
+import React, { PureComponent, lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
+import { isMobile } from "react-device-detect";
+
 import Header from "./components/header/header-container";
 import SearchResults from "./components/search/search-results";
-import About from "./components/about/about";
-import Contact from "./components/contact/contact";
-import OilDetails from "./components/oil-details/oil-details";
+import { /* isPageBottom */ isPageScrollable } from "./utils/scroll";
+import Loader from "./components/common/loader/loader";
 
 import "./app.scss";
 
+const About = lazy(() => import("./components/about/about"));
+const Contact = lazy(() => import("./components/contact/contact"));
+const OilDetails = lazy(() => import("./components/oil-details/oil-details"));
+
 class App extends PureComponent {
   state = {
-    isBottom: false,
     isScrollable: false,
   };
 
@@ -24,27 +28,15 @@ class App extends PureComponent {
   }
 
   handleScroll = () => {
-    const element = document.documentElement;
-    const currentScrollPos = window.pageYOffset;
-    const clientHeight = element.clientHeight;
-    const scrollTop = element.scrollTop;
-    const scrollHeight = element.scrollHeight;
-
-    const distanceFromBottom = scrollHeight - scrollTop;
-    const isScrollable =
-      currentScrollPos > 0 && distanceFromBottom > clientHeight;
-    const isBottom =
-      element.scrollHeight - element.scrollTop === element.clientHeight;
-
-    const visible = isBottom ? true : isScrollable;
+    const isScrollable = !isMobile && isPageScrollable();
+    // const isBottom = isPageBottom();
 
     this.setState({
-      isScrollable: visible,
-      isBottom,
+      isScrollable,
     });
   };
   render() {
-    const { isBottom, isScrollable } = this.state;
+    const { isScrollable } = this.state;
     return (
       <div className="app">
         <Header isSticky={isScrollable} />
@@ -55,9 +47,16 @@ class App extends PureComponent {
             <Route
               exact
               path="/"
-              render={props => <SearchResults isBottom={isBottom} {...props} />}
+              render={props => <SearchResults {...props} />}
             />
-            <Route path="/:name" render={props => <OilDetails {...props} />} />
+            <Route
+              path="/:name"
+              render={props => (
+                <Suspense fallback={<Loader />}>
+                  <OilDetails {...props} />
+                </Suspense>
+              )}
+            />
           </Switch>
         </div>
       </div>
@@ -65,6 +64,4 @@ class App extends PureComponent {
   }
 }
 // avoid reload state on dev change
-// const hotFunction = hot(module);
-// export default hotFunction(App);
-export default hot(module)(App);
+export default hot(App);

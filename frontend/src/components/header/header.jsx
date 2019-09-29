@@ -8,6 +8,7 @@ const Header = React.forwardRef((props, ref) => (
     <div className="header__title">
       <h1 id="logo">Essentially</h1>
       <img src="/assets/images/logo.png" alt="logo" />
+      <h2>Bienvenue sur ton moteur de recherche {" d'huiles "}essentielles</h2>
     </div>
     {props.children}
   </div>

@@ -1,6 +1,6 @@
 const client = require("../datasource/connection");
 
-const SIZE = 200;
+// const SIZE = 200;
 const INDEX = "oils";
 
 const buildFullTextSearchQuery = (terms, offset) => {
@@ -20,7 +20,7 @@ const buildFullTextSearchQuery = (terms, offset) => {
     query: {
       query_string: {
         query: queryString,
-        minimum_should_match: 2,
+        // minimum_should_match: 2,
         fields: [
           "name",
           "ideal",
@@ -65,7 +65,7 @@ module.exports = {
     return client.search({
       index: INDEX,
       body: {
-        size: SIZE,
+        // size: SIZE,
         query: {
           match_phrase: {
             name

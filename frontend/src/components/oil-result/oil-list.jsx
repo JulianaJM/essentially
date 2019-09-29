@@ -5,12 +5,16 @@ import OilResult from "./oil-result";
 import "./oils.scss";
 
 const OilList = ({ oils }) => (
-  <div className="oils">
+  <ul className="oils">
     {oils.map(({ _source }) => {
       const oil = { ..._source };
-      return <OilResult key={oil.name} oil={oil} />;
+      return (
+        <li className="oils__result" key={oil.name}>
+          <OilResult oil={oil} />
+        </li>
+      );
     })}
-  </div>
+  </ul>
 );
 
 OilList.propTypes = {

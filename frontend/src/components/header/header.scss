@@ -30,6 +30,7 @@
 .heightSizeDown {
   top: 0;
   position: fixed;
+  z-index: 1;
   height: 6.25rem; //100px;
   flex-direction: row;
 }
@@ -39,5 +40,8 @@
   margin: 0 10px;
   img {
     width: 70%;
+  }
+  h2 {
+    display: none;
   }
 }
