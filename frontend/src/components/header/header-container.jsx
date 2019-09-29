@@ -11,6 +11,7 @@ class HeaderContainer extends PureComponent {
   };
 
   ticking = false;
+
   headerRef = React.createRef();
 
   componentDidMount() {

@@ -35,6 +35,7 @@ class App extends PureComponent {
       isScrollable,
     });
   };
+
   render() {
     const { isScrollable } = this.state;
     return (
