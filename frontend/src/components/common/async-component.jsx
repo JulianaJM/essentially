@@ -5,22 +5,22 @@ export default function asyncComponent(importComponent) {
     constructor(props) {
       super(props);
       this.state = {
-        Component: null,
+        ComponentToImport: null,
       };
     }
 
     async componentDidMount() {
-      const { default: Component } = await importComponent();
+      const { default: ComponentToImport } = await importComponent();
 
       this.setState({
-        Component,
+        ComponentToImport,
       });
     }
 
     render() {
-      const { Component } = this.state;
+      const { ComponentToImport } = this.state;
 
-      return Component ? (
+      return ComponentToImport ? (
         <Suspense fallback={[]}>
           <Component {...this.props} />
         </Suspense>
