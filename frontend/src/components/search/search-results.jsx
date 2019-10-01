@@ -74,8 +74,6 @@ const SearchResults = ({ location }) => {
 
   return (
     <div className="search">
-      <div className="search__intro"> </div>
-
       <div className="search__results">
         {searchResults.length > 0 && (
           <Suspense fallback={<Loader />}>

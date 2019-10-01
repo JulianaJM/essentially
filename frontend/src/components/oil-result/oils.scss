@@ -3,6 +3,7 @@
   grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
   grid-gap: 10px;
   align-items: stretch;
+  justify-content: center;
   &__result {
     // display: inline-block;
     // list-style: none outside none;

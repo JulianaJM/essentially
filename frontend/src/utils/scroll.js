@@ -1,6 +1,6 @@
 export const isPageScrollable = () => {
   const currentScrollPos = window.pageYOffset;
-  return currentScrollPos > 590;
+  return currentScrollPos > 450;
 };
 
 export const isPageBottom = () => {
