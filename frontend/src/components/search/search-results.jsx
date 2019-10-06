@@ -44,24 +44,33 @@ const SearchResults = ({ location }) => {
   };
 
   useEffect(() => {
-    ElasticSearchService.getRandom().then(res => {
-      setSearchResults(res.data.hits);
-      setIsRandom(true);
-    });
+    // FIXME ugly
+    const searchParams = getSearchValues();
+    if (!searchParams.length) {
+      ElasticSearchService.getRandom().then(res => {
+        setSearchResults(res.data.hits);
+        setIsRandom(true);
+      });
+    }
   }, []);
 
   useEffect(() => {
     const searchParams = getSearchValues();
     if (searchParams.length > 0) {
-      setIsRandom(false);
       ElasticSearchService.search(searchParams, searchOffset)
         .then(res => {
           if (res.data.total.value === 0) {
             resetSearchResults();
           } else {
             setTotal(res.data.total.value);
-            setSearchResults([...searchResults, ...res.data.hits]);
-            setHasNextResults(true);
+            if (isRandom) {
+              setSearchResults(res.data.hits);
+              setIsRandom(false);
+            } else {
+              setSearchResults([...searchResults, ...res.data.hits]);
+            }
+
+            setHasNextResults(res.data.total.value > 10);
           }
         })
         .catch((/* err */) => {
@@ -77,7 +86,7 @@ const SearchResults = ({ location }) => {
       <div className="search__results">
         {searchResults.length > 0 && (
           <Suspense fallback={<Loader />}>
-            {!isRandom && hasNextResults && (
+            {!isRandom && (
               <p className="search__results__total">
                 {total} résultats trouvés
               </p>
@@ -88,7 +97,7 @@ const SearchResults = ({ location }) => {
               </h2>
             )}
             <OilList oils={searchResults} />
-            {hasNextResults && (
+            {!isRandom && hasNextResults && (
               <div className="button-wrapper">
                 <button className="button-next" type="button" onClick={onClick}>
                   <FontAwesomeIcon icon={faArrowDown} />

@@ -1,7 +1,8 @@
 import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
-import { object, bool } from "prop-types";
+import { object } from "prop-types";
 import { isMobile } from "react-device-detect";
+import { throttle } from "lodash";
 
 import Header from "./header";
 import Tags from "../search/tags/tags";
@@ -9,7 +10,6 @@ import Tags from "../search/tags/tags";
 class HeaderContainer extends PureComponent {
   static propTypes = {
     history: object.isRequired,
-    isSticky: bool.isRequired,
   };
 
   ticking = false;
@@ -20,6 +20,12 @@ class HeaderContainer extends PureComponent {
     const { history } = this.props;
     history.push("");
 
+    if (!isMobile) {
+      window.addEventListener(
+        "scroll",
+        throttle(this.handleSticky, 100, { trailing: true, leading: true })
+      );
+    }
     if (isMobile) {
       const { current } = this.headerRef;
 
@@ -29,10 +35,9 @@ class HeaderContainer extends PureComponent {
     }
   }
 
-  componentDidUpdate(prevProps) {
-    const { isSticky } = this.props;
-    if (prevProps.isSticky !== isSticky) {
-      this.handleScroll();
+  componentWillUnmount() {
+    if (!isMobile) {
+      window.removeEventListener("scroll", this.handleSticky);
     }
   }
 
@@ -44,12 +49,11 @@ class HeaderContainer extends PureComponent {
 
   handleSticky = () => {
     const { current } = this.headerRef;
-    const { isSticky } = this.props;
-    if (isSticky) {
+    if (window.scrollY > 400) {
       current.classList.add("heightSizeDown");
       current.firstChild.classList.add("logoSizeDown");
       current.nextElementSibling.classList.add("container");
-    } else {
+    } else if (window.scrollY === 0) {
       current.classList.remove("heightSizeDown");
       current.firstChild.classList.remove("logoSizeDown");
       current.nextElementSibling.classList.remove("container");
