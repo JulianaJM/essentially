@@ -73,6 +73,16 @@ app.get("/searchByName", function(req, res) {
     });
 });
 
+app.get("/suggestions", function(req, res) {
+  elasticsearchService
+    .getSuggestions(req.query.value)
+    .then(results => res.json(results.hits.hits))
+    .catch(err => {
+      console.log(err);
+      res.send(err);
+    });
+});
+
 // error handler
 app.use((err, req, res, next) => {
   // set locals, only providing error in development

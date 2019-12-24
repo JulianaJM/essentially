@@ -44,6 +44,8 @@ http://localhost:9200/oils/_search?q=health.properties:Antiseptique%20AND%20-hea
 
 ### utils
 
+https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html
+
 https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/16.x/quick-start.html
 
 https://medium.com/terragoneng/elastic-search-index-and-mapping-in-node-js-97d8f480e3c7

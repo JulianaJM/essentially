@@ -15,23 +15,30 @@ const Contact = lazy(() => import("./components/contact/contact"));
 const OilDetails = lazy(() => import("./components/oil-details/oil-details"));
 
 const App = () => (
-  <div className="app">
-    <Header />
-    <Switch>
-      <Route path="/about" component={AsyncComponent(() => About)} />
-      <Route path="/contact" component={AsyncComponent(() => Contact)} />
-      <Route exact path="/" render={props => <SearchResults {...props} />} />
-      <Route
-        path="/:name"
-        render={props => (
-          <Suspense fallback={<Loader />}>
-            <OilDetails {...props} />
-          </Suspense>
-        )}
-      />
-    </Switch>
-    <Navbar />
-  </div>
+  <>
+    <header>
+      <Header />
+    </header>
+    <section>
+      <Switch>
+        <Route path="/about" component={AsyncComponent(() => About)} />
+        <Route path="/contact" component={AsyncComponent(() => Contact)} />
+        <Route exact path="/" render={props => <SearchResults {...props} />} />
+        <Route
+          path="/:name"
+          render={props => (
+            <Suspense fallback={<Loader />}>
+              <OilDetails {...props} />
+            </Suspense>
+          )}
+        />
+      </Switch>
+    </section>
+    <footer>
+      <small>&copy; juliana jm</small>
+      <Navbar />
+    </footer>
+  </>
 );
 
 // avoid reload state on dev change

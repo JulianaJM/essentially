@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => (
-  <div className="navbar">
+  <nav className="navbar">
     <span>ESSENTIALY</span>
     <NavLink exact to="/">
       Accueil
     </NavLink>
     <NavLink to="/contact">Contact</NavLink>
     <NavLink to="/about">A propos</NavLink>
-  </div>
+  </nav>
 );
 
 export default Navbar;

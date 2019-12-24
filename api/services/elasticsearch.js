@@ -1,6 +1,6 @@
 const client = require("../datasource/connection");
 
-// const SIZE = 200;
+const MAX_SIZE = 200;
 const INDEX = "oils";
 
 const buildFullTextSearchQuery = (terms, offset) => {
@@ -8,7 +8,7 @@ const buildFullTextSearchQuery = (terms, offset) => {
   terms.forEach((t, i) => {
     if (t) {
       if (i === terms.length - 1) {
-        queryString += `(${t}~)`;
+        queryString += `(${t}~)`; // ~ enables fuzzy search
       } else {
         queryString += `(${t}~) OR `;
       }
@@ -65,10 +65,25 @@ module.exports = {
     return client.search({
       index: INDEX,
       body: {
-        // size: SIZE,
+        // size: MAX_SIZE,
         query: {
           match_phrase: {
             name
+          }
+        }
+      }
+    });
+  },
+
+  getSuggestions: function(term) {
+    return client.search({
+      index: INDEX,
+      size: MAX_SIZE,
+      body: {
+        query: {
+          multi_match: {
+            query: term,
+            fields: ["name", "ideal"]
           }
         }
       }

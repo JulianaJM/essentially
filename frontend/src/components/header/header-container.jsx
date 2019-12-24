@@ -12,23 +12,26 @@ class HeaderContainer extends PureComponent {
     history: object.isRequired,
   };
 
-  ticking = false;
+  constructor(props) {
+    super(props);
+    this.ticking = false;
 
-  headerRef = React.createRef();
+    this.headerRef = React.createRef();
+
+    this.throttledFunc = throttle(this.handleSticky, 100, {
+      trailing: true,
+      leading: true,
+    });
+  }
 
   componentDidMount() {
     const { history } = this.props;
     history.push("");
 
     if (!isMobile) {
-      window.addEventListener(
-        "scroll",
-        throttle(this.handleSticky, 100, { trailing: true, leading: true })
-      );
-    }
-    if (isMobile) {
+      window.addEventListener("scroll", this.throttledFunc);
+    } else {
       const { current } = this.headerRef;
-
       current.classList.add("heightSizeDown--mobile");
       current.firstChild.classList.add("logoSizeDown");
       current.nextElementSibling.classList.add("container");
@@ -37,7 +40,7 @@ class HeaderContainer extends PureComponent {
 
   componentWillUnmount() {
     if (!isMobile) {
-      window.removeEventListener("scroll", this.handleSticky);
+      window.removeEventListener("scroll", this.throttledFunc);
     }
   }
 
