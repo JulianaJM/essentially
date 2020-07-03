@@ -1,0 +1,24 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error"],
+    "react/forbid-prop-types": "off",
+    "no-underscore-dangle": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/state-in-constructor": "off",
+    "react/static-property-placement": "off"
+  }
+}
