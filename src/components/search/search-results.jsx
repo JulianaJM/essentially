@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-import ElasticSearchService from "../../services/elasticSearch";
+import { getRandom, search } from "../../services/elasticSearch";
 import Loader from "../common/loader/loader";
 
 import "./search.scss";
@@ -47,7 +47,7 @@ const SearchResults = ({ location }) => {
     // FIXME ugly
     const searchParams = getSearchValues();
     if (!searchParams.length) {
-      ElasticSearchService.getRandom().then(res => {
+      getRandom().then(res => {
         setSearchResults(res.data.hits);
         setIsRandom(true);
       });
@@ -57,7 +57,7 @@ const SearchResults = ({ location }) => {
   useEffect(() => {
     const searchParams = getSearchValues();
     if (searchParams.length > 0) {
-      ElasticSearchService.search(searchParams, searchOffset)
+      search(searchParams, searchOffset)
         .then(res => {
           if (res.data.total.value === 0) {
             resetSearchResults();

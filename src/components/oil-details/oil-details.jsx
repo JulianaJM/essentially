@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import OilElement from "./oil-element";
-import ElasticSearchService from "../../services/elasticSearch";
+import { searchByName } from "../../services/elasticSearch";
 
 import "./oil-details.scss";
 
@@ -13,7 +13,7 @@ const OilDetails = ({ match }) => {
 
   useEffect(() => {
     const { params } = match;
-    ElasticSearchService.searchByName(params.name)
+    searchByName(params.name)
       .then(res => {
         setOil(res.data[0]._source);
       })

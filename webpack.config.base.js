@@ -1,14 +1,10 @@
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const imageminMozjpeg = require("imagemin-mozjpeg");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
-const path = require("path");
-const dotenv = require("dotenv").config({
-  path: path.join(__dirname, ".env"),
-});
+const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.jsx",
@@ -94,8 +90,6 @@ module.exports = {
       pngquant: { quality: 10 - 15 },
       plugins: [imageminMozjpeg({ quality: 20, progressive: true })],
     }),
-    new webpack.DefinePlugin({
-      "process.env": dotenv.parsed,
-    }),
+    new Dotenv(),
   ],
 };
