@@ -34,7 +34,7 @@ class HeaderContainer extends PureComponent {
       const { current } = this.headerRef;
       current.classList.add("heightSizeDown--mobile");
       current.firstChild.classList.add("logoSizeDown");
-      current.nextElementSibling.classList.add("container");
+      // current.nextElementSibling.classList.add("container");
     }
   }
 

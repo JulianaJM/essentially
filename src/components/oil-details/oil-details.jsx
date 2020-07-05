@@ -13,7 +13,9 @@ const OilDetails = ({ match }) => {
 
   useEffect(() => {
     const { params } = match;
-    searchByName(params.name)
+    const newName = params.name.replace(/_/g, " ");
+
+    searchByName(newName)
       .then(res => {
         setOil(res.data[0]._source);
       })
