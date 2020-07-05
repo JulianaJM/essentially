@@ -4,7 +4,6 @@ const ImageminPlugin = require("imagemin-webpack-plugin").default;
 const imageminMozjpeg = require("imagemin-mozjpeg");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
-const Dotenv = require("dotenv-webpack");
 
 module.exports = {
   entry: "./src/index.jsx",
@@ -90,6 +89,5 @@ module.exports = {
       pngquant: { quality: 10 - 15 },
       plugins: [imageminMozjpeg({ quality: 20, progressive: true })],
     }),
-    new Dotenv(),
   ],
 };

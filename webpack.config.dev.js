@@ -1,4 +1,5 @@
 const merge = require("webpack-merge");
+const Dotenv = require("dotenv-webpack");
 const baseConfig = require("./webpack.config.base");
 
 module.exports = merge(baseConfig, {
@@ -14,4 +15,5 @@ module.exports = merge(baseConfig, {
     // writeToDisk: true // instead of memory read
   },
   devtool: "eval-source-map",
+  plugins: [new Dotenv()],
 });

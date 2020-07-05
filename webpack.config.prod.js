@@ -1,4 +1,5 @@
 const merge = require("webpack-merge");
+const webpack = require("webpack");
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const TerserPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -18,6 +19,11 @@ module.exports = merge(baseConfig, {
     new BundleAnalyzerPlugin({
       analyzerMode: "static",
       openAnalyzer: false,
+    }),
+    new webpack.DefinePlugin({
+      "process.env": {
+        API_URL: JSON.stringify(process.env.API_URL),
+      },
     }),
   ],
   externals: {
