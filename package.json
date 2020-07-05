@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.prod.js",
-    "dev": "webpack --watch --config webpack.config.dev.js",
-    "start": "webpack-dev-server --config webpack.config.dev.js",
-    "serve:hot": "yarn serve -- --hot",
+    "dev:w": "webpack --watch --config webpack.config.dev.js",
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "dev:hot": "yarn dev -- --hot",
+    "start": "node ./server",
     "test": "jest",
     "format": "pretty-quick",
     "lint": "eslint src/**/*.js src/**/*.jsx"
@@ -94,6 +95,7 @@
     "core-js": "3",
     "elasticsearch": "^16.1.1",
     "emotion": "^10.0.9",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
     "log": "^6.0.0",
     "memoize-one": "^5.0.4",
