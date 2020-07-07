@@ -5,7 +5,8 @@ import { isMobile } from "react-device-detect";
 import { throttle } from "lodash";
 
 import Header from "./header";
-import Tags from "../search/tags/tags";
+// import Tags from "../search/tags/tags";
+import SearchBox from "../search/searchbox/SearchBox";
 
 class HeaderContainer extends PureComponent {
   static propTypes = {
@@ -25,9 +26,6 @@ class HeaderContainer extends PureComponent {
   }
 
   componentDidMount() {
-    // const { history } = this.props;
-    // history.push("");
-
     if (!isMobile) {
       window.addEventListener("scroll", this.throttledFunc);
     } else {
@@ -78,10 +76,12 @@ class HeaderContainer extends PureComponent {
     return (
       <Header ref={this.headerRef}>
         <div className="search-bar">
-          <Tags
+          {/* <Tags
             onUpdate={this.handleChange}
             placeholder="je recherche une huile ou un symptome..."
-          />
+          /> */}
+
+          <SearchBox onUpdate={this.handleChange} />
         </div>
       </Header>
     );

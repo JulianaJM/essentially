@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-import { getRandom, search } from "../../services/elasticSearch";
+import { getRandomOils, search } from "../../services/elasticSearch";
 import Loader from "../common/loader/loader";
 
 import "./search.scss";
@@ -21,7 +21,8 @@ const SearchResults = ({ location }) => {
     const queryParamString = location.search
       ? location.search.split("=")[1]
       : "";
-    const queryParams = queryParamString ? queryParamString.split(",") : [];
+
+    const queryParams = queryParamString ? queryParamString.split("+") : [];
     return queryParams.map(param => {
       const decode = decodeURI(param);
       return decode.trim();
@@ -47,7 +48,7 @@ const SearchResults = ({ location }) => {
     // FIXME ugly
     const searchParams = getSearchValues();
     if (!searchParams.length) {
-      getRandom().then(res => {
+      getRandomOils().then(res => {
         setSearchResults(res.data.hits);
         setIsRandom(true);
       });
@@ -57,25 +58,21 @@ const SearchResults = ({ location }) => {
   useEffect(() => {
     const searchParams = getSearchValues();
     if (searchParams.length > 0) {
-      search(searchParams, searchOffset)
-        .then(res => {
-          if (res.data.total.value === 0) {
-            resetSearchResults();
+      search(searchParams, searchOffset).then(res => {
+        if (res.data.total.value === 0) {
+          resetSearchResults();
+        } else {
+          setTotal(res.data.total.value);
+          if (isRandom) {
+            setSearchResults(res.data.hits);
+            setIsRandom(false);
           } else {
-            setTotal(res.data.total.value);
-            if (isRandom) {
-              setSearchResults(res.data.hits);
-              setIsRandom(false);
-            } else {
-              setSearchResults([...searchResults, ...res.data.hits]);
-            }
-
-            setHasNextResults(res.data.total.value > 10);
+            setSearchResults([...searchResults, ...res.data.hits]);
           }
-        })
-        .catch((/* err */) => {
-          // console.log("error during search", err);
-        });
+
+          setHasNextResults(res.data.total.value > 10);
+        }
+      });
     } else {
       resetSearchResults();
     }
