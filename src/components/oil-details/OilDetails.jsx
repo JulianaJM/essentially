@@ -15,13 +15,9 @@ const OilDetails = ({ match }) => {
     const { params } = match;
     const newName = params.name.replace(/_/g, " ");
 
-    searchByName(newName)
-      .then(res => {
-        setOil(res.data[0]._source);
-      })
-      .catch((/* err */) => {
-        // console.log(err);
-      });
+    searchByName(newName).then(res => {
+      setOil(res.data[0]._source);
+    });
   }, [match.params.name]);
 
   return (

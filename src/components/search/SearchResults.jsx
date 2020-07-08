@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 import { getRandomOils, search } from "../../services/elasticSearch";
-import Loader from "../common/loader/loader";
+import Loader from "../common/loader/Loader";
 
 import "./search.scss";
 
