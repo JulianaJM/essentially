@@ -1,17 +1,11 @@
 import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
-import { object } from "prop-types";
 import { isMobile } from "react-device-detect";
 import { throttle } from "lodash";
 
 import Header from "./Header";
-import SearchBox from "../search/searchbox/SearchBox";
 
 class HeaderContainer extends PureComponent {
-  static propTypes = {
-    history: object.isRequired,
-  };
-
   constructor(props) {
     super(props);
     this.ticking = false;
@@ -26,7 +20,7 @@ class HeaderContainer extends PureComponent {
 
   componentDidMount() {
     if (!isMobile) {
-      window.addEventListener("scroll", this.throttledFunc);
+      // window.addEventListener("scroll", this.throttledFunc);
     } else {
       const { current } = this.headerRef;
       current.classList.add("heightSizeDown--mobile");
@@ -40,12 +34,6 @@ class HeaderContainer extends PureComponent {
       window.removeEventListener("scroll", this.throttledFunc);
     }
   }
-
-  handleChange = queryParams => {
-    const { history } = this.props;
-    history.push("");
-    history.push(`?value=${queryParams}`);
-  };
 
   handleSticky = () => {
     const { current } = this.headerRef;
@@ -72,13 +60,7 @@ class HeaderContainer extends PureComponent {
   };
 
   render() {
-    return (
-      <Header ref={this.headerRef}>
-        <div className="search-bar">
-          <SearchBox onUpdate={this.handleChange} />
-        </div>
-      </Header>
-    );
+    return <Header ref={this.headerRef} />;
   }
 }
 
