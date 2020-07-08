@@ -76,11 +76,6 @@ class HeaderContainer extends PureComponent {
     return (
       <Header ref={this.headerRef}>
         <div className="search-bar">
-          {/* <Tags
-            onUpdate={this.handleChange}
-            placeholder="je recherche une huile ou un symptome..."
-          /> */}
-
           <SearchBox onUpdate={this.handleChange} />
         </div>
       </Header>

@@ -59,18 +59,21 @@ const SearchResults = ({ location }) => {
     const searchParams = getSearchValues();
     if (searchParams.length > 0) {
       search(searchParams, searchOffset).then(res => {
-        if (res.data.total.value === 0) {
+        const totalRes = res.data.total.value;
+        if (totalRes === 0) {
           resetSearchResults();
         } else {
-          setTotal(res.data.total.value);
+          setTotal(totalRes);
           if (isRandom) {
             setSearchResults(res.data.hits);
             setIsRandom(false);
+          } else if (totalRes <= 10) {
+            setSearchResults(res.data.hits);
           } else {
             setSearchResults([...searchResults, ...res.data.hits]);
           }
 
-          setHasNextResults(res.data.total.value > 10);
+          setHasNextResults(totalRes > 10);
         }
       });
     } else {
