@@ -8,7 +8,7 @@ import Loader from "../common/loader/loader";
 
 import "./search.scss";
 
-const OilList = lazy(() => import("../oil-result/oil-list"));
+const OilList = lazy(() => import("../oil-result/OilList"));
 
 const SearchResults = ({ location }) => {
   const [searchResults, setSearchResults] = useState([]);

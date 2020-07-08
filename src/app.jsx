@@ -4,8 +4,8 @@ import { hot } from "react-hot-loader/root";
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/header/header-container";
-import SearchResults from "./components/search/search-results";
+import Header from "./components/header/HeaderContainer";
+import SearchResults from "./components/search/SearchResults";
 import Loader from "./components/common/loader/loader";
 import Navbar from "./components/common/navbar/navbar";
 import AsyncComponent from "./components/common/async-component";
@@ -14,7 +14,7 @@ import About from "./components/about/about";
 import "./app.scss";
 
 const Contact = lazy(() => import("./components/contact/contact"));
-const OilDetails = lazy(() => import("./components/oil-details/oil-details"));
+const OilDetails = lazy(() => import("./components/oil-details/OilDetails"));
 
 const App = () => (
   <>

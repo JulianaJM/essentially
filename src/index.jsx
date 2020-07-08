@@ -3,8 +3,8 @@ import "regenerator-runtime/runtime";
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import App from "./app";
-import DefaultErrorBoundary from "./components/default-error-boundary";
+import App from "./App";
+import DefaultErrorBoundary from "./components/DefaultErrorBoundary";
 
 import "./style.scss";
 

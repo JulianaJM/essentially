@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
-import OilElement from "./oil-element";
+import OilElement from "./OilElement";
 import { searchByName } from "../../services/elasticSearch";
 
 import "./oil-details.scss";

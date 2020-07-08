@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
 import PropTypes from "prop-types";
-import OilResult from "./oil-result";
+import OilResult from "./OilResult";
 
 import "./oils.scss";
 

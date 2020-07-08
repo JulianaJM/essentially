@@ -4,8 +4,7 @@ import { object } from "prop-types";
 import { isMobile } from "react-device-detect";
 import { throttle } from "lodash";
 
-import Header from "./header";
-// import Tags from "../search/tags/tags";
+import Header from "./Header";
 import SearchBox from "../search/searchbox/SearchBox";
 
 class HeaderContainer extends PureComponent {
