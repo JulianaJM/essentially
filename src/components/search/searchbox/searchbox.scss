@@ -1,13 +1,13 @@
 .search-bar {
   .react-autosuggest__container {
     width: 100%;
+    position: relative;
   }
 
   .react-autosuggest__input {
     width: 100%;
-    padding: 10px;
-    font-weight: 300;
-    font-size: 1.2rem;
+    padding: 5px;
+    font-size: 0.8rem;
     border: 1px solid rgba(0, 126, 255, 0.24);
     border-radius: 4px;
     color: #000;
@@ -30,21 +30,26 @@
 
   .react-autosuggest__suggestions-list {
     margin: 0;
-    position: relative;
+    position: absolute;
+    top: 20px;
     padding: 0;
     background-color: #fff;
     list-style-type: none;
     width: 100%;
     border: 1px solid #eee;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     z-index: 1;
+    overflow: hidden;
+    min-height: 400px;
+    height: 100px;
+    overflow-y: scroll;
   }
 
   .react-autosuggest__suggestion {
     cursor: pointer;
-    padding: 10px;
+    padding: 5px;
     border-bottom: 1px solid #eee;
-    white-space: nowrap;
+    white-space: wrap;
   }
 
   .react-autosuggest__suggestion--highlighted {
@@ -63,5 +68,27 @@
     background-color: yellow;
     padding: 4px;
     border-radius: 2px;
+  }
+}
+
+// styles pour desktop/tablets
+@media (min-width: 600px) {
+  .search-bar {
+    .react-autosuggest__input {
+      padding: 10px;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+
+    .react-autosuggest__suggestions-list {
+      font-size: 1.2rem;
+      min-height: 300px;
+      top: initial;
+    }
+
+    .react-autosuggest__suggestion {
+      padding: 10px;
+      white-space: nowrap;
+    }
   }
 }
