@@ -23,7 +23,11 @@ const OilDetails = ({ match }) => {
   return (
     oil && (
       <div className="oil-details">
-        <img src={oil.image} alt={oil.name} />
+        <img
+          data-src={`https://res.cloudinary.com/dvbd6z854/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1594298310/essentially/${oil.image}`}
+          alt={oil.name}
+          className="lazyload"
+        />
         <div className="oil-details__content">
           <h2>{oil.name}</h2>
           <p>{oil.description}</p>
