@@ -5,10 +5,10 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 15.625rem; //250px
-
+  height: 465px;
   transition: 0.4s;
-  background-color: white;
+  background-color: rgba(19, 128, 36, 0.5);
+
   &__title {
     &__content {
       display: flex;

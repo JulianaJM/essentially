@@ -1,6 +1,5 @@
 .container {
   min-height: 100vh;
-  position: relative;
 
   .sr-only {
     position: absolute;
@@ -12,5 +11,22 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
+  }
+}
+
+/* Sur les grands écrans, on limite la largeur du contenu */
+@media (min-width: 1200px) {
+  .container {
+    width: 1360px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    position: relative;
+    top: -95px;
+    background: white;
+    border-radius: 6px;
   }
 }
