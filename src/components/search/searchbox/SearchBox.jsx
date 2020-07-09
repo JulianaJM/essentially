@@ -6,7 +6,7 @@ import { getSuggestions } from "../../../services/elasticSearch";
 
 import "./searchbox.scss";
 
-export default class SearchBox extends Component {
+class SearchBox extends Component {
   constructor() {
     super();
 
@@ -88,7 +88,6 @@ export default class SearchBox extends Component {
 
   render() {
     const { value, suggestions } = this.state;
-
     const inputProps = {
       placeholder: "je recherche une huile ou un symptome...",
       value,
@@ -107,6 +106,7 @@ export default class SearchBox extends Component {
     );
   }
 }
+export default SearchBox;
 
 SearchBox.propTypes = {
   onUpdate: PropTypes.func.isRequired,

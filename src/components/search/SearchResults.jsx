@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useState, useEffect } from "react";
+import React, { Suspense, lazy, useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -10,12 +10,49 @@ import "./search.scss";
 
 const OilList = lazy(() => import("../oil-result/OilList"));
 
+function init() {
+  return {
+    searchOffset: 0, // Search result pagination offset
+    searchResults: [],
+    hasNextResults: false,
+    isRandom: true,
+    total: 0, // Total search results found
+  };
+}
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "setSearchResults":
+      return {
+        ...state,
+        searchResults: action.searchResults,
+      };
+    case "setIsRandom":
+      return { ...state, isRandom: action.isRandom };
+    case "setHasNextResults":
+      return { ...state, hasNextResults: action.hasNextResults };
+    case "setTotal":
+      return { ...state, total: action.total };
+    case "setSearchOffset":
+      return { ...state, searchOffset: action.searchOffset };
+    case "reset":
+      return init();
+    default:
+      return state;
+  }
+}
+
 const SearchResults = ({ location }) => {
-  const [searchResults, setSearchResults] = useState([]);
-  const [searchOffset, setSearchOffset] = useState(0); // Search result pagination offset
-  const [total, setTotal] = useState(0); // Total search results found
-  const [hasNextResults, setHasNextResults] = useState(false);
-  const [isRandom, setIsRandom] = useState(false);
+  const [
+    { searchOffset, searchResults, hasNextResults, isRandom, total },
+    dispatch,
+  ] = useReducer(reducer, {
+    searchOffset: 0,
+    searchResults: [],
+    hasNextResults: false,
+    isRandom: true,
+    total: 0,
+  });
 
   const getSearchValues = () => {
     const queryParamString = location.search
@@ -29,58 +66,55 @@ const SearchResults = ({ location }) => {
     });
   };
 
-  const resetSearchResults = () => {
-    setSearchOffset(0);
-    setSearchResults([]);
-    setHasNextResults(false);
-  };
-
   const onClick = () => {
     const offsetDisplayed = searchOffset + 10;
     if (total > offsetDisplayed) {
-      setSearchOffset(offsetDisplayed);
+      dispatch({ type: "setSearchOffset", searchOffset: offsetDisplayed });
     } else {
-      setHasNextResults(false);
+      dispatch({ type: "setHasNextResults", hasNextResults: false });
     }
   };
 
   useEffect(() => {
-    // FIXME ugly
-    const searchParams = getSearchValues();
-    if (!searchParams.length) {
-      getRandomOils().then(res => {
-        setSearchResults(res.data.hits);
-        setIsRandom(true);
-      });
-    }
+    getRandomOils().then(res => {
+      dispatch({ type: "setSearchResults", searchResults: res.data.hits });
+    });
   }, []);
 
   useEffect(() => {
     const searchParams = getSearchValues();
-    if (searchParams.length > 0) {
-      search(searchParams, searchOffset).then(res => {
-        const totalRes = res.data.total.value;
-        if (totalRes === 0) {
-          resetSearchResults();
-        } else {
-          setTotal(totalRes);
-          if (isRandom) {
-            setSearchResults(res.data.hits);
-            setIsRandom(false);
-          } else if (totalRes <= 10) {
-            setSearchResults(res.data.hits);
-          } else {
-            setSearchResults([...searchResults, ...res.data.hits]);
-          }
-
-          setHasNextResults(totalRes > 10);
-        }
+    search(searchParams, searchOffset).then(res => {
+      const totalRes = res.data.total.value;
+      dispatch({ type: "setTotal", total: totalRes });
+      dispatch({
+        type: "setHasNextResults",
+        hasNextResults: totalRes > 10,
       });
-    } else {
-      resetSearchResults();
-    }
-  }, [location.search, searchOffset]);
 
+      if (totalRes === 0) {
+        dispatch({ type: "reset" });
+      } else {
+        if (isRandom) {
+          dispatch({
+            type: "setIsRandom",
+            isRandom: false,
+          });
+        }
+
+        if (totalRes <= 10) {
+          dispatch({
+            type: "setSearchResults",
+            searchResults: res.data.hits,
+          });
+        } else {
+          dispatch({
+            type: "setSearchResults",
+            searchResults: [...searchResults, ...res.data.hits],
+          });
+        }
+      }
+    });
+  }, [location.search, searchOffset]);
   return (
     <div className="search">
       <div className="search__results">
