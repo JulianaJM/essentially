@@ -5,8 +5,10 @@
   width: 100%;
 
   &__results {
-    @media (min-width: 1024px) {
-      margin: 0 150px 100px 150px;
+    margin: 0 150px 100px 150px;
+
+    @media screen and (min-width: 600px) and (max-width: 1170px) {
+      margin: 0 10px;
     }
     @media only screen and (max-width: 480px) {
       margin: 0 2px;

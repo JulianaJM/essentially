@@ -1,6 +1,6 @@
 .oils {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
   grid-gap: 5px;
   align-items: stretch;
   justify-content: center;
@@ -16,8 +16,8 @@
       display: inline-block;
       text-decoration: none;
       vertical-align: top;
-      height: 180px;
-      width: 300px;
+      height: 210px;
+      width: 400px;
       overflow: hidden;
       transition: all 0.3s ease-in-out;
 
@@ -40,21 +40,23 @@
 
     .tile-content {
       display: flex;
-      align-items: center;
+      // align-items: center;
       overflow: hidden;
 
       img {
         width: 80px;
         height: 80px;
-        margin: 5px 5px 5px 0;
+        margin: 5px;
+        border-radius: 50%;
       }
 
       p {
         color: #6a747e;
-        font-size: 0.7em;
+        font-size: 0.9em;
         text-align: center;
         line-height: 140%;
         margin: 0;
+        height: 100px;
       }
     }
   }

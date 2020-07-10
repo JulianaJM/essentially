@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento|Sacramento&display=swap");
+
 .react-autosuggest__container {
   width: 100%;
   position: relative;
@@ -12,6 +14,7 @@
   color: #000;
   background-color: #fff;
   height: 40px;
+  font-family: "Quattrocento", serif;
 }
 
 .react-autosuggest__input::placeholder {
@@ -31,16 +34,15 @@
 .react-autosuggest__suggestions-list {
   margin: 0;
   position: absolute;
-  top: 20px;
+  top: 40px;
   padding: 0;
   background-color: #fff;
   list-style-type: none;
   width: 100%;
   border: 1px solid #eee;
-  font-size: 0.8rem;
   z-index: 1;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 200px;
   height: 100px;
   overflow-y: scroll;
 }
@@ -50,6 +52,8 @@
   padding: 5px;
   border-bottom: 1px solid #eee;
   white-space: wrap;
+  font-size: 0.9rem;
+  font-family: "Quattrocento", serif;
 }
 
 .react-autosuggest__suggestion--highlighted {
@@ -80,12 +84,13 @@
 
   .react-autosuggest__suggestions-list {
     font-size: 1.2rem;
-    min-height: 300px;
+    min-height: 100px;
     top: initial;
   }
 
   .react-autosuggest__suggestion {
     padding: 10px;
     white-space: nowrap;
+    font-size: 1.3rem;
   }
 }

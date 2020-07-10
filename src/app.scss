@@ -1,5 +1,5 @@
 .container {
-  // min-height: 100vh;
+  min-height: 100vh;
 
   .sr-only {
     position: absolute;
@@ -17,7 +17,7 @@
 /* Sur les grands écrans, on limite la largeur du contenu */
 @media (min-width: 1200px) {
   .container {
-    width: 1360px;
+    width: 1170px;
     margin: 0 auto;
   }
 }

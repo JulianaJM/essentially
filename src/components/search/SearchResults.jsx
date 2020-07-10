@@ -42,7 +42,7 @@ function reducer(state, action) {
   }
 }
 
-const SearchResults = ({ location, isPageBottom }) => {
+const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
   const [
     { searchOffset, searchResults, hasNextResults, isRandom, total },
     dispatch,
@@ -101,7 +101,7 @@ const SearchResults = ({ location, isPageBottom }) => {
           });
         }
 
-        if (totalRes <= 10) {
+        if (totalRes <= 10 || isValueChanged) {
           dispatch({
             type: "setSearchResults",
             searchResults: res.data.hits,
@@ -133,23 +133,11 @@ const SearchResults = ({ location, isPageBottom }) => {
               </p>
             ) : (
               <h2 className="search__results__discover">
-                Je découvre la sélection du jour
+                Je découvre la sélection des 10 huiles du jour
               </h2>
             )}
 
             <OilList oils={searchResults} />
-            {/* {!isRandom && hasNextResults && (
-              <div className="button-wrapper">
-                <button
-                  className="button-next"
-                  type="button"
-                  onClick={loadNextResults}
-                >
-                  <FontAwesomeIcon icon={faArrowDown} />
-                  <p className="sr-only">Plus de résultats</p>
-                </button>
-              </div>
-            )} */}
           </Suspense>
         ) : (
           <p className="search__results__total">Aucun résultats trouvés</p>
@@ -164,6 +152,7 @@ SearchResults.defaultProps = { isPageBottom: false };
 SearchResults.propTypes = {
   location: PropTypes.object.isRequired,
   isPageBottom: PropTypes.bool,
+  isValueChanged: PropTypes.bool.isRequired,
 };
 
 export default SearchResults;
