@@ -4,6 +4,7 @@ import { isMobile } from "react-device-detect";
 import { throttle } from "lodash";
 
 import Header from "./Header";
+import { isPageBottom } from "../../utils/scroll";
 
 class HeaderContainer extends PureComponent {
   constructor(props) {
@@ -32,9 +33,10 @@ class HeaderContainer extends PureComponent {
 
   handleSticky = () => {
     const { current } = this.headerRef;
-    if (window.pageYOffset > current.offsetHeight) {
+    const isBottom = isPageBottom();
+    if (window.pageYOffset > current.offsetTop) {
       current.classList.add("sticky");
-    } else {
+    } else if (!isBottom) {
       current.classList.remove("sticky");
     }
   };

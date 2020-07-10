@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 import { getRandomOils, search } from "../../services/elasticSearch";
 import Loader from "../common/loader/Loader";
@@ -42,7 +42,7 @@ function reducer(state, action) {
   }
 }
 
-const SearchResults = ({ location }) => {
+const SearchResults = ({ location, isPageBottom }) => {
   const [
     { searchOffset, searchResults, hasNextResults, isRandom, total },
     dispatch,
@@ -66,7 +66,7 @@ const SearchResults = ({ location }) => {
     });
   };
 
-  const onClick = () => {
+  const loadNextResults = () => {
     const offsetDisplayed = searchOffset + 10;
     if (total > offsetDisplayed) {
       dispatch({ type: "setSearchOffset", searchOffset: offsetDisplayed });
@@ -115,6 +115,13 @@ const SearchResults = ({ location }) => {
       }
     });
   }, [location.search, searchOffset]);
+
+  useEffect(() => {
+    if (isPageBottom && !isRandom && hasNextResults) {
+      loadNextResults();
+    }
+  }, [isPageBottom]);
+
   return (
     <div className="search">
       <div className="search__results">
@@ -131,14 +138,18 @@ const SearchResults = ({ location }) => {
             )}
 
             <OilList oils={searchResults} />
-            {!isRandom && hasNextResults && (
+            {/* {!isRandom && hasNextResults && (
               <div className="button-wrapper">
-                <button className="button-next" type="button" onClick={onClick}>
+                <button
+                  className="button-next"
+                  type="button"
+                  onClick={loadNextResults}
+                >
                   <FontAwesomeIcon icon={faArrowDown} />
                   <p className="sr-only">Plus de résultats</p>
                 </button>
               </div>
-            )}
+            )} */}
           </Suspense>
         ) : (
           <p className="search__results__total">Aucun résultats trouvés</p>
@@ -148,8 +159,11 @@ const SearchResults = ({ location }) => {
   );
 };
 
+SearchResults.defaultProps = { isPageBottom: false };
+
 SearchResults.propTypes = {
   location: PropTypes.object.isRequired,
+  isPageBottom: PropTypes.bool,
 };
 
 export default SearchResults;
