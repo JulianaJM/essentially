@@ -12,7 +12,7 @@ class HeaderContainer extends PureComponent {
 
     this.headerRef = React.createRef();
 
-    this.throttledFunc = throttle(this.handleSticky, 100, {
+    this.throttledFunc = throttle(this.handleScroll, 100, {
       trailing: true,
       leading: true,
     });
@@ -20,12 +20,7 @@ class HeaderContainer extends PureComponent {
 
   componentDidMount() {
     if (!isMobile) {
-      // window.addEventListener("scroll", this.throttledFunc);
-    } else {
-      const { current } = this.headerRef;
-      current.classList.add("heightSizeDown--mobile");
-      current.firstChild.classList.add("logoSizeDown");
-      // current.nextElementSibling.classList.add("container");
+      window.addEventListener("scroll", this.throttledFunc);
     }
   }
 
@@ -37,14 +32,10 @@ class HeaderContainer extends PureComponent {
 
   handleSticky = () => {
     const { current } = this.headerRef;
-    if (window.scrollY > 400) {
-      current.classList.add("heightSizeDown");
-      current.firstChild.classList.add("logoSizeDown");
-      current.nextElementSibling.classList.add("container");
-    } else if (window.scrollY === 0) {
-      current.classList.remove("heightSizeDown");
-      current.firstChild.classList.remove("logoSizeDown");
-      current.nextElementSibling.classList.remove("container");
+    if (window.pageYOffset > current.offsetHeight) {
+      current.classList.add("sticky");
+    } else {
+      current.classList.remove("sticky");
     }
   };
 

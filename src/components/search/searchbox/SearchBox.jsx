@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { getSuggestions } from "../../../services/elasticSearch";
 
-import "./searchbox.scss";
+import "./search-box.scss";
 
 class SearchBox extends Component {
   constructor() {
@@ -89,7 +89,7 @@ class SearchBox extends Component {
   render() {
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "je recherche une huile ou un symptome...",
+      placeholder: "Recherche une huile ou un symptome",
       value,
       onChange: this.onChange,
     };

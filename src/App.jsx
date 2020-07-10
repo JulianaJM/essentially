@@ -5,7 +5,7 @@ import React, { lazy } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/header/HeaderContainer";
-import Navbar from "./components/common/navbar/navbar";
+// import Navbar from "./components/common/navbar/navbar";
 import AsyncComponent from "./components/common/async-component";
 import About from "./components/about/about";
 import DetailPage from "./page/DetailPage";
@@ -17,10 +17,8 @@ const Contact = lazy(() => import("./components/contact/contact"));
 
 const App = () => (
   <>
-    <header>
-      <Header />
-    </header>
-    <section className="container">
+    <Header />
+    <div className="container">
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/contact" component={AsyncComponent(() => Contact)} />
@@ -28,11 +26,7 @@ const App = () => (
         <Route path="/:name" render={props => <DetailPage {...props} />} />
         <Route render={() => <h1>Page not found</h1>} />
       </Switch>
-    </section>
-    <footer>
-      <small>&copy; juliana jm</small>
-      <Navbar />
-    </footer>
+    </div>
   </>
 );
 

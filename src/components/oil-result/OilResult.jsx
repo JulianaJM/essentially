@@ -9,8 +9,10 @@ const OilResult = ({ oil }) => {
   return (
     <Link className="tile" to={`/${newName}`}>
       <h2>{name}</h2>
-      <img data-src={imgUrl} alt={name} className="lazyload" />
-      <p>{description}</p>
+      <div className="tile-content">
+        <img data-src={imgUrl} alt={name} className="lazyload" />
+        <p>{description}</p>
+      </div>
     </Link>
   );
 };

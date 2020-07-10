@@ -118,18 +118,18 @@ const SearchResults = ({ location }) => {
   return (
     <div className="search">
       <div className="search__results">
-        {searchResults.length > 0 && (
+        {searchResults.length > 0 ? (
           <Suspense fallback={<Loader />}>
-            {!isRandom && (
+            {!isRandom ? (
               <p className="search__results__total">
                 {total} résultats trouvés
               </p>
-            )}
-            {isRandom && (
+            ) : (
               <h2 className="search__results__discover">
                 Je découvre la sélection du jour
               </h2>
             )}
+
             <OilList oils={searchResults} />
             {!isRandom && hasNextResults && (
               <div className="button-wrapper">
@@ -140,6 +140,8 @@ const SearchResults = ({ location }) => {
               </div>
             )}
           </Suspense>
+        ) : (
+          <p className="search__results__total">Aucun résultats trouvés</p>
         )}
       </div>
     </div>
