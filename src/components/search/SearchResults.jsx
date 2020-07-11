@@ -143,23 +143,25 @@ const SearchResults = ({ location, isPageBottom }) => {
   return (
     <div className="search">
       <div className="search__results">
-        {searchResults.length > 0 ? (
-          <Suspense fallback={<Loader />}>
-            {!isRandom ? (
-              <p className="search__results__total">
-                {total} résultats trouvés
-              </p>
-            ) : (
-              <h2 className="search__results__discover">
-                Je découvre la sélection des 10 huiles du jour
-              </h2>
-            )}
+        <Suspense fallback={<Loader />}>
+          {searchResults.length > 0 ? (
+            <>
+              {!isRandom ? (
+                <p className="search__results__total">
+                  {total} résultats trouvés
+                </p>
+              ) : (
+                <h2 className="search__results__discover">
+                  Je découvre la sélection des 10 huiles du jour
+                </h2>
+              )}
 
-            <OilList oils={searchResults} />
-          </Suspense>
-        ) : (
-          <p className="search__results__total">Aucun résultats trouvés</p>
-        )}
+              <OilList oils={searchResults} />
+            </>
+          ) : (
+            <p className="search__results__total">Aucun résultats trouvés</p>
+          )}
+        </Suspense>
       </div>
     </div>
   );
