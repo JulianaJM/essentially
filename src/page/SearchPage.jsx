@@ -11,13 +11,11 @@ import "./search-page.scss";
 
 const SearchPage = props => {
   const [isBottom, setIsBottom] = useState(false);
-  const [isValueChanged, setIsValueChanged] = useState(false);
 
   const handleChange = queryParams => {
     const { history } = props;
     history.push("");
     history.push(`?value=${queryParams}`);
-    setIsValueChanged(true);
   };
 
   const handleScroll = () => {
@@ -39,16 +37,12 @@ const SearchPage = props => {
       <div className="search-bar">
         <SearchBox onUpdate={handleChange} />
       </div>
-      <SearchResults
-        isPageBottom={isBottom}
-        isValueChanged={isValueChanged}
-        {...props}
-      />
+      <SearchResults isPageBottom={isBottom} {...props} />
     </>
   );
 };
 
-export default withRouter(SearchPage);
+export default withRouter(React.memo(SearchPage));
 
 SearchPage.propTypes = {
   history: PropTypes.object.isRequired,

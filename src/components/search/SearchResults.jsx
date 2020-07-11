@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useReducer } from "react";
+import React, { Suspense, lazy, useEffect, useReducer, useRef } from "react";
 import PropTypes from "prop-types";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
@@ -42,7 +42,7 @@ function reducer(state, action) {
   }
 }
 
-const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
+const SearchResults = ({ location, isPageBottom }) => {
   const [
     { searchOffset, searchResults, hasNextResults, isRandom, total },
     dispatch,
@@ -54,6 +54,10 @@ const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
     total: 0,
   });
 
+  // refs keeps value and avoid useless rerender
+  const searchvalue = useRef("");
+  const isValueChanged = useRef(false);
+
   const getSearchValues = () => {
     const queryParamString = location.search
       ? location.search.split("=")[1]
@@ -62,6 +66,20 @@ const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
     const queryParams = queryParamString ? queryParamString.split("+") : [];
     return queryParams.map(param => {
       const decode = decodeURI(param);
+
+      if (searchvalue.current === decode) {
+        isValueChanged.current = false;
+      } else {
+        isValueChanged.current = true;
+        dispatch({ type: "reset" });
+        // keep random to false
+        dispatch({
+          type: "setIsRandom",
+          isRandom: false,
+        });
+      }
+      searchvalue.current = decode;
+
       return decode.trim();
     });
   };
@@ -76,6 +94,7 @@ const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
   };
 
   useEffect(() => {
+    // mount
     getRandomOils().then(res => {
       dispatch({ type: "setSearchResults", searchResults: res.data.hits });
     });
@@ -90,7 +109,6 @@ const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
         type: "setHasNextResults",
         hasNextResults: totalRes > 10,
       });
-
       if (totalRes === 0) {
         dispatch({ type: "reset" });
       } else {
@@ -101,7 +119,7 @@ const SearchResults = ({ location, isPageBottom, isValueChanged }) => {
           });
         }
 
-        if (totalRes <= 10 || isValueChanged) {
+        if (totalRes <= 10) {
           dispatch({
             type: "setSearchResults",
             searchResults: res.data.hits,
@@ -152,7 +170,6 @@ SearchResults.defaultProps = { isPageBottom: false };
 SearchResults.propTypes = {
   location: PropTypes.object.isRequired,
   isPageBottom: PropTypes.bool,
-  isValueChanged: PropTypes.bool.isRequired,
 };
 
 export default SearchResults;

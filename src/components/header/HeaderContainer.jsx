@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 import { throttle } from "lodash";
 
 import Header from "./Header";
@@ -20,13 +20,13 @@ class HeaderContainer extends PureComponent {
   }
 
   componentDidMount() {
-    if (!isMobile) {
+    if (!isMobileOnly) {
       window.addEventListener("scroll", this.throttledFunc);
     }
   }
 
   componentWillUnmount() {
-    if (!isMobile) {
+    if (!isMobileOnly) {
       window.removeEventListener("scroll", this.throttledFunc);
     }
   }

@@ -102,6 +102,7 @@ class SearchBox extends Component {
         renderSuggestion={this.renderSuggestion}
         inputProps={inputProps}
         onSuggestionSelected={this.onSuggestionSelected}
+        alwaysRenderSuggestions={false}
       />
     );
   }
