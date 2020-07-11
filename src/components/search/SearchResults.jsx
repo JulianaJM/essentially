@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 // import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 import { getRandomOils, search } from "../../services/elasticSearch";
-import Loader from "../common/loader/Loader";
+import OilListSkeleton from "../common/skeleton/OilListSkeleton";
+// import Loader from "../common/loader/Loader";
 
 import "./search.scss";
 
@@ -143,7 +144,7 @@ const SearchResults = ({ location, isPageBottom }) => {
   return (
     <div className="search">
       <div className="search__results">
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback={<OilListSkeleton />}>
           {searchResults.length > 0 ? (
             <>
               {!isRandom ? (

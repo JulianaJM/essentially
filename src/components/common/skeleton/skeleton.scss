@@ -1,0 +1,95 @@
+.skeleton-item {
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -125%;
+    left: -100%;
+    width: 40px;
+    height: 350%;
+    opacity: 0;
+    transform: rotate(45deg);
+    background: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    animation: shine;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+}
+
+.result-skeleton-item {
+  height: 180px;
+  width: 400px;
+
+  &__title {
+    height: 20px;
+    width: 400px;
+    margin-bottom: 5px;
+  }
+
+  &__img {
+    height: 70px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+
+  &__desc {
+    width: 400px;
+    height: 140px;
+  }
+
+  @media only screen and (max-width: 480px) {
+    height: 120px;
+
+    &__title {
+      width: 200px;
+      margin-left: 50px;
+    }
+
+    &__img {
+      height: 50px;
+      width: 50px;
+    }
+
+    &__desc {
+      height: 50px;
+    }
+  }
+}
+
+.skeleton-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
+  grid-gap: 5px;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 80px;
+
+  @media only screen and (max-width: 480px) {
+    display: block;
+    margin-top: 0;
+  }
+}
+
+@keyframes shine {
+  from {
+    opacity: 0.5;
+    left: -100%;
+  }
+
+  to {
+    opacity: 1;
+    left: 200%;
+  }
+}
