@@ -16,7 +16,7 @@ function init() {
     searchOffset: 0, // Search result pagination offset
     searchResults: [],
     hasNextResults: false,
-    isRandom: true,
+    isRandom: false,
     total: 0, // Total search results found
   };
 }
@@ -73,11 +73,6 @@ const SearchResults = ({ location, isPageBottom }) => {
       } else {
         isValueChanged.current = true;
         dispatch({ type: "reset" });
-        // keep random to false
-        dispatch({
-          type: "setIsRandom",
-          isRandom: false,
-        });
       }
       searchvalue.current = decode;
 
@@ -96,31 +91,40 @@ const SearchResults = ({ location, isPageBottom }) => {
 
   useEffect(() => {
     // mount
-    getRandomOils().then(res => {
-      dispatch({ type: "setSearchResults", searchResults: res.data.hits });
-    });
+    const searchParams = getSearchValues();
+    if (searchParams.length === 0) {
+      getRandomOils().then(res => {
+        dispatch({ type: "setSearchResults", searchResults: res.data.hits });
+      });
+
+      dispatch({
+        type: "setIsRandom",
+        isRandom: true,
+      });
+    }
   }, []);
 
   useEffect(() => {
     const searchParams = getSearchValues();
-    search(searchParams, searchOffset).then(res => {
-      const totalRes = res.data.total.value;
-      dispatch({ type: "setTotal", total: totalRes });
+    if (searchParams.length > 0) {
       dispatch({
-        type: "setHasNextResults",
-        hasNextResults: totalRes > 10,
+        type: "setIsRandom",
+        isRandom: false,
       });
-      if (totalRes === 0) {
-        dispatch({ type: "reset" });
-      } else {
-        if (isRandom) {
-          dispatch({
-            type: "setIsRandom",
-            isRandom: false,
-          });
-        }
+      search(searchParams, searchOffset).then(res => {
+        const totalRes = res.data.total.value;
+        dispatch({ type: "setTotal", total: totalRes });
+        dispatch({
+          type: "setHasNextResults",
+          hasNextResults: totalRes > 10,
+        });
 
-        if (totalRes <= 10) {
+        if (totalRes === 0) {
+          dispatch({
+            type: "setSearchResults",
+            searchResults: [],
+          });
+        } else if (totalRes <= 10) {
           dispatch({
             type: "setSearchResults",
             searchResults: res.data.hits,
@@ -131,9 +135,9 @@ const SearchResults = ({ location, isPageBottom }) => {
             searchResults: [...searchResults, ...res.data.hits],
           });
         }
-      }
-    });
-  }, [location.search, searchOffset]);
+      });
+    }
+  }, [location.search, searchOffset, isRandom]);
 
   useEffect(() => {
     if (isPageBottom && !isRandom && hasNextResults) {
@@ -145,23 +149,19 @@ const SearchResults = ({ location, isPageBottom }) => {
     <div className="search">
       <div className="search__results">
         <Suspense fallback={<OilListSkeleton />}>
-          {searchResults.length > 0 ? (
-            <>
-              {!isRandom ? (
-                <p className="search__results__total">
-                  {total} résultats trouvés
-                </p>
-              ) : (
-                <h2 className="search__results__discover">
-                  Je découvre la sélection des 10 huiles du jour
-                </h2>
-              )}
-
-              <OilList oils={searchResults} />
-            </>
+          {!isRandom ? (
+            <p className="search__results__total">
+              {total > 0
+                ? `${total} résultats trouvés`
+                : "Aucun résultats trouvés"}
+            </p>
           ) : (
-            <p className="search__results__total">Aucun résultats trouvés</p>
+            <h2 className="search__results__discover">
+              Je découvre la sélection des 10 huiles du jour
+            </h2>
           )}
+
+          <OilList oils={searchResults} />
         </Suspense>
       </div>
     </div>

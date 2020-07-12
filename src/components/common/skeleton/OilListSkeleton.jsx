@@ -7,7 +7,7 @@ import "./skeleton.scss";
 const OilListSkeleton = () => {
   return (
     <div className="skeleton-list">
-      {[...Array(6)].map((item, key) => (
+      {[...Array(10)].map((item, key) => (
         <OilResultSkeleton key={key} />
       ))}
     </div>

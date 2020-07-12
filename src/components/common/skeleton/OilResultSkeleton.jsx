@@ -10,23 +10,12 @@ const OilResultSkeleton = () => {
         className="result-skeleton-item__title"
       />
 
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", marginTop: "13px" }}>
         {/* image */}
-        <SkeletonItem
-          // style={{
-          //   height: "70px",
-          //   width: "80px",
-          //   borderRadius: "50%",
-          //   marginRight: "5px",
-          // }}
-          className="result-skeleton-item__img"
-        />
+        <SkeletonItem className="result-skeleton-item__img" />
 
         {/* description */}
-        <SkeletonItem
-          // style={{ width: "400px", height: "140px" }}
-          className="result-skeleton-item__desc"
-        />
+        <SkeletonItem className="result-skeleton-item__desc" />
       </div>
     </div>
   );
