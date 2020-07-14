@@ -7,9 +7,11 @@ import OilElement from "./OilElement";
 import { searchByName } from "../../services/elasticSearch";
 
 import "./oil-details.scss";
+import Collapse from "../common/collapse/Collapse";
 
 const OilDetails = ({ match }) => {
   const [oil, setOil] = useState(null);
+  const [activeTabs, setActiveTabs] = useState([]);
 
   useEffect(() => {
     const { params } = match;
@@ -20,31 +22,86 @@ const OilDetails = ({ match }) => {
     });
   }, [match.params.name]);
 
+  const onToggle = e => {
+    const currentTab = e.currentTarget.id;
+    if (!activeTabs.includes(currentTab)) {
+      setActiveTabs([...activeTabs, currentTab]);
+    } else {
+      setActiveTabs(activeTabs.filter(f => f !== currentTab));
+    }
+  };
+
   return (
     oil && (
       <div className="oil-details">
-        <img
-          data-src={`https://res.cloudinary.com/dvbd6z854/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1594298310/essentially/${oil.image}`}
-          alt={oil.name}
-          className="lazyload"
-        />
+        <div className="oil-img">
+          <img
+            data-src={`https://res.cloudinary.com/dvbd6z854/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1594298310/essentially/${oil.image}`}
+            alt={oil.name}
+            className="lazyload"
+          />
+        </div>
+
         <div className="oil-details__content">
-          <h2>{oil.name}</h2>
-          <p>{oil.description}</p>
-          {oil.health.propertiesDesc && <h3>En Santé</h3>}
-          <OilElement category={oil.health} />
-          {oil.mood.propertiesDesc && <h3>En bien-être</h3>}
-          <OilElement category={oil.mood} />
-          {oil.beauty.propertiesDesc && <h3>En beauté</h3>}
-          <OilElement category={oil.beauty} />
-          {oil.precautions.length > 0 && (
-            <p className="subtitle">Précautions</p>
+          <h2 className="oil-title">{oil.name}</h2>
+
+          <p className="detail-desc">{oil.description}</p>
+
+          {oil.health.propertiesDesc && (
+            <button
+              id="health"
+              className="detail-btn"
+              onClick={onToggle}
+              type="button"
+            >
+              <Collapse
+                title="En Santé"
+                content={<OilElement category={oil.health} />}
+                isOpen={activeTabs.includes("health")}
+              />
+            </button>
           )}
-          <ul>
-            {oil.precautions.map((precaution, index) => (
-              <li key={index}>{precaution}</li>
-            ))}
-          </ul>
+
+          {oil.mood.propertiesDesc && (
+            <button
+              id="mood"
+              className="detail-btn"
+              onClick={onToggle}
+              type="button"
+            >
+              <Collapse
+                title="En bien-être"
+                content={<OilElement category={oil.mood} />}
+                isOpen={activeTabs.includes("mood")}
+              />
+            </button>
+          )}
+
+          {oil.beauty.propertiesDesc && (
+            <button
+              id="beauty"
+              className="detail-btn"
+              onClick={onToggle}
+              type="button"
+            >
+              <Collapse
+                title="En beauté"
+                content={<OilElement category={oil.beauty} />}
+                isOpen={activeTabs.includes("beauty")}
+              />
+            </button>
+          )}
+
+          {oil.precautions.length > 0 && (
+            <div className="precaution">
+              <p className="precaution__subtitle">Précautions</p>
+              <ul className="precaution__content">
+                {oil.precautions.map((precaution, index) => (
+                  <li key={index}>{precaution}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     )
