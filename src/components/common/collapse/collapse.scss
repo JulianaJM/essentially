@@ -48,6 +48,7 @@
 .collapsible-content {
   max-height: 0px;
   overflow: hidden;
+  overflow-y: scroll;
   transition: max-height 0.25s ease-in-out;
 }
 
@@ -64,4 +65,7 @@
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 0.5rem 1rem;
+  @media only screen and (max-width: 480px) {
+    padding: 0.5rem;
+  }
 }
