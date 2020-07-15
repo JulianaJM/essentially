@@ -35,13 +35,14 @@
     &__title {
       &__content {
         width: 70%;
+
         h2 {
           display: none;
         }
 
         img {
           width: 60%;
-          margin: 0 5px;
+          // margin: 0 5px;
         }
       }
     }
@@ -73,17 +74,27 @@
   .search-bar {
     z-index: 1;
     position: fixed;
+
     .react-autosuggest__input {
       width: 80%;
     }
   }
 
   .oil-details {
+    position: relative;
+    top: 100px;
+
+    .oil-img {
+      img {
+        position: relative;
+        top: 15%;
+      }
+    }
     &__content {
       .oil-title {
         z-index: 1;
         position: fixed;
-        top: 35px;
+        top: 25px;
         left: 35%;
       }
     }
