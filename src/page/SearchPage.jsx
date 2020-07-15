@@ -22,7 +22,7 @@ const SearchPage = props => {
     setIsBottom(isPageBottom());
   };
 
-  const trottledFunction = throttle(handleScroll, 300);
+  const trottledFunction = throttle(handleScroll, 500);
 
   useEffect(() => {
     window.addEventListener("scroll", trottledFunction);

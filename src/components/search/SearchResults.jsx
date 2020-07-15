@@ -162,6 +162,8 @@ const SearchResults = ({ location, isPageBottom }) => {
           )}
 
           <OilList oils={searchResults} />
+          {/* skeleton on next res */}
+          {!isRandom && isPageBottom && hasNextResults && <OilListSkeleton />}
         </Suspense>
       </div>
     </div>

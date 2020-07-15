@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import "./header.scss";
 
@@ -8,7 +9,9 @@ const Header = React.forwardRef((props, ref) => (
     <div className="header__title">
       <h1 className="sr-only">Essentially</h1>
       <div className="header__title__content">
-        <img src="/assets/images/logo.png" alt="logo" />
+        <Link to="/">
+          <img src="/assets/images/logo.png" alt="logo" />
+        </Link>
         <h2>
           Bienvenue sur ton moteur de recherche{" "}
           <span className="bold-green">{" d'huiles essentielles "} </span>
