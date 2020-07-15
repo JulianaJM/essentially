@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
+import { isMobile } from "react-device-detect";
+
 import OilElement from "./OilElement";
 import { searchByName } from "../../services/elasticSearch";
 
@@ -11,7 +13,13 @@ import Collapse from "../common/collapse/Collapse";
 
 const OilDetails = ({ match }) => {
   const [oil, setOil] = useState(null);
-  const [activeTabs, setActiveTabs] = useState([]);
+  const [activeTabs, setActiveTabs] = useState(["health", "mood", "beauty"]);
+
+  useEffect(() => {
+    if (isMobile) {
+      setActiveTabs([]);
+    }
+  }, []);
 
   useEffect(() => {
     const { params } = match;

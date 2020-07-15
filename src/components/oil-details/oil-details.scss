@@ -3,20 +3,36 @@
 .oil-details {
   font-family: "Quattrocento", cursive;
   display: flex;
-
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
   .precaution {
     font-size: 1.1rem;
     margin: 50px;
 
     @media only screen and (max-width: 480px) {
       margin: 50px 0;
-      padding: 5px;
+      padding: 10px;
     }
 
     &__subtitle {
-      text-decoration: underline;
       margin-bottom: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    &__content {
+      list-style: disc;
+      text-align: left;
+      margin: 10px 0 20px 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      @media only screen and (max-width: 480px) {
+        margin: 10px 0 20px 20px;
+      }
     }
   }
 
@@ -62,6 +78,7 @@
         top: 40px;
         right: 25px;
         width: 220px;
+        font-size: 1.1rem;
       }
     }
 
@@ -83,7 +100,12 @@
       width: 100%;
       outline: none;
       padding: 0;
-      margin: 0;
+      margin-bottom: 10px;
+
+      @media only screen and (max-width: 480px) {
+        width: 98%;
+        padding-left: 7px;
+      }
 
       .wrap-collabsible {
         .collapsible-content {
@@ -101,8 +123,19 @@
           }
 
           .subtitle {
-            margin: 5px;
+            margin: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
             text-decoration: underline;
+            font-style: italic;
+
+            li {
+              margin-bottom: 10px;
+            }
+
+            @media only screen and (max-width: 480px) {
+              margin: 10px;
+            }
           }
         }
       }
