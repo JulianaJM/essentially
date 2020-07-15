@@ -74,7 +74,10 @@ class SearchBox extends Component {
       }
 
       const { onUpdate } = this.props;
-      onUpdate(value);
+      // load search when more than 3 chars
+      if (value.length > 2) {
+        onUpdate(value);
+      }
     });
   };
 

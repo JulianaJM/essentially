@@ -52,8 +52,28 @@ const OilDetails = ({ match }) => {
 
         <div className="oil-details__content">
           <h2 className="oil-title">{oil.name}</h2>
-
           <p className="detail-desc">{oil.description}</p>
+
+          {oil.utilisations.length > 0 && (
+            <div className="oil-utilisation">
+              <ul>
+                {oil.utilisations.map((utilisation, index) => (
+                  <li key={index}>{utilisation}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {oil.ideal.length > 0 && (
+            <div className="oil-ideal">
+              <p className="oil-ideal__desc">Idéal pour : </p>
+              <ul>
+                {oil.ideal.map((ide, index) => (
+                  <li key={index}>{ide}</li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           {oil.health.propertiesDesc && (
             <button
@@ -96,6 +116,33 @@ const OilDetails = ({ match }) => {
                 title="En beauté"
                 content={<OilElement category={oil.beauty} />}
                 isOpen={activeTabs.includes("beauty")}
+              />
+            </button>
+          )}
+
+          {oil.kitchen.details.length > 0 && (
+            <button
+              id="kitchen"
+              className="detail-btn"
+              onClick={onToggle}
+              type="button"
+            >
+              <Collapse
+                title="En cuisine"
+                content={
+                  <div>
+                    {/* <p>{oil.kitchen.kitchenDesc}</p> */}
+                    {/* {oil.kitchen.details && ( */}
+                    {/* <h3>Utilisations</h3> */}
+                    <ul>
+                      {oil.kitchen.details.map((detail, index) => (
+                        <li key={index}>{detail}</li>
+                      ))}
+                    </ul>
+                    {/* )} */}
+                  </div>
+                }
+                isOpen={activeTabs.includes("kitchen")}
               />
             </button>
           )}

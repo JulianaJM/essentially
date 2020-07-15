@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
-import throttle from "lodash/throttle";
+import debounce from "lodash/debounce";
 
 import SearchBox from "../components/search/searchbox/SearchBox";
 import SearchResults from "../components/search/SearchResults";
@@ -22,7 +22,7 @@ const SearchPage = props => {
     setIsBottom(isPageBottom());
   };
 
-  const trottledFunction = throttle(handleScroll, 500);
+  const trottledFunction = debounce(handleScroll, 500);
 
   useEffect(() => {
     window.addEventListener("scroll", trottledFunction);

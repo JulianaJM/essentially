@@ -36,6 +36,63 @@
     }
   }
 
+  .oil-utilisation {
+    position: absolute;
+    left: 30px;
+    top: 18%;
+    background: white;
+    border-radius: 7px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+      width: 230px;
+      left: 18px;
+
+      li {
+        margin-bottom: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 480px) {
+      position: initial;
+      background: rgba(19, 128, 36, 0.5);
+      width: 290px;
+    }
+  }
+
+  .oil-ideal {
+    margin: 30px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+
+    &__desc {
+      margin: 10px;
+      font-size: 1.5rem;
+    }
+    ul {
+      columns: 3;
+      // display: flex;
+      // justify-content: space-around;
+      // align-items: center;
+      @media only screen and (max-width: 480px) {
+        // display: block;
+        columns: 1;
+      }
+      @media screen and (min-width: 600px) and (max-width: 1024px) {
+        columns: 2;
+      }
+    }
+
+    li {
+      margin: 10px;
+      @media only screen and (max-width: 480px) {
+        margin: 6px;
+      }
+    }
+  }
+
   @media only screen and (max-width: 480px) {
     margin: 0;
   }

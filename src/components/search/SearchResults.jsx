@@ -51,7 +51,7 @@ const SearchResults = ({ location, isPageBottom }) => {
     searchOffset: 0,
     searchResults: [],
     hasNextResults: false,
-    isRandom: true,
+    isRandom: false,
     total: 0,
   });
 
@@ -72,7 +72,7 @@ const SearchResults = ({ location, isPageBottom }) => {
         isValueChanged.current = false;
       } else {
         isValueChanged.current = true;
-        dispatch({ type: "reset" });
+        dispatch({ type: "reset" }); // FIXME ne marche pas
       }
       searchvalue.current = decode;
 
@@ -129,6 +129,12 @@ const SearchResults = ({ location, isPageBottom }) => {
             type: "setSearchResults",
             searchResults: res.data.hits,
           });
+        } else if (isValueChanged.current) {
+          // FIXME ugly ne marche pas plus haut
+          dispatch({
+            type: "setSearchResults",
+            searchResults: res.data.hits,
+          });
         } else {
           dispatch({
             type: "setSearchResults",
@@ -163,7 +169,11 @@ const SearchResults = ({ location, isPageBottom }) => {
 
           <OilList oils={searchResults} />
           {/* skeleton on next res */}
-          {!isRandom && isPageBottom && hasNextResults && <OilListSkeleton />}
+          {!isRandom && isPageBottom && hasNextResults && (
+            <div className="search__load">
+              <OilListSkeleton />
+            </div>
+          )}
         </Suspense>
       </div>
     </div>
