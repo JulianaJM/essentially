@@ -54,7 +54,7 @@ const OilDetails = ({ match }) => {
           <h2 className="oil-title">{oil.name}</h2>
           <p className="detail-desc">{oil.description}</p>
 
-          {oil.utilisations.length > 0 && (
+          {oil.utilisations && oil.utilisations.length > 0 && (
             <div className="oil-utilisation">
               <ul>
                 {oil.utilisations.map((utilisation, index) => (
