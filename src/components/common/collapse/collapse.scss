@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Quattrocento&display=swap");
 
 .wrap-collabsible {
-  border-top: 1px solid #ddd;
+  border: 1px solid #ddd;
   box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 7px;
   font-family: "Quattrocento", cursive;
@@ -65,7 +65,7 @@
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding: 0.5rem 1rem;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     padding: 0.5rem;
   }
 }

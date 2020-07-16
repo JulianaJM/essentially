@@ -33,10 +33,19 @@
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
 
+  @media (max-device-width: 768px) and (orientation: portrait) {
+    width: 300px;
+  }
+
   &__title {
     height: 10px;
     width: 260px;
     margin: 5px 0 5px 95px;
+
+    @media (max-device-width: 768px) and (orientation: portrait) {
+      width: 225px;
+      margin: 5px 0 5px 68px;
+    }
   }
 
   &__img {
@@ -49,9 +58,14 @@
   &__desc {
     width: 290px;
     height: 110px;
+
+    @media (max-device-width: 768px) and (orientation: portrait) {
+      width: 250px;
+      margin-right: 6px;
+    }
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     height: 120px;
     border-left: 2px solid #94c093;
     box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.1);
@@ -86,7 +100,11 @@
   justify-content: center;
   margin: 120px 0;
 
-  @media only screen and (max-width: 480px) {
+  @media (max-device-width: 768px) and (orientation: portrait) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  }
+
+  @media only screen and (max-width: 600px) {
     display: block;
     margin-top: 62px;
   }

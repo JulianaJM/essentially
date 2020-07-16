@@ -11,7 +11,7 @@
     @media screen and (min-width: 600px) and (max-width: 1170px) {
       margin: 0 10px;
     }
-    @media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 600px) {
       margin: 0 2px;
     }
 
@@ -31,7 +31,7 @@
         font-size: 2.5rem;
         transition: 0.3s;
 
-        @media only screen and (max-width: 480px) {
+        @media only screen and (max-width: 600px) {
           margin-top: 5px;
           font-size: 1.5rem;
         }
@@ -52,7 +52,7 @@
       text-align: center;
       font-size: 1.4rem;
 
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 600px) {
         font-size: 1.2rem;
         margin-top: 30px;
       }
@@ -60,7 +60,7 @@
     &__total {
       color: #484848;
       margin: 50px;
-      @media only screen and (max-width: 480px) {
+      @media only screen and (max-width: 600px) {
         margin: 30px;
         font-size: 0.8rem;
       }

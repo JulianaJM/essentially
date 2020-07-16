@@ -6,6 +6,10 @@
   justify-content: center;
   margin-top: 70px;
 
+  @media (max-device-width: 768px) and (orientation: portrait) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+  }
+
   &__result {
     .tile {
       box-sizing: border-box;
@@ -20,6 +24,10 @@
       width: 400px;
       overflow: hidden;
       transition: all 0.3s ease-in-out;
+
+      @media (max-device-width: 768px) and (orientation: portrait) {
+        width: 300px;
+      }
 
       &:hover {
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
@@ -61,7 +69,7 @@
     }
   }
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     display: block;
     margin-top: 0;
 
