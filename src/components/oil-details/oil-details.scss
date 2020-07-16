@@ -4,14 +4,16 @@
   font-family: "Quattrocento", cursive;
   display: flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 5px 0;
+  line-height: 120%;
 
   .precaution {
     font-size: 1.1rem;
-    margin: 50px;
+    margin: 50px 0;
+    padding: 10px;
 
-    @media only screen and (max-width: 600px) {
-      margin: 50px 0;
-      padding: 10px;
+    @media (min-width: 768px) {
+      line-height: 148%;
     }
 
     &__subtitle {
@@ -24,22 +26,20 @@
     &__content {
       list-style: disc;
       text-align: left;
-      margin: 10px 0 20px 0;
+      margin: 10px 0 20px 20px;
+
+      @media (min-width: 768px) {
+        margin: 10px 0 20px 0;
+      }
 
       li {
         margin-bottom: 10px;
-      }
-
-      @media only screen and (max-width: 600px) {
-        margin: 10px 0 20px 20px;
       }
     }
   }
 
   .oil-utilisation {
-    position: absolute;
-    left: 30px;
-    top: 18%;
+    width: 290px;
     background: rgba(19, 128, 36, 0.5);
     border-radius: 7px;
     margin: 20px auto;
@@ -47,8 +47,8 @@
     border: 1px solid #ddd;
     transition: top 0.5s linear;
 
-    // tablette
-    @media screen and (min-width: 600px) and (max-width: 1024px) {
+    @media (min-width: 768px) {
+      position: absolute;
       width: 32%;
       left: 10px;
       top: 12%;
@@ -58,14 +58,13 @@
       }
     }
 
+    @media (min-width: 992px) {
+      top: 18%;
+    }
+
     // tablette landscape
     @media (max-device-width: 1024px) and (orientation: landscape) {
       top: 25%;
-    }
-
-    @media only screen and (max-width: 600px) {
-      position: initial;
-      width: 290px;
     }
   }
 
@@ -78,97 +77,89 @@
       margin: 10px;
       font-size: 1.5rem;
     }
+
     ul {
-      columns: 3;
-      // display: flex;
-      // justify-content: space-around;
-      // align-items: center;
-      @media only screen and (max-width: 600px) {
-        // display: block;
-        columns: 1;
-      }
-      @media screen and (min-width: 600px) and (max-width: 1024px) {
+      padding: 5px;
+
+      @media (min-width: 550px) {
+        padding: 0;
         columns: 2;
       }
     }
 
     li {
-      margin: 10px;
-      @media only screen and (max-width: 600px) {
-        margin: 6px;
+      margin: 6px;
+
+      @media (min-width: 768px) {
+        margin: 10px;
       }
     }
   }
 
-  @media only screen and (max-width: 600px) {
-    margin: 0;
-  }
-
   .oil-img {
-    width: 100%;
-    margin: 10px;
-    flex: 1;
+    display: none;
 
-    img {
+    @media (min-width: 768px) {
+      display: block;
       width: 100%;
-      height: auto;
-      position: relative;
-      top: 0;
-      transition: top 0.5s linear;
-    }
+      margin: 10px;
+      flex: 1;
 
-    @media only screen and (max-width: 600px) {
-      display: none;
+      img {
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        transition: top 0.5s linear;
+      }
     }
   }
 
   &__content {
-    margin: 0 30px;
-    flex: 2;
+    margin: 0;
 
-    @media only screen and (max-width: 600px) {
-      margin: 0;
+    @media (min-width: 768px) {
+      margin: 0 30px;
+      flex: 2;
     }
 
     .oil-title {
-      font-size: 2.1rem;
-      margin: 0.2rem;
-      text-align: center;
+      margin: 0;
+      position: absolute;
+      top: 40px;
+      right: 25px;
+      width: 220px;
+      font-size: 1.1rem;
 
-      @media only screen and (max-width: 600px) {
-        font-size: 1.5rem;
-        margin: 0;
-        position: absolute;
-        top: 40px;
-        right: 25px;
-        width: 220px;
-        font-size: 1.1rem;
+      @media (min-width: 768px) {
+        line-height: 1;
+        position: initial;
+        width: 100%;
+        font-size: 2.1rem;
+        margin: 15px;
+        text-align: center;
       }
     }
 
     .detail-desc {
       font-family: "Quattrocento", cursive;
-      margin: 50px;
-      text-align: center;
       font-size: 1.1rem;
-
-      @media only screen and (max-width: 600px) {
-        margin: 30px 0;
-        padding: 0 2px;
-      }
+      text-align: center;
+      margin: 30px 0;
+      padding: 0 2px;
     }
 
     .detail-btn {
-      background: none;
-      border: none;
-      width: 100%;
+      background: 0;
+      border: 0;
       outline: none;
+      width: 98%;
+      padding-left: 7px;
       padding: 0;
       margin-bottom: 10px;
 
-      @media only screen and (max-width: 600px) {
-        width: 98%;
-        padding-left: 7px;
+      @media (min-width: 768px) {
+        width: 100%;
       }
 
       .wrap-collabsible {
@@ -176,18 +167,19 @@
           .content-inner ul {
             list-style: disc;
             text-align: left;
-            margin: 10px 0 20px 80px;
+            margin: 10px 0 20px 50px;
+
             li {
               margin-bottom: 10px;
             }
 
-            @media only screen and (max-width: 600px) {
-              margin: 10px 0 20px 50px;
+            @media (min-width: 768px) {
+              margin: 10px 0 20px 80px;
             }
           }
 
           .subtitle {
-            margin: 20px;
+            margin: 10px;
             font-size: 1.2rem;
             font-weight: bold;
             text-decoration: underline;
@@ -197,8 +189,8 @@
               margin-bottom: 10px;
             }
 
-            @media only screen and (max-width: 600px) {
-              margin: 10px;
+            @media (min-width: 768px) {
+              margin: 20px;
             }
           }
         }

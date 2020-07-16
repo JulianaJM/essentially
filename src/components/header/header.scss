@@ -1,54 +1,58 @@
 @import url("https://fonts.googleapis.com/css?family=Quattrocento|Sacramento&display=swap");
 .header {
+  font-family: "Sacramento", cursive;
   outline: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 465px;
+  height: 6.25rem; //100px;
+  // border-radius: 0% 0% 150% 150%/0% 0% 40% 40%;
+  // border-radius: 0% 0% 100% 100%/0% 0% 30% 30%;
+  border-radius: 0% 0% 250% 250%/0% 0% 40% 40%;
   transition: height 0.6s, background-color 0.6s linear;
   background-color: rgba(19, 128, 36, 0.5);
+
+  @media (min-width: 768px) {
+    height: 465px;
+    flex-direction: column;
+    border-radius: initial;
+  }
 
   &__title {
     &__content {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 70%;
+
+      @media (min-width: 768px) {
+        width: 100%;
+      }
 
       h2 {
-        font-family: "Sacramento", cursive;
-        font-size: 40px;
+        display: none;
+
+        @media (min-width: 768px) {
+          display: block;
+          font-size: 40px;
+        }
+      }
+
+      img {
+        width: 60%;
+        @media (min-width: 768px) {
+          width: 100%;
+        }
       }
     }
   }
+
   .bold-green {
     color: rgba(19, 128, 36, 0.54);
   }
-
-  @media only screen and (max-width: 600px) {
-    height: 6.25rem; //100px;
-    flex-direction: row;
-    // border-radius: 0% 0% 150% 150%/0% 0% 40% 40%;
-    // border-radius: 0% 0% 100% 100%/0% 0% 30% 30%;
-    border-radius: 0% 0% 250% 250%/0% 0% 40% 40%;
-
-    &__title {
-      &__content {
-        width: 70%;
-
-        h2 {
-          display: none;
-        }
-
-        img {
-          width: 60%;
-          // margin: 0 5px;
-        }
-      }
-    }
-  }
 }
 
+// sticky only tablette desktop
 .sticky {
   top: 0;
   position: fixed;
@@ -78,6 +82,24 @@
     .react-autosuggest__input {
       width: 80%;
     }
+
+    @media (min-width: 768px) {
+      right: 140px;
+
+      .react-autosuggest__input {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      right: 220px;
+    }
+
+    @media (min-width: 1200px) {
+      .react-autosuggest__input {
+        width: 70%;
+      }
+    }
   }
 
   .oil-details {
@@ -90,16 +112,29 @@
         top: 15%;
       }
     }
+
     &__content {
       .oil-title {
         z-index: 1;
         position: fixed;
         top: 25px;
         left: 35%;
+
+        @media (min-width: 768px) {
+          left: 10%;
+          line-height: 1;
+        }
       }
 
       .oil-utilisation {
-        top: 35%;
+        @media (min-width: 768px) {
+          top: 27%;
+        }
+
+        @media (min-width: 992px) {
+          top: 33%;
+        }
+
         // tablette landscape
         @media (max-device-width: 1024px) and (orientation: landscape) {
           top: 40%;

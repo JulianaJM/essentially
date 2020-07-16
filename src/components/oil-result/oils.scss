@@ -1,32 +1,56 @@
 .oils {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
-  grid-gap: 5px;
-  align-items: stretch;
-  justify-content: center;
-  margin-top: 70px;
+  display: block;
+  margin-top: 0;
 
-  @media (max-device-width: 768px) and (orientation: portrait) {
+  @media (min-width: 768px) {
+    display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 300px));
+    grid-gap: 5px;
+    align-items: stretch;
+    justify-content: center;
+    margin-top: 70px;
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
   }
 
   &__result {
+    h2 {
+      font-size: 24px;
+    }
+
+    /*Tiles*/
+    ul {
+      padding: 0;
+    }
+
     .tile {
+      display: inline-block;
       box-sizing: border-box;
       background: none repeat scroll 0 0 #fff;
-      // border-bottom: 0.2rem solid #000000;
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-      display: inline-block;
+      width: 98%;
+      height: 120px;
       text-decoration: none;
+      border: 1px solid #ccc;
+      border-left: 2px solid #94c093;
+      border-top: 0;
+      border-radius: 3px;
       vertical-align: top;
-      height: 210px;
-      width: 400px;
+      box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.1);
+      margin-bottom: 5px;
       overflow: hidden;
       transition: all 0.3s ease-in-out;
 
-      @media (max-device-width: 768px) and (orientation: portrait) {
+      @media (min-width: 768px) {
+        border-left: 0;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
         width: 300px;
+        height: 210px;
+      }
+
+      @media (min-width: 992px) {
+        width: 400px;
       }
 
       &:hover {
@@ -39,81 +63,43 @@
         display: block;
         font-size: 1.1rem;
         font-weight: 500;
-        margin: 0 0 15px 0;
-        padding: 5px;
-        text-decoration: none;
+        padding: 0;
         text-align: center;
+        text-decoration: none;
+        margin: 15px 0 15px 0;
       }
     }
 
     .tile-content {
       display: flex;
-      // align-items: center;
       overflow: hidden;
 
       img {
-        width: 80px;
-        height: 80px;
-        margin: 5px;
+        width: 50px;
+        height: 50px;
+        margin: 0 1px;
         border-radius: 50%;
+
+        @media (min-width: 768px) {
+          width: 80px;
+          height: 80px;
+          margin: 5px;
+        }
       }
 
       p {
         color: #6a747e;
-        font-size: 0.9em;
+        font-size: 0.75em;
         text-align: center;
-        line-height: 140%;
-        margin: 0;
-        height: 100px;
-      }
-    }
-  }
+        height: 40px;
+        margin: 0 auto;
+        line-height: 1;
 
-  @media only screen and (max-width: 600px) {
-    display: block;
-    margin-top: 0;
-
-    &__result {
-      h2 {
-        font-size: 24px;
-      }
-
-      /*Tiles*/
-      ul {
-        padding: 0;
-      }
-
-      .tile {
-        width: 98%;
-        height: 120px;
-        border-left: 2px solid #94c093;
-        box-shadow: 2px 0px 4px 0px rgba(0, 0, 0, 0.1);
-        margin-bottom: 5px;
-        border-top: 0;
-        border-radius: 3px;
-
-        h2 {
-          padding: 0;
-          text-align: center;
-          margin: 15px 0 15px 0;
-        }
-      }
-
-      .tile-content {
-        p {
-          color: #6a747e;
-          font-size: 0.75em;
-          text-align: center;
-          height: 40px;
-          margin: 0 auto;
-          line-height: 1;
-        }
-
-        img {
-          width: 50px;
-          height: 50px;
-          margin: 0 1px;
-          border-radius: 50%;
+        @media (min-width: 768px) {
+          line-height: 140%;
+          margin: 0;
+          height: 100px;
+          font-size: 0.9em;
         }
       }
     }

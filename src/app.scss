@@ -1,14 +1,23 @@
 .container {
   min-height: 100vh;
-  margin: 0 20px;
-  position: relative;
-  top: -95px;
-  background: white;
-  border-radius: 6px;
+  margin: 0 10px;
 
-  @media only screen and (max-width: 600px) {
-    position: initial;
-    margin: 0 10px;
+  @media (min-width: 768px) {
+    margin: 0 20px;
+    position: relative;
+    top: -95px;
+    background: white;
+    border-radius: 6px;
+  }
+
+  @media (min-width: 992px) {
+    margin: 0 auto;
+  }
+
+  /* Sur les grands écrans, on limite la largeur du contenu */
+  @media (min-width: 1200px) {
+    width: 1170px;
+    margin: 0 auto;
   }
 
   .sr-only {
@@ -21,23 +30,5 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
-  }
-}
-
-/* Sur les grands écrans, on limite la largeur du contenu */
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    // position: relative;
-    // top: -95px;
-    // background: white;
-    // border-radius: 6px;
-    margin: 0 auto;
   }
 }
