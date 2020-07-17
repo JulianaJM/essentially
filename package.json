@@ -99,7 +99,7 @@
     "emotion": "^10.0.9",
     "express": "^4.17.1",
     "lazysizes": "^5.2.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "log": "^6.0.0",
     "memoize-one": "^5.0.4",
     "prop-types": "^15.7.2",
