@@ -17,3 +17,11 @@ export const isPageBottom = () => {
   const windowBottom = windowHeight + window.pageYOffset;
   return windowBottom >= docHeight;
 };
+
+export const scrollTop = () => {
+  if (window.scrollY > 0) {
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 200);
+  }
+};

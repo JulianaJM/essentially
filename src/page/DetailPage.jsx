@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import Loader from "../components/common/loader/Loader";
 import { searchByName } from "../services/elasticSearch";
 import { replaceUnderscorebySpace } from "../utils/replace";
+import { scrollTop } from "../utils/scroll";
 
 import "./detail-page.scss";
 
@@ -17,6 +18,7 @@ const DetailPage = ({ match }) => {
   const { params } = match;
 
   useEffect(() => {
+    scrollTop();
     if (isMobile) {
       setActiveTabs([]);
     }

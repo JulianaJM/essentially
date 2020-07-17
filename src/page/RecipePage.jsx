@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import Loader from "../components/common/loader/Loader";
 import { searchByName } from "../services/elasticSearch";
 import { replaceUnderscorebySpace } from "../utils/replace";
+import { scrollTop } from "../utils/scroll";
 
 const Recipe = lazy(() => import("../components/recipe/Recipe"));
 
@@ -23,8 +24,9 @@ const RecipePage = ({ match }) => {
   };
 
   useEffect(() => {
-    const newName = replaceUnderscorebySpace(params.name);
+    scrollTop();
 
+    const newName = replaceUnderscorebySpace(params.name);
     searchByName(newName).then(res => {
       setOil(res.data[0]._source);
     });

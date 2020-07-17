@@ -5,7 +5,7 @@ import debounce from "lodash/debounce";
 
 import SearchBox from "../components/search/searchbox/SearchBox";
 import SearchResults from "../components/search/SearchResults";
-import { isPageBottom } from "../utils/scroll";
+import { isPageBottom, scrollTop } from "../utils/scroll";
 
 import "./search-page.scss";
 
@@ -25,6 +25,7 @@ const SearchPage = props => {
   const trottledFunction = debounce(handleScroll, 500);
 
   useEffect(() => {
+    scrollTop();
     window.addEventListener("scroll", trottledFunction);
     return () => {
       // console.log("will unmount");
