@@ -59,7 +59,8 @@
     margin: 2px;
     cursor: grab;
     border-radius: 50%;
-    background-color: #ddd;
+    // background-color: #ddd;
+    background: none;
     color: black;
     font-size: 1.2rem;
 
@@ -100,7 +101,7 @@
     position: initial;
     top: initial;
     left: initial;
-    background-color: rgba(19, 128, 36, 0.54);
+    // background-color: rgba(19, 128, 36, 0.54);
   }
 }
 

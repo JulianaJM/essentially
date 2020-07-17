@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 import "./header.scss";
 
@@ -11,7 +13,7 @@ const Header = React.forwardRef((props, ref) => (
       <div className="header__title__content">
         {props.shouldShowBackButton && (
           <button type="button" onClick={props.goBack} className="previous">
-            &#8249;
+            <FontAwesomeIcon icon={faChevronLeft} />
           </button>
         )}
         <Link to="/">
