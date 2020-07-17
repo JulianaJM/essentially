@@ -25,6 +25,7 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
 
         {oil.utilisations && oil.utilisations.length > 0 && (
           <div className="oil-utilisation">
+            <p className="sr-only">Utilisations</p>
             <ul>
               {oil.utilisations.map((utilisation, index) => (
                 <li key={index}>{utilisation}</li>

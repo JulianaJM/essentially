@@ -3,9 +3,12 @@
 .oil-details {
   font-family: "Quattrocento", cursive;
   display: flex;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin: 5px 0;
   line-height: 120%;
+
+  @media (min-width: 768px) {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
 
   .precaution {
     font-size: 1.1rem;
@@ -59,7 +62,7 @@
     }
 
     @media (min-width: 992px) {
-      top: 16%;
+      top: 17%;
     }
 
     // tablette landscape
@@ -152,7 +155,7 @@
     .detail-btn {
       background: 0;
       border: 0;
-      outline: none;
+      // outline: none;
       width: 98%;
       padding-left: 7px;
       padding: 0;

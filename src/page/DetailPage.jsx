@@ -1,11 +1,11 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
 import { isMobile } from "react-device-detect";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import Loader from "../components/common/loader/Loader";
-// import Recipe from "../components/recipe/Recipe";
 import { searchByName } from "../services/elasticSearch";
+import { replaceUnderscorebySpace } from "../utils/replace";
 
 import "./detail-page.scss";
 
@@ -14,6 +14,7 @@ const OilDetails = lazy(() => import("../components/oil-details/OilDetails"));
 const DetailPage = ({ match }) => {
   const [oil, setOil] = useState(null);
   const [activeTabs, setActiveTabs] = useState(["health"]);
+  const { params } = match;
 
   useEffect(() => {
     if (isMobile) {
@@ -22,8 +23,7 @@ const DetailPage = ({ match }) => {
   }, []);
 
   useEffect(() => {
-    const { params } = match;
-    const newName = params.name.replace(/_/g, " ");
+    const newName = replaceUnderscorebySpace(params.name);
 
     searchByName(newName).then(res => {
       setOil(res.data[0]._source);
@@ -49,13 +49,16 @@ const DetailPage = ({ match }) => {
             onToggle={handleToggle}
           />
 
-          {oil.recipes && (
+          {oil.recipes && oil.recipes.recipesTitle.length > 0 && (
             <>
-              <button className="recette-btn" type="button">
-                Recette
-              </button>
-
-              {/* <Recipe recipes={oil.recipes} /> */}
+              <Link
+                // to={{ pathname: "/recipe", recipes: oil.recipes }}
+                to={`/${params.name}/recipe`}
+                className="recette-btn"
+                type="button"
+              >
+                Idées recette
+              </Link>
             </>
           )}
         </>

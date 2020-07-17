@@ -10,6 +10,7 @@ import AsyncComponent from "./components/common/async-component";
 import About from "./components/about/about";
 import DetailPage from "./page/DetailPage";
 import SearchPage from "./page/SearchPage";
+import RecipePage from "./page/RecipePage";
 
 import "./app.scss";
 
@@ -23,6 +24,10 @@ const App = () => (
         <Route path="/about" component={About} />
         <Route path="/contact" component={AsyncComponent(() => Contact)} />
         <Route exact path="/" render={props => <SearchPage {...props} />} />
+        <Route
+          path="/:name/recipe"
+          render={props => <RecipePage {...props} />}
+        />
         <Route path="/:name" render={props => <DetailPage {...props} />} />
         <Route render={() => <h1>Page not found</h1>} />
       </Switch>

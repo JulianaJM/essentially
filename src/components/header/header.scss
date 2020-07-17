@@ -105,11 +105,16 @@
   .oil-details {
     position: relative;
     top: 100px;
+    box-shadow: initial;
 
     .oil-img {
       img {
         position: relative;
-        top: 15%;
+        top: 10%;
+
+        @media (min-width: 992px) {
+          top: 15%;
+        }
       }
     }
 
@@ -121,14 +126,21 @@
         left: 35%;
 
         @media (min-width: 768px) {
+          left: 20%;
+          width: 70%;
+          line-height: 1;
+        }
+
+        @media (min-width: 992px) {
           left: 10%;
+          width: 100%;
           line-height: 1;
         }
       }
 
       .oil-utilisation {
         @media (min-width: 768px) {
-          top: 27%;
+          top: 25%;
         }
 
         @media (min-width: 992px) {
@@ -139,6 +151,26 @@
         @media (max-device-width: 1024px) and (orientation: landscape) {
           top: 40%;
         }
+      }
+    }
+  }
+
+  .recipe {
+    position: relative;
+    top: 200px;
+    box-shadow: initial;
+    padding-bottom: 0;
+
+    .oil-title {
+      z-index: 1;
+      position: fixed;
+      top: 25px;
+      left: 35%;
+      padding: 0;
+
+      @media (min-width: 768px) {
+        left: 40px;
+        line-height: 1;
       }
     }
   }
