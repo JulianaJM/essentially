@@ -8,10 +8,18 @@
   margin: 4px 2px;
   opacity: 0.6;
   transition: 0.3s;
+  position: relative;
+  bottom: -40px;
+  width: 100%;
+  border-radius: 10px;
 
-  position: absolute;
-  top: 32%;
-  left: 12%;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 60%;
+    bottom: initial;
+    left: 2%;
+    width: 30%;
+  }
 }
 
 .recette-btn:hover {
