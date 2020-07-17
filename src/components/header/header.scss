@@ -21,11 +21,11 @@
   &__title {
     &__content {
       display: flex;
-      flex-direction: column;
       align-items: center;
       width: 70%;
 
       @media (min-width: 768px) {
+        flex-direction: column;
         width: 100%;
       }
 
@@ -50,6 +50,26 @@
   .bold-green {
     color: rgba(19, 128, 36, 0.54);
   }
+
+  .previous {
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    padding: 8px 16px;
+    margin: 2px;
+    cursor: grab;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: black;
+    font-size: 1.2rem;
+
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 10px;
+    }
+  }
 }
 
 // sticky only tablette desktop
@@ -61,6 +81,12 @@
   flex-direction: row;
   background: white;
 
+  .header__title {
+    &__content {
+      flex-direction: row;
+    }
+  }
+
   h2 {
     display: none;
   }
@@ -68,6 +94,13 @@
   img {
     width: 65%;
     margin: 0;
+  }
+
+  .previous {
+    position: initial;
+    top: initial;
+    left: initial;
+    background-color: rgba(19, 128, 36, 0.54);
   }
 }
 

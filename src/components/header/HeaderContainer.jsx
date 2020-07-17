@@ -1,12 +1,18 @@
 import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
 import { isMobileOnly } from "react-device-detect";
+import PropTypes from "prop-types";
 import { throttle } from "lodash";
 
 import Header from "./Header";
 import { isPageBottom } from "../../utils/scroll";
 
 class HeaderContainer extends PureComponent {
+  static propTypes = {
+    history: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+  };
+
   constructor(props) {
     super(props);
     this.ticking = false;
@@ -52,8 +58,21 @@ class HeaderContainer extends PureComponent {
     }
   };
 
+  goBack = () => {
+    const { history } = this.props;
+    history.goBack();
+  };
+
   render() {
-    return <Header ref={this.headerRef} />;
+    const { location } = this.props;
+
+    return (
+      <Header
+        ref={this.headerRef}
+        goBack={this.goBack}
+        shouldShowBackButton={location.pathname !== "/"}
+      />
+    );
   }
 }
 
