@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { throttle } from "lodash";
 
 import Header from "./Header";
-import { isPageBottom } from "../../utils/scroll";
+import { isPageBottom, scrollTop } from "../../utils/scroll";
 
 class HeaderContainer extends PureComponent {
   static propTypes = {
@@ -59,6 +59,9 @@ class HeaderContainer extends PureComponent {
   };
 
   goBack = () => {
+    if (isMobileOnly) {
+      scrollTop();
+    }
     const { history } = this.props;
     history.goBack();
   };
