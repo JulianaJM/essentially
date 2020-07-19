@@ -7,6 +7,7 @@
     "build": "webpack --config webpack.config.prod.js",
     "dev:w": "webpack --watch --config webpack.config.dev.js",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "dev:out": "webpack-dev-server --host=0.0.0.0 --config webpack.config.dev.js",
     "dev:hot": "yarn dev -- --hot",
     "start": "node ./server",
     "test": "jest",

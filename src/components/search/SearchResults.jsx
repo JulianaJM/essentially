@@ -1,45 +1,60 @@
-import React, { Suspense, lazy, useEffect, useReducer, useRef } from "react";
+import React, { Suspense, lazy, useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 import { getRandomOils, search } from "../../services/elasticSearch";
 import OilListSkeleton from "../common/skeleton/OilListSkeleton";
-// import Loader from "../common/loader/Loader";
 
 import "./search.scss";
 
 const OilList = lazy(() => import("../oil-result/OilList"));
 
-function init() {
-  return {
-    searchOffset: 0, // Search result pagination offset
-    searchResults: [],
-    hasNextResults: false,
-    isRandom: false,
-    total: 0, // Total search results found
-  };
-}
+function searchReducer(state, action) {
+  const { searchResults } = state;
 
-function reducer(state, action) {
   switch (action.type) {
-    case "setSearchResults":
+    case "SEARCH_RESULTS": {
       return {
-        ...state,
+        isRandom: false,
         searchResults: action.searchResults,
+        total: action.total,
+        searchOffset: action.searchOffset,
+        hasNextResults: action.hasNextResults,
       };
-    case "setIsRandom":
-      return { ...state, isRandom: action.isRandom };
-    case "setHasNextResults":
-      return { ...state, hasNextResults: action.hasNextResults };
-    case "setTotal":
-      return { ...state, total: action.total };
-    case "setSearchOffset":
-      return { ...state, searchOffset: action.searchOffset };
-    case "reset":
-      return init();
-    default:
-      return state;
+    }
+
+    case "SEARCH_NEXT_RESULTS": {
+      return {
+        isRandom: false,
+        searchResults: [...searchResults, ...action.searchResults],
+        total: action.total,
+        searchOffset: action.searchOffset,
+        hasNextResults: action.hasNextResults,
+      };
+    }
+
+    case "SEARCH_RANDOM_RESULTS": {
+      return {
+        isRandom: true,
+        searchResults: action.searchResults,
+        total: action.total,
+        searchOffset: action.searchOffset,
+        hasNextResults: action.hasNextResults,
+      };
+    }
+
+    case "RESET": {
+      return {
+        searchOffset: 0, // Search result pagination offset
+        searchResults: [],
+        hasNextResults: false,
+        isRandom: false,
+        total: 0, // Total search results found
+      };
+    }
+
+    default: {
+      throw new Error(`Unhandled action type: ${action.type}`);
+    }
   }
 }
 
@@ -47,17 +62,13 @@ const SearchResults = ({ location, isPageBottom }) => {
   const [
     { searchOffset, searchResults, hasNextResults, isRandom, total },
     dispatch,
-  ] = useReducer(reducer, {
+  ] = useReducer(searchReducer, {
     searchOffset: 0,
     searchResults: [],
     hasNextResults: false,
     isRandom: false,
     total: 0,
   });
-
-  // refs keeps value and avoid useless rerender
-  const searchvalue = useRef("");
-  const isValueChanged = useRef(false);
 
   const getSearchValues = () => {
     const queryParamString = location.search
@@ -68,24 +79,33 @@ const SearchResults = ({ location, isPageBottom }) => {
     return queryParams.map(param => {
       const decode = decodeURI(param);
 
-      if (searchvalue.current === decode) {
-        isValueChanged.current = false;
-      } else {
-        isValueChanged.current = true;
-        dispatch({ type: "reset" }); // FIXME ne marche pas
-      }
-      searchvalue.current = decode;
-
-      return decode.trim();
+      return decode;
     });
   };
 
   const loadNextResults = () => {
-    const offsetDisplayed = searchOffset + 10;
-    if (total > offsetDisplayed) {
-      dispatch({ type: "setSearchOffset", searchOffset: offsetDisplayed });
+    const newSearchOffset = searchOffset + 10;
+    if (total > newSearchOffset) {
+      const searchParams = getSearchValues();
+      search(searchParams, newSearchOffset).then(res => {
+        dispatch({
+          type: "SEARCH_NEXT_RESULTS",
+          searchOffset: newSearchOffset,
+          searchResults: res.data.hits,
+          hasNextResults: true,
+          isRandom: false,
+          total: res.data.total.value,
+        });
+      });
     } else {
-      dispatch({ type: "setHasNextResults", hasNextResults: false });
+      dispatch({
+        type: "SEARCH_NEXT_RESULTS",
+        searchOffset,
+        searchResults: [],
+        hasNextResults: false,
+        isRandom: false,
+        total,
+      });
     }
   };
 
@@ -94,12 +114,14 @@ const SearchResults = ({ location, isPageBottom }) => {
     const searchParams = getSearchValues();
     if (searchParams.length === 0) {
       getRandomOils().then(res => {
-        dispatch({ type: "setSearchResults", searchResults: res.data.hits });
-      });
-
-      dispatch({
-        type: "setIsRandom",
-        isRandom: true,
+        dispatch({
+          type: "SEARCH_RANDOM_RESULTS",
+          searchOffset,
+          searchResults: res.data.hits,
+          hasNextResults,
+          isRandom: true,
+          total,
+        });
       });
     }
   }, []);
@@ -107,46 +129,26 @@ const SearchResults = ({ location, isPageBottom }) => {
   useEffect(() => {
     const searchParams = getSearchValues();
     if (searchParams.length > 0) {
-      dispatch({
-        type: "setIsRandom",
-        isRandom: false,
-      });
       search(searchParams, searchOffset).then(res => {
-        const totalRes = res.data.total.value;
-        dispatch({ type: "setTotal", total: totalRes });
+        const newTotal = res.data.total.value;
         dispatch({
-          type: "setHasNextResults",
-          hasNextResults: totalRes > 10,
+          type: "SEARCH_RESULTS",
+          searchOffset,
+          searchResults: res.data.hits,
+          hasNextResults: newTotal > 10,
+          isRandom: false,
+          total: newTotal,
         });
-
-        if (totalRes === 0) {
-          dispatch({
-            type: "setSearchResults",
-            searchResults: [],
-          });
-        } else if (totalRes <= 10) {
-          dispatch({
-            type: "setSearchResults",
-            searchResults: res.data.hits,
-          });
-        } else if (isValueChanged.current) {
-          // FIXME ugly ne marche pas plus haut
-          dispatch({
-            type: "setSearchResults",
-            searchResults: res.data.hits,
-          });
-        } else {
-          dispatch({
-            type: "setSearchResults",
-            searchResults: [...searchResults, ...res.data.hits],
-          });
-        }
+      });
+    } else {
+      dispatch({
+        type: "RESET",
       });
     }
-  }, [location.search, searchOffset, isRandom]);
+  }, [location.search]);
 
   useEffect(() => {
-    if (isPageBottom && !isRandom && hasNextResults) {
+    if (isPageBottom && hasNextResults) {
       loadNextResults();
     }
   }, [isPageBottom]);
@@ -169,7 +171,7 @@ const SearchResults = ({ location, isPageBottom }) => {
 
           <OilList oils={searchResults} />
           {/* skeleton on next res */}
-          {!isRandom && isPageBottom && hasNextResults && (
+          {hasNextResults && isPageBottom && (
             <div className="search__load">
               <OilListSkeleton />
             </div>

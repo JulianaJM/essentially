@@ -43,6 +43,8 @@ class SearchBox extends Component {
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
+    // eslint-disable-next-line react/destructuring-assignment
+    if (this.state.value === value) return;
     getSuggestions(value).then(res => {
       const results = res.data.map(h => h._source);
       if (results.length > 0) {
@@ -74,10 +76,7 @@ class SearchBox extends Component {
       }
 
       const { onUpdate } = this.props;
-      // load search when more than 3 chars
-      if (value.length > 2) {
-        onUpdate(value);
-      }
+      onUpdate(value);
     });
   };
 
