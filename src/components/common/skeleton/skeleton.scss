@@ -92,6 +92,7 @@
 .skeleton-list {
   display: block;
   margin-top: 62px;
+  margin-bottom: 162px;
 
   @media (min-width: 768px) {
     display: grid;
@@ -100,6 +101,10 @@
     align-items: stretch;
     justify-content: center;
     margin: 120px 0;
+
+    position: relative;
+    top: -226px;
+    background: white;
   }
 
   @media (min-width: 992px) {

@@ -1,12 +1,11 @@
-import React, { Suspense, lazy, useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import PropTypes from "prop-types";
 
 import { getRandomOils, search } from "../../services/elasticSearch";
 import OilListSkeleton from "../common/skeleton/OilListSkeleton";
+import OilList from "../oil-result/OilList";
 
 import "./search.scss";
-
-const OilList = lazy(() => import("../oil-result/OilList"));
 
 function searchReducer(state, action) {
   const { searchResults } = state;
@@ -64,9 +63,9 @@ const SearchResults = ({ location, isPageBottom }) => {
     dispatch,
   ] = useReducer(searchReducer, {
     searchOffset: 0,
-    searchResults: [],
+    searchResults: null,
     hasNextResults: false,
-    isRandom: false,
+    isRandom: true,
     total: 0,
   });
 
@@ -94,7 +93,7 @@ const SearchResults = ({ location, isPageBottom }) => {
           searchResults: res.data.hits,
           hasNextResults: true,
           isRandom: false,
-          total: res.data.total.value,
+          total,
         });
       });
     } else {
@@ -120,7 +119,7 @@ const SearchResults = ({ location, isPageBottom }) => {
           searchResults: res.data.hits,
           hasNextResults,
           isRandom: true,
-          total,
+          total: res.data.total.value,
         });
       });
     }
@@ -156,27 +155,29 @@ const SearchResults = ({ location, isPageBottom }) => {
   return (
     <div className="search">
       <div className="search__results">
-        <Suspense fallback={<OilListSkeleton />}>
-          {!isRandom ? (
-            <p className="search__results__total">
-              {total > 0
-                ? `${total} résultats trouvés`
-                : "Aucun résultats trouvés"}
-            </p>
-          ) : (
-            <h2 className="search__results__discover">
-              Je découvre la sélection des 10 huiles du jour
-            </h2>
-          )}
+        {!isRandom && searchResults && (
+          <p className="search__results__total">
+            {total > 0
+              ? `${total} résultats trouvés`
+              : "Aucun résultats trouvés"}
+          </p>
+        )}
 
-          <OilList oils={searchResults} />
-          {/* skeleton on next res */}
-          {hasNextResults && isPageBottom && (
-            <div className="search__load">
-              <OilListSkeleton />
-            </div>
-          )}
-        </Suspense>
+        {isRandom && (
+          <h2 className="search__results__discover">
+            Je découvre la sélection des 10 huiles du jour
+          </h2>
+        )}
+
+        {/* skeleton on first load */}
+        {searchResults ? <OilList oils={searchResults} /> : <OilListSkeleton />}
+
+        {/* skeleton on next res */}
+        {hasNextResults && isPageBottom && (
+          <div className="search__load">
+            <OilListSkeleton />
+          </div>
+        )}
       </div>
     </div>
   );

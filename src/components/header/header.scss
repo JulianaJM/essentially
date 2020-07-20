@@ -41,7 +41,11 @@
       img {
         width: 60%;
         @media (min-width: 768px) {
-          width: 100%;
+          width: 30%;
+        }
+
+        @media (min-width: 992px) {
+          width: 35%;
         }
       }
     }
@@ -52,24 +56,25 @@
   }
 
   .previous {
-    text-decoration: none;
-    display: inline-block;
+    visibility: hidden;
     border: none;
-    padding: 8px 16px;
-    margin: 2px;
     cursor: grab;
-    border-radius: 50%;
-    // background-color: #ddd;
     background: none;
     color: black;
-    font-size: 1.2rem;
+    padding: 8px;
 
     @media (min-width: 768px) {
       position: absolute;
       top: 0;
       left: 0;
       margin: 10px;
+      font-size: 1.2rem;
     }
+  }
+
+  .is-active {
+    visibility: visible;
+    font-size: 1.1rem;
   }
 }
 
@@ -85,6 +90,7 @@
   .header__title {
     &__content {
       flex-direction: row;
+      align-items: center;
     }
   }
 
@@ -118,7 +124,7 @@
     }
 
     @media (min-width: 768px) {
-      right: 140px;
+      right: 100px;
 
       .react-autosuggest__input {
         width: 100%;
@@ -148,6 +154,7 @@
 
         @media (min-width: 992px) {
           top: 15%;
+          width: 70%;
         }
       }
     }
@@ -156,11 +163,11 @@
       .oil-title {
         z-index: 1;
         position: fixed;
-        top: 25px;
+        top: 15px;
         left: 35%;
 
         @media (min-width: 768px) {
-          left: 20%;
+          left: 25%;
           width: 70%;
           line-height: 1;
         }
@@ -198,13 +205,14 @@
     .oil-title {
       z-index: 1;
       position: fixed;
-      top: 25px;
+      top: 15px;
       left: 35%;
       padding: 0;
 
       @media (min-width: 768px) {
-        left: 40px;
+        left: 25%;
         line-height: 1;
+        width: 70%;
       }
     }
   }

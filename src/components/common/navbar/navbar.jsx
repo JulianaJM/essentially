@@ -1,16 +1,31 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./navbar.scss";
 
 const Navbar = () => (
-  <nav className="navbar">
-    <span>ESSENTIALY</span>
-    <NavLink exact to="/">
-      Accueil
-    </NavLink>
-    <NavLink to="/contact">Contact</NavLink>
-    <NavLink to="/about">A propos</NavLink>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+
+      <span />
+      <span />
+      <span />
+
+      <ul id="menu">
+        <Link exact to="/">
+          <li>Home</li>
+        </Link>
+
+        <Link to="/contact">
+          <li>Contact</li>
+        </Link>
+
+        <Link to="/about">
+          <li>A propos</li>
+        </Link>
+      </ul>
+    </div>
   </nav>
 );
 

@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+// import Navbar from "../common/navbar/navbar";
 
 import "./header.scss";
 
@@ -11,14 +12,17 @@ const Header = React.forwardRef((props, ref) => (
     <div className="header__title">
       <h1 className="sr-only">Essentially</h1>
       <div className="header__title__content">
-        {props.shouldShowBackButton && (
-          <button type="button" onClick={props.goBack} className="previous">
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-        )}
-        <Link to="/">
-          <img src="/assets/images/logo.png" alt="logo" />
-        </Link>
+        {/* {!props.shouldShowBackButton && <Navbar />} */}
+        <button
+          type="button"
+          onClick={props.goBack}
+          className={classNames("previous", {
+            "is-active": props.shouldShowBackButton,
+          })}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <img src="/assets/images/logo.png" alt="logo" />
         <h2>
           Bienvenue sur ton moteur de recherche{" "}
           <span className="bold-green">{" d'huiles essentielles "} </span>
