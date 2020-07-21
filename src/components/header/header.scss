@@ -58,7 +58,7 @@
   .previous {
     visibility: hidden;
     border: none;
-    cursor: grab;
+    cursor: pointer;
     background: none;
     color: black;
     padding: 8px;
@@ -132,7 +132,7 @@
     }
 
     @media (min-width: 992px) {
-      right: 220px;
+      right: 170px;
     }
 
     @media (min-width: 1200px) {

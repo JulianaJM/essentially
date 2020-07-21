@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-// import Navbar from "../common/navbar/navbar";
 
 import "./header.scss";
 
@@ -12,7 +11,6 @@ const Header = React.forwardRef((props, ref) => (
     <div className="header__title">
       <h1 className="sr-only">Essentially</h1>
       <div className="header__title__content">
-        {/* {!props.shouldShowBackButton && <Navbar />} */}
         <button
           type="button"
           onClick={props.goBack}

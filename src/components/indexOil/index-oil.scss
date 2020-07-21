@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Quattrocento|Indie+Flower&display=swap");
+
+.index-oil {
+  font-family: "Quattrocento", cursive;
+
+  @media (min-width: 768px) {
+    columns: 2;
+    margin-left: 40px;
+  }
+
+  &__link {
+    color: inherit;
+    cursor: pointer;
+  }
+
+  li {
+    padding: 8px;
+    @media (min-width: 768px) {
+      padding: 10px;
+    }
+  }
+}

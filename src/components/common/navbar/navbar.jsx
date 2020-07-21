@@ -1,31 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { isMobileOnly } from "react-device-detect";
 
 import "./navbar.scss";
 
 const Navbar = () => (
-  <nav role="navigation">
-    <div id="menuToggle">
-      <input type="checkbox" />
-
-      <span />
-      <span />
-      <span />
-
-      <ul id="menu">
-        <Link exact to="/">
-          <li>Home</li>
-        </Link>
-
-        <Link to="/contact">
-          <li>Contact</li>
-        </Link>
-
-        <Link to="/about">
-          <li>A propos</li>
-        </Link>
-      </ul>
-    </div>
+  <nav className="navbar">
+    {!isMobileOnly && <span>ESSENTIALY</span>}
+    <NavLink exact to="/">
+      Accueil
+    </NavLink>
+    <NavLink to="/index">Index des huiles</NavLink>
+    <NavLink to="/about">A propos</NavLink>
   </nav>
 );
 

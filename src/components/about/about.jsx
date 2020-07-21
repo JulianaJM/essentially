@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { scrollTop } from "../../utils/scroll";
 
-const About = () => (
-  <div>
-    <h2>A propos</h2>
-    <p>todo</p>
-  </div>
-);
+const About = () => {
+  useEffect(() => {
+    scrollTop();
+  }, []);
+
+  return (
+    <div>
+      <p>Sources provenant de Aroma-Zone et Doctissimo</p>
+    </div>
+  );
+};
 
 export default About;

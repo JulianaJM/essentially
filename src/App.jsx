@@ -5,13 +5,13 @@ import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/header/HeaderContainer";
-// import Navbar from "./components/common/navbar/navbar";
+import Navbar from "./components/common/navbar/navbar";
 import SearchPage from "./page/SearchPage";
 import Loader from "./components/common/loader/Loader";
 
 import "./app.scss";
 
-const Contact = lazy(() => import("./components/contact/contact"));
+const IndexOil = lazy(() => import("./components/indexOil/IndexOil"));
 const About = lazy(() => import("./components/about/about"));
 const DetailPage = lazy(() => import("./page/DetailPage"));
 const RecipePage = lazy(() => import("./page/RecipePage"));
@@ -23,7 +23,7 @@ const App = () => (
       <Suspense fallback={<Loader />}>
         <Switch>
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/index" component={IndexOil} />
           <Route exact path="/" render={props => <SearchPage {...props} />} />
           <Route
             path="/:name/recipe"
@@ -34,6 +34,7 @@ const App = () => (
         </Switch>
       </Suspense>
     </div>
+    <Navbar />
   </>
 );
 

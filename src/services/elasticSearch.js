@@ -23,6 +23,10 @@ export const getRandomOils = () => {
   return axios.get(`${URL_PREFIX}/oils/randomlist`);
 };
 
+export const getOils = () => {
+  return axios.get(`${URL_PREFIX}/oils`);
+};
+
 export const getSuggestions = inputVal => {
   return axios.get(`${URL_PREFIX}/oils/suggestions`, {
     params: {
