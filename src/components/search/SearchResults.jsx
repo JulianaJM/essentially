@@ -108,9 +108,10 @@ const SearchResults = ({ location, isPageBottom }) => {
     }
   };
 
+  const searchParams = getSearchValues();
+
   useEffect(() => {
     // mount
-    const searchParams = getSearchValues();
     if (searchParams.length === 0) {
       getRandomOils().then(res => {
         dispatch({
@@ -126,23 +127,24 @@ const SearchResults = ({ location, isPageBottom }) => {
   }, []);
 
   useEffect(() => {
-    const searchParams = getSearchValues();
-    if (searchParams.length > 0) {
-      search(searchParams, searchOffset).then(res => {
-        const newTotal = res.data.total.value;
-        dispatch({
-          type: "SEARCH_RESULTS",
-          searchOffset,
-          searchResults: res.data.hits,
-          hasNextResults: newTotal > 10,
-          isRandom: false,
-          total: newTotal,
+    if (location.search) {
+      if (searchParams.length > 0) {
+        search(searchParams, searchOffset).then(res => {
+          const newTotal = res.data.total.value;
+          dispatch({
+            type: "SEARCH_RESULTS",
+            searchOffset,
+            searchResults: res.data.hits,
+            hasNextResults: newTotal > 10,
+            isRandom: false,
+            total: newTotal,
+          });
         });
-      });
-    } else {
-      dispatch({
-        type: "RESET",
-      });
+      } else {
+        dispatch({
+          type: "RESET",
+        });
+      }
     }
   }, [location.search]);
 
