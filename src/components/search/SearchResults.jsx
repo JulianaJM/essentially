@@ -76,7 +76,7 @@ const SearchResults = ({ location, isPageBottom }) => {
 
     const queryParams = queryParamString ? queryParamString.split("+") : [];
     return queryParams.map(param => {
-      const decode = decodeURI(param);
+      const decode = decodeURI(param.replace(",", "")); // remove comas
 
       return decode;
     });

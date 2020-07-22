@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
-import debounce from "lodash/debounce";
+import throttle from "lodash/throttle";
 
 import SearchBox from "../components/search/searchbox/SearchBox";
 import SearchResults from "../components/search/SearchResults";
@@ -16,7 +16,7 @@ const SearchPage = props => {
     const { history } = props;
     history.push({
       pathname: "",
-      search: queryParams ? `?value=${queryParams}` : "",
+      search: `?value=${queryParams}`,
     });
   };
 
@@ -24,10 +24,21 @@ const SearchPage = props => {
     setIsBottom(isPageBottom());
   };
 
-  const trottledFunction = debounce(handleScroll, 500);
+  const trottledFunction = throttle(handleScroll, 500);
 
   useEffect(() => {
     scrollTop();
+    const { history } = props;
+
+    const locationSearch = history.location.search
+      ? history.location.search.split("=")[1]
+      : "";
+    if (!locationSearch) {
+      history.push({
+        pathname: "",
+        search: "",
+      });
+    }
     window.addEventListener("scroll", trottledFunction);
     return () => {
       // console.log("will unmount");
@@ -45,7 +56,7 @@ const SearchPage = props => {
   );
 };
 
-export default withRouter(React.memo(SearchPage));
+export default withRouter(SearchPage);
 
 SearchPage.propTypes = {
   history: PropTypes.object.isRequired,
