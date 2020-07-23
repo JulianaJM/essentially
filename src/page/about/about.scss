@@ -2,7 +2,11 @@
 
 .about {
   font-family: "Quattrocento", cursive;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
+  }
 
   position: absolute;
   left: 50%;
