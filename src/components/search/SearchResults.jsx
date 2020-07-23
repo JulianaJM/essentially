@@ -97,7 +97,7 @@ const SearchResults = ({ location, isPageBottom }) => {
     } else {
       dispatch({
         type: "SEARCH_NEXT_RESULTS",
-        searchOffset,
+        searchOffset: 0,
         searchResults: [],
         hasNextResults: false,
         isRandom: false,
