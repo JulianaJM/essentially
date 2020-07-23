@@ -146,9 +146,9 @@ const SearchResults = ({ location, isPageBottom }) => {
       getRandomOils().then(res => {
         dispatch({
           type: "SEARCH_RANDOM_RESULTS",
-          searchOffset,
+          searchOffset: 0,
           searchResults: res.data.hits,
-          hasNextResults,
+          hasNextResults: false,
           isRandom: true,
           total: res.data.total.value,
         });
