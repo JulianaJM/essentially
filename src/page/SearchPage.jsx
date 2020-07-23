@@ -11,9 +11,11 @@ import "./search-page.scss";
 
 const SearchPage = props => {
   const [isBottom, setIsBottom] = useState(false);
+  const [value, setValue] = useState("");
+  const { history } = props;
 
   const handleChange = queryParams => {
-    const { history } = props;
+    setValue(queryParams);
     history.push({
       pathname: "",
       search: `?value=${queryParams}`,
@@ -28,17 +30,20 @@ const SearchPage = props => {
 
   useEffect(() => {
     scrollTop();
-    const { history } = props;
 
-    const locationSearch = history.location.search
+    const initialValue = history.location.search
       ? history.location.search.split("=")[1]
       : "";
-    if (!locationSearch) {
+
+    setValue(decodeURI(initialValue));
+
+    if (!initialValue) {
       history.push({
         pathname: "",
         search: "",
       });
     }
+
     window.addEventListener("scroll", trottledFunction);
     return () => {
       // console.log("will unmount");
@@ -49,7 +54,7 @@ const SearchPage = props => {
   return (
     <>
       <div className="search-bar">
-        <SearchBox onUpdate={handleChange} />
+        <SearchBox onUpdate={handleChange} value={value} />
       </div>
       <SearchResults isPageBottom={isBottom} {...props} />
     </>

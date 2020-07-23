@@ -11,7 +11,7 @@ class SearchBox extends Component {
     super();
 
     this.state = {
-      value: "",
+      // value: "",
       suggestions: [],
     };
   }
@@ -25,12 +25,12 @@ class SearchBox extends Component {
   };
 
   onChange = (event, { newValue }) => {
-    this.setState({ value: newValue });
+    // this.setState({ value: newValue });
     // empty doesn't call onSuggestionsFetchRequested
-    if (!newValue) {
-      const { onUpdate } = this.props;
-      onUpdate(newValue);
-    }
+    // if (!newValue) {
+    const { onUpdate } = this.props;
+    onUpdate(newValue);
+    // }
   };
 
   onlyUnique = (value, index, self) => {
@@ -89,7 +89,8 @@ class SearchBox extends Component {
   };
 
   render() {
-    const { value, suggestions } = this.state;
+    const { suggestions } = this.state;
+    const { value } = this.props;
     const inputProps = {
       placeholder: "Recherche une huile ou un symptome",
       value,
@@ -113,4 +114,5 @@ export default SearchBox;
 
 SearchBox.propTypes = {
   onUpdate: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
