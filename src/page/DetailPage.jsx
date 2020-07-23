@@ -12,7 +12,7 @@ import "./detail-page.scss";
 
 const OilDetails = lazy(() => import("../components/oil-details/OilDetails"));
 
-const DetailPage = ({ match }) => {
+const DetailPage = ({ match, location }) => {
   const [oil, setOil] = useState(null);
   const [activeTabs, setActiveTabs] = useState(["health"]);
   const { params } = match;
@@ -49,6 +49,7 @@ const DetailPage = ({ match }) => {
             activeTabs={activeTabs}
             oil={oil}
             onToggle={handleToggle}
+            hightlight={location.hightlight}
           />
 
           {oil.recipes && oil.recipes.recipesTitle.length > 0 && (
@@ -73,4 +74,5 @@ export default withRouter(DetailPage);
 
 DetailPage.propTypes = {
   match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };

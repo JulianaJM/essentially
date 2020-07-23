@@ -5,10 +5,11 @@ import PropTypes from "prop-types";
 
 import OilElement from "./OilElement";
 import Collapse from "../common/collapse/Collapse";
+import Hightlight from "../common/hightlight/Hightlight";
 
 import "./oil-details.scss";
 
-const OilDetails = ({ activeTabs, oil, onToggle }) =>
+const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
   oil && (
     <div className="oil-details">
       <div className="oil-img">
@@ -20,9 +21,10 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
       </div>
 
       <div className="oil-details__content">
-        <h2 className="oil-title">{oil.name}</h2>
-        <p className="detail-desc">{oil.description}</p>
-
+        <h2 className="oil-title">{oil.name}</h2>,
+        <p className="detail-desc">
+          <Hightlight hightlight={hightlight} content={oil.description} />
+        </p>
         {oil.utilisations && oil.utilisations.length > 0 && (
           <div className="oil-utilisation">
             <p className="sr-only">Utilisations</p>
@@ -33,18 +35,18 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
             </ul>
           </div>
         )}
-
         {oil.ideal.length > 0 && (
           <div className="oil-ideal">
             <p className="oil-ideal__desc">Idéal pour : </p>
             <ul>
               {oil.ideal.map((ide, index) => (
-                <li key={index}>{ide}</li>
+                <li key={index}>
+                  <Hightlight hightlight={hightlight} content={ide} />
+                </li>
               ))}
             </ul>
           </div>
         )}
-
         {oil.health.propertiesDesc && (
           <button
             id="health"
@@ -54,12 +56,13 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
           >
             <Collapse
               title="En Santé"
-              content={<OilElement category={oil.health} />}
+              content={
+                <OilElement category={oil.health} hightlight={hightlight} />
+              }
               isOpen={activeTabs.includes("health")}
             />
           </button>
         )}
-
         {oil.mood.propertiesDesc && (
           <button
             id="mood"
@@ -69,12 +72,13 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
           >
             <Collapse
               title="En bien-être"
-              content={<OilElement category={oil.mood} />}
+              content={
+                <OilElement category={oil.mood} hightlight={hightlight} />
+              }
               isOpen={activeTabs.includes("mood")}
             />
           </button>
         )}
-
         {oil.beauty.propertiesDesc && (
           <button
             id="beauty"
@@ -84,12 +88,13 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
           >
             <Collapse
               title="En beauté"
-              content={<OilElement category={oil.beauty} />}
+              content={
+                <OilElement category={oil.beauty} hightlight={hightlight} />
+              }
               isOpen={activeTabs.includes("beauty")}
             />
           </button>
         )}
-
         {oil.kitchen.details.length > 0 && (
           <button
             id="kitchen"
@@ -116,7 +121,6 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
             />
           </button>
         )}
-
         {oil.precautions.length > 0 && (
           <div className="precaution">
             <p className="precaution__subtitle">Précautions</p>
@@ -131,10 +135,15 @@ const OilDetails = ({ activeTabs, oil, onToggle }) =>
     </div>
   );
 
+OilDetails.defaultProps = {
+  hightlight: [],
+};
+
 OilDetails.propTypes = {
   oil: PropTypes.object.isRequired,
   activeTabs: PropTypes.array.isRequired,
+  hightlight: PropTypes.array,
   onToggle: PropTypes.func.isRequired,
 };
 
-export default React.memo(OilDetails);
+export default OilDetails;

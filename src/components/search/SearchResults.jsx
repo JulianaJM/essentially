@@ -80,10 +80,11 @@ const SearchResults = ({ location, isPageBottom }) => {
     });
   };
 
+  const searchParams = getSearchValues();
+
   const loadNextResults = () => {
     const newSearchOffset = searchOffset + 10;
     if (total > newSearchOffset) {
-      const searchParams = getSearchValues();
       search(searchParams, newSearchOffset).then(res => {
         dispatch({
           type: "SEARCH_NEXT_RESULTS",
@@ -105,8 +106,6 @@ const SearchResults = ({ location, isPageBottom }) => {
       });
     }
   };
-
-  const searchParams = getSearchValues();
 
   useEffect(() => {
     // mount
@@ -170,7 +169,11 @@ const SearchResults = ({ location, isPageBottom }) => {
         )}
 
         {/* skeleton on first load */}
-        {searchResults ? <OilList oils={searchResults} /> : <OilListSkeleton />}
+        {searchResults ? (
+          <OilList oils={searchResults} hightlight={searchParams} />
+        ) : (
+          <OilListSkeleton />
+        )}
 
         {/* skeleton on next res */}
         {hasNextResults && isPageBottom && (
