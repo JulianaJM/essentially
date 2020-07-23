@@ -107,21 +107,21 @@ const SearchResults = ({ location, isPageBottom }) => {
     }
   };
 
-  useEffect(() => {
-    // mount
-    if (searchParams.length === 0) {
-      getRandomOils().then(res => {
-        dispatch({
-          type: "SEARCH_RANDOM_RESULTS",
-          searchOffset,
-          searchResults: res.data.hits,
-          hasNextResults,
-          isRandom: true,
-          total: res.data.total.value,
-        });
-      });
-    }
-  }, []);
+  // useEffect(() => {
+  //   // mount
+  //   if (searchParams.length === 0) {
+  //     getRandomOils().then(res => {
+  //       dispatch({
+  //         type: "SEARCH_RANDOM_RESULTS",
+  //         searchOffset,
+  //         searchResults: res.data.hits,
+  //         hasNextResults,
+  //         isRandom: true,
+  //         total: res.data.total.value,
+  //       });
+  //     });
+  //   }
+  // }, []);
 
   useEffect(() => {
     if (location.search) {
@@ -142,6 +142,17 @@ const SearchResults = ({ location, isPageBottom }) => {
           type: "RESET",
         });
       }
+    } else {
+      getRandomOils().then(res => {
+        dispatch({
+          type: "SEARCH_RANDOM_RESULTS",
+          searchOffset,
+          searchResults: res.data.hits,
+          hasNextResults,
+          isRandom: true,
+          total: res.data.total.value,
+        });
+      });
     }
   }, [location.search]);
 
