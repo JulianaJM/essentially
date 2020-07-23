@@ -3,7 +3,7 @@
   margin: 0 10px;
 
   @media (min-width: 768px) {
-    margin: 5px 20px;
+    margin: 0 auto;
     position: relative;
     top: -95px;
     background: white;
@@ -11,12 +11,13 @@
   }
 
   @media (min-width: 992px) {
-    margin: 0 auto;
+    margin: 5px 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   /* Sur les grands écrans, on limite la largeur du contenu */
   @media (min-width: 1200px) {
-    width: 1170px;
+    width: 1200px;
     margin: 0 auto;
   }
 

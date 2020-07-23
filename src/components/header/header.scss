@@ -114,6 +114,7 @@
 .sticky + .container {
   position: relative;
   top: 80px;
+  box-shadow: initial;
 
   .search-bar {
     z-index: 1;
@@ -124,7 +125,7 @@
     }
 
     @media (min-width: 768px) {
-      right: 100px;
+      right: 90px;
 
       .react-autosuggest__input {
         width: 100%;
@@ -132,10 +133,11 @@
     }
 
     @media (min-width: 992px) {
-      right: 170px;
+      right: 160px;
     }
 
     @media (min-width: 1200px) {
+      right: 300px;
       .react-autosuggest__input {
         width: 70%;
       }
@@ -154,7 +156,7 @@
 
         @media (min-width: 992px) {
           top: 15%;
-          width: 70%;
+          width: 100%;
         }
       }
     }
@@ -176,6 +178,10 @@
           left: 10%;
           width: 100%;
           line-height: 1;
+        }
+
+        @media (min-width: 1200px) {
+          left: 5%;
         }
       }
 
@@ -213,6 +219,14 @@
         left: 25%;
         line-height: 1;
         width: 70%;
+      }
+
+      @media (min-width: 992px) {
+        left: 20%;
+      }
+
+      @media (min-width: 1200px) {
+        left: 15%;
       }
     }
   }
