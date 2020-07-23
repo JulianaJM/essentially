@@ -63,7 +63,7 @@ const SearchPage = props => {
   }, []);
 
   return (
-    <>
+    <div className="search-page">
       <div className="search-bar">
         <SearchBox onUpdate={handleChange} value={value} />
         <button type="button" className="reset-btn" onClick={onResetInput}>
@@ -71,7 +71,7 @@ const SearchPage = props => {
         </button>
       </div>
       <SearchResults isPageBottom={isBottom} {...props} />
-    </>
+    </div>
   );
 };
 
