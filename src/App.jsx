@@ -11,8 +11,8 @@ import Loader from "./components/common/loader/Loader";
 
 import "./app.scss";
 
-const IndexOil = lazy(() => import("./components/indexOil/IndexOil"));
-const About = lazy(() => import("./components/about/about"));
+const IndexOil = lazy(() => import("./page/indexOil/IndexOil"));
+const About = lazy(() => import("./page/about/about"));
 const DetailPage = lazy(() => import("./page/DetailPage"));
 const RecipePage = lazy(() => import("./page/RecipePage"));
 

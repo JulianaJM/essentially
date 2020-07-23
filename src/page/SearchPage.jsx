@@ -30,6 +30,11 @@ const SearchPage = props => {
 
   const onResetInput = () => {
     setValue("");
+
+    history.push({
+      pathname: "",
+      search: "",
+    });
   };
 
   const trottledFunction = throttle(handleScroll, 500);
