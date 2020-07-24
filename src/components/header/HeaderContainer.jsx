@@ -41,7 +41,7 @@ class HeaderContainer extends PureComponent {
   handleSticky = () => {
     const { current } = this.headerRef;
     const isBottom = isPageBottom();
-    if (window.pageYOffset > current.offsetTop) {
+    if (window.pageYOffset > 100 /* current.offsetTop */) {
       current.classList.add("sticky");
     } else if (!isBottom) {
       current.classList.remove("sticky");

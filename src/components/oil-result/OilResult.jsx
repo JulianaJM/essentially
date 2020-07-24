@@ -7,12 +7,24 @@ const OilResult = ({ oil, hightlight }) => {
   const { name, image, description } = oil;
   const newName = replaceSpacebyUnderscore(name);
   const imgUrl = `https://res.cloudinary.com/dvbd6z854/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1594298310/essentially/${image}`;
+  const thumbnail = `https://res.cloudinary.com/dvbd6z854/image/upload/c_thumb,w_200,g_face/v1594298310/essentially/${image}`;
   return (
     <Link className="tile" to={{ pathname: `/${newName}`, hightlight }}>
-      <h2>{name}</h2>
       <div className="tile-content">
-        <img data-src={imgUrl} alt={name} className="lazyload" />
-        <p>{description}</p>
+        <div
+          className="lazyload tile-image"
+          style={{
+            backgroundImage: `url(${thumbnail})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+          data-src={imgUrl}
+        />
+        {/* <img data-src={imgUrl} alt={name} className="lazyload" /> */}
+        <div className="tile-desc">
+          <h2 className="title">{name}</h2>
+          <p>{description}</p>
+        </div>
       </div>
     </Link>
   );

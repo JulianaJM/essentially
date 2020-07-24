@@ -21,7 +21,7 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
       </div>
 
       <div className="oil-details__content">
-        <h2 className="oil-title">{oil.name}</h2>,
+        <h2 className="oil-title">{oil.name}</h2>
         <p className="detail-desc">
           <Hightlight hightlight={hightlight} content={oil.description} />
         </p>
