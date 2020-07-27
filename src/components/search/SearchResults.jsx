@@ -145,6 +145,7 @@ const SearchResults = ({ location, isPageBottom }) => {
           });
         });
       } else {
+        console.log("reset");
         dispatch({
           type: "RESET",
         });
@@ -180,7 +181,7 @@ const SearchResults = ({ location, isPageBottom }) => {
           </p>
         )}
 
-        {isRandom && (
+        {isRandom && searchResults && (
           <h2 className="search__results__discover">
             Je découvre la sélection des 10 huiles du jour
           </h2>
