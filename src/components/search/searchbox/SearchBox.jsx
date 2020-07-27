@@ -63,6 +63,24 @@ class SearchBox extends Component {
             return newUnique.includes(newValue);
           });
 
+        const indications = results
+          .map(result => {
+            const health = result.health.indications;
+            const mood = result.mood.indications;
+            const beauty = result.beauty.indications;
+
+            return health.concat(mood, beauty);
+          })
+          .reduce((acc, curr) => acc.concat(curr), [])
+          .filter(this.onlyUnique)
+          .filter(unique => {
+            const newUnique = unique
+              .normalize("NFD")
+              .replace(reg, "")
+              .toLowerCase();
+            return newUnique.includes(newValue) && newUnique.length <= 30; // limit the suggests for less than 30 words
+          });
+
         const names = results.map(r => r.name);
         const name = results[0].name
           .normalize("NFD")
@@ -71,7 +89,7 @@ class SearchBox extends Component {
         if (name.includes(newValue)) {
           this.setState({ suggestions: names });
         } else {
-          this.setState({ suggestions: ideals });
+          this.setState({ suggestions: ideals.concat(indications) });
         }
       }
 

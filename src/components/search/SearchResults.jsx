@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { getRandomOils, search } from "../../services/elasticSearch";
 import OilListSkeleton from "../common/skeleton/OilListSkeleton";
 import OilList from "../oil-result/OilList";
+import { removeUselessElement } from "../../utils/arrayUtils";
 
 import "./search.scss";
 
@@ -76,7 +77,7 @@ const SearchResults = ({ location, isPageBottom }) => {
 
     const queryParams = queryParamString ? queryParamString.split("+") : [];
     return queryParams.map(param => {
-      return decodeURI(param.replace(",", "")); // remove comas and encoded spaces
+      return decodeURI(param.replace(",", "")); // remove commas and encoded spaces
     });
   };
 
@@ -84,14 +85,21 @@ const SearchResults = ({ location, isPageBottom }) => {
     if (location.search) {
       const queryParams = location.search.split("=")[1];
       const decode = decodeURI(queryParams);
+      const hightlights = [decode];
 
       if (!decode.includes(",")) {
-        return decode.split(" ");
+        return hightlights.concat(removeUselessElement(decode.split(" ")));
       }
 
-      const hightlight = [decode];
-      return hightlight.concat(decode.split(","));
+      // autosuggest with commas
+      let tabOfSearchWords = [];
+      decode.split(",").forEach(t => {
+        tabOfSearchWords = tabOfSearchWords.concat(t.split(" "));
+      });
+
+      return hightlights.concat(removeUselessElement(tabOfSearchWords));
     }
+
     return [];
   };
 
