@@ -108,16 +108,18 @@ const SearchResults = ({ location, isPageBottom }) => {
   const loadNextResults = () => {
     const newSearchOffset = searchOffset + 10;
     if (total > newSearchOffset) {
-      search(searchParams, newSearchOffset).then(res => {
-        dispatch({
-          type: "SEARCH_NEXT_RESULTS",
-          searchOffset: newSearchOffset,
-          searchResults: res.data.hits,
-          hasNextResults: true,
-          isRandom: false,
-          total,
+      if (newSearchOffset !== searchOffset)
+        // avoid calls with same offset
+        search(searchParams, newSearchOffset).then(res => {
+          dispatch({
+            type: "SEARCH_NEXT_RESULTS",
+            searchOffset: newSearchOffset,
+            searchResults: res.data.hits,
+            hasNextResults: true,
+            isRandom: false,
+            total,
+          });
         });
-      });
     } else {
       dispatch({
         type: "SEARCH_NEXT_RESULTS",
@@ -145,7 +147,6 @@ const SearchResults = ({ location, isPageBottom }) => {
           });
         });
       } else {
-        console.log("reset");
         dispatch({
           type: "RESET",
         });
