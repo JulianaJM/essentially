@@ -80,6 +80,21 @@ const SearchResults = ({ location, isPageBottom }) => {
     });
   };
 
+  const getHightlights = () => {
+    if (location.search) {
+      const queryParams = location.search.split("=")[1];
+      const decode = decodeURI(queryParams);
+
+      if (!decode.includes(",")) {
+        return decode.split(" ");
+      }
+
+      const hightlight = [decode];
+      return hightlight.concat(decode.split(","));
+    }
+    return [];
+  };
+
   const searchParams = getSearchValues();
 
   const loadNextResults = () => {
@@ -106,22 +121,6 @@ const SearchResults = ({ location, isPageBottom }) => {
       });
     }
   };
-
-  // useEffect(() => {
-  //   // mount
-  //   if (searchParams.length === 0) {
-  //     getRandomOils().then(res => {
-  //       dispatch({
-  //         type: "SEARCH_RANDOM_RESULTS",
-  //         searchOffset,
-  //         searchResults: res.data.hits,
-  //         hasNextResults,
-  //         isRandom: true,
-  //         total: res.data.total.value,
-  //       });
-  //     });
-  //   }
-  // }, []);
 
   useEffect(() => {
     if (location.search) {
@@ -181,7 +180,7 @@ const SearchResults = ({ location, isPageBottom }) => {
 
         {/* skeleton on first load */}
         {searchResults ? (
-          <OilList oils={searchResults} hightlight={searchParams} />
+          <OilList oils={searchResults} hightlight={getHightlights()} />
         ) : (
           <OilListSkeleton />
         )}
