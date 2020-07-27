@@ -43,7 +43,7 @@ const DetailPage = ({ match, location }) => {
 
   return (
     <Suspense fallback={<Loader />}>
-      {oil && (
+      {oil ? (
         <>
           <OilDetails
             activeTabs={activeTabs}
@@ -65,6 +65,8 @@ const DetailPage = ({ match, location }) => {
             </>
           )}
         </>
+      ) : (
+        <Loader />
       )}
     </Suspense>
   );

@@ -34,13 +34,15 @@ const RecipePage = ({ match }) => {
 
   return (
     <Suspense fallback={<Loader />}>
-      {oil && oil.recipes && (
+      {oil && oil.recipes ? (
         <Recipe
           name={params.name}
           recipes={oil.recipes}
           onToggle={handleToggle}
           activeTabs={activeTabs}
         />
+      ) : (
+        <Loader />
       )}
     </Suspense>
   );

@@ -15,7 +15,12 @@ const Hightlight = ({ hightlight, content }) => {
 
 export default Hightlight;
 
+Hightlight.defaultProps = {
+  hightlight: [],
+  content: "",
+};
+
 Hightlight.propTypes = {
-  hightlight: PropTypes.array.isRequired,
-  content: PropTypes.string.isRequired,
+  hightlight: PropTypes.array,
+  content: PropTypes.string,
 };
