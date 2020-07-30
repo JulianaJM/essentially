@@ -9,12 +9,16 @@
 }
 .search-bar {
   position: absolute;
-  top: 35px;
-  right: 25px;
+  top: 75px;
+  right: 15px;
   margin: 0 auto;
-  width: 60%;
+  width: 90%;
+  transition: position 0.3s, width 0.3s ease-in-out;
 
-  transition: position 0.3s ease-in-out;
+  @media (min-width: 768px) {
+    top: 35px;
+    right: 25px;
+  }
 
   .reset-btn {
     background: none;
