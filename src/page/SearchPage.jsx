@@ -66,9 +66,11 @@ const SearchPage = props => {
     <div className="search-page">
       <div className="search-bar">
         <SearchBox onUpdate={handleChange} value={value} />
-        <button type="button" className="reset-btn" onClick={onResetInput}>
-          <FontAwesomeIcon icon={faTimesCircle} />
-        </button>
+        {value && (
+          <button type="button" className="reset-btn" onClick={onResetInput}>
+            <FontAwesomeIcon icon={faTimesCircle} />
+          </button>
+        )}
       </div>
       <SearchResults isPageBottom={isBottom} {...props} />
     </div>
