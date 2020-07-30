@@ -55,7 +55,7 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="En Santé"
+              title="Santé"
               content={
                 <OilElement category={oil.health} hightlight={hightlight} />
               }
@@ -71,7 +71,7 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="En bien-être"
+              title="Bien-être"
               content={
                 <OilElement category={oil.mood} hightlight={hightlight} />
               }
@@ -87,7 +87,7 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="En beauté"
+              title="Beauté"
               content={
                 <OilElement category={oil.beauty} hightlight={hightlight} />
               }
