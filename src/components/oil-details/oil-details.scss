@@ -135,6 +135,7 @@
       right: 40px;
       width: 300px;
       font-size: 1.1rem;
+      text-align: center;
 
       @media (min-width: 768px) {
         line-height: 1;
@@ -142,7 +143,6 @@
         width: 100%;
         font-size: 2.1rem;
         margin: 15px;
-        text-align: center;
       }
     }
 
