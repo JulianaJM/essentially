@@ -71,7 +71,9 @@ class HeaderContainer extends PureComponent {
       <Header
         ref={this.headerRef}
         goBack={this.goBack}
-        shouldShowBackButton={location.pathname !== "/"}
+        shouldShowBackButton={
+          location.pathname !== "/" && location.pathname !== "/notfound"
+        }
       />
     );
   }

@@ -7,7 +7,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import DefaultErrorBoundary from "./components/DefaultErrorBoundary";
+import DefaultErrorBoundary from "./page/error/DefaultErrorBoundary";
 
 import "./style.scss";
 

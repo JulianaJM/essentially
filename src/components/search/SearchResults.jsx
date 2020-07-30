@@ -5,6 +5,7 @@ import { getRandomOils, search } from "../../services/elasticSearch";
 import OilListSkeleton from "../common/skeleton/OilListSkeleton";
 import OilList from "../oil-result/OilList";
 import { removeUselessElement } from "../../utils/arrayUtils";
+import useAsyncError from "../../utils/useAsyncError";
 
 import "./search.scss";
 
@@ -70,6 +71,8 @@ const SearchResults = ({ location, isPageBottom }) => {
     total: 0,
   });
 
+  const throwError = useAsyncError();
+
   const getSearchValues = () => {
     const queryParamString = location.search
       ? location.search.split("=")[1]
@@ -110,16 +113,20 @@ const SearchResults = ({ location, isPageBottom }) => {
     if (total > newSearchOffset) {
       if (newSearchOffset !== searchOffset)
         // avoid calls with same offset
-        search(searchParams, newSearchOffset).then(res => {
-          dispatch({
-            type: "SEARCH_NEXT_RESULTS",
-            searchOffset: newSearchOffset,
-            searchResults: res.data.hits,
-            hasNextResults: true,
-            isRandom: false,
-            total,
+        search(searchParams, newSearchOffset)
+          .then(res => {
+            dispatch({
+              type: "SEARCH_NEXT_RESULTS",
+              searchOffset: newSearchOffset,
+              searchResults: res.data.hits,
+              hasNextResults: true,
+              isRandom: false,
+              total,
+            });
+          })
+          .catch(() => {
+            throwError(new Error("An error occured while search next"));
           });
-        });
     } else {
       dispatch({
         type: "SEARCH_NEXT_RESULTS",
@@ -135,33 +142,41 @@ const SearchResults = ({ location, isPageBottom }) => {
   useEffect(() => {
     if (location.search) {
       if (searchParams.length > 0) {
-        search(searchParams, searchOffset).then(res => {
-          const newTotal = res.data.total.value;
-          dispatch({
-            type: "SEARCH_RESULTS",
-            searchOffset,
-            searchResults: res.data.hits,
-            hasNextResults: newTotal > 10,
-            isRandom: false,
-            total: newTotal,
+        search(searchParams, searchOffset)
+          .then(res => {
+            const newTotal = res.data.total.value;
+            dispatch({
+              type: "SEARCH_RESULTS",
+              searchOffset,
+              searchResults: res.data.hits,
+              hasNextResults: newTotal > 10,
+              isRandom: false,
+              total: newTotal,
+            });
+          })
+          .catch(() => {
+            throwError(new Error("An error occured while search"));
           });
-        });
       } else {
         dispatch({
           type: "RESET",
         });
       }
     } else {
-      getRandomOils().then(res => {
-        dispatch({
-          type: "SEARCH_RANDOM_RESULTS",
-          searchOffset: 0,
-          searchResults: res.data.hits,
-          hasNextResults: false,
-          isRandom: true,
-          total: res.data.total.value,
+      getRandomOils()
+        .then(res => {
+          dispatch({
+            type: "SEARCH_RANDOM_RESULTS",
+            searchOffset: 0,
+            searchResults: res.data.hits,
+            hasNextResults: false,
+            isRandom: true,
+            total: res.data.total.value,
+          });
+        })
+        .catch(() => {
+          throwError(new Error("An error occured while search"));
         });
-      });
     }
   }, [location.search]);
 
@@ -182,7 +197,7 @@ const SearchResults = ({ location, isPageBottom }) => {
           </p>
         )}
 
-        {isRandom && searchResults && (
+        {isRandom && searchResults && searchResults.length > 0 && (
           <h2 className="search__results__discover">
             Je découvre la sélection des 10 huiles du jour
           </h2>

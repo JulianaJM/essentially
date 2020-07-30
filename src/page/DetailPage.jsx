@@ -7,15 +7,17 @@ import Loader from "../components/common/loader/Loader";
 import { searchByName } from "../services/elasticSearch";
 import { replaceUnderscorebySpace } from "../utils/replace";
 import { scrollTop } from "../utils/scroll";
+import useAsyncError from "../utils/useAsyncError";
 
 import "./detail-page.scss";
 
 const OilDetails = lazy(() => import("../components/oil-details/OilDetails"));
 
-const DetailPage = ({ match, location }) => {
+const DetailPage = ({ match, location, history }) => {
   const [oil, setOil] = useState(null);
   const [activeTabs, setActiveTabs] = useState(["health"]);
   const { params } = match;
+  const throwError = useAsyncError();
 
   useEffect(() => {
     scrollTop();
@@ -26,10 +28,17 @@ const DetailPage = ({ match, location }) => {
 
   useEffect(() => {
     const newName = replaceUnderscorebySpace(params.name);
-
-    searchByName(newName).then(res => {
-      setOil(res.data[0]._source);
-    });
+    if (!newName.toLowerCase().startsWith("huile")) {
+      history.push("/notfound");
+    } else {
+      searchByName(newName)
+        .then(res => {
+          setOil(res.data[0]._source);
+        })
+        .catch(() => {
+          throwError(new Error("An error occured while access oil page"));
+        });
+    }
   }, [match.params.name]);
 
   const handleToggle = e => {
@@ -77,4 +86,5 @@ export default withRouter(DetailPage);
 DetailPage.propTypes = {
   match: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired,
 };

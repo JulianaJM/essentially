@@ -15,6 +15,7 @@ const IndexOil = lazy(() => import("./page/indexOil/IndexOil"));
 const About = lazy(() => import("./page/about/about"));
 const DetailPage = lazy(() => import("./page/DetailPage"));
 const RecipePage = lazy(() => import("./page/RecipePage"));
+const NotFound = lazy(() => import("./page/not-found/NotFound"));
 
 const App = () => (
   <>
@@ -24,13 +25,13 @@ const App = () => (
         <Switch>
           <Route path="/about" component={About} />
           <Route path="/index" component={IndexOil} />
+          <Route path="/notfound" component={NotFound} />
           <Route exact path="/" render={props => <SearchPage {...props} />} />
           <Route
             path="/:name/recipe"
             render={props => <RecipePage {...props} />}
           />
           <Route path="/:name" component={DetailPage} />
-          <Route render={() => <h1>Page not found</h1>} />
         </Switch>
       </Suspense>
     </div>
