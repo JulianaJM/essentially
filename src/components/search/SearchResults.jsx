@@ -80,7 +80,15 @@ const SearchResults = ({ location, isPageBottom }) => {
 
     const queryParams = queryParamString ? queryParamString.split("+") : [];
     return queryParams.map(param => {
-      return decodeURI(param.replace(",", "")); // remove commas and encoded spaces
+      // remove commas and encoded spaces
+      let newParam = decodeURI(param.replace(",", ""));
+
+      // FIXME remove when backend handle it
+      if (param.toLowerCase().startsWith("huile")) {
+        newParam = newParam.replace("-", " ");
+        newParam = newParam.slice(20, param.length);
+      }
+      return newParam;
     });
   };
 

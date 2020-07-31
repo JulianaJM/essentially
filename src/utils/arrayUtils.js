@@ -44,5 +44,13 @@ export const removeUselessElement = list => {
     list.splice(list.indexOf("l'"), 1);
   }
 
+  if (list.includes("qui")) {
+    list.splice(list.indexOf("qui"), 1);
+  }
+
+  if (list.includes("que")) {
+    list.splice(list.indexOf("que"), 1);
+  }
+
   return list;
 };
