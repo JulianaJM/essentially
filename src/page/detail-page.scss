@@ -16,16 +16,18 @@
 
   @media (min-width: 768px) {
     position: absolute;
-    top: 58%;
+    top: 640px;
     bottom: initial;
     width: 30%;
     margin-left: 8px;
   }
 
-  // tablette landscape
+  @media (min-width: 992px) {
+    top: 590px;
+  }
+
   @media (max-device-width: 1024px) and (orientation: landscape) {
-    top: initial;
-    bottom: 5%;
+    top: 620px;
   }
 }
 
