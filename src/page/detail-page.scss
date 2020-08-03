@@ -26,6 +26,10 @@
     top: 590px;
   }
 
+  @media (min-width: 1200px) {
+    top: 610px;
+  }
+
   @media (max-device-width: 1024px) and (orientation: landscape) {
     top: 620px;
   }

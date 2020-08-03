@@ -19,6 +19,8 @@
   }
 
   &__title {
+    margin-top: 20px;
+
     &__content {
       display: flex;
       align-items: center;
@@ -36,24 +38,25 @@
         @media (min-width: 768px) {
           display: block;
           font-size: 40px;
+          color: white;
         }
       }
 
-      img {
-        width: 75%;
-        @media (min-width: 768px) {
-          width: 30%;
-        }
-
-        @media (min-width: 992px) {
-          width: 35%;
-        }
+      .logo {
+        background-image: url("/assets/images/logo-white.png");
+        background-size: cover;
+        background-position: center;
+        width: 200px;
+        height: 200px;
+        // @media (min-width: 768px) {
+        //   width: 35%;
+        // }
       }
     }
   }
 
   .bold-green {
-    color: rgba(19, 128, 36, 0.54);
+    color: rgba(19, 128, 36, 0.8);
   }
 
   .previous {
@@ -61,7 +64,7 @@
     border: none;
     cursor: pointer;
     background: none;
-    color: black;
+    color: white;
     padding: 8px;
 
     @media (min-width: 768px) {
@@ -92,6 +95,17 @@
     &__content {
       flex-direction: row;
       align-items: center;
+      margin-top: -40px;
+
+      .logo {
+        background-image: url("/assets/images/logo.png");
+        width: 170px;
+        height: 170px;
+      }
+
+      .previous {
+        color: black;
+      }
     }
   }
 
@@ -164,11 +178,6 @@
       img {
         position: relative;
         top: 80px;
-
-        @media (min-width: 992px) {
-          // top: 15%;
-          // width: 100%;
-        }
       }
     }
 
@@ -180,25 +189,27 @@
         left: 180px;
         margin: 20px;
         width: 50%;
+        color: #000;
 
         @media (min-width: 768px) {
-          left: 210px;
+          left: 240px;
           line-height: 1;
           width: 70%;
+          margin: 0;
+          padding-top: 10px;
         }
 
         @media (min-width: 992px) {
-          left: 430px;
-          width: 100%;
+          //left: 430px;
+          width: 85%;
           line-height: 1;
-          width: 70%;
         }
 
         // tablette landscape
-        @media (max-device-width: 1024px) and (orientation: landscape) {
-          left: 340px;
-          width: 90%;
-        }
+        //@media (max-device-width: 1024px) and (orientation: landscape) {
+        //left: 280px;
+        //width: 80%;
+        //}
       }
 
       .oil-utilisation {

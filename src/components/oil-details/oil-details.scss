@@ -45,13 +45,19 @@
   }
 
   .oil-utilisation {
-    width: 290px;
+    width: 320px;
     background: rgba(19, 128, 36, 0.5);
     border-radius: 7px;
     margin: 20px auto;
     padding: 10px;
     border: 1px solid #ddd;
     transition: top 0.5s linear;
+    color: white;
+    font-weight: 600;
+
+    li {
+      margin-bottom: 5px;
+    }
 
     @media (min-width: 768px) {
       position: absolute;
@@ -75,7 +81,7 @@
     margin: 15px;
 
     &__desc {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
       margin-bottom: 15px;
     }
@@ -122,12 +128,10 @@
     }
 
     .oil-title {
-      position: absolute;
-      top: 82px;
-      left: 30px;
-      width: 100%;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
       font-weight: bold;
+      text-align: center;
+      padding-top: 10px;
 
       @media (min-width: 768px) {
         line-height: 1;

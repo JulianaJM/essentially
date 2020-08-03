@@ -20,9 +20,9 @@ const Header = React.forwardRef((props, ref) => (
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
-        <img src="/assets/images/logo.png" alt="logo" />
+        <div className="logo" />
         <h2>
-          Bienvenue sur ton moteur de recherche{" "}
+          Le moteur de recherche{" "}
           <span className="bold-green">{" d'huiles essentielles "} </span>
         </h2>
       </div>
