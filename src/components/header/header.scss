@@ -177,16 +177,18 @@
         z-index: 1;
         position: fixed;
         top: 15px;
-        left: 35%;
+        left: 180px;
+        margin: 20px;
+        width: 50%;
 
         @media (min-width: 768px) {
-          left: 25%;
-          width: 70%;
+          left: 210px;
           line-height: 1;
+          width: 70%;
         }
 
         @media (min-width: 992px) {
-          left: 10%;
+          left: 230px;
           width: 100%;
           line-height: 1;
         }

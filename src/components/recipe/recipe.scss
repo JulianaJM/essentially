@@ -7,13 +7,12 @@
   }
 
   .oil-title {
-    margin: 0;
     position: absolute;
-    top: 78px;
-    right: 40px;
-    width: 300px;
-    font-size: 1.1rem;
-    text-align: center;
+    top: 82px;
+    left: 30px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
 
     @media (min-width: 768px) {
       line-height: 1;
@@ -22,6 +21,7 @@
       font-size: 2.1rem;
       margin: 15px;
       padding: 10px;
+      text-align: center;
     }
   }
 

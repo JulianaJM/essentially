@@ -6,22 +6,25 @@
   margin: 5px 0;
   line-height: 120%;
 
+  @media (min-width: 768px) {
+    padding-bottom: 40px;
+  }
+
   @media (min-width: 992px) {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding-bottom: 40px;
+    padding-bottom: 150px;
   }
 
   .precaution {
     font-size: 1.1rem;
-    margin: 50px 0;
-    padding: 10px;
+    margin: 50px 15px;
 
     @media (min-width: 768px) {
       line-height: 148%;
     }
 
     &__subtitle {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
       font-size: 1.2rem;
       font-weight: bold;
       text-decoration: underline;
@@ -29,7 +32,6 @@
 
     &__content {
       list-style: disc;
-      text-align: left;
       margin: 10px 0 20px 20px;
 
       @media (min-width: 768px) {
@@ -37,7 +39,7 @@
       }
 
       li {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -75,25 +77,22 @@
   .oil-ideal {
     margin: 30px 0;
     font-size: 1.1rem;
-    font-style: italic;
+    margin: 15px;
 
     &__desc {
-      margin: 10px;
       font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     ul {
-      padding: 5px;
-
-      @media (min-width: 550px) {
-        padding: 0;
+      @media (min-width: 768px) {
         columns: 2;
       }
     }
 
     li {
-      margin: 6px;
-
+      margin-bottom: 5px;
       @media (min-width: 768px) {
         margin: 0;
       }
@@ -121,36 +120,35 @@
   }
 
   &__content {
-    margin: 0;
-
     @media (min-width: 768px) {
       margin: 0 30px;
       flex: 2;
     }
 
     .oil-title {
-      margin: 0;
       position: absolute;
-      top: 78px;
-      right: 40px;
-      width: 300px;
-      font-size: 1.1rem;
-      text-align: center;
+      top: 82px;
+      left: 30px;
+      width: 100%;
+      font-size: 1.25rem;
+      font-weight: bold;
 
       @media (min-width: 768px) {
         line-height: 1;
         position: initial;
-        width: 100%;
-        font-size: 2.1rem;
+        font-size: 1.9rem;
         margin: 15px;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 2.1rem;
       }
     }
 
     .detail-desc {
       font-family: "Quattrocento", cursive;
       font-size: 1.1rem;
-      text-align: center;
-      margin: 30px 0;
+      margin: 30px 15px;
       padding: 0 2px;
     }
 
@@ -189,7 +187,6 @@
             font-size: 1.2rem;
             font-weight: bold;
             text-decoration: underline;
-            font-style: italic;
 
             li {
               margin-bottom: 10px;
