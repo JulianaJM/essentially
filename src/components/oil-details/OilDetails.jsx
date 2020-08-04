@@ -2,10 +2,16 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 
 import OilElement from "./OilElement";
 import Collapse from "../common/collapse/Collapse";
 import Hightlight from "../common/hightlight/Hightlight";
+import HealthIcon from "../../assets/icons/Health";
+import BeautyIcon from "../../assets/icons/Beauty";
+import MoodIcon from "../../assets/icons/Mood";
+import KitchenIcon from "../../assets/icons/Kitchen";
 
 import "./oil-details.scss";
 
@@ -55,7 +61,8 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="Santé"
+              title="En Santé"
+              icon={<HealthIcon width="60px" height="40px" />}
               content={
                 <OilElement category={oil.health} hightlight={hightlight} />
               }
@@ -71,7 +78,8 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="Bien-être"
+              title="En Bien-être"
+              icon={<MoodIcon />}
               content={
                 <OilElement category={oil.mood} hightlight={hightlight} />
               }
@@ -87,7 +95,8 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="Beauté"
+              title="En Beauté"
+              icon={<BeautyIcon />}
               content={
                 <OilElement category={oil.beauty} hightlight={hightlight} />
               }
@@ -103,7 +112,7 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             type="button"
           >
             <Collapse
-              title="En cuisine"
+              title="En Cuisine"
               content={
                 <div>
                   {/* <p>{oil.kitchen.kitchenDesc}</p> */}
@@ -117,13 +126,16 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
                   {/* )} */}
                 </div>
               }
+              icon={<KitchenIcon />}
               isOpen={activeTabs.includes("kitchen")}
             />
           </button>
         )}
         {oil.precautions.length > 0 && (
           <div className="precaution">
-            <p className="precaution__subtitle">Précautions</p>
+            <p className="precaution__subtitle">
+              <FontAwesomeIcon icon={faExclamationTriangle} /> Précautions
+            </p>
             <ul className="precaution__content">
               {oil.precautions.map((precaution, index) => (
                 <li key={index}>{precaution}</li>

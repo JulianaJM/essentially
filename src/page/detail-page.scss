@@ -6,7 +6,7 @@
   padding: 16px 32px;
   text-align: center;
   font-size: 16px;
-  margin: 8px 2px;
+  margin: 20px 2px;
   opacity: 0.6;
   transition: 0.3s;
   position: relative;
@@ -20,6 +20,10 @@
     bottom: initial;
     width: 30%;
     margin-left: 8px;
+
+    &:focus {
+      outline: 1px dashed rgb(19, 128, 36);
+    }
   }
 
   @media (min-width: 992px) {

@@ -4,7 +4,7 @@ import { isMobileOnly } from "react-device-detect";
 import PropTypes from "prop-types";
 import { throttle } from "lodash";
 
-import { isPageBottom } from "../../utils/scroll";
+import { isPageBottom } from "../../../utils/scroll";
 
 import Header from "./Header";
 

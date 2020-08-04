@@ -5,13 +5,15 @@ import classNames from "classnames";
 
 import "./collapse.scss";
 
-const Collapse = ({ title, content, isOpen }) => {
+const Collapse = ({ title, icon, content, isOpen }) => {
   return (
     <div className="wrap-collabsible">
       {/* <input id="collapsible" className="toggle" type="checkbox" /> */}
       <div className={classNames("toggle", { isOpen })} />
 
-      <label className="lbl-toggle">{title}</label>
+      <label className="lbl-toggle">
+        {title} {icon}
+      </label>
       <div className="collapsible-content">
         {isOpen && <div className="content-inner">{content}</div>}
       </div>
@@ -19,8 +21,11 @@ const Collapse = ({ title, content, isOpen }) => {
   );
 };
 
+Collapse.defaultProps = { icon: null };
+
 Collapse.propTypes = {
-  title: Proptypes.node.isRequired,
+  title: Proptypes.string.isRequired,
+  icon: Proptypes.node,
   content: Proptypes.node.isRequired,
   isOpen: Proptypes.bool.isRequired,
 };

@@ -4,7 +4,7 @@ import { hot } from "react-hot-loader/root";
 import React, { lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Header from "./components/header/HeaderContainer";
+import Header from "./components/common/header/HeaderContainer";
 import Navbar from "./components/common/navbar/navbar";
 import SearchPage from "./page/SearchPage";
 import Loader from "./components/common/loader/Loader";

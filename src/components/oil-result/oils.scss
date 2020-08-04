@@ -48,6 +48,10 @@
         box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
         width: 300px;
         height: 210px;
+
+        &:focus {
+          outline: 1px dashed rgb(19, 128, 36);
+        }
       }
 
       @media (min-width: 992px) {

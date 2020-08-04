@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState } from "react";
-import { isMobile } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 import { withRouter, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
@@ -21,7 +21,7 @@ const DetailPage = ({ match, location, history }) => {
 
   useEffect(() => {
     scrollTop();
-    if (isMobile) {
+    if (isMobileOnly) {
       setActiveTabs([]);
     }
   }, []);

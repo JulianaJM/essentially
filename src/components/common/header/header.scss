@@ -73,6 +73,10 @@
       left: 0;
       margin: 10px;
       font-size: 1.2rem;
+
+      &:focus {
+        outline: 1px dashed rgb(19, 128, 36);
+      }
     }
   }
 

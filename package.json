@@ -12,7 +12,8 @@
     "start": "node ./server",
     "test": "jest",
     "format": "pretty-quick",
-    "lint": "eslint src/**/*.js src/**/*.jsx"
+    "lint": "eslint src/**/*.js src/**/*.jsx",
+    "svgr": "svgr -d src/assets/icons/ src/assets/svg --ext jsx --icon"
   },
   "husky": {
     "hooks": {
@@ -38,6 +39,7 @@
     "@babel/plugin-transform-template-literals": "^7.10.4",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@svgr/cli": "^5.4.0",
     "@testing-library/jest-dom": "^5.11.0",
     "@testing-library/react": "^10.4.3",
     "autoprefixer": "^9.6.1",
