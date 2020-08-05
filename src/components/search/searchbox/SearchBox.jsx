@@ -52,33 +52,21 @@ class SearchBox extends Component {
         const newValue = value.normalize("NFD").replace(reg, "").toLowerCase();
 
         const ideals = results
-          .map(result => result.ideal)
-          .reduce((acc, curr) => acc.concat(curr), [])
-          .filter(this.onlyUnique)
-          .filter(unique => {
-            const newUnique = unique
-              .normalize("NFD")
-              .replace(reg, "")
-              .toLowerCase();
-            return newUnique.includes(newValue);
-          });
-
-        const indications = results
           .map(result => {
             const health = result.health.indications;
             const mood = result.mood.indications;
             const beauty = result.beauty.indications;
-
-            return health.concat(mood, beauty);
+            return result.ideal.concat(health, mood, beauty);
           })
           .reduce((acc, curr) => acc.concat(curr), [])
+          .sort((a, b) => a.localeCompare(b))
           .filter(this.onlyUnique)
-          .filter(unique => {
-            const newUnique = unique
+          .filter(ideal => {
+            const newIdeal = ideal
               .normalize("NFD")
               .replace(reg, "")
               .toLowerCase();
-            return newUnique.includes(newValue) && newUnique.length <= 30; // limit the suggests for less than 30 words
+            return newIdeal.includes(newValue) && newIdeal.length <= 30; // limit the suggests for less than 30 words
           });
 
         const names = results.map(r => r.name);
@@ -89,7 +77,7 @@ class SearchBox extends Component {
         if (name.includes(newValue)) {
           this.setState({ suggestions: names });
         } else {
-          this.setState({ suggestions: ideals.concat(indications) });
+          this.setState({ suggestions: ideals });
         }
       }
 

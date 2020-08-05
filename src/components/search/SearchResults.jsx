@@ -84,8 +84,8 @@ const SearchResults = ({ location, isPageBottom }) => {
       let newParam = decodeURI(param.replace(",", ""));
 
       // FIXME remove when backend handle it
+      newParam = newParam.replace("-", " "); // ylang-ylang anti-*
       if (param.toLowerCase().startsWith("huile")) {
-        newParam = newParam.replace("-", " ");
         newParam = newParam.slice(20, param.length);
       }
       return newParam;
