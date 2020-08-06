@@ -42,8 +42,8 @@
   border: 1px solid #eee;
   z-index: 1;
   overflow: hidden;
-  min-height: 200px;
-  height: 100px;
+  // min-height: 200px;
+  // height: 100px;
   overflow-y: scroll;
 }
 
@@ -84,7 +84,7 @@
 
   .react-autosuggest__suggestions-list {
     font-size: 1.2rem;
-    min-height: 100px;
+    // min-height: 100px;
     top: initial;
   }
 
