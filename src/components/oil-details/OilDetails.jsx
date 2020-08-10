@@ -70,7 +70,7 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
             />
           </button>
         )}
-        {oil.mood.propertiesDesc && (
+        {(oil.mood.propertiesDesc || oil.mood.indicationsDesc) && (
           <button
             id="mood"
             className="detail-btn"
@@ -115,15 +115,12 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
               title="En Cuisine"
               content={
                 <div>
-                  {/* <p>{oil.kitchen.kitchenDesc}</p> */}
-                  {/* {oil.kitchen.details && ( */}
-                  {/* <h3>Utilisations</h3> */}
+                  <p>{oil.kitchen.kitchenDesc}</p>
                   <ul>
                     {oil.kitchen.details.map((detail, index) => (
                       <li key={index}>{detail}</li>
                     ))}
                   </ul>
-                  {/* )} */}
                 </div>
               }
               icon={<KitchenIcon />}

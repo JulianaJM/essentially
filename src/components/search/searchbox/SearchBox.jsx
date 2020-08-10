@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Autosuggest from "react-autosuggest";
 import PropTypes from "prop-types";
+import Fuse from "fuse.js";
 
 import { getSuggestions } from "../../../services/elasticSearch";
 
@@ -19,7 +20,7 @@ class SearchBox extends Component {
   renderSuggestion = suggestion => {
     return (
       <div className="result">
-        <div>{suggestion}</div>
+        <div>{suggestion.item}</div>
       </div>
     );
   };
@@ -39,7 +40,7 @@ class SearchBox extends Component {
 
   onSuggestionSelected = (event, { suggestion }) => {
     const { onUpdate } = this.props;
-    onUpdate(suggestion);
+    onUpdate(suggestion.item);
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
@@ -47,39 +48,43 @@ class SearchBox extends Component {
     if (this.state.value === value) return;
     getSuggestions(value).then(res => {
       const results = res.data.map(h => h._source);
-      if (results.length > 0) {
-        const reg = /[\u0300-\u036f]/g; // remove special chars
-        const newValue = value.normalize("NFD").replace(reg, "").toLowerCase();
 
-        const ideals = results
-          .map(result => {
-            const health = result.health.indications;
-            const mood = result.mood.indications;
-            const beauty = result.beauty.indications;
-            return result.ideal.concat(health, mood, beauty);
-          })
-          .reduce((acc, curr) => acc.concat(curr), [])
-          .sort((a, b) => a.localeCompare(b))
-          .filter(this.onlyUnique)
-          .filter(ideal => {
-            const newIdeal = ideal
-              .normalize("NFD")
-              .replace(reg, "")
-              .toLowerCase();
-            return newIdeal.includes(newValue) && newIdeal.length <= 30; // limit the suggests for less than 30 words
-          });
+      const reg = /[\u0300-\u036f]/g; // remove special chars
+      const newValue = value.normalize("NFD").replace(reg, "").toLowerCase();
 
-        const names = results.map(r => r.name);
-        const name = results[0].name
-          .normalize("NFD")
-          .replace(reg, "")
-          .toLowerCase();
-        if (name.includes(newValue)) {
-          this.setState({ suggestions: names });
-        } else {
-          this.setState({ suggestions: ideals });
-        }
-      }
+      const ideals = results
+        .map(result => {
+          const health = result.health.indications;
+          const mood = result.mood.indications;
+          const beauty = result.beauty.indications;
+          const names = result.name;
+          return result.ideal.concat(health, mood, beauty, names);
+        })
+        .reduce((acc, curr) => acc.concat(curr), [])
+        .sort((a, b) => a.localeCompare(b))
+        .filter(this.onlyUnique)
+        .filter(ideal => {
+          // const newIdeal = ideal
+          //   .normalize("NFD")
+          //   .replace(reg, "")
+          //   .toLowerCase();
+          return /* newIdeal.includes(newValue) && */ ideal.length <= 30; // limit the suggests for less than 30 words
+        });
+
+      // const names = results.map(r => r.name);
+      // const name = results[0].name
+      //   .normalize("NFD")
+      //   .replace(reg, "")
+      //   .toLowerCase();
+      // if (name.includes(newValue)) {
+      //   this.setState({ suggestions: names });
+      // } else {
+      //   this.setState({ suggestions: ideals });
+      // }
+
+      const fuse = new Fuse(ideals);
+      const suggestions = fuse.search(newValue);
+      this.setState({ suggestions });
 
       const { onUpdate } = this.props;
       onUpdate(value);
@@ -91,7 +96,7 @@ class SearchBox extends Component {
   };
 
   getSuggestionValue = suggestion => {
-    return suggestion;
+    return suggestion.item;
   };
 
   render() {

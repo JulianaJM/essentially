@@ -18,10 +18,19 @@ const SearchPage = props => {
 
   const handleChange = queryParams => {
     setValue(queryParams);
-    history.push({
-      pathname: "",
-      search: `?value=${queryParams}`,
-    });
+
+    if (!queryParams) {
+      history.push({
+        pathname: "",
+      });
+    }
+
+    if (queryParams.length > 2) {
+      history.push({
+        pathname: "",
+        search: `?value=${queryParams}`,
+      });
+    }
   };
 
   const handleScroll = () => {

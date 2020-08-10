@@ -42,7 +42,7 @@
   border: 1px solid #eee;
   z-index: 1;
   overflow: hidden;
-  // min-height: 200px;
+  min-height: 200px;
   // height: 100px;
   overflow-y: scroll;
 }
@@ -68,12 +68,6 @@
   font-size: 80%;
 }
 
-.highlight {
-  background-color: yellow;
-  padding: 4px;
-  border-radius: 2px;
-}
-
 // styles pour desktop/tablets
 @media (min-width: 600px) {
   .react-autosuggest__input {
@@ -84,7 +78,7 @@
 
   .react-autosuggest__suggestions-list {
     font-size: 1.2rem;
-    // min-height: 100px;
+    height: 150px;
     top: initial;
   }
 
