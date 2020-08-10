@@ -56,5 +56,25 @@ export const removeUselessElement = list => {
     list.splice(list.indexOf("et"), 1);
   }
 
+  if (list.includes("huiles")) {
+    list.splice(list.indexOf("huiles"), 1);
+  }
+
+  if (list.includes("huile")) {
+    list.splice(list.indexOf("huile"), 1);
+  }
+
+  if (list.includes("Huile")) {
+    list.splice(list.indexOf("Huile"), 1);
+  }
+
+  if (list.includes("Huiles")) {
+    list.splice(list.indexOf("Huiles"), 1);
+  }
+
+  if (list.includes("essentielle")) {
+    list.splice(list.indexOf("essentielle"), 1);
+  }
+
   return list;
 };

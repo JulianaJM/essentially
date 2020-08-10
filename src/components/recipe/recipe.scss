@@ -53,6 +53,10 @@
     list-style: disc;
     margin-left: 15px;
 
+    li {
+      margin-bottom: 10px;
+    }
+
     @media (min-width: 768px) {
       margin-left: 20px;
     }

@@ -85,9 +85,9 @@ const SearchResults = ({ location, isPageBottom }) => {
 
       // FIXME remove when backend handle it
       newParam = newParam.replace("-", " "); // ylang-ylang anti-*
-      if (param.toLowerCase().startsWith("huile")) {
-        newParam = newParam.slice(20, param.length);
-      }
+      // if (param.toLowerCase().startsWith("huile")) {
+      //   newParam = newParam.slice(20, param.length);
+      // }
       return newParam;
     });
   };
