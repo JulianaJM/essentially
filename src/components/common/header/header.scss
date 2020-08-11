@@ -66,14 +66,13 @@
     background: none;
     color: white;
     padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    font-size: 1.1rem;
 
     @media (min-width: 768px) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 10px;
-      font-size: 1.2rem;
-
       &:focus {
         outline: 1px dashed rgb(19, 128, 36);
       }
@@ -82,7 +81,6 @@
 
   .is-active {
     visibility: visible;
-    font-size: 1.1rem;
   }
 }
 

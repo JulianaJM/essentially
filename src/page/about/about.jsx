@@ -9,12 +9,33 @@ const About = () => {
 
   return (
     <div className="about">
-      <p>Ceci est un référentiel non exhaustif d&apos;huiles essentielles.</p>
-      <p>
-        Ces informations n&apos;ont aucune valeur médicale, pour tout traitement
-        consulter votre médecin.
-      </p>
-      <p>Sources provenant de Aroma-Zone et de Doctissimo.</p>
+      <div className="about__content">
+        <p>Ceci est un référentiel non exhaustif d&apos;huiles essentielles.</p>
+        <p>
+          Ces informations ne constituent en aucun cas un avis médical. Elles
+          sont données à titre informatif. Pour tout usage dans un but
+          thérapeutique, consultez un médecin.
+        </p>
+        <p>
+          Ces informations ont été traité à partir des sites{" "}
+          <a
+            href="https://www.aroma-zone.com/info/guide-des-huiles-essentielles/tous"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Aroma-Zone
+          </a>{" "}
+          et{" "}
+          <a
+            href="https://www.doctissimo.fr/sante/aromatherapie/guide-huiles-essentielles"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Doctissimo
+          </a>
+          .
+        </p>
+      </div>
     </div>
   );
 };

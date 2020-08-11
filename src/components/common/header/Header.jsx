@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +21,7 @@ const Header = React.forwardRef((props, ref) => (
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
-        <div className="logo" />
+        <Link to="/" className="logo" />
         <h2>
           Le moteur de recherche{" "}
           <span className="bold-green">{" d'huiles essentielles "} </span>

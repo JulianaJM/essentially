@@ -2,10 +2,15 @@
 
 .index-oil {
   font-family: "Quattrocento", cursive;
+  padding: 10px;
 
   @media (min-width: 768px) {
     columns: 2;
-    margin-left: 40px;
+  }
+
+  @media (min-width: 992px) {
+    margin-left: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   }
 
   &__link {
@@ -14,9 +19,6 @@
   }
 
   li {
-    padding: 8px;
-    @media (min-width: 768px) {
-      padding: 10px;
-    }
+    line-height: 2;
   }
 }

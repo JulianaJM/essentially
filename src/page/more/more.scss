@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Quattrocento&display=swap");
 
-.about {
+.more {
   @media (min-width: 992px) {
     width: 100%;
     height: 100vh;
@@ -8,16 +8,17 @@
   }
 
   &__content {
-    width: 100%;
     font-family: "Quattrocento", cursive;
     font-size: 1.1rem;
+    width: 100%;
     padding: 15px;
     margin-top: 30px;
 
     @media (min-width: 768px) {
       font-size: 1.5rem;
       margin-top: 10px;
-      margin-left: 20px;
+      margin-left: 50px;
+      padding: 10px;
       position: absolute;
       left: 50%;
       top: 25%;

@@ -88,9 +88,9 @@
     }
 
     ul {
-      @media (min-width: 768px) {
-        columns: 2;
-      }
+      //@media (min-width: 768px) {
+      columns: 2;
+      //}
     }
 
     li {

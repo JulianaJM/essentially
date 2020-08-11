@@ -16,6 +16,7 @@ const About = lazy(() => import("./page/about/about"));
 const DetailPage = lazy(() => import("./page/DetailPage"));
 const RecipePage = lazy(() => import("./page/RecipePage"));
 const NotFound = lazy(() => import("./page/not-found/NotFound"));
+const More = lazy(() => import("./page/more/More"));
 
 const App = () => (
   <>
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/about" component={About} />
           <Route path="/index" component={IndexOil} />
           <Route path="/notfound" component={NotFound} />
+          <Route path="/more" component={More} />
           <Route exact path="/" render={props => <SearchPage {...props} />} />
           <Route
             path="/:name/recipe"
