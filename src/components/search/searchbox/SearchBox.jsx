@@ -54,33 +54,15 @@ class SearchBox extends Component {
 
       const ideals = results
         .map(result => {
-          const health = result.health.indications;
-          const mood = result.mood.indications;
-          const beauty = result.beauty.indications;
+          // const health = result.health.indications;
+          // const mood = result.mood.indications;
+          // const beauty = result.beauty.indications;
           const names = result.name;
-          return result.ideal.concat(health, mood, beauty, names);
+          return result.ideal.concat(/* health, mood, beauty, */ names);
         })
         .reduce((acc, curr) => acc.concat(curr), [])
         .sort((a, b) => a.localeCompare(b))
-        .filter(this.onlyUnique)
-        .filter(ideal => {
-          // const newIdeal = ideal
-          //   .normalize("NFD")
-          //   .replace(reg, "")
-          //   .toLowerCase();
-          return /* newIdeal.includes(newValue) && */ ideal.length <= 30; // limit the suggests for less than 30 words
-        });
-
-      // const names = results.map(r => r.name);
-      // const name = results[0].name
-      //   .normalize("NFD")
-      //   .replace(reg, "")
-      //   .toLowerCase();
-      // if (name.includes(newValue)) {
-      //   this.setState({ suggestions: names });
-      // } else {
-      //   this.setState({ suggestions: ideals });
-      // }
+        .filter(this.onlyUnique);
 
       const fuse = new Fuse(ideals);
       const suggestions = fuse.search(newValue);

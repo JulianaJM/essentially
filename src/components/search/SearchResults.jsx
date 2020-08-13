@@ -78,18 +78,15 @@ const SearchResults = ({ location, isPageBottom }) => {
       ? location.search.split("=")[1]
       : "";
 
-    const queryParams = queryParamString ? queryParamString.split("+") : [];
-    return queryParams.map(param => {
-      // remove commas and encoded spaces
-      let newParam = decodeURI(param.replace(",", ""));
+    // remove commas and encoded spaces
+    let newParam = decodeURI(queryParamString.replace(",", ""));
+    // FIXME remove when backend handle it
+    newParam = newParam.replace("-", " "); // ylang-ylang anti-*
+    // if (param.toLowerCase().startsWith("huile")) {
+    //   newParam = newParam.slice(20, param.length);
+    // }
 
-      // FIXME remove when backend handle it
-      newParam = newParam.replace("-", " "); // ylang-ylang anti-*
-      // if (param.toLowerCase().startsWith("huile")) {
-      //   newParam = newParam.slice(20, param.length);
-      // }
-      return newParam;
-    });
+    return newParam;
   };
 
   const getHightlights = () => {
