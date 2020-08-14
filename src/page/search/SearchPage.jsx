@@ -5,9 +5,9 @@ import throttle from "lodash/throttle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 
-import SearchBox from "../components/search/searchbox/SearchBox";
-import SearchResults from "../components/search/SearchResults";
-import { isPageBottom, scrollTop } from "../utils/scroll";
+import SearchBox from "../../components/search/searchbox/SearchBox";
+import SearchResults from "../../components/search/SearchResults";
+import { isPageBottom, scrollTop } from "../../utils/scroll";
 
 import "./search-page.scss";
 

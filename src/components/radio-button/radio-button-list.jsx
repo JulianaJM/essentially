@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 import mood from '../../assets/images/mood.jpg';
 import beauty from '../../assets/images/beauty.jpeg'; */
 
-import RadioButton from "./RadioButton";
+import RadioButton from "./radio-button";
+
 const images = [
   /* health, mood, beauty */
 ];

@@ -11,6 +11,17 @@ const More = () => {
     <div className="more">
       <div className="more__content">
         <p>Quelques liens pour aller plus loin : </p>
+        <br />
+        <p>
+          <a
+            href="https://www.doctissimo.fr/sante/aromatherapie/utilisation-des-huiles-essentielles/comment-utiliser-huiles-essentielles"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Comment utiliser les huiles essentielles ?
+          </a>
+        </p>
+
         <p>
           <a
             href="https://www.lessentieldejulien.com/"

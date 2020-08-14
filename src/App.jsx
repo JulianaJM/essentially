@@ -6,17 +6,18 @@ import { Switch, Route } from "react-router-dom";
 
 import Header from "./components/common/header/HeaderContainer";
 import Navbar from "./components/common/navbar/navbar";
-import SearchPage from "./page/SearchPage";
+import SearchPage from "./page/search/SearchPage";
 import Loader from "./components/common/loader/Loader";
 
 import "./app.scss";
 
 const IndexOil = lazy(() => import("./page/indexOil/IndexOil"));
 const About = lazy(() => import("./page/about/about"));
-const DetailPage = lazy(() => import("./page/DetailPage"));
-const RecipePage = lazy(() => import("./page/RecipePage"));
+const DetailPage = lazy(() => import("./page/detail/DetailPage"));
+const RecipePage = lazy(() => import("./page/recipe/RecipePage"));
 const NotFound = lazy(() => import("./page/not-found/NotFound"));
 const More = lazy(() => import("./page/more/More"));
+const RecipeSearch = lazy(() => import("./page/recipe/RecipeSearch"));
 
 const App = () => (
   <>
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/index" component={IndexOil} />
           <Route path="/notfound" component={NotFound} />
           <Route path="/more" component={More} />
+          <Route path="/recipes" component={RecipeSearch} />
           <Route exact path="/" render={props => <SearchPage {...props} />} />
           <Route
             path="/:name/recipe"

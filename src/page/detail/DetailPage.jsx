@@ -3,15 +3,17 @@ import { isMobileOnly } from "react-device-detect";
 import { withRouter, Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import Loader from "../components/common/loader/Loader";
-import { searchByName } from "../services/elasticSearch";
-import { replaceUnderscorebySpace } from "../utils/replace";
-import { scrollTop } from "../utils/scroll";
-import useAsyncError from "../utils/useAsyncError";
+import Loader from "../../components/common/loader/Loader";
+import { searchByName } from "../../services/elasticSearch";
+import { replaceUnderscorebySpace } from "../../utils/replace";
+import { scrollTop } from "../../utils/scroll";
+import useAsyncError from "../../utils/useAsyncError";
 
 import "./detail-page.scss";
 
-const OilDetails = lazy(() => import("../components/oil-details/OilDetails"));
+const OilDetails = lazy(() =>
+  import("../../components/oil-details/OilDetails")
+);
 
 const DetailPage = ({ match, location, history }) => {
   const [oil, setOil] = useState(null);

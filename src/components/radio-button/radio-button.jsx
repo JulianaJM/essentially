@@ -13,6 +13,7 @@ const RadioButton = ({ id, label, image, onChange }) => {
         id={id}
         onChange={onChange}
       />
+      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
       <label htmlFor={id}>
         <img src={image} alt={label} />
       </label>

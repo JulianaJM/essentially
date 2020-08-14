@@ -6,6 +6,7 @@ function withRef(WrappedComponent) {
     static propTypes = {
       forwardedRef: func.isRequired,
     };
+
     render() {
       const { forwardedRef, ...rest } = this.props;
 
@@ -16,7 +17,6 @@ function withRef(WrappedComponent) {
     return <WithRef {...props} forwardedRef={ref} />;
   }); */
   const forwardRef = (props, ref) => {
-    debugger;
     return <WithRef {...props} forwardedRef={ref} />;
   };
   // Donne à ce composant un nom d’affichage plus utile dans les DevTools.

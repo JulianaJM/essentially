@@ -115,7 +115,12 @@ const OilDetails = ({ activeTabs, oil, onToggle, hightlight }) =>
               title="En Cuisine"
               content={
                 <div>
-                  <p>{oil.kitchen.kitchenDesc}</p>
+                  <p>
+                    <Hightlight
+                      hightlight={hightlight}
+                      content={oil.kitchen.kitchenDesc}
+                    />
+                  </p>
                   <ul>
                     {oil.kitchen.details.map((detail, index) => (
                       <li key={index}>{detail}</li>

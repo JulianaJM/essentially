@@ -250,4 +250,13 @@
       }
     }
   }
+
+  .recipe-search {
+    &__bar {
+      position: fixed;
+      top: 100px;
+      z-index: 1;
+      width: 90%;
+    }
+  }
 }

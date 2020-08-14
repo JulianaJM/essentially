@@ -34,3 +34,11 @@ export const getSuggestions = inputVal => {
     },
   });
 };
+
+export const searchRecipe = terms => {
+  return axios.get(`${URL_PREFIX}/oils/recipe/results`, {
+    params: {
+      values: terms,
+    },
+  });
+};

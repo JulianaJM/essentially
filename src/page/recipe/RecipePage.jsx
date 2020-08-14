@@ -2,12 +2,14 @@ import React, { lazy, Suspense, useEffect, useState } from "react";
 import { withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import Loader from "../components/common/loader/Loader";
-import { searchByName } from "../services/elasticSearch";
-import { replaceUnderscorebySpace } from "../utils/replace";
-import { scrollTop } from "../utils/scroll";
+import Loader from "../../components/common/loader/Loader";
+import { searchByName } from "../../services/elasticSearch";
+import { replaceUnderscorebySpace } from "../../utils/replace";
+import { scrollTop } from "../../utils/scroll";
 
-const Recipe = lazy(() => import("../components/recipe/Recipe"));
+import "./recipe.scss";
+
+const Recipe = lazy(() => import("../../components/recipe/Recipe"));
 
 const RecipePage = ({ match }) => {
   const [oil, setOil] = useState(null);

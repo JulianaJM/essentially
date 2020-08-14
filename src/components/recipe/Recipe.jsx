@@ -2,10 +2,9 @@
 /* eslint-disable react/no-array-index-key */
 import React from "react";
 import PropTypes from "prop-types";
-
-import "./recipe.scss";
 import { replaceUnderscorebySpace } from "../../utils/replace";
 import Collapse from "../common/collapse/Collapse";
+import "./recipe.scss";
 
 const Recipe = ({ name, recipes, activeTabs, onToggle }) => {
   const newName = replaceUnderscorebySpace(name);

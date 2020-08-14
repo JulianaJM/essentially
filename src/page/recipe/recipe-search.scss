@@ -1,0 +1,53 @@
+.recipe-search {
+  &__bar {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+    transition: width 0.6s linear;
+
+    button {
+      background: none;
+      border: none;
+      margin-top: 20px;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      padding: 0 15px;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      padding: 10px;
+      outline: none;
+    }
+  }
+
+  &__title {
+    line-height: 1;
+    position: initial;
+    font-size: 1.5rem;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 2.1rem;
+    }
+  }
+
+  .recipe {
+    .oil-title {
+      margin: 0;
+      padding: 0;
+    }
+
+    .recipe__collapse {
+      width: 90%;
+    }
+  }
+}

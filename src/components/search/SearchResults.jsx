@@ -196,9 +196,9 @@ const SearchResults = ({ location, isPageBottom }) => {
       <div className="search__results">
         {!isRandom && searchResults && (
           <p className="search__results__total">
-            {total > 0
-              ? `${total} résultats trouvés`
-              : "Aucun résultats trouvés"}
+            {total > 1 && `${total} résultats trouvés`}
+            {total === 1 && "1 résultat trouvé"}
+            {total === 0 && "Aucun résultats trouvés"}
           </p>
         )}
 

@@ -16,7 +16,9 @@ const OilElement = ({ category, hightlight }) => {
 
   return (
     <div>
-      <p>{category.propertiesDesc}</p>
+      <p>
+        <Hightlight hightlight={hightlight} content={category.propertiesDesc} />
+      </p>
       <ul>
         {category.properties.map((property, index) => (
           <li key={index}>

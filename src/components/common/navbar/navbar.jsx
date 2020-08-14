@@ -10,14 +10,8 @@ const Navbar = () => (
     <NavLink exact to="/">
       Accueil
     </NavLink>
+    <NavLink to="/recipes">Recettes</NavLink>
     <NavLink to="/index">Index des huiles</NavLink>
-    <a
-      href="https://www.doctissimo.fr/sante/aromatherapie/utilisation-des-huiles-essentielles/comment-utiliser-huiles-essentielles"
-      target="_blank"
-      rel="noreferrer"
-    >
-      How to
-    </a>
     <NavLink to="/more">Liens utils</NavLink>
     <NavLink to="/about">A propos</NavLink>
   </nav>
