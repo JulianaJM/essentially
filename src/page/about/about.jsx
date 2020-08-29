@@ -10,12 +10,15 @@ const About = () => {
   return (
     <div className="about">
       <div className="about__content">
-        <p>Ceci est un référentiel non exhaustif d&apos;huiles essentielles.</p>
         <p>
-          Ces informations ne constituent en aucun cas un avis médical. Elles
-          sont données à titre informatif. Pour tout usage dans un but
-          thérapeutique, consultez un médecin.
+          Ce site est un référentiel d&apos;informations non exhaustif
+          d&apos;huiles essentielles.
         </p>
+        <p>
+          Il ne constitue en aucun cas un avis médical et est donné à titre
+          informatif.
+        </p>
+        <p>Pour tout usage dans un but thérapeutique, consultez un médecin.</p>
         <p>
           Ces informations ont été traité à partir des sites{" "}
           <a
