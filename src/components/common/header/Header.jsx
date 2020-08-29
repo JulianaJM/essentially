@@ -21,7 +21,7 @@ const Header = React.forwardRef((props, ref) => (
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
-        <Link to="/" className="logo" />
+        <Link to="/" className="logo" tabIndex={-1} />
         <h2>
           Le moteur de recherche{" "}
           <span className="bold-green">{" d'huiles essentielles "} </span>

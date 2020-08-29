@@ -48,9 +48,7 @@
         background-position: center;
         width: 200px;
         height: 200px;
-        // @media (min-width: 768px) {
-        //   width: 35%;
-        // }
+        outline: none;
       }
     }
   }
@@ -68,11 +66,12 @@
     padding: 8px;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     margin: 10px;
     font-size: 1.1rem;
 
     @media (min-width: 768px) {
+      font-size: 1.3rem;
       &:focus {
         outline: 1px dashed rgb(19, 128, 36);
       }
