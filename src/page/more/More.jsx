@@ -21,7 +21,6 @@ const More = () => {
             Comment utiliser les huiles essentielles ?
           </a>
         </p>
-
         <p>
           <a
             href="https://www.lessentieldejulien.com/"
@@ -31,7 +30,6 @@ const More = () => {
             L&rsquo;essentiel de Julien
           </a>
         </p>
-
         <p>
           <a
             href="https://www.slow-cosmetique.com/"
@@ -39,6 +37,30 @@ const More = () => {
             rel="noreferrer"
           >
             Slow cosmetique
+          </a>
+        </p>
+        <p>
+          <a href="https://revelessence.com/" target="_blank" rel="noreferrer">
+            Revelessence
+          </a>
+        </p>
+        <p>
+          <a
+            href="https://aucoeurdesracines.fr/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Au coeur des racines
+          </a>
+        </p>
+
+        <p>
+          <a
+            href="https://www.macosmetoperso.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ma cosmeto perso
           </a>
         </p>
       </div>
