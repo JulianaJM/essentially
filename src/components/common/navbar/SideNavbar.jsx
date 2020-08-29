@@ -26,16 +26,20 @@ const SideNavbar = () => {
         if (
           event.target.matches(".menuBtn") ||
           event.target.matches(".closebtn") ||
-          event.target.matches(".sidenav")
+          event.target.matches(".sidenav") ||
+          event.target.matches(".more a")
         ) {
           // do nothing on right selectors
-        } else if (navEl.current.style.width !== "0px") {
+        } else if (
+          navEl.current.style.width !== "" &&
+          navEl.current.style.width !== "0px"
+        ) {
           // If the clicked element doesn't have the right selector
           closeNav();
-        }
 
-        // Don't follow the link
-        event.preventDefault();
+          // Don't follow the link
+          event.preventDefault();
+        }
       },
       false
     );
