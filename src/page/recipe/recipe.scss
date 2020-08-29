@@ -1,8 +1,24 @@
 .recipe {
   font-family: "Quattrocento", cursive;
 
+  .recipe__collapse {
+    button {
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
   @media (min-width: 992px) {
     // padding-bottom: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    .recipe__collapse {
+      button {
+        &:focus {
+          outline: 1px dashed rgb(19, 128, 36);
+        }
+      }
+    }
   }
 }

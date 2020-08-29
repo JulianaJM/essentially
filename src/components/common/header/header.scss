@@ -256,7 +256,9 @@
       position: fixed;
       top: 100px;
       z-index: 1;
-      width: 90%;
+      width: 60%;
+      left: 50%;
+      margin-left: -30%; /* Negative half of width to center. */
     }
   }
 }

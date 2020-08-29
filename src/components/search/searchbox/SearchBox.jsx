@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Fuse from "fuse.js";
 
 import { getSuggestions } from "../../../services/elasticSearch";
+import { onlyUnique } from "../../../utils/arrayUtils";
 
 import "./search-box.scss";
 
@@ -34,10 +35,6 @@ class SearchBox extends Component {
     // }
   };
 
-  onlyUnique = (value, index, self) => {
-    return self.indexOf(value) === index;
-  };
-
   onSuggestionSelected = (event, { suggestion }) => {
     const { onUpdate } = this.props;
     onUpdate(suggestion.item);
@@ -62,7 +59,7 @@ class SearchBox extends Component {
         })
         .reduce((acc, curr) => acc.concat(curr), [])
         .sort((a, b) => a.localeCompare(b))
-        .filter(this.onlyUnique);
+        .filter(onlyUnique);
 
       const fuse = new Fuse(ideals);
       const suggestions = fuse.search(newValue);

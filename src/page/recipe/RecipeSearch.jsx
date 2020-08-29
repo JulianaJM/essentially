@@ -29,7 +29,10 @@ const RecipeSearch = () => {
           res.data.hits.forEach(r => {
             const { recipesTitle, recipesContent } = r._source.recipes;
             recipesTitle.forEach((title, j) => {
-              if (title.toLowerCase().includes(value.toLowerCase())) {
+              if (
+                title.toLowerCase().includes(value.toLowerCase()) &&
+                !newRecipes.recipesTitle.includes(title)
+              ) {
                 newRecipes.recipesTitle.push(title);
                 newRecipes.recipesContent.push(recipesContent[j]);
               }
@@ -38,7 +41,7 @@ const RecipeSearch = () => {
           setRecipes(newRecipes);
         })
         .catch(() => {
-          throwError(new Error("An error occured while search"));
+          throwError(new Error("An error occured while search recipe"));
         });
     }
   };
@@ -72,7 +75,7 @@ const RecipeSearch = () => {
       <div className="recipe-search__bar">
         <input
           type="text"
-          placeholder="Rechercher une recette en indiquant votre symptome ..."
+          placeholder="indiquer le symptome ..."
           onChange={onValueChange}
           onKeyDown={onKeyDown}
         />

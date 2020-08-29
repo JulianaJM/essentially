@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const removeUselessElement = list => {
   const stopWords = [
     "de",
@@ -22,4 +21,8 @@ export const removeUselessElement = list => {
   ];
 
   return list.filter(l => !stopWords.includes(l));
+};
+
+export const onlyUnique = (value, index, self) => {
+  return self.indexOf(value) === index;
 };
