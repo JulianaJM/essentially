@@ -18,6 +18,7 @@ const Header = React.forwardRef((props, ref) => (
           className={classNames("previous", {
             "is-active": props.shouldShowBackButton,
           })}
+          tabIndex={props.shouldShowBackButton ? 0 : -1}
         >
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>

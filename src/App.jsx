@@ -23,6 +23,7 @@ const RecipeSearch = lazy(() => import("./page/recipe/RecipeSearch"));
 const App = () => (
   <>
     <SideNavbar />
+    <div id="overlay" />
     <Header />
     <div className="container">
       <Suspense fallback={<Loader />}>
