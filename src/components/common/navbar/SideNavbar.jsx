@@ -100,7 +100,7 @@ const SideNavbar = () => {
           Index des huiles
         </NavLink>
         <NavLink to="/more" tabIndex={tabindex}>
-          Liens utils
+          Liens utiles
         </NavLink>
         <NavLink to="/about" tabIndex={tabindex}>
           A propos
