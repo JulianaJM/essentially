@@ -75,7 +75,7 @@ const RecipeSearch = () => {
       <div className="recipe-search__bar">
         <input
           type="text"
-          placeholder="indiquer le symptome ..."
+          placeholder="indiquer le symptome et valider ..."
           onChange={onValueChange}
           onKeyDown={onKeyDown}
         />
