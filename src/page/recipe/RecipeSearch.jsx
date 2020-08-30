@@ -1,11 +1,12 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faTimesCircle } from "@fortawesome/free-solid-svg-icons";
 import { searchRecipe } from "../../services/elasticSearch";
 import useAsyncError from "../../utils/useAsyncError";
 import Recipe from "../../components/recipe/Recipe";
 import { scrollTop } from "../../utils/scroll";
+import { removeUselessElement } from "../../utils/arrayUtils";
 
 import "./recipe-search.scss";
 
@@ -23,16 +24,26 @@ const RecipeSearch = () => {
     if (value) {
       scrollTop();
 
-      searchRecipe(value.toLowerCase())
+      const terms = removeUselessElement(value.toLowerCase().split(" "));
+      searchRecipe(terms)
         .then(res => {
           const newRecipes = { recipesTitle: [], recipesContent: [] };
           res.data.hits.forEach(r => {
             const { recipesTitle, recipesContent } = r._source.recipes;
+            const valueSplit = removeUselessElement(
+              value.split(" ").map(curr => curr.toLowerCase())
+            );
+
             recipesTitle.forEach((title, j) => {
-              if (
-                title.toLowerCase().includes(value.toLowerCase()) &&
-                !newRecipes.recipesTitle.includes(title)
-              ) {
+              const titleSplit = removeUselessElement(
+                title.split(" ").map(curr => curr.toLowerCase())
+              );
+
+              const isIncluded = valueSplit.some(val =>
+                titleSplit.includes(val)
+              );
+
+              if (isIncluded && !newRecipes.recipesTitle.includes(title)) {
                 newRecipes.recipesTitle.push(title);
                 newRecipes.recipesContent.push(recipesContent[j]);
               }
@@ -52,6 +63,11 @@ const RecipeSearch = () => {
     if (!val) {
       setRecipes(null);
     }
+  };
+
+  const onResetInput = () => {
+    setValue("");
+    setRecipes(null);
   };
 
   const onKeyDown = event => {
@@ -78,10 +94,16 @@ const RecipeSearch = () => {
           placeholder="indiquer le symptome et valider ..."
           onChange={onValueChange}
           onKeyDown={onKeyDown}
+          value={value}
         />
         <button type="button" onClick={onSearch}>
           <FontAwesomeIcon icon={faSearch} />
         </button>
+        {value && (
+          <button type="button" className="reset-btn" onClick={onResetInput}>
+            <FontAwesomeIcon icon={faTimesCircle} />
+          </button>
+        )}
       </div>
 
       {recipes && recipes.recipesTitle.length > 0 && (
@@ -91,6 +113,10 @@ const RecipeSearch = () => {
           activeTabs={activeTabs}
           onToggle={handleToggle}
         />
+      )}
+
+      {recipes && recipes.recipesTitle.length === 0 && (
+        <p className="no-result">Aucun résultat trouvé</p>
       )}
     </div>
   );
