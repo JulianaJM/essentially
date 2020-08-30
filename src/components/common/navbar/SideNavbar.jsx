@@ -22,7 +22,7 @@ const SideNavbar = () => {
       navEl.current.style.opacity = "0.9";
     } else {
       navEl.current.style.width = "300px";
-      // document.getElementById("app").style.marginLeft = "250px"; // push content to letf
+      document.getElementById("app").style.marginLeft = "250px"; // push content to letf
       document.getElementById("overlay").classList.add("overlay");
     }
     navEl.current.focus();
@@ -37,7 +37,7 @@ const SideNavbar = () => {
     setTabindex(-1);
 
     navEl.current.style.width = "0";
-    // document.getElementById("app").style.marginLeft = "0";
+    document.getElementById("app").style.marginLeft = "0";
     document.getElementById("overlay").classList.remove("overlay");
     menuBtnEl.current.style.display = "block";
   };
