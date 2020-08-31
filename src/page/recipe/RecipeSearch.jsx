@@ -9,10 +9,12 @@ import { scrollTop } from "../../utils/scroll";
 import { removeUselessElement } from "../../utils/arrayUtils";
 
 import "./recipe-search.scss";
+import Loader from "../../components/common/loader/Loader";
 
 const RecipeSearch = () => {
   const [value, setValue] = useState("");
   const [recipes, setRecipes] = useState(null);
+  const [isFetching, setIsFetching] = useState(false);
   const throwError = useAsyncError();
   const [activeTabs, setActiveTabs] = useState([""]);
 
@@ -23,7 +25,7 @@ const RecipeSearch = () => {
   const onSearch = () => {
     if (value) {
       scrollTop();
-
+      setIsFetching(true);
       const terms = removeUselessElement(value.toLowerCase().split(" "));
       searchRecipe(terms)
         .then(res => {
@@ -49,7 +51,9 @@ const RecipeSearch = () => {
               }
             });
           });
+
           setRecipes(newRecipes);
+          setIsFetching(false);
         })
         .catch(() => {
           throwError(new Error("An error occured while search recipe"));
@@ -105,6 +109,8 @@ const RecipeSearch = () => {
           </button>
         )}
       </div>
+
+      {isFetching && <Loader />}
 
       {recipes && recipes.recipesTitle.length > 0 && (
         <Recipe

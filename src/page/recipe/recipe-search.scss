@@ -88,4 +88,12 @@
     right: 45px;
     border: none;
   }
+
+  .loader-wrapper {
+    top: 50%;
+
+    @media (min-width: 768px) {
+      top: 30%;
+    }
+  }
 }
