@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { withRouter } from "react-router-dom";
-import { isMobile, isMobileOnly } from "react-device-detect";
+import { isMobileOnly } from "react-device-detect";
 import PropTypes from "prop-types";
 import { throttle } from "lodash";
 
@@ -72,7 +72,7 @@ class HeaderContainer extends PureComponent {
         ref={this.headerRef}
         goBack={this.goBack}
         shouldShowBackButton={
-          isMobile &&
+          isMobileOnly &&
           location.pathname !== "/" &&
           location.pathname !== "/notfound"
         }
