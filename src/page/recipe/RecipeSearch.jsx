@@ -6,10 +6,10 @@ import { searchRecipe } from "../../services/elasticSearch";
 import useAsyncError from "../../utils/useAsyncError";
 import Recipe from "../../components/recipe/Recipe";
 import { scrollTop } from "../../utils/scroll";
-import { removeUselessElement } from "../../utils/arrayUtils";
+import { removeUselessWords } from "../../utils/arrayUtils";
+import Loader from "../../components/common/loader/Loader";
 
 import "./recipe-search.scss";
-import Loader from "../../components/common/loader/Loader";
 
 const RecipeSearch = () => {
   const [value, setValue] = useState("");
@@ -26,18 +26,19 @@ const RecipeSearch = () => {
     if (value) {
       scrollTop();
       setIsFetching(true);
-      const terms = removeUselessElement(value.toLowerCase().split(" "));
+
+      const terms = removeUselessWords(value.toLowerCase().split(/'| /)); // apostroph or space
       searchRecipe(terms)
         .then(res => {
           const newRecipes = { recipesTitle: [], recipesContent: [] };
           res.data.hits.forEach(r => {
             const { recipesTitle, recipesContent } = r._source.recipes;
-            const valueSplit = removeUselessElement(
+            const valueSplit = removeUselessWords(
               value.split(" ").map(curr => curr.toLowerCase())
             );
 
             recipesTitle.forEach((title, j) => {
-              const titleSplit = removeUselessElement(
+              const titleSplit = removeUselessWords(
                 title.split(" ").map(curr => curr.toLowerCase())
               );
 

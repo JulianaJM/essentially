@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { getRandomOils, search } from "../../services/elasticSearch";
 import OilListSkeleton from "../common/skeleton/OilListSkeleton";
 import OilList from "../oil-result/OilList";
-import { removeUselessElement } from "../../utils/arrayUtils";
+import { removeUselessWords } from "../../utils/arrayUtils";
 import useAsyncError from "../../utils/useAsyncError";
 
 import "./search.scss";
@@ -96,7 +96,7 @@ const SearchResults = ({ location, isPageBottom }) => {
       const hightlights = [decode];
 
       if (!decode.includes(",")) {
-        return hightlights.concat(removeUselessElement(decode.split(" ")));
+        return hightlights.concat(removeUselessWords(decode.split(" ")));
       }
 
       // autosuggest with commas
@@ -105,7 +105,7 @@ const SearchResults = ({ location, isPageBottom }) => {
         tabOfSearchWords = tabOfSearchWords.concat(t.split(" "));
       });
 
-      return hightlights.concat(removeUselessElement(tabOfSearchWords));
+      return hightlights.concat(removeUselessWords(tabOfSearchWords));
     }
 
     return [];

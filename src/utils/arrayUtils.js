@@ -1,4 +1,4 @@
-export const removeUselessElement = list => {
+export const removeUselessWords = list => {
   const stopWords = [
     "de",
     "a",
@@ -10,6 +10,7 @@ export const removeUselessElement = list => {
     "sans",
     "pour",
     "d'",
+    "d",
     "l'",
     "que",
     "et",
